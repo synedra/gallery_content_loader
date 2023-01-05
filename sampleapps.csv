@@ -1,0 +1,58 @@
+Name,Language,Stack,Use Case,Owner,DATA,DOC,GQL,CQL,GRPC,DB,IAM,STRM,Comment
+"astra spring boot starter
+Helper to initialize astra sdk client in spring boot and spring data",,"spring-boot, spring-data",N/A,Cedrick Lunven,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,,Development,Active development,Maintenance,Abandonned
+"astra-httpie
+Helper to interact with Astra Api and Httpie cli to do HTTP Calls",,Httpie,N/A,Kirsten Hunter,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,,,,,,,
+"TikTok clone
+React demo connecting document Api in Astra",JavaScript,"React, netlify,
+docAPI",Social Network,Chris Whilhite,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Netflix clone
+React demo connecting graph Api in Astra with paging",JavaScript,"React, netlify,
+GraphQL",Digital Library,Chris Whilhite,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Todo App with Jamstack
+React demo using Netlify",JavaScript,"React, netlify",TodoList,Chris Whilhite,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Battlestax
+React game using doc API and netlify",JavaScript,"React, netlify,
+docAPI",Game Development,Chris Whilhite,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Spring Data Starter
+REST API with Spring data and spring-mvc",Java,"spring-boot, spring-data",Order Management,Cedrick Lunven,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Reactive Petclinic webflux
+Clone of Petclinic with spring webflux, java drivers connected to Astra",Java,"spring-boot, spring-webflux",Order Management,Cedrick Lunven,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Next.js and Astra Db Starter,,,N/A,Chris Whilhite,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Astra Glitch Starter,,,N/A,Alex Leventer,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Astra Gatsby Starter,,,N/A,Chris Whilhite,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Google Cloud Functions & NodeJS,,,N/A,Chris Whilhite,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+AWS Lamda & Node JS,,,N/A,no maintenance,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Azure Functions & NodeJS,,,N/A,no maintenance,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Spark Migration Tool Demo,,--,N/A,Chris Whilhite,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Datastax Bulk Loader Demo,,Spark,N/A,Chris Whilhite,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Killrvideo Java
+Clone of youtube using DSE and java drivers",Java,"grpc, spring, drivers",Digital Library,Cedrick Lunven,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Killrvideo Python
+Clone of youtube using DSE and python drivers",Python,"grpc, drivers",Digital Library,no maintenance,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Killrvideo CSharp
+Clone of youtube using DSE and csharp drivers",CSharp,"grpc, drivers",Digital Library,no maintenance,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Kiillrvideo NodeJS
+Clone of youtube using DSE and nodeJS drivers",JavaScript,"grpc, drivers",Digital Library,no maintenance,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"From driver 3x to 4x
+Sample codes to illustrate part of java drivers and migrations",Java,--,N/A,Cedrick Lunven,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+AstraDB Loom,Elixir,,Chat Server,Chris Wilhite,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+astrolabeIO,,,N/A,Chris Whilhite,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Build a Twitter Clone,Python,Django,Social Media,Kirsten Hunter,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Python Webscraper,,,CMS,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+BetterReads,,,Digital Library,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+NuxtJS,,,CMS,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+FastSite,,,CMS,,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Mercury,,,Chat Server,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Telco Billing Application,,,E-Commerce,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+AI as an API,,,Machine Learning,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+Build a Crypto Application,,"graphql federation, 
+react, express",Crypto Application,Cedrick Lunven,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,,,,,,,
+,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"Ansible Demo
+How to use Astra Data & DevOps APIs in Ansible playbooks.",,,,Steven Mattison,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+"How to use Ansible with Astra
+Devops and Data API with Ansible",,,,Madhavan Sridharan,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+VSCode extension,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+IntelliJ Plugin,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,
+,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,,,

@@ -1,0 +1,31 @@
+{
+    "Code": "W014",
+    "Name": "TikTok clone using React, JAMStack and AstraDB",
+    "Tags": [
+        {
+            "name": ""
+        },
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "document API"
+        }
+    ],
+    "URLs": {
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1SP0VbYkO0QQP5Ur4_H62ALPYtgfc5GfD"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-social-media-tiktok"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1134131"
+        ]
+    },
+    "Description": "A simple Tik-Tok clone running on AstraDB that leverages the Document API.",
+    "Duration": "50 minutes",
+    "Skilllevel": "Advanced",
+    "Category": "apps",
+    "Priority": 1
+}

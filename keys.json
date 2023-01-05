@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sample-application-data",
+  "private_key_id": "8cb62103b277c841c2d6502f90c544866d96ff8b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCyhd9YoA/eLc/r\nlVyBQ3k2MM4lA0pCgBBljzY6eNV/DMy9gdz0yr65RDRGK3E15yEbK3CYkXgxuNVi\n5h7vA5uDALkM0Z02Yw0XRNJ6EeSfbw91jMJlBHnthTBFuCiVlfPzk2JfooYLzcwO\nLlByVQg8zl7FrqkeEtBk6vU8bisMUI4navNjONuzriI53AckX9coM8/ZlPmK3A0Q\njudxTCgclhdyeMeCpF0R/25yDj9FOpF6j1z1RRUOPomDYy6xosD363oyEkqrFW/d\nDqD4uKFkKZlR4ID/fAOcX+iQzrGeLXQneyaH4+CrICT1uGg00KAUleD6Oa9EZh7S\nIuTT4g43AgMBAAECggEAUxLrARHS8H//DlC98EUWxbnmY+DpEJMJjkkbYhBSwUGS\nkOk6igtCv3HWpYSXtQ6uIDeRuN2QwgqR+ei+IllaZ5bRhf6RGvry344eJ8Hl0q9a\n0UfEOj/gAUCGWxs8f4d9My61i21U1W9Z8oto0htxruIVxgXmGuGEakHQBuP5Ukvu\nNTas7gqL1lbon00z5vB6QU6sJl1OPI1qiuqAOwDE/cE4qohqyVB9IFv8ZCGytpDj\nkPSbBD1ymT2P87RQESOem0p0B83LfGwFOciU0zN82lALoFdaY+yu15VGg9XyUHep\nkVyhM7eFq7OYmukMTzGKQFCufR9Ejo1jfiR9Os614QKBgQDsQedO5042znXZ+77q\nbclNaR0/RsUpGvc/FMnOWin+KCEsJduZWNs42w/oZN/rQPlpX7kVfB8vrAwd2BUJ\nPnOCajxrFlWJqm95psSYDYbTty1QJCxj/Yh/VeO5x8GXA3fs3EXDhHmKcmuhggLt\nwjjNzxF3C6x0MWo6tddWleFQBwKBgQDBcOTFedSvjHYDk2R+zI+gwcZg/G7a+RwB\nKRk9rT+G7w6y12vAj7+irO7UOfA+2BQt1uRy7oEgVKwk7a0wKEBlXoqGQ0jAR1/H\nvjgdyeidBA08ATKENnthQJDuvHS2jtb83RuPr0pTgh6BXa9smFW/ERIG2PjZFLr8\nd1s3WcNkUQKBgEYXSztibhbea6JPCJXeGlGn9LBYG5gVUvLZBQH+R+UKHMVPOfYl\noWwduXt1qeTOcvArIOrZ1xq6jSGxgJQsffJb+C7BAoGEGexaaIq/wJdBCeVzxeOo\nTP2SCqyMMcfOlJ6lvuDBhZloVrwkqR/GdjnAy+qogPI70ss2NXuPnbezAoGAXOuW\n6Qk50k3djqApoQMwZx9N5N69fXA2NJSCbG8hWfbRj7UNLIWgn0sEumtObVGsd8yH\nFnJdEqO5wU9uZvie3lLIpfACLWLbrn5ARIbttybwGIfWtU3afH/gXt2mDt+UhAjO\nKXohcPXLI4dWMgsG/W38w89L0jM0Evxek7sJsdECgYEAuuZt8jdqxEaOJUTT08xA\n5t7FRqxQIJ1giDKjcRL8P6Lmy9moscThk1CiMsraT0BSi57OcDrbBeRCybq0dGZJ\nzeZHWhPZODcUJwnjHnmq9fDVKegwcXzYsSovR5CFzOK6YzqZMajxwhgOhoe/cdAo\nQHIzwh6dm8e1jf7J72zu0PI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "datastax-admin@sample-application-data.iam.gserviceaccount.com",
+  "client_id": "106731463598302848532",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/datastax-admin%40sample-application-data.iam.gserviceaccount.com"
+}
