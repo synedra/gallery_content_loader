@@ -19,8 +19,7 @@ from astrapy.client import create_astra_client
 astra_client = create_astra_client(astra_database_id=os.environ["ASTRA_DB_ID"],
                                    astra_database_region=os.environ["ASTRA_DB_REGION"],
                                    astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
-tag_collection = astra_client.collections.namespace(
-    "applications").collection("tagapps1")
+tag_collection = astra_client.collections.namespace("gallery").collection("tag_applications")
 # using an access token
 f = open("github.token", "r")
 line = f.readlines()[0].replace("\n", "")
@@ -204,6 +203,7 @@ def main():
 
         entries.append(new_item)
 
+    githublinks = []
     for index in range(len(entries)):
         readme = ""
         keys = {}
@@ -212,10 +212,20 @@ def main():
             for url in entry["urls"]["github"]:
                 if "github" not in url:
                     continue
+                githublinks.append(url)
                 owner = url.split('/')[3]
                 reponame = url.split('/')[4]
                 repo = g.get_repo(owner + "/" + reponame)
+                # Get the README
 
+    # Just for fun, get all the repos for Datastax-Examples
+    organization = g.get_organization('Datastax-Examples')
+    for repo in organization.get_repos():
+        url = repo.raw_data["html_url"]
+        if url not in githublinks:
+            entries.append( {"urls":{"github":url}})
+
+    uniquelinks = []
     for index in range(len(entries)):
         astrajson = ""
         keys = {}
@@ -223,6 +233,9 @@ def main():
         if ("github" in entry["urls"]):
             for url in entry["urls"]["github"]:
                 if "github" not in url:
+                    continue
+                if url in uniquelinks:
+                    del entries[index]
                     continue
                 owner = url.split('/')[3]
                 reponame = url.split('/')[4]
@@ -246,8 +259,6 @@ def main():
                     elif (key.upper() == "VERCELURL"):
                         entries[index]["urls"]["vercel"] = [settings[key]]
                     elif (key.upper() == "TAGS"):
-                        if "tags" not in entries[index]:
-                            entries[index]["tags"] = []
                         for tag in settings["tags"]:
                             if ("name" in tag):
                                 entries[index]["tags"].append(
@@ -265,13 +276,16 @@ def main():
                         entries[index]["urls"]["heroimage"] = settings[key]
                     else:
                         entries[index][lowerkey] = settings[key]
-            entries[index]["tags"] = cleanTags(entries[index]["tags"])
+                if "tags" in entries[index]:
+                    entries[index]["tags"] = cleanTags(entries[index]["tags"])
 
     tagdict = {}
     tagdict["all"] = {}
     tagdict["all"]["apps"] = []
 
     for entry in entries:
+        if "name" not in entry:
+            entries.remove(entry)
         if "tags" in entry:
             for tag in entry["tags"]:
                 if tag.lower() not in tagdict.keys():
@@ -282,6 +296,7 @@ def main():
 
     names = []
 
+    # Remove dupes in all
     for tag in tagdict.keys():
         for app in tagdict[tag]["apps"]:
             if app["name"] not in names:
@@ -293,10 +308,11 @@ def main():
 
     for tag in tagdict.keys():
         count = len(tagdict[tag]["apps"])
+        tagdict[tag]["count"] = count
+
         try:
             res = tag_collection.create(
                 document={"name": tag, "count": count, tag: tagdict[tag]}, path=tag)
-            print("SUCCESS  " + json.dumps(tagdict[tag], indent=4))
             print(res)
         except:
             print("ERROR")
