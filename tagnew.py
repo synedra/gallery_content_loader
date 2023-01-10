@@ -293,19 +293,16 @@ def main():
             if app["name"] not in names:
                 tagdict["all"]["apps"].append(app)
                 names.append(app["name"])
-                print ("Setting up to skip " + app["name"])
-            else:
-                print("Skipping " + app["name"])
 
     for tag in tagdict.keys():
         count = len(tagdict[tag]["apps"])
         tagdict[tag]["count"] = count
+        print(json.dumps(tagdict, indent=4))
 
         try:
             res = tag_collection.create(
                 document={"name": tag, "count": count, tag: tagdict[tag]}, path=tag)
             print("SUCCESS")
-            print(json.dumps(tagdict[tag], indent=4))
             print(res)
         except:
             print("ERROR")
