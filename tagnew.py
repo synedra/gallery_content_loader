@@ -1,0 +1,437 @@
+from __future__ import print_function
+from github import Github
+
+import os.path
+import os
+import json
+import re
+from bs4 import BeautifulSoup
+import markdown
+
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+
+from astrapy.client import create_astra_client
+
+from astrapy.client import create_astra_client
+
+
+astra_client = create_astra_client(astra_database_id=os.environ["ASTRA_DB_ID"],
+                                   astra_database_region=os.environ["ASTRA_DB_REGION"],
+                                   astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
+tag_collection = astra_client.collections.namespace("gallery").collection("tag_applications")
+# using an access token
+f = open("github.token", "r")
+line = f.readlines()[0].replace("\n", "")
+g = Github(line)
+
+p = re.compile('[a-zA-Z]+')
+
+# If modifying these scopes, delete the file token.json.
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+
+# The ID and range of a sample spreadsheet.
+SAMPLE_SPREADSHEET_ID = '1vJSKJAa7EJ0s1Ksn_L_lgQGJI6-UMDqNngrQO4U4cEY'
+SAMPLE_RANGE_NAME = 'SampleApplicationMain'
+
+
+def main():
+    """Shows basic usage of the Sheets API.
+    Prints values from a sample spreadsheet.
+    """
+    print("Starting")
+    entries = []
+    creds = None
+    # The file token.json stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    if os.path.exists('token.json'):
+        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            print("Refreshing creds")
+            try:
+                creds.refresh(Request())
+            except:
+                print("ERROR")
+        else:
+            print("Using creds")
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'credentials.json', SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open('token.json', 'w') as token:
+            token.write(creds.to_json())
+    print("Building service")
+    service = build('sheets', 'v4', credentials=creds)
+    sheet = service.spreadsheets()
+
+    print("Getting sample application links")
+    # Call the Sheets API for SampleApplication links
+    result = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, ranges=SAMPLE_RANGE_NAME,
+                                        fields="sheets/data/rowData/values/hyperlink,sheets/data/rowData/values/textFormatRuns/format/link/uri").execute()
+    values = result.get('sheets', [])
+
+    sampleApplicationLinks = values[0]["data"][0]["rowData"]
+    print("Got sample application links")
+
+    print("Getting sample application items")
+    # Call the Sheets API for SampleApplication items
+    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+                                range=SAMPLE_RANGE_NAME).execute()
+    sampleApplicationItems = result.get('values', [])
+    print("Got sample application items")
+    # Workshop sheet for links
+    WORKSHOP_SAMPLE_RANGE_NAME = 'WorkshopCatalog'
+
+    print("Getting workshop links")
+    # Call the Sheets API for Workshop Links
+    result = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, ranges=WORKSHOP_SAMPLE_RANGE_NAME,
+                                        fields="sheets/data/rowData/values/hyperlink,sheets/data/rowData/values/textFormatRuns/format/link/uri").execute()
+    values = result.get('sheets', [])
+    workshopLinks = values[0]["data"][0]["rowData"]
+
+    print("Got workshop links")
+    print("Getting workshop items")
+    # Get the items for Workshops
+    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+                                range=WORKSHOP_SAMPLE_RANGE_NAME).execute()
+    workshopItems = result.get('values', [])
+    print("Got workshop items")
+    counter = 0
+    github = {}
+    for entry in sampleApplicationItems:
+        urls = {"heroimage":"https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"}
+        if counter == 0:
+            counter += 1
+            continue
+
+        counter += 1
+        summary = ""
+        if '\n' in entry[0]:
+            (name, summary) = entry[0].split('\n')
+        else:
+            if entry[0] == "":
+                continue
+            name = entry[0]
+
+        links = sampleApplicationLinks
+        if (len(links) > counter-1 and "values" in links[counter-1]):
+            urlcheck = links[counter-1]["values"]
+            getLinks(urlcheck, urls)
+
+        tags = []
+        language = []
+       # Language
+        if (entry[2] != [""]):
+            language = entry[2].split(",")
+            for item in language:
+                tags.append(item.lower())
+
+        # Stack should be an array
+        if (entry[3] != [""]):
+            stack = entry[3].split(",")
+            for item in stack:
+                tags.append(item.lower())
+
+        # APIs
+        entrynumber = 6
+        apiarray = []
+        for api in ["DATA", "DOC", "GQL", "CQL", "GRPC", "DB", "IAM", "STRM"]:
+            if entry[entrynumber] == 'TRUE':
+                apiarray.append(api)
+            entrynumber += 1
+
+        newtags = cleanTags(tags)
+
+        new_item = {
+            "name": name,
+            "summary": summary,
+            "urls": urls,
+            "language": language,
+            "stack": stack,
+            "usecases": entry[4],
+            "owner": entry[5],
+            "apis": apiarray,
+            "tags": newtags
+        }
+
+        entries.append(new_item)
+
+    counter = 0
+
+    for entry in workshopItems:
+        urls = {}
+        tags = []
+        if counter <= 1:
+            counter += 1
+            continue
+
+        if (len(entry) == 0):
+            continue
+        counter += 1
+        summary = ""
+
+        if '\n' in entry[0]:
+            (name, summary) = entry[0].split('\n')
+            code = ""
+        else:
+            code = entry[0]
+
+        links = workshopLinks
+
+        if (len(links) > counter-1 and "values" in links[counter-1]):
+            urlcheck = links[counter-1]["values"]
+            addurl = ""
+            getLinks(urlcheck, urls)
+
+        if (len(entry) >= 8):
+            taglist = entry[7].replace(',', "\n").split('\n')
+            for tag in taglist:
+                tags.append(tag.lower())
+
+        tags.append("workshop")
+        newtags = cleanTags(tags)
+
+        new_item = {
+            "code": code,
+            "name": entry[2].replace("\n", ""),
+            "tags": newtags,
+            "urls": urls
+        }
+
+        entries.append(new_item)
+
+    githublinks = []
+    for index in range(len(entries)):
+        readme = ""
+        keys = {}
+        entry = entries[index]
+        if ("github" in entry["urls"]):
+            for url in entry["urls"]["github"]:
+                if "github" not in url or url in githublinks:
+                    continue
+                githublinks.append(url)
+                owner = url.split('/')[3]
+                reponame = url.split('/')[4]
+                repo = g.get_repo(owner + "/" + reponame)
+                # Get the README
+
+    # Just for fun, get all the repos for Datastax-Examples
+    organization = g.get_organization('Datastax-Examples')
+    for repo in organization.get_repos():
+        url = repo.raw_data["html_url"]
+        if url in githublinks:
+            continue
+        owner = url.split('/')[3]
+        reponame = url.split('/')[4]
+        print ("Getting information for " + reponame)
+        repo = g.get_repo('Datastax-Examples/' + reponame)
+        try:
+            astrajson = repo.get_contents("astra.json")
+        except:
+            continue
+
+        entry = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), {"urls":{"github":["url"]}})
+        entry["last_modified"] = repo.last_modified
+        entries.append(entry)
+        try:
+            readme = repo.get_contents("README.md")
+            readmemd = json.loads(readme.decoded_content.decode())
+            html = markdown.markdown(readmemd)
+            soup = BeautifulSoup(html)
+            print(soup)
+
+        
+        except:
+            continue
+
+
+    for index in range(len(entries)):
+        astrajson = ""
+        keys = {}
+        entry = entries[index]
+        if ("github" in entry["urls"]):
+            for url in entry["urls"]["github"]:
+                if "github" not in url:
+                    continue
+                
+                owner = url.split('/')[3]
+                reponame = url.split('/')[4]
+                repo = g.get_repo(owner + "/" + reponame)
+                try:
+                    astrajson = repo.get_contents("astra.json")
+                except:
+                    continue
+                entries[index] = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), entries[index])
+                readmemd = repo.get_contents("README.md")
+                html = markdown.markdown(readmemd.decoded_content.decode())
+                entries[index]["readme"] = html
+
+    tagdict = {}
+    tagdict["all"] = {}
+    tagdict["all"]["apps"] = []
+
+    for entry in entries:
+        if "tags" in entry:
+            for tag in entry["tags"]:
+                if tag.lower() not in tagdict.keys():
+                    tagdict[tag.lower()] = {
+                        "name": tag.lower(), "apps": [entry]}
+                else:
+                    tagdict[tag.lower()]["apps"].append(entry)
+
+    names = []
+
+    # Remove dupes in all
+    for tag in tagdict.keys():
+        for app in tagdict[tag]["apps"]:
+            if app["name"] not in names:
+                tagdict["all"]["apps"].append(app)
+                names.append(app["name"])
+                print ("Setting up to skip " + app["name"])
+            else:
+                print("Skipping " + app["name"])
+
+    for tag in tagdict.keys():
+        count = len(tagdict[tag]["apps"])
+        tagdict[tag]["count"] = count
+
+        try:
+            res = tag_collection.create(
+                document={"name": tag, "count": count, tag: tagdict[tag]}, path=tag)
+            print("SUCCESS")
+            print(json.dumps(tagdict[tag], indent=4))
+            print(res)
+        except:
+            print("ERROR")
+            print(res)
+
+def walker(soup):
+    pages = []
+    h2tags = soup.find_all('h2')
+    if soup.name is not None:
+        for h2tag in h2tags:
+            h2tags = soup.find_all('h2')
+            page = [str(h2tag)]
+            elem = next_element(h2tag)
+            while elem and elem.name != 'h2':
+                page.append(str(elem))
+                elem = next_element(elem)
+            pages.append('\n'.join(page))
+    return pages
+ 
+def next_element(elem):
+    while elem is not None:
+        # Find next element, skip NavigableString objects
+        elem = elem.next_sibling
+        if ("text" in elem):
+            print (elem.text)
+        return elem
+
+
+def cleanTags(tags):
+    newtags = []
+    for tag in tags:
+        if not (p.match(tag)):
+            continue
+        if tag in ("doc api", "documentapi", "docapi", "document api"):
+            tag = "doc api"
+        if tag in ("gql api", "graphql"):
+            tag = "graphql api"
+        if tag in ("java", "java driver"):
+            tag = "java"
+        if tag in ("spring-boot", "spring-data", "spring", "spring-webflux"):
+            tag = "spring"
+        if tag not in newtags:
+            newtags.append(tag)
+    return newtags
+
+
+def addURL(urlitem, index, urls):
+    if index == 1:
+        if "badge" not in urls:
+            urls["badge"] = []
+        urls["badge"].append(urlitem)
+        urls["heroimage"] = urlitem
+    if index == 3:
+        if "slides" not in urls:
+            urls["slides"] = []
+        urls["slides"].append(urlitem)
+    if index == 4:
+        if "github" not in urls:
+            urls["github"] = []
+        urls["github"].append(urlitem)
+    if index == 5:
+        if "menti" not in urls:
+            urls["menti"] = []
+        urls["menti"].append(urlitem)
+    if index == 6:
+        if "abstract" not in urls:
+            urls["abstract"] = []
+        urls["abstract"].append(urlitem)
+    if index == 9:
+        if "youtube" not in urls:
+            urls["youtube"] = []
+        urls["youtube"].append(urlitem)
+
+
+def getLinks(urlcheck, urls):
+    for index in range(len(urlcheck)):
+        if "textFormatRuns" in urlcheck[index]:
+            for textFormatRuns in range(len(urlcheck[index]["textFormatRuns"])):
+                if "link" in urlcheck[index]["textFormatRuns"][textFormatRuns]["format"]:
+                    urlitem = urlcheck[index]["textFormatRuns"][textFormatRuns]["format"]["link"]["uri"]
+                    if ("github" in urlitem):
+                        addURL(urlitem, 4, urls)
+                    else:
+                        addURL(urlitem, index, urls)
+        if "hyperlink" in urlcheck[index]:
+            urlitem = urlcheck[index]["hyperlink"]
+            addURL(urlitem, index, urls)
+
+def astraJsonSettings(settings, entry):
+    keys = settings.keys()
+    if "tags" not in entry:
+        entry["tags"] = []
+    for key in keys:
+        lowerkey = key.lower()
+        if (key.upper() == "GITHUBURL"):
+            continue
+        elif (key.upper() == "GITPODURL"):
+            entry["urls"]["gitpod"] = [settings[key]]
+        elif (key.upper() == "NETLIFYURL"):
+            entry["urls"]["netlify"] = [settings[key]]
+        elif (key.upper() == "DEMOURL" or key.upper() == "DEMO"):
+            entry["urls"]["demo"] = [settings[key]]
+        elif (key.upper() == "VERCELURL"):
+            entry["urls"]["vercel"] = [settings[key]]
+        elif (key.upper() == "TAGS"):
+            for tag in settings["tags"]:
+                if ("name" in tag):
+                    entry["tags"].append(
+                        tag["name"].lower())
+                else:
+                    entry["tags"].append(tag.lower())
+        elif (key.upper() == "STACK"):
+            for stack in settings["stack"]:
+                if ("tags" not in entry):
+                    entry["tags"] = []
+                entry["tags"].append(stack.lower())
+        elif (key.upper() == "CATEGORY"):
+            entry["tags"].append(settings[key])
+        elif (key.upper() == "HEROIMAGE"):
+            entry["urls"]["heroimage"] = settings[key]
+        else:
+            entry[lowerkey] = settings[key]
+    if "tags" in entry:
+        entry["tags"] = cleanTags(entry["tags"])
+    return entry
+
+
+if __name__ == '__main__':
+    main()
