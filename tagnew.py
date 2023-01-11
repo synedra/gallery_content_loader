@@ -194,6 +194,9 @@ def main():
             for tag in taglist:
                 tags.append(tag.lower())
 
+        if "youtube" not in urls:
+            tags.append("NOYOUTUBE")
+
         tags.append("workshop")
         newtags = cleanTags(tags)
 
@@ -203,7 +206,7 @@ def main():
             "tags": newtags,
             "urls": urls
         }
-
+        
         entries.append(new_item)
 
     githublinks = []
@@ -236,7 +239,7 @@ def main():
         except:
             continue
 
-        entry = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), {"urls":{"github":["url"]}})
+        entry = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), {"urls":{"github":[url]}})
         entry["last_modified"] = repo.last_modified
         entries.append(entry)
         try:
@@ -265,12 +268,20 @@ def main():
                 repo = g.get_repo(owner + "/" + reponame)
                 try:
                     astrajson = repo.get_contents("astra.json")
+                    entries[index] = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), entries[index])
                 except:
+                    if ( "tags" not in entries[index]):
+                        entries[index]["tags"] = []
+                    entries[index]["tags"].append("noastrajson")
+                    print ("No astrajson for " + entries[index]["name"])
+                    print (json.dumps(entries[index], indent=4))
                     continue
-                entries[index] = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), entries[index])
-                readmemd = repo.get_contents("README.md")
-                html = markdown.markdown(readmemd.decoded_content.decode())
-                entries[index]["readme"] = html
+                try:
+                    readmemd = repo.get_contents("README.md")
+                    html = markdown.markdown(readmemd.decoded_content.decode())
+                    entries[index]["readme"] = html
+                except:
+                    print ("No README.md for " + entries[index]["name"])
 
     tagdict = {}
     tagdict["all"] = {}
@@ -307,28 +318,6 @@ def main():
         except:
             print("ERROR")
             print(res)
-
-def walker(soup):
-    pages = []
-    h2tags = soup.find_all('h2')
-    if soup.name is not None:
-        for h2tag in h2tags:
-            h2tags = soup.find_all('h2')
-            page = [str(h2tag)]
-            elem = next_element(h2tag)
-            while elem and elem.name != 'h2':
-                page.append(str(elem))
-                elem = next_element(elem)
-            pages.append('\n'.join(page))
-    return pages
- 
-def next_element(elem):
-    while elem is not None:
-        # Find next element, skip NavigableString objects
-        elem = elem.next_sibling
-        if ("text" in elem):
-            print (elem.text)
-        return elem
 
 
 def cleanTags(tags):
