@@ -338,8 +338,14 @@ def cleanTags(tags):
             continue
         if tag in ("doc api", "documentapi", "docapi", "document api"):
             tag = "doc api"
+        if tag in ("grpc"):
+            tag = "grpc api"
         if tag in ("gql api", "graphql"):
             tag = "graphql api"
+        if tag in ("nodejs", "nodejs driver"):
+            tag = "nodejs"
+        if tag in ("python", "python driver"):
+            tag = "python"
         if tag in ("java", "java driver"):
             tag = "java"
         if tag in ("spring-boot", "spring-data", "spring", "spring-webflux"):
