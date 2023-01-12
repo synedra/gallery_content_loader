@@ -283,13 +283,19 @@ def main():
                 try:
                     readmemd = repo.get_contents("README.md")
                     html = markdown.markdown(readmemd.decoded_content.decode())
-                    #entries[index]["readme"] = html
                     res = readme_collection.create(document={"content":html}, path=reposlug)
-                    print("SUCCESS README for " + reposlug)
-                    print(json.dumps(res))
-
+                    print("SUCCESS for " + reposlug)
                 except:
                     print("ERROR for " + reposlug)
+                
+                try:
+                    for tag in repo.get_topics():
+                        entries[index]["tags"].append(tag)
+                        print ("Added new tag " + tag)
+
+                except:
+                    print("No tags for" + reposlug)
+                entries[index]["tags"] = cleanTags(entries[index]["tags"])
 
     tagdict = {}
     tagdict["all"] = {}

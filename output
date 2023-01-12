@@ -1,5 +1,4 @@
 Starting
-Refreshing creds
 Building service
 Getting sample application links
 Got sample application links
@@ -215,20 +214,54 @@ No astrajson for astra spring boot starter
         "noastrajson"
     ]
 }
-SUCCESS README for datastax-astra-sdk-java
-{"documentId": "datastax-astra-sdk-java"}
-SUCCESS README for DataStax-Examples-astra-tik-tok
-{"documentId": "DataStax-Examples-astra-tik-tok"}
-SUCCESS README for DataStax-Examples-astra-netflix
-{"documentId": "DataStax-Examples-astra-netflix"}
-SUCCESS README for DataStax-Examples-todo-astra-jamstack-netlify
-{"documentId": "DataStax-Examples-todo-astra-jamstack-netlify"}
-SUCCESS README for DataStax-Examples-battlestax
-{"documentId": "DataStax-Examples-battlestax"}
-SUCCESS README for DataStax-Examples-spring-data-starter
-{"documentId": "DataStax-Examples-spring-data-starter"}
-SUCCESS README for DataStax-Examples-spring-petclinic-reactive
-{"documentId": "DataStax-Examples-spring-petclinic-reactive"}
+SUCCESS for datastax-astra-sdk-java
+SUCCESS for DataStax-Examples-astra-tik-tok
+Added new tag building-sample-apps
+Added new tag astra
+Added new tag datastax
+Added new tag react
+Added new tag netlify
+Added new tag document-api
+Added new tag dev
+SUCCESS for DataStax-Examples-astra-netflix
+Added new tag building-sample-apps
+Added new tag datastax
+Added new tag astra
+Added new tag dev
+SUCCESS for DataStax-Examples-todo-astra-jamstack-netlify
+Added new tag cassandra
+Added new tag datastax
+Added new tag astra
+Added new tag building-sample-apps
+Added new tag dev
+Added new tag document-api
+SUCCESS for DataStax-Examples-battlestax
+Added new tag dev
+Added new tag building-sample-apps
+Added new tag astra
+Added new tag datastax
+Added new tag cassandra
+Added new tag document-api
+Added new tag netlify
+Added new tag gitpod
+Added new tag react
+Added new tag redux
+SUCCESS for DataStax-Examples-spring-data-starter
+Added new tag spring
+Added new tag spring-data
+Added new tag spring-data-cassandra
+Added new tag rest-api
+Added new tag cassandra
+Added new tag building-sample-apps
+Added new tag dev
+SUCCESS for DataStax-Examples-spring-petclinic-reactive
+Added new tag dev
+Added new tag java
+Added new tag angular
+Added new tag astra
+Added new tag datastax
+Added new tag spring
+Added new tag building-sample-apps
 No astrajson for Killrvideo Java
 {
     "name": "Killrvideo Java",
@@ -256,8 +289,11 @@ No astrajson for Killrvideo Java
         "noastrajson"
     ]
 }
-SUCCESS README for KillrVideo-killrvideo-java
-{"documentId": "KillrVideo-killrvideo-java"}
+SUCCESS for KillrVideo-killrvideo-java
+Added new tag killrvideo
+Added new tag cassandra
+Added new tag datastax-enterprise
+Added new tag dse
 No astrajson for Killrvideo Python
 {
     "name": "Killrvideo Python",
@@ -284,8 +320,7 @@ No astrajson for Killrvideo Python
         "noastrajson"
     ]
 }
-SUCCESS README for KillrVideo-killrvideo-python
-{"documentId": "KillrVideo-killrvideo-python"}
+SUCCESS for KillrVideo-killrvideo-python
 No astrajson for Killrvideo CSharp
 {
     "name": "Killrvideo CSharp",
@@ -312,8 +347,7 @@ No astrajson for Killrvideo CSharp
         "noastrajson"
     ]
 }
-SUCCESS README for KillrVideo-killrvideo-csharp
-{"documentId": "KillrVideo-killrvideo-csharp"}
+SUCCESS for KillrVideo-killrvideo-csharp
 No astrajson for Kiillrvideo NodeJS
 {
     "name": "Kiillrvideo NodeJS",
@@ -340,8 +374,11 @@ No astrajson for Kiillrvideo NodeJS
         "noastrajson"
     ]
 }
-SUCCESS README for KillrVideo-killrvideo-nodejs
-{"documentId": "KillrVideo-killrvideo-nodejs"}
+SUCCESS for KillrVideo-killrvideo-nodejs
+Added new tag killrvideo
+Added new tag cassandra
+Added new tag dse
+Added new tag datastax-enterprise
 No astrajson for From driver 3x to 4x
 {
     "name": "From driver 3x to 4x",
@@ -366,8 +403,7 @@ No astrajson for From driver 3x to 4x
         "noastrajson"
     ]
 }
-SUCCESS README for DataStax-Examples-java-cassandra-driver-from3x-to4x
-{"documentId": "DataStax-Examples-java-cassandra-driver-from3x-to4x"}
+SUCCESS for DataStax-Examples-java-cassandra-driver-from3x-to4x
 No astrajson for Ansible Demo
 {
     "name": "Ansible Demo",
@@ -391,8 +427,14 @@ No astrajson for Ansible Demo
         "noastrajson"
     ]
 }
-SUCCESS README for ds-steven-matison-astra-ansibile-demo
-{"documentId": "ds-steven-matison-astra-ansibile-demo"}
+SUCCESS for ds-steven-matison-astra-ansibile-demo
+Added new tag devops
+Added new tag ansible-playbooks
+Added new tag astra-data
+Added new tag devops-apis
+Added new tag keyspaces
+Added new tag datastax
+Added new tag astra
 No astrajson for How to use Ansible with Astra
 {
     "name": "How to use Ansible with Astra",
@@ -416,10 +458,13 @@ No astrajson for How to use Ansible with Astra
         "noastrajson"
     ]
 }
-SUCCESS README for msmygit-dse-titbits
-{"documentId": "msmygit-dse-titbits"}
-SUCCESS README for datastaxdevs-workshop-cassandra-fundamentals
-{"documentId": "datastaxdevs-workshop-cassandra-fundamentals"}
+SUCCESS for msmygit-dse-titbits
+SUCCESS for datastaxdevs-workshop-cassandra-fundamentals
+Added new tag astradb
+Added new tag cassandra
+Added new tag nosql
+Added new tag database
+Added new tag workshop
 No astrajson for Cassandra Data Modelling
 {
     "code": "W002",
@@ -453,8 +498,7 @@ No astrajson for Cassandra Data Modelling
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-cassandra-data-modeling
-{"documentId": "datastaxdevs-workshop-cassandra-data-modeling"}
+SUCCESS for datastaxdevs-workshop-cassandra-data-modeling
 No astrajson for Drivers and App Development
 {
     "code": "W003",
@@ -486,8 +530,7 @@ No astrajson for Drivers and App Development
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-cassandra-application-development
-{"documentId": "datastaxdevs-workshop-cassandra-application-development"}
+SUCCESS for datastaxdevs-workshop-cassandra-application-development
 No astrajson for Api and microservices
 {
     "code": "W004",
@@ -513,10 +556,8 @@ No astrajson for Api and microservices
         ]
     }
 }
-SUCCESS README for datastaxdevs-bootcamp-fullstack-apps-with-cassandra
-{"documentId": "datastaxdevs-bootcamp-fullstack-apps-with-cassandra"}
-SUCCESS README for datastaxdevs-workshop-storage-attached-indexes
-{"documentId": "datastaxdevs-workshop-storage-attached-indexes"}
+SUCCESS for datastaxdevs-bootcamp-fullstack-apps-with-cassandra
+SUCCESS for datastaxdevs-workshop-storage-attached-indexes
 No astrajson for Introduction to Machine Learning with Apache Spark and Apache Cassandra
 {
     "code": "W006",
@@ -548,10 +589,8 @@ No astrajson for Introduction to Machine Learning with Apache Spark and Apache C
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-introduction-to-machine-learning
-{"documentId": "datastaxdevs-workshop-introduction-to-machine-learning"}
-SUCCESS README for datastaxdevs-workshop-nosqlbench
-{"documentId": "datastaxdevs-workshop-nosqlbench"}
+SUCCESS for datastaxdevs-workshop-introduction-to-machine-learning
+SUCCESS for datastaxdevs-workshop-nosqlbench
 No astrajson for Kubernetes, K8ssandra
 {
     "code": "W008",
@@ -577,8 +616,11 @@ No astrajson for Kubernetes, K8ssandra
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-k8ssandra
-{"documentId": "datastaxdevs-workshop-k8ssandra"}
+SUCCESS for datastaxdevs-workshop-k8ssandra
+Added new tag apache-cassandra
+Added new tag kubernetes
+Added new tag k8ssandra
+Added new tag workshop
 No astrajson for BattleStax
 {
     "code": "W009",
@@ -604,8 +646,7 @@ No astrajson for BattleStax
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-battlestax
-{"documentId": "datastaxdevs-workshop-battlestax"}
+SUCCESS for datastaxdevs-workshop-battlestax
 No astrajson for Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certification
 {
     "code": "W010",
@@ -641,8 +682,7 @@ No astrajson for Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certif
         ]
     }
 }
-SUCCESS README for DataStax-Academy-workshop-cassandra-certification
-{"documentId": "DataStax-Academy-workshop-cassandra-certification"}
+SUCCESS for DataStax-Academy-workshop-cassandra-certification
 No astrajson for Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certification
 {
     "code": "W010",
@@ -679,8 +719,7 @@ No astrajson for Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certif
         ]
     }
 }
-SUCCESS README for DataStax-Academy-workshop-k8ssandra-certification
-{"documentId": "DataStax-Academy-workshop-k8ssandra-certification"}
+SUCCESS for DataStax-Academy-workshop-k8ssandra-certification
 No astrajson for Cassandra in the cloud
 {
     "code": "W011",
@@ -738,12 +777,12 @@ No astrajson for From SQL to NoSQL
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-sql-to-nosql-migration
-{"documentId": "datastaxdevs-workshop-sql-to-nosql-migration"}
-SUCCESS README for datastaxdevs-appdev-week1-todolist
-{"documentId": "datastaxdevs-appdev-week1-todolist"}
-SUCCESS README for datastaxdevs-workshop-social-media-tiktok
-{"documentId": "datastaxdevs-workshop-social-media-tiktok"}
+SUCCESS for datastaxdevs-workshop-sql-to-nosql-migration
+SUCCESS for datastaxdevs-appdev-week1-todolist
+SUCCESS for datastaxdevs-workshop-social-media-tiktok
+Added new tag cassandra
+Added new tag cassandra-database
+Added new tag netlify
 No astrajson for Netflix Application
 {
     "code": "W015",
@@ -769,8 +808,14 @@ No astrajson for Netflix Application
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-graphql-netflix
-{"documentId": "datastaxdevs-workshop-graphql-netflix"}
+SUCCESS for datastaxdevs-workshop-graphql-netflix
+Added new tag astradb
+Added new tag cassandra
+Added new tag gitpod
+Added new tag graphql
+Added new tag netlify
+Added new tag nosql
+Added new tag reactjs
 No astrajson for React Native
 {
     "code": "W016",
@@ -796,8 +841,7 @@ No astrajson for React Native
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-todo-native-mobile
-{"documentId": "datastaxdevs-workshop-todo-native-mobile"}
+SUCCESS for datastaxdevs-workshop-todo-native-mobile
 No astrajson for VueJS and TypeScript
 {
     "code": "W017",
@@ -823,8 +867,7 @@ No astrajson for VueJS and TypeScript
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-vuejs
-{"documentId": "datastaxdevs-workshop-vuejs"}
+SUCCESS for datastaxdevs-workshop-vuejs
 No astrajson for Introduction to GraphQL
 {
     "code": "W018",
@@ -853,8 +896,7 @@ No astrajson for Introduction to GraphQL
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-intro-to-graphql
-{"documentId": "datastaxdevs-workshop-intro-to-graphql"}
+SUCCESS for datastaxdevs-workshop-intro-to-graphql
 No astrajson for Introduction to NoSQL
 {
     "code": "W019",
@@ -886,8 +928,7 @@ No astrajson for Introduction to NoSQL
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-introduction-to-nosql
-{"documentId": "datastaxdevs-workshop-introduction-to-nosql"}
+SUCCESS for datastaxdevs-workshop-introduction-to-nosql
 No astrajson for Cassandra and Quarkus
 {
     "code": "W021",
@@ -913,8 +954,7 @@ No astrajson for Cassandra and Quarkus
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-intro-quarkus-cassandra
-{"documentId": "datastaxdevs-workshop-intro-quarkus-cassandra"}
+SUCCESS for datastaxdevs-workshop-intro-quarkus-cassandra
 No astrajson for Todo Application (Spring Data)
 {
     "code": "W022",
@@ -970,8 +1010,7 @@ No astrajson for eCommerce Application
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-ecommerce-app
-{"documentId": "datastaxdevs-workshop-ecommerce-app"}
+SUCCESS for datastaxdevs-workshop-ecommerce-app
 No astrajson for Stargate Wheel App (Spring Data)
 {
     "code": "W024",
@@ -997,8 +1036,7 @@ No astrajson for Stargate Wheel App (Spring Data)
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-spring-stargate
-{"documentId": "datastaxdevs-workshop-spring-stargate"}
+SUCCESS for datastaxdevs-workshop-spring-stargate
 No astrajson for PetClinic App (Spring, Reactive)
 {
     "code": "W025",
@@ -1024,8 +1062,13 @@ No astrajson for PetClinic App (Spring, Reactive)
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-spring-reactive
-{"documentId": "datastaxdevs-workshop-spring-reactive"}
+SUCCESS for datastaxdevs-workshop-spring-reactive
+Added new tag spring
+Added new tag reactive
+Added new tag gitpod
+Added new tag webflux
+Added new tag cassandra
+Added new tag astradb
 No astrajson for NLP as an API - Text classification using Keras, FastAPI and NoSQL
 {
     "code": "W026",
@@ -1057,8 +1100,7 @@ No astrajson for NLP as an API - Text classification using Keras, FastAPI and No
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-ai-as-api
-{"documentId": "datastaxdevs-workshop-ai-as-api"}
+SUCCESS for datastaxdevs-workshop-ai-as-api
 No astrajson for Build a Multiplayer Real-time Game with Astra Streaming
 {
     "code": "W027",
@@ -1090,10 +1132,17 @@ No astrajson for Build a Multiplayer Real-time Game with Astra Streaming
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-streaming-game
-{"documentId": "datastaxdevs-workshop-streaming-game"}
-SUCCESS README for datastaxdevs-workshop-betterreads
-{"documentId": "datastaxdevs-workshop-betterreads"}
+SUCCESS for datastaxdevs-workshop-streaming-game
+Added new tag workshop
+Added new tag game
+Added new tag pulsar
+Added new tag datastax
+SUCCESS for datastaxdevs-workshop-betterreads
+Added new tag spring-boot
+Added new tag cassandra-database
+Added new tag spring-mvc
+Added new tag spring-data
+Added new tag spring-security-oauth2
 No astrajson for Introduction to Streaming and CDC
 {
     "code": "W029",
@@ -1120,8 +1169,7 @@ No astrajson for Introduction to Streaming and CDC
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-intro-streaming-and-cdc
-{"documentId": "datastaxdevs-workshop-intro-streaming-and-cdc"}
+SUCCESS for datastaxdevs-workshop-intro-streaming-and-cdc
 No astrajson for Real-Time Data pipelines
 {
     "code": "W030",
@@ -1148,8 +1196,7 @@ No astrajson for Real-Time Data pipelines
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-realtime-data-pipelines
-{"documentId": "datastaxdevs-workshop-realtime-data-pipelines"}
+SUCCESS for datastaxdevs-workshop-realtime-data-pipelines
 No astrajson for Swift, IOS and Document API
 {
     "code": "W031",
@@ -1174,8 +1221,7 @@ No astrajson for Swift, IOS and Document API
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-IOS-Swift-Astra
-{"documentId": "datastaxdevs-workshop-IOS-Swift-Astra"}
+SUCCESS for datastaxdevs-workshop-IOS-Swift-Astra
 No astrajson for Quine and Astra DBIn progress 10/19
 {
     "code": "W032",
@@ -1200,8 +1246,7 @@ No astrajson for Quine and Astra DBIn progress 10/19
         ]
     }
 }
-SUCCESS README for datastaxdevs-workshop-streaming-graph-quine
-{"documentId": "datastaxdevs-workshop-streaming-graph-quine"}
+SUCCESS for datastaxdevs-workshop-streaming-graph-quine
 No astrajson for Quarkus Spring and Micronaut
 {
     "code": "W033",
@@ -1224,67 +1269,204 @@ No astrajson for Quarkus Spring and Micronaut
     },
     "readme": "<h1>weatherapp</h1>\n<p>Stargate Document API as TimeSeries DB for Weather Monitoring</p>\n<p>Stargate is a data gateway deployed between the client applications and a database. The Stargate Document API modifies and queries data stored as unstructured JSON documents in collections. This gives the application developers native json support without having to give up any of the reliability and scalability goodness of Cassandra. This Stargate Docs API lets most Cassandra distros (Cassandra 3.11, Cassandra 4.0, and DataStax Enterprise 6.8), work with JSON through a REST API. The deep dive details on how to the Stargate Docs API stores the json as C* column family within Cassandra are at https://stargate.io/2020/10/19/the-stargate-cassandra-documents-api.html.</p>\n<p>In this blog, you would see how to use the Stargate Docs API and build a simple TimeSeries DB for Weather monitoring on top of the DataStax Astra DB. The demo is restricted to the data model, data extraction, storage and retrieval queries for the Weather monitoring app.</p>\n<p>The retrieval queries for various reports are available as Postman collection at https://www.postman.com/datastax/workspace/stargate-cassandra/collection/24325908-23927518-65bd-4797-911b-e872931bb735?ctx=documentation </p>\n<h3>App Dev Framework ###</h3>\n<p>This is a <a href=\"https://nextjs.org/\">Next.js</a> project bootstrapped with <a href=\"https://github.com/vercel/next.js/tree/canary/packages/create-next-app\"><code>create-next-app</code></a>.</p>\n<h2>Running on local</h2>\n<ol>\n<li>\n<p>add the configuration params to <code>.env.local</code> </p>\n</li>\n<li>\n<p>run the development server:</p>\n</li>\n</ol>\n<p>```bash\nnpm run dev</p>\n<h1>or</h1>\n<p>yarn dev\n```</p>\n<p>Open <a href=\"http://localhost:3000\">http://localhost:3000</a> with your browser to see the result.</p>\n<p>You can start editing the page by modifying <code>pages/index.tsx</code>. The page auto-updates as you edit the file.</p>\n<p>The <code>pages/api</code> directory is mapped to <code>/api/*</code>. Files in this directory are treated as <a href=\"https://nextjs.org/docs/api-routes/introduction\">API routes</a> instead of React pages.</p>\n<h2>Learn More</h2>\n<p>To learn more about Next.js, take a look at the following resources:</p>\n<ul>\n<li><a href=\"https://nextjs.org/docs\">Next.js Documentation</a> - learn about Next.js features and API.</li>\n<li><a href=\"https://nextjs.org/learn\">Learn Next.js</a> - an interactive Next.js tutorial.</li>\n</ul>\n<p>You can check out <a href=\"https://github.com/vercel/next.js/\">the Next.js GitHub repository</a> - your feedback and contributions are welcome!</p>\n<h2>Deploy on Vercel</h2>\n<p>The easiest way to deploy your Next.js app is to use the <a href=\"https://vercel.com/new?utm_medium=default-template&amp;filter=next.js&amp;utm_source=create-next-app&amp;utm_campaign=create-next-app-readme\">Vercel Platform</a> from the creators of Next.js.</p>\n<p>Check out our <a href=\"https://nextjs.org/docs/deployment\">Next.js deployment documentation</a> for more details.</p>"
 }
-SUCCESS README for datastaxdevs-workshop-spring-quarkus-micronaut-cassandra
-{"documentId": "datastaxdevs-workshop-spring-quarkus-micronaut-cassandra"}
-SUCCESS README for DataStax-Examples-getting-started-with-astra-csharp
-{"documentId": "DataStax-Examples-getting-started-with-astra-csharp"}
-SUCCESS README for DataStax-Examples-getting-started-with-astra-java
-{"documentId": "DataStax-Examples-getting-started-with-astra-java"}
-SUCCESS README for DataStax-Examples-getting-started-with-astra-python
-{"documentId": "DataStax-Examples-getting-started-with-astra-python"}
-SUCCESS README for DataStax-Examples-azure-functions-nodejs
-{"documentId": "DataStax-Examples-azure-functions-nodejs"}
-SUCCESS README for DataStax-Examples-aws-lambda-nodejs
-{"documentId": "DataStax-Examples-aws-lambda-nodejs"}
-SUCCESS README for DataStax-Examples-google-cloud-functions-nodejs
-{"documentId": "DataStax-Examples-google-cloud-functions-nodejs"}
-SUCCESS README for DataStax-Examples-dsbulk-to-astra
-{"documentId": "DataStax-Examples-dsbulk-to-astra"}
-SUCCESS README for DataStax-Examples-astra-gatsbyjs-starter
-{"documentId": "DataStax-Examples-astra-gatsbyjs-starter"}
-SUCCESS README for DataStax-Examples-astra-next.js-starter
-{"documentId": "DataStax-Examples-astra-next.js-starter"}
+SUCCESS for datastaxdevs-workshop-spring-quarkus-micronaut-cassandra
+SUCCESS for DataStax-Examples-getting-started-with-astra-csharp
+Added new tag dev
+SUCCESS for DataStax-Examples-getting-started-with-astra-java
+Added new tag dev
+Added new tag java
+Added new tag spring
+Added new tag cassandra
+Added new tag java-driver
+Added new tag astra
+Added new tag datastax
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-getting-started-with-astra-python
+Added new tag dev
+Added new tag datastax
+Added new tag astra
+Added new tag python
+Added new tag flask
+Added new tag cassandra
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-azure-functions-nodejs
+Added new tag dev
+SUCCESS for DataStax-Examples-aws-lambda-nodejs
+Added new tag dev
+SUCCESS for DataStax-Examples-google-cloud-functions-nodejs
+Added new tag dev
+Added new tag astra
+Added new tag datastax
+Added new tag nodejs
+Added new tag google-cloud
+Added new tag serverless-framework
+Added new tag nodejs-driver
+Added new tag cassandra
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-dsbulk-to-astra
+Added new tag dev
+Added new tag datastax
+Added new tag astra
+Added new tag datastax-bulk-loader
+Added new tag cassandra
+Added new tag cql
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-astra-gatsbyjs-starter
+Added new tag astra
+Added new tag cassandra
+Added new tag cassandra-cql
+Added new tag jamstack
+Added new tag building-sample-apps
+Added new tag dev
+Added new tag examples
+SUCCESS for DataStax-Examples-astra-next.js-starter
+Added new tag building-sample-apps
+Added new tag dev
+Added new tag gitpod
+Added new tag rest-api
+Added new tag datastax
+Added new tag astra
+Added new tag nextjs
 ERROR for DataStax-Examples-java-framework-compare
-SUCCESS README for DataStax-Examples-Astra101Java
-{"documentId": "DataStax-Examples-Astra101Java"}
-SUCCESS README for DataStax-Examples-astra-spark-migration
-{"documentId": "DataStax-Examples-astra-spark-migration"}
-SUCCESS README for DataStax-Examples-astra-nodejs-starter
-{"documentId": "DataStax-Examples-astra-nodejs-starter"}
-SUCCESS README for DataStax-Examples-doom-patrol
-{"documentId": "DataStax-Examples-doom-patrol"}
-SUCCESS README for DataStax-Examples-sample-app-template
-{"documentId": "DataStax-Examples-sample-app-template"}
-SUCCESS README for DataStax-Examples-astra-loom
-{"documentId": "DataStax-Examples-astra-loom"}
-SUCCESS README for DataStax-Examples-glitch-astra-starter
-{"documentId": "DataStax-Examples-glitch-astra-starter"}
-SUCCESS README for DataStax-Examples-fastsite-console
-{"documentId": "DataStax-Examples-fastsite-console"}
-SUCCESS README for DataStax-Examples-nf-data-explorer
-{"documentId": "DataStax-Examples-nf-data-explorer"}
-SUCCESS README for DataStax-Examples-todo-native-mobile
-{"documentId": "DataStax-Examples-todo-native-mobile"}
-SUCCESS README for DataStax-Examples-django-cassandra-blog
-{"documentId": "DataStax-Examples-django-cassandra-blog"}
-SUCCESS README for DataStax-Examples-telco-billing-app
-{"documentId": "DataStax-Examples-telco-billing-app"}
-SUCCESS README for DataStax-Examples-astra-nextjs-tutorial
-{"documentId": "DataStax-Examples-astra-nextjs-tutorial"}
-SUCCESS README for DataStax-Examples-astra-nuxtjs-nestjs
-{"documentId": "DataStax-Examples-astra-nuxtjs-nestjs"}
-SUCCESS README for DataStax-Examples-python-website-scraper
-{"documentId": "DataStax-Examples-python-website-scraper"}
-SUCCESS README for DataStax-Examples-betterreads-webapp
-{"documentId": "DataStax-Examples-betterreads-webapp"}
-SUCCESS README for DataStax-Examples-ai-as-an-api
-{"documentId": "DataStax-Examples-ai-as-an-api"}
-SUCCESS README for DataStax-Examples-astra-ide-plugin
-{"documentId": "DataStax-Examples-astra-ide-plugin"}
-SUCCESS README for DataStax-Examples-rpg-astra
-{"documentId": "DataStax-Examples-rpg-astra"}
-SUCCESS README for DataStax-Examples-weatherapp
-{"documentId": "DataStax-Examples-weatherapp"}
+Added new tag java
+Added new tag spring
+Added new tag quarkus
+Added new tag micronaut
+Added new tag helidon
+Added new tag cassandra
+SUCCESS for DataStax-Examples-Astra101Java
+SUCCESS for DataStax-Examples-astra-spark-migration
+Added new tag building-sample-apps
+Added new tag dev
+Added new tag cassandra
+Added new tag spark
+Added new tag scala
+Added new tag astra
+Added new tag datastax
+SUCCESS for DataStax-Examples-astra-nodejs-starter
+Added new tag astra
+Added new tag datastax
+Added new tag dev
+Added new tag building-sample-apps
+Added new tag nodejs
+Added new tag cassandra
+Added new tag javascript
+SUCCESS for DataStax-Examples-doom-patrol
+Added new tag dev
+SUCCESS for DataStax-Examples-sample-app-template
+Added new tag template
+SUCCESS for DataStax-Examples-astra-loom
+Added new tag cassandra
+Added new tag elixir
+Added new tag dev
+Added new tag datastax
+Added new tag astra
+Added new tag gitpod
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-glitch-astra-starter
+Added new tag astra
+Added new tag building-sample-apps
+Added new tag dev
+Added new tag datastax
+Added new tag cassandra
+Added new tag javascript
+Added new tag nodejs
+Added new tag glitch
+SUCCESS for DataStax-Examples-fastsite-console
+Added new tag dev
+Added new tag datastax
+Added new tag astra
+Added new tag building-sample-apps
+Added new tag react
+Added new tag netlify
+Added new tag headless-cms
+SUCCESS for DataStax-Examples-nf-data-explorer
+Added new tag cassandra
+Added new tag dev
+Added new tag datastax
+Added new tag astra
+Added new tag netflix-data-explorer
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-todo-native-mobile
+Added new tag astra
+Added new tag datastax
+Added new tag react
+Added new tag react-native
+Added new tag ios
+Added new tag android
+Added new tag dev
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-django-cassandra-blog
+Added new tag datastax
+Added new tag astra
+Added new tag python
+Added new tag django
+Added new tag dev
+SUCCESS for DataStax-Examples-telco-billing-app
+Added new tag datastax
+Added new tag astra
+Added new tag react
+Added new tag javascript
+Added new tag netlify
+Added new tag gitpod
+Added new tag dev
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-astra-nextjs-tutorial
+Added new tag nextjs
+Added new tag eddiehub
+Added new tag datastax
+Added new tag astra
+Added new tag dev
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-astra-nuxtjs-nestjs
+Added new tag dev
+Added new tag astra
+Added new tag eddiehub
+Added new tag datastax
+Added new tag nuxtjs
+Added new tag nestjs
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-python-website-scraper
+Added new tag datastax
+Added new tag astra
+Added new tag python
+Added new tag selenium
+Added new tag fastapi
+Added new tag cassandra
+Added new tag dev
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-betterreads-webapp
+Added new tag dev
+Added new tag astra
+Added new tag java
+Added new tag spring
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-ai-as-an-api
+Added new tag astradb
+Added new tag machine-learning
+Added new tag python
+Added new tag fastapi
+Added new tag dev
+Added new tag building-sample-apps
+SUCCESS for DataStax-Examples-astra-ide-plugin
+Added new tag building-sample-apps
+Added new tag dev
+Added new tag jetbrains
+Added new tag astra
+SUCCESS for DataStax-Examples-rpg-astra
+Added new tag astra
+Added new tag netlify
+Added new tag javascript
+Added new tag react
+Added new tag building-sample-apps
+Added new tag dev
+SUCCESS for DataStax-Examples-weatherapp
+Added new tag dev
+Added new tag nextjs
+Added new tag typescript
+Added new tag astra
+Added new tag datastax
+Added new tag building-sample-apps
 SUCCESS for all
 {"documentId": "all"}
 SUCCESS for spring
@@ -1301,30 +1483,76 @@ SUCCESS for doc api
 {"documentId": "doc api"}
 SUCCESS for apps
 {"documentId": "apps"}
+SUCCESS for building-sample-apps
+{"documentId": "building-sample-apps"}
+SUCCESS for astra
+{"documentId": "astra"}
+SUCCESS for datastax
+{"documentId": "datastax"}
+SUCCESS for netlify
+{"documentId": "netlify"}
+SUCCESS for document-api
+{"documentId": "document-api"}
+SUCCESS for dev
+{"documentId": "dev"}
 SUCCESS for graphql api
 {"documentId": "graphql api"}
+SUCCESS for cassandra
+{"documentId": "cassandra"}
 SUCCESS for workshop
 {"documentId": "workshop"}
+SUCCESS for gitpod
+{"documentId": "gitpod"}
+SUCCESS for redux
+{"documentId": "redux"}
 SUCCESS for java
 {"documentId": "java"}
 SUCCESS for starters
 {"documentId": "starters"}
+SUCCESS for spring-data-cassandra
+{"documentId": "spring-data-cassandra"}
+SUCCESS for rest-api
+{"documentId": "rest-api"}
 SUCCESS for labs
 {"documentId": "labs"}
+SUCCESS for angular
+{"documentId": "angular"}
 SUCCESS for spark
 {"documentId": "spark"}
 SUCCESS for grpc api
 {"documentId": "grpc api"}
+SUCCESS for killrvideo
+{"documentId": "killrvideo"}
+SUCCESS for datastax-enterprise
+{"documentId": "datastax-enterprise"}
+SUCCESS for dse
+{"documentId": "dse"}
 SUCCESS for python
 {"documentId": "python"}
 SUCCESS for csharp
 {"documentId": "csharp"}
 SUCCESS for elixir
 {"documentId": "elixir"}
+SUCCESS for devops
+{"documentId": "devops"}
+SUCCESS for ansible-playbooks
+{"documentId": "ansible-playbooks"}
+SUCCESS for astra-data
+{"documentId": "astra-data"}
+SUCCESS for devops-apis
+{"documentId": "devops-apis"}
+SUCCESS for keyspaces
+{"documentId": "keyspaces"}
 SUCCESS for apache cassandra
 {"documentId": "apache cassandra"}
 SUCCESS for cql
 {"documentId": "cql"}
+SUCCESS for astradb
+{"documentId": "astradb"}
+SUCCESS for nosql
+{"documentId": "nosql"}
+SUCCESS for database
+{"documentId": "database"}
 SUCCESS for data modeling
 {"documentId": "data modeling"}
 SUCCESS for noyoutube
@@ -1335,46 +1563,104 @@ SUCCESS for ml
 {"documentId": "ml"}
 SUCCESS for performance testing
 {"documentId": "performance testing"}
+SUCCESS for apache-cassandra
+{"documentId": "apache-cassandra"}
+SUCCESS for kubernetes
+{"documentId": "kubernetes"}
+SUCCESS for k8ssandra
+{"documentId": "k8ssandra"}
 SUCCESS for certification
 {"documentId": "certification"}
-SUCCESS for nosql
-{"documentId": "nosql"}
 SUCCESS for rest api
 {"documentId": "rest api"}
-SUCCESS for cassandra
-{"documentId": "cassandra"}
+SUCCESS for cassandra-database
+{"documentId": "cassandra-database"}
+SUCCESS for reactjs
+{"documentId": "reactjs"}
+SUCCESS for reactive
+{"documentId": "reactive"}
+SUCCESS for webflux
+{"documentId": "webflux"}
 SUCCESS for ai
 {"documentId": "ai"}
 SUCCESS for streaming
 {"documentId": "streaming"}
+SUCCESS for game
+{"documentId": "game"}
+SUCCESS for pulsar
+{"documentId": "pulsar"}
+SUCCESS for spring-mvc
+{"documentId": "spring-mvc"}
+SUCCESS for spring-security-oauth2
+{"documentId": "spring-security-oauth2"}
 SUCCESS for change data capture
 {"documentId": "change data capture"}
 SUCCESS for graph
 {"documentId": "graph"}
 SUCCESS for c#
 {"documentId": "c"}
+SUCCESS for java-driver
+{"documentId": "java-driver"}
+SUCCESS for flask
+{"documentId": "flask"}
 SUCCESS for nodejs
 {"documentId": "nodejs"}
+SUCCESS for google-cloud
+{"documentId": "google-cloud"}
+SUCCESS for serverless-framework
+{"documentId": "serverless-framework"}
+SUCCESS for nodejs-driver
+{"documentId": "nodejs-driver"}
 SUCCESS for ds-bulk
 {"documentId": "ds-bulk"}
 SUCCESS for tools
 {"documentId": "tools"}
+SUCCESS for datastax-bulk-loader
+{"documentId": "datastax-bulk-loader"}
+SUCCESS for cassandra-cql
+{"documentId": "cassandra-cql"}
+SUCCESS for jamstack
+{"documentId": "jamstack"}
+SUCCESS for examples
+{"documentId": "examples"}
+SUCCESS for nextjs
+{"documentId": "nextjs"}
+SUCCESS for quarkus
+{"documentId": "quarkus"}
+SUCCESS for micronaut
+{"documentId": "micronaut"}
+SUCCESS for helidon
+{"documentId": "helidon"}
 SUCCESS for scala
 {"documentId": "scala"}
+SUCCESS for template
+{"documentId": "template"}
+SUCCESS for glitch
+{"documentId": "glitch"}
+SUCCESS for headless-cms
+{"documentId": "headless-cms"}
+SUCCESS for netflix-data-explorer
+{"documentId": "netflix-data-explorer"}
+SUCCESS for react-native
+{"documentId": "react-native"}
+SUCCESS for ios
+{"documentId": "ios"}
+SUCCESS for android
+{"documentId": "android"}
 SUCCESS for django
 {"documentId": "django"}
 SUCCESS for video
 {"documentId": "video"}
-SUCCESS for netlify
-{"documentId": "netlify"}
-SUCCESS for nextjs
-{"documentId": "nextjs"}
+SUCCESS for eddiehub
+{"documentId": "eddiehub"}
 SUCCESS for nuxtjs
 {"documentId": "nuxtjs"}
 SUCCESS for nestjs
 {"documentId": "nestjs"}
 SUCCESS for selenium
 {"documentId": "selenium"}
+SUCCESS for fastapi
+{"documentId": "fastapi"}
 SUCCESS for machine-learning
 {"documentId": "machine-learning"}
 SUCCESS for jetbrains
@@ -1383,3 +1669,5 @@ SUCCESS for stargate documents api
 {"documentId": "stargate documents api"}
 SUCCESS for timeseries db
 {"documentId": "timeseries db"}
+SUCCESS for typescript
+{"documentId": "typescript"}
