@@ -1,4 +1,5 @@
 Starting
+Refreshing creds
 Building service
 Getting sample application links
 Got sample application links
@@ -13,13 +14,31 @@ Getting information for datastax-examples-template
 Getting information for how-to-create-an-example
 Getting information for paging-graph-results-java
 Getting information for getting-started-with-astra-csharp
+Last modified is Thu, 03 Dec 2020 00:59:13 GMT
+SUCCESS README for Datastax-Examples-getting-started-with-astra-csharp
+{"documentId": "Datastax-Examples-getting-started-with-astra-csharp"}
 Getting information for getting-started-with-astra-ui
 Getting information for kafka-connector-sink-json
 Getting information for getting-started-with-astra-java
+Last modified is Sat, 01 Oct 2022 07:40:41 GMT
+SUCCESS README for Datastax-Examples-getting-started-with-astra-java
+{"documentId": "Datastax-Examples-getting-started-with-astra-java"}
 Getting information for getting-started-with-astra-python
+Last modified is Tue, 02 Aug 2022 05:27:00 GMT
+SUCCESS README for Datastax-Examples-getting-started-with-astra-python
+{"documentId": "Datastax-Examples-getting-started-with-astra-python"}
 Getting information for azure-functions-nodejs
+Last modified is Thu, 03 Dec 2020 01:11:59 GMT
+SUCCESS README for Datastax-Examples-azure-functions-nodejs
+{"documentId": "Datastax-Examples-azure-functions-nodejs"}
 Getting information for aws-lambda-nodejs
+Last modified is Thu, 15 Dec 2022 05:57:27 GMT
+SUCCESS README for Datastax-Examples-aws-lambda-nodejs
+{"documentId": "Datastax-Examples-aws-lambda-nodejs"}
 Getting information for google-cloud-functions-nodejs
+Last modified is Sat, 19 Nov 2022 04:04:05 GMT
+SUCCESS README for Datastax-Examples-google-cloud-functions-nodejs
+{"documentId": "Datastax-Examples-google-cloud-functions-nodejs"}
 Getting information for kafka-connector-sink-avro
 Getting information for cassandra-reactive-demo-java
 Getting information for gremlin-reference-guides
@@ -43,6 +62,9 @@ Getting information for switch-connection-java
 Getting information for prepared-statements-nodejs
 Getting information for object-mapper-java
 Getting information for dsbulk-to-astra
+Last modified is Tue, 08 Mar 2022 02:35:23 GMT
+SUCCESS README for Datastax-Examples-dsbulk-to-astra
+{"documentId": "Datastax-Examples-dsbulk-to-astra"}
 Getting information for object-mapper-csharp
 Getting information for linq-csharp
 Getting information for cluster-topology-java
@@ -63,41 +85,109 @@ Getting information for dc-latency-checker
 Getting information for ticker-demo-python
 Getting information for spring-k8s-cassandra-microservices
 Getting information for astra-gatsbyjs-starter
+Last modified is Tue, 08 Nov 2022 13:26:59 GMT
+SUCCESS README for Datastax-Examples-astra-gatsbyjs-starter
+{"documentId": "Datastax-Examples-astra-gatsbyjs-starter"}
 Getting information for query-diagnostics
 Getting information for astra-next.js-starter
+Last modified is Wed, 30 Nov 2022 13:19:29 GMT
+SUCCESS README for Datastax-Examples-astra-next.js-starter
+{"documentId": "Datastax-Examples-astra-next.js-starter"}
 Getting information for object-mapper-jvm
 Getting information for java-framework-compare
+Last modified is Thu, 10 Dec 2020 14:25:27 GMT
+ERROR for Datastax-Examples-java-framework-compare
 Getting information for all_astra_apis
 Getting information for Astra101Java
+Last modified is Thu, 03 Dec 2020 00:24:03 GMT
+SUCCESS README for Datastax-Examples-Astra101Java
+{"documentId": "Datastax-Examples-Astra101Java"}
 Getting information for astra-spark-migration
+Last modified is Mon, 15 Aug 2022 13:28:17 GMT
+SUCCESS README for Datastax-Examples-astra-spark-migration
+{"documentId": "Datastax-Examples-astra-spark-migration"}
 Getting information for sai-demo
 Getting information for crud-with-python-and-node
 Getting information for astra-nodejs-starter
+Last modified is Wed, 05 Jan 2022 18:23:43 GMT
+SUCCESS README for Datastax-Examples-astra-nodejs-starter
+{"documentId": "Datastax-Examples-astra-nodejs-starter"}
 Getting information for doom-patrol
+Last modified is Thu, 03 Dec 2020 01:38:16 GMT
+SUCCESS README for Datastax-Examples-doom-patrol
+{"documentId": "Datastax-Examples-doom-patrol"}
 Getting information for sample-app-template
+Last modified is Thu, 10 Nov 2022 10:21:49 GMT
+SUCCESS README for Datastax-Examples-sample-app-template
+{"documentId": "Datastax-Examples-sample-app-template"}
 Getting information for astradb-spring-rest
 Getting information for astra-loom
+Last modified is Sat, 26 Nov 2022 14:51:52 GMT
+SUCCESS README for Datastax-Examples-astra-loom
+{"documentId": "Datastax-Examples-astra-loom"}
 Getting information for glitch-astra-starter
+Last modified is Wed, 19 Oct 2022 15:31:59 GMT
+SUCCESS README for Datastax-Examples-glitch-astra-starter
+{"documentId": "Datastax-Examples-glitch-astra-starter"}
 Getting information for fastsite-console
+Last modified is Thu, 03 Feb 2022 13:17:40 GMT
+SUCCESS README for Datastax-Examples-fastsite-console
+{"documentId": "Datastax-Examples-fastsite-console"}
 Getting information for nf-data-explorer
+Last modified is Fri, 18 Nov 2022 10:44:27 GMT
+SUCCESS README for Datastax-Examples-nf-data-explorer
+{"documentId": "Datastax-Examples-nf-data-explorer"}
 Getting information for todo-native-mobile
+Last modified is Thu, 03 Feb 2022 12:53:47 GMT
+SUCCESS README for Datastax-Examples-todo-native-mobile
+{"documentId": "Datastax-Examples-todo-native-mobile"}
 Getting information for django-cassandra-blog
+Last modified is Mon, 24 Oct 2022 20:26:47 GMT
+SUCCESS README for Datastax-Examples-django-cassandra-blog
+{"documentId": "Datastax-Examples-django-cassandra-blog"}
 Getting information for telco-billing-app
+Last modified is Fri, 30 Sep 2022 09:42:47 GMT
+SUCCESS README for Datastax-Examples-telco-billing-app
+{"documentId": "Datastax-Examples-telco-billing-app"}
 Getting information for astra-nextjs-tutorial
+Last modified is Sat, 29 Oct 2022 17:05:48 GMT
+SUCCESS README for Datastax-Examples-astra-nextjs-tutorial
+{"documentId": "Datastax-Examples-astra-nextjs-tutorial"}
 Getting information for astra-nuxtjs-nestjs
+Last modified is Tue, 28 Sep 2021 13:21:03 GMT
+SUCCESS README for Datastax-Examples-astra-nuxtjs-nestjs
+{"documentId": "Datastax-Examples-astra-nuxtjs-nestjs"}
 Getting information for python-website-scraper
+Last modified is Tue, 26 Jul 2022 10:18:31 GMT
+SUCCESS README for Datastax-Examples-python-website-scraper
+{"documentId": "Datastax-Examples-python-website-scraper"}
 Getting information for betterreads-webapp
+Last modified is Wed, 05 Jan 2022 21:20:38 GMT
+SUCCESS README for Datastax-Examples-betterreads-webapp
+{"documentId": "Datastax-Examples-betterreads-webapp"}
 Getting information for cassandra-cicd-example
 Getting information for ai-as-an-api
+Last modified is Mon, 10 Jan 2022 14:59:50 GMT
+SUCCESS README for Datastax-Examples-ai-as-an-api
+{"documentId": "Datastax-Examples-ai-as-an-api"}
 Getting information for astra-samples-java-sdk
 Getting information for astra-samples-java
 Getting information for astra-ide-plugin
+Last modified is Fri, 28 Jan 2022 14:06:20 GMT
+SUCCESS README for Datastax-Examples-astra-ide-plugin
+{"documentId": "Datastax-Examples-astra-ide-plugin"}
 Getting information for rpg-astra
+Last modified is Sun, 20 Nov 2022 20:42:27 GMT
+SUCCESS README for Datastax-Examples-rpg-astra
+{"documentId": "Datastax-Examples-rpg-astra"}
 Getting information for spark-dsegf-identity-resolution
 Getting information for dscryptocommerce-astradb
 Getting information for spring-data-cassandra-dse
 Getting information for grpc-drivers-demo-java
 Getting information for weatherapp
+Last modified is Tue, 13 Dec 2022 23:22:21 GMT
+SUCCESS README for Datastax-Examples-weatherapp
+{"documentId": "Datastax-Examples-weatherapp"}
 No astrajson for astra spring boot starter
 {
     "name": "astra spring boot starter",
@@ -125,7 +215,20 @@ No astrajson for astra spring boot starter
         "noastrajson"
     ]
 }
-No README.md for HTTPie/Astra Katapod
+SUCCESS README for datastax-astra-sdk-java
+{"documentId": "datastax-astra-sdk-java"}
+SUCCESS README for DataStax-Examples-astra-tik-tok
+{"documentId": "DataStax-Examples-astra-tik-tok"}
+SUCCESS README for DataStax-Examples-astra-netflix
+{"documentId": "DataStax-Examples-astra-netflix"}
+SUCCESS README for DataStax-Examples-todo-astra-jamstack-netlify
+{"documentId": "DataStax-Examples-todo-astra-jamstack-netlify"}
+SUCCESS README for DataStax-Examples-battlestax
+{"documentId": "DataStax-Examples-battlestax"}
+SUCCESS README for DataStax-Examples-spring-data-starter
+{"documentId": "DataStax-Examples-spring-data-starter"}
+SUCCESS README for DataStax-Examples-spring-petclinic-reactive
+{"documentId": "DataStax-Examples-spring-petclinic-reactive"}
 No astrajson for Killrvideo Java
 {
     "name": "Killrvideo Java",
@@ -153,6 +256,8 @@ No astrajson for Killrvideo Java
         "noastrajson"
     ]
 }
+SUCCESS README for KillrVideo-killrvideo-java
+{"documentId": "KillrVideo-killrvideo-java"}
 No astrajson for Killrvideo Python
 {
     "name": "Killrvideo Python",
@@ -179,6 +284,8 @@ No astrajson for Killrvideo Python
         "noastrajson"
     ]
 }
+SUCCESS README for KillrVideo-killrvideo-python
+{"documentId": "KillrVideo-killrvideo-python"}
 No astrajson for Killrvideo CSharp
 {
     "name": "Killrvideo CSharp",
@@ -205,6 +312,8 @@ No astrajson for Killrvideo CSharp
         "noastrajson"
     ]
 }
+SUCCESS README for KillrVideo-killrvideo-csharp
+{"documentId": "KillrVideo-killrvideo-csharp"}
 No astrajson for Kiillrvideo NodeJS
 {
     "name": "Kiillrvideo NodeJS",
@@ -231,6 +340,8 @@ No astrajson for Kiillrvideo NodeJS
         "noastrajson"
     ]
 }
+SUCCESS README for KillrVideo-killrvideo-nodejs
+{"documentId": "KillrVideo-killrvideo-nodejs"}
 No astrajson for From driver 3x to 4x
 {
     "name": "From driver 3x to 4x",
@@ -255,6 +366,8 @@ No astrajson for From driver 3x to 4x
         "noastrajson"
     ]
 }
+SUCCESS README for DataStax-Examples-java-cassandra-driver-from3x-to4x
+{"documentId": "DataStax-Examples-java-cassandra-driver-from3x-to4x"}
 No astrajson for Ansible Demo
 {
     "name": "Ansible Demo",
@@ -278,6 +391,8 @@ No astrajson for Ansible Demo
         "noastrajson"
     ]
 }
+SUCCESS README for ds-steven-matison-astra-ansibile-demo
+{"documentId": "ds-steven-matison-astra-ansibile-demo"}
 No astrajson for How to use Ansible with Astra
 {
     "name": "How to use Ansible with Astra",
@@ -301,6 +416,10 @@ No astrajson for How to use Ansible with Astra
         "noastrajson"
     ]
 }
+SUCCESS README for msmygit-dse-titbits
+{"documentId": "msmygit-dse-titbits"}
+SUCCESS README for datastaxdevs-workshop-cassandra-fundamentals
+{"documentId": "datastaxdevs-workshop-cassandra-fundamentals"}
 No astrajson for Cassandra Data Modelling
 {
     "code": "W002",
@@ -334,6 +453,8 @@ No astrajson for Cassandra Data Modelling
         ]
     }
 }
+SUCCESS README for datastaxdevs-workshop-cassandra-data-modeling
+{"documentId": "datastaxdevs-workshop-cassandra-data-modeling"}
 No astrajson for Drivers and App Development
 {
     "code": "W003",
@@ -365,6 +486,8 @@ No astrajson for Drivers and App Development
         ]
     }
 }
+SUCCESS README for datastaxdevs-workshop-cassandra-application-development
+{"documentId": "datastaxdevs-workshop-cassandra-application-development"}
 No astrajson for Api and microservices
 {
     "code": "W004",
@@ -390,6 +513,10 @@ No astrajson for Api and microservices
         ]
     }
 }
+SUCCESS README for datastaxdevs-bootcamp-fullstack-apps-with-cassandra
+{"documentId": "datastaxdevs-bootcamp-fullstack-apps-with-cassandra"}
+SUCCESS README for datastaxdevs-workshop-storage-attached-indexes
+{"documentId": "datastaxdevs-workshop-storage-attached-indexes"}
 No astrajson for Introduction to Machine Learning with Apache Spark and Apache Cassandra
 {
     "code": "W006",
@@ -421,6 +548,10 @@ No astrajson for Introduction to Machine Learning with Apache Spark and Apache C
         ]
     }
 }
+SUCCESS README for datastaxdevs-workshop-introduction-to-machine-learning
+{"documentId": "datastaxdevs-workshop-introduction-to-machine-learning"}
+SUCCESS README for datastaxdevs-workshop-nosqlbench
+{"documentId": "datastaxdevs-workshop-nosqlbench"}
 No astrajson for Kubernetes, K8ssandra
 {
     "code": "W008",
@@ -446,6 +577,8 @@ No astrajson for Kubernetes, K8ssandra
         ]
     }
 }
+SUCCESS README for datastaxdevs-workshop-k8ssandra
+{"documentId": "datastaxdevs-workshop-k8ssandra"}
 No astrajson for BattleStax
 {
     "code": "W009",
@@ -471,4 +604,782 @@ No astrajson for BattleStax
         ]
     }
 }
+SUCCESS README for datastaxdevs-workshop-battlestax
+{"documentId": "datastaxdevs-workshop-battlestax"}
 No astrajson for Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certification
+{
+    "code": "W010",
+    "name": "Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certification",
+    "tags": [
+        "certification",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1E_s-doK5RXO3MvL8tc-v-dj5u0asUD9b"
+        ],
+        "github": [
+            "https://github.com/DataStax-Academy/workshop-cassandra-certification",
+            "https://github.com/DataStax-Academy/workshop-k8ssandra-certification"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973145"
+        ],
+        "abstract": [
+            "https://docs.google.com/document/d/1bVGQ85jz70uh4L7arkmwTWG_rRWPqOMbTlHXMY7wg-M/edit?usp=sharing",
+            "https://docs.google.com/document/d/1JZtIgFtSDXCnyR1-d6Gz-r7RkacMxT1W_u84hRxJCgs/edit?usp=sharing",
+            "https://docs.google.com/document/d/1JZtIgFtSDXCnyR1-d6Gz-r7RkacMxT1W_u84hRxJCgs/edit?usp=sharing"
+        ],
+        "youtube": [
+            "https://www.youtube.com/watch?v=ZA-NBczakqk",
+            "https://www.youtube.com/watch?v=JT1Dljbfmz8"
+        ]
+    }
+}
+SUCCESS README for DataStax-Academy-workshop-cassandra-certification
+{"documentId": "DataStax-Academy-workshop-cassandra-certification"}
+No astrajson for Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certification
+{
+    "code": "W010",
+    "name": "Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certification",
+    "tags": [
+        "certification",
+        "workshop",
+        "noastrajson",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1E_s-doK5RXO3MvL8tc-v-dj5u0asUD9b"
+        ],
+        "github": [
+            "https://github.com/DataStax-Academy/workshop-cassandra-certification",
+            "https://github.com/DataStax-Academy/workshop-k8ssandra-certification"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973145"
+        ],
+        "abstract": [
+            "https://docs.google.com/document/d/1bVGQ85jz70uh4L7arkmwTWG_rRWPqOMbTlHXMY7wg-M/edit?usp=sharing",
+            "https://docs.google.com/document/d/1JZtIgFtSDXCnyR1-d6Gz-r7RkacMxT1W_u84hRxJCgs/edit?usp=sharing",
+            "https://docs.google.com/document/d/1JZtIgFtSDXCnyR1-d6Gz-r7RkacMxT1W_u84hRxJCgs/edit?usp=sharing"
+        ],
+        "youtube": [
+            "https://www.youtube.com/watch?v=ZA-NBczakqk",
+            "https://www.youtube.com/watch?v=JT1Dljbfmz8"
+        ]
+    }
+}
+SUCCESS README for DataStax-Academy-workshop-k8ssandra-certification
+{"documentId": "DataStax-Academy-workshop-k8ssandra-certification"}
+No astrajson for Cassandra in the cloud
+{
+    "code": "W011",
+    "name": "Cassandra in the cloud",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1UE_ooWhnRf1trfuKhAy2eQg9lB8LUjH-"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-your-k8s-to-cloud"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973130"
+        ]
+    }
+}
+ERROR for datastaxdevs-workshop-your-k8s-to-cloud
+No astrajson for From SQL to NoSQL
+{
+    "code": "W012",
+    "name": "From SQL to NoSQL",
+    "tags": [
+        "nosql",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/AuVCajxCS0eXFYb2aCRqxA/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/AuVCajxCS0eXFYb2aCRqxA/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1KP6ltv8AwRBQNroaOTfMXv-o_NM8GJYa"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-sql-to-nosql-migration"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973105"
+        ],
+        "abstract": [
+            "https://docs.google.com/document/d/1C1lJpj_gkUsRtueL2JrY1S2M4fNdGSBe1M23l6Mlnjg/edit?usp=sharing"
+        ],
+        "youtube": [
+            "https://www.youtube.com/watch?v=tNvBjY8izSk"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-sql-to-nosql-migration
+{"documentId": "datastaxdevs-workshop-sql-to-nosql-migration"}
+SUCCESS README for datastaxdevs-appdev-week1-todolist
+{"documentId": "datastaxdevs-appdev-week1-todolist"}
+SUCCESS README for datastaxdevs-workshop-social-media-tiktok
+{"documentId": "datastaxdevs-workshop-social-media-tiktok"}
+No astrajson for Netflix Application
+{
+    "code": "W015",
+    "name": "Netflix Application",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/d3rt3TUlQw-GBb1ethVnzg/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/d3rt3TUlQw-GBb1ethVnzg/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1neLRpSiNxqQs_vEoDJ7l05KOVWJzu1CU"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-graphql-netflix"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1134150"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-graphql-netflix
+{"documentId": "datastaxdevs-workshop-graphql-netflix"}
+No astrajson for React Native
+{
+    "code": "W016",
+    "name": "React Native",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/7tNZR8zwQkS3gXVi0jLJ0w/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/7tNZR8zwQkS3gXVi0jLJ0w/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1QXerOGOImq-U_2nxwXuiBVMMOYS8Xe_n"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-todo-native-mobile"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973146"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-todo-native-mobile
+{"documentId": "datastaxdevs-workshop-todo-native-mobile"}
+No astrajson for VueJS and TypeScript
+{
+    "code": "W017",
+    "name": "VueJS and TypeScript",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/6-MkoHDYS1erN3aLT8n7gg/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/6-MkoHDYS1erN3aLT8n7gg/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1o-SeO00oyszgjWrMpjQ-DK4OpewTkaFQ"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-vuejs"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973147"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-vuejs
+{"documentId": "datastaxdevs-workshop-vuejs"}
+No astrajson for Introduction to GraphQL
+{
+    "code": "W018",
+    "name": "Introduction to GraphQL",
+    "tags": [
+        "graphql api",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/Wp93l6JnTUG6w-b7f6KT9w/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/Wp93l6JnTUG6w-b7f6KT9w/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1UEgbHHRPu5W79E5N6FO2emK424r3BSkH"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-intro-to-graphql"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1768638"
+        ],
+        "youtube": [
+            "https://www.youtube.com/watch?v=0yLysXQNJ1g"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-intro-to-graphql
+{"documentId": "datastaxdevs-workshop-intro-to-graphql"}
+No astrajson for Introduction to NoSQL
+{
+    "code": "W019",
+    "name": "Introduction to NoSQL",
+    "tags": [
+        "cassandra",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/LbRRYqXOQIanLfV05nP8Ow/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/LbRRYqXOQIanLfV05nP8Ow/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1XpYXADz39jP0NUwN4aq1_yyFqYCA12hq"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-introduction-to-nosql"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1710373"
+        ],
+        "abstract": [
+            "https://docs.google.com/presentation/d/1B2sEsHrQcjj7TxR9reNZLoJ0LI7NBgeMk1IpgVvF2jM/edit?usp=sharing"
+        ],
+        "youtube": [
+            "https://www.youtube.com/watch?v=rhzUrejsA4A"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-introduction-to-nosql
+{"documentId": "datastaxdevs-workshop-introduction-to-nosql"}
+No astrajson for Cassandra and Quarkus
+{
+    "code": "W021",
+    "name": "Cassandra and Quarkus",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://badgr.com/public/assertions/O_7Dcl7ySCiWJasmtnJaNw"
+        ],
+        "heroimage": "https://badgr.com/public/assertions/O_7Dcl7ySCiWJasmtnJaNw",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1wD15nv9KwwjtIVPrQ2YmejajcxLOilRj"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-intro-quarkus-cassandra"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1397809"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-intro-quarkus-cassandra
+{"documentId": "datastaxdevs-workshop-intro-quarkus-cassandra"}
+No astrajson for Todo Application (Spring Data)
+{
+    "code": "W022",
+    "name": "Todo Application (Spring Data)",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/6WpOvdPQR4CF5jcJf5tjEg/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/6WpOvdPQR4CF5jcJf5tjEg/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/167Mf0WSRTEhcD8tywONFZqWGd_-RQH-e"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-spring-data-cassandra"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973108"
+        ]
+    }
+}
+ERROR for datastaxdevs-workshop-spring-data-cassandra
+No astrajson for eCommerce Application
+{
+    "code": "W023",
+    "name": "eCommerce Application",
+    "tags": [
+        "java",
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/By3medzRRv6DYaPPJrOEyw/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/By3medzRRv6DYaPPJrOEyw/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1qRm2k12ugxH0H4ZnMKWYAARALcc-voch"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-ecommerce-app"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1495817"
+        ],
+        "abstract": [
+            "https://docs.google.com/presentation/d/1MgVCGoe31OjFrQkg0VaiQnTPPj6h0mPqlnanBHvPe0s/edit?usp=sharing"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-ecommerce-app
+{"documentId": "datastaxdevs-workshop-ecommerce-app"}
+No astrajson for Stargate Wheel App (Spring Data)
+{
+    "code": "W024",
+    "name": "Stargate Wheel App (Spring Data)",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://github.com/datastaxdevs/workshop-spring-stargate/raw/main/images/tutorials/badge.png?raw=true"
+        ],
+        "heroimage": "https://github.com/datastaxdevs/workshop-spring-stargate/raw/main/images/tutorials/badge.png?raw=true",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1-wAY_jtez3eNDKElovTPy_pCv6LIXeb1"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-spring-stargate"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973138"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-spring-stargate
+{"documentId": "datastaxdevs-workshop-spring-stargate"}
+No astrajson for PetClinic App (Spring, Reactive)
+{
+    "code": "W025",
+    "name": "PetClinic App (Spring, Reactive)",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/QNo4Nsq5QAyo7NJsgRY1Bg/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/QNo4Nsq5QAyo7NJsgRY1Bg/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1VzvQ2vbJQVoPU75E41NT2VnJliN4v3Or"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-spring-reactive"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973087"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-spring-reactive
+{"documentId": "datastaxdevs-workshop-spring-reactive"}
+No astrajson for NLP as an API - Text classification using Keras, FastAPI and NoSQL
+{
+    "code": "W026",
+    "name": "NLP as an API - Text classification using Keras, FastAPI and NoSQL",
+    "tags": [
+        "ai",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/Hx87KBhFTDK1BK1DUPRRPg/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/Hx87KBhFTDK1BK1DUPRRPg/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1bOYZsmF6l7M_qmgjizXRBrUhsSa-Fk2Z"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-ai-as-api"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1585505"
+        ],
+        "abstract": [
+            "https://docs.google.com/document/d/1ZzK86Zw7izsn5sgq1-n7tSVveqV0HPAuKtyQtwDGKrg/edit"
+        ],
+        "youtube": [
+            "https://www.youtube.com/watch?v=3LQBJP3JL6A"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-ai-as-api
+{"documentId": "datastaxdevs-workshop-ai-as-api"}
+No astrajson for Build a Multiplayer Real-time Game with Astra Streaming
+{
+    "code": "W027",
+    "name": "Build a Multiplayer Real-time Game with Astra Streaming",
+    "tags": [
+        "streaming",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/6EYVSdcSTfKyYnkXAZcmUw/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/6EYVSdcSTfKyYnkXAZcmUw/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/11BMPKnpCnEpTa5PCpNLbOuapP5X5Ze_P"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-streaming-game"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1432915"
+        ],
+        "abstract": [
+            "https://docs.google.com/presentation/d/17_D6IFIxgkzvCb59pdeI2zoMphKCNF45BwAdlAvoBo0/edit#slide=id.p"
+        ],
+        "youtube": [
+            "https://www.youtube.com/watch?v=jfOBPlcd9eA"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-streaming-game
+{"documentId": "datastaxdevs-workshop-streaming-game"}
+SUCCESS README for datastaxdevs-workshop-betterreads
+{"documentId": "datastaxdevs-workshop-betterreads"}
+No astrajson for Introduction to Streaming and CDC
+{
+    "code": "W029",
+    "name": "Introduction to Streaming and CDC",
+    "tags": [
+        "change data capture",
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/OE7vzm9cRHyD1WbDI2BXdQ/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/OE7vzm9cRHyD1WbDI2BXdQ/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1Ynj_SX6PS6p9XyUbIXnB03GYuRnjcNFM"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973152"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-intro-streaming-and-cdc
+{"documentId": "datastaxdevs-workshop-intro-streaming-and-cdc"}
+No astrajson for Real-Time Data pipelines
+{
+    "code": "W030",
+    "name": "Real-Time Data pipelines",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+            "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+        "slides": [
+            "https://drive.google.com/drive/u/1/folders/1ZpDnGf53rvCDovVOZMVf8UyphZTdTJhR"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-realtime-data-pipelines"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1858607"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-realtime-data-pipelines
+{"documentId": "datastaxdevs-workshop-realtime-data-pipelines"}
+No astrajson for Swift, IOS and Document API
+{
+    "code": "W031",
+    "name": "Swift, IOS and Document API",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "slides": [
+            "https://drive.google.com/drive/folders/1K6XtDFET9ujOzQKMHzK-RYNP2-ZSsjbF?usp=sharing"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-IOS-Swift-Astra"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1807858"
+        ],
+        "abstract": [
+            "https://docs.google.com/document/d/1KHysoOwoohnHnA8Qz5yMmk20cNZvupZr3Rh_DbUyXvw/edit#"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-IOS-Swift-Astra
+{"documentId": "datastaxdevs-workshop-IOS-Swift-Astra"}
+No astrajson for Quine and Astra DBIn progress 10/19
+{
+    "code": "W032",
+    "name": "Quine and Astra DBIn progress 10/19",
+    "tags": [
+        "graph",
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "badge": [
+            "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+            "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+        ],
+        "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+        "github": [
+            "https://github.com/datastaxdevs/workshop-streaming-graph-quine"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1884439"
+        ]
+    }
+}
+SUCCESS README for datastaxdevs-workshop-streaming-graph-quine
+{"documentId": "datastaxdevs-workshop-streaming-graph-quine"}
+No astrajson for Quarkus Spring and Micronaut
+{
+    "code": "W033",
+    "name": "Quarkus Spring and Micronaut",
+    "tags": [
+        "NOYOUTUBE",
+        "workshop",
+        "noastrajson"
+    ],
+    "urls": {
+        "slides": [
+            "https://drive.google.com/drive/u/0/folders/1tm2ynxcNv22TmhhbvXUpL4I4514WGgar"
+        ],
+        "github": [
+            "https://github.com/datastaxdevs/workshop-spring-quarkus-micronaut-cassandra"
+        ],
+        "menti": [
+            "https://www.mentimeter.com/app/folder/1973120"
+        ]
+    },
+    "readme": "<h1>weatherapp</h1>\n<p>Stargate Document API as TimeSeries DB for Weather Monitoring</p>\n<p>Stargate is a data gateway deployed between the client applications and a database. The Stargate Document API modifies and queries data stored as unstructured JSON documents in collections. This gives the application developers native json support without having to give up any of the reliability and scalability goodness of Cassandra. This Stargate Docs API lets most Cassandra distros (Cassandra 3.11, Cassandra 4.0, and DataStax Enterprise 6.8), work with JSON through a REST API. The deep dive details on how to the Stargate Docs API stores the json as C* column family within Cassandra are at https://stargate.io/2020/10/19/the-stargate-cassandra-documents-api.html.</p>\n<p>In this blog, you would see how to use the Stargate Docs API and build a simple TimeSeries DB for Weather monitoring on top of the DataStax Astra DB. The demo is restricted to the data model, data extraction, storage and retrieval queries for the Weather monitoring app.</p>\n<p>The retrieval queries for various reports are available as Postman collection at https://www.postman.com/datastax/workspace/stargate-cassandra/collection/24325908-23927518-65bd-4797-911b-e872931bb735?ctx=documentation </p>\n<h3>App Dev Framework ###</h3>\n<p>This is a <a href=\"https://nextjs.org/\">Next.js</a> project bootstrapped with <a href=\"https://github.com/vercel/next.js/tree/canary/packages/create-next-app\"><code>create-next-app</code></a>.</p>\n<h2>Running on local</h2>\n<ol>\n<li>\n<p>add the configuration params to <code>.env.local</code> </p>\n</li>\n<li>\n<p>run the development server:</p>\n</li>\n</ol>\n<p>```bash\nnpm run dev</p>\n<h1>or</h1>\n<p>yarn dev\n```</p>\n<p>Open <a href=\"http://localhost:3000\">http://localhost:3000</a> with your browser to see the result.</p>\n<p>You can start editing the page by modifying <code>pages/index.tsx</code>. The page auto-updates as you edit the file.</p>\n<p>The <code>pages/api</code> directory is mapped to <code>/api/*</code>. Files in this directory are treated as <a href=\"https://nextjs.org/docs/api-routes/introduction\">API routes</a> instead of React pages.</p>\n<h2>Learn More</h2>\n<p>To learn more about Next.js, take a look at the following resources:</p>\n<ul>\n<li><a href=\"https://nextjs.org/docs\">Next.js Documentation</a> - learn about Next.js features and API.</li>\n<li><a href=\"https://nextjs.org/learn\">Learn Next.js</a> - an interactive Next.js tutorial.</li>\n</ul>\n<p>You can check out <a href=\"https://github.com/vercel/next.js/\">the Next.js GitHub repository</a> - your feedback and contributions are welcome!</p>\n<h2>Deploy on Vercel</h2>\n<p>The easiest way to deploy your Next.js app is to use the <a href=\"https://vercel.com/new?utm_medium=default-template&amp;filter=next.js&amp;utm_source=create-next-app&amp;utm_campaign=create-next-app-readme\">Vercel Platform</a> from the creators of Next.js.</p>\n<p>Check out our <a href=\"https://nextjs.org/docs/deployment\">Next.js deployment documentation</a> for more details.</p>"
+}
+SUCCESS README for datastaxdevs-workshop-spring-quarkus-micronaut-cassandra
+{"documentId": "datastaxdevs-workshop-spring-quarkus-micronaut-cassandra"}
+SUCCESS README for DataStax-Examples-getting-started-with-astra-csharp
+{"documentId": "DataStax-Examples-getting-started-with-astra-csharp"}
+SUCCESS README for DataStax-Examples-getting-started-with-astra-java
+{"documentId": "DataStax-Examples-getting-started-with-astra-java"}
+SUCCESS README for DataStax-Examples-getting-started-with-astra-python
+{"documentId": "DataStax-Examples-getting-started-with-astra-python"}
+SUCCESS README for DataStax-Examples-azure-functions-nodejs
+{"documentId": "DataStax-Examples-azure-functions-nodejs"}
+SUCCESS README for DataStax-Examples-aws-lambda-nodejs
+{"documentId": "DataStax-Examples-aws-lambda-nodejs"}
+SUCCESS README for DataStax-Examples-google-cloud-functions-nodejs
+{"documentId": "DataStax-Examples-google-cloud-functions-nodejs"}
+SUCCESS README for DataStax-Examples-dsbulk-to-astra
+{"documentId": "DataStax-Examples-dsbulk-to-astra"}
+SUCCESS README for DataStax-Examples-astra-gatsbyjs-starter
+{"documentId": "DataStax-Examples-astra-gatsbyjs-starter"}
+SUCCESS README for DataStax-Examples-astra-next.js-starter
+{"documentId": "DataStax-Examples-astra-next.js-starter"}
+ERROR for DataStax-Examples-java-framework-compare
+SUCCESS README for DataStax-Examples-Astra101Java
+{"documentId": "DataStax-Examples-Astra101Java"}
+SUCCESS README for DataStax-Examples-astra-spark-migration
+{"documentId": "DataStax-Examples-astra-spark-migration"}
+SUCCESS README for DataStax-Examples-astra-nodejs-starter
+{"documentId": "DataStax-Examples-astra-nodejs-starter"}
+SUCCESS README for DataStax-Examples-doom-patrol
+{"documentId": "DataStax-Examples-doom-patrol"}
+SUCCESS README for DataStax-Examples-sample-app-template
+{"documentId": "DataStax-Examples-sample-app-template"}
+SUCCESS README for DataStax-Examples-astra-loom
+{"documentId": "DataStax-Examples-astra-loom"}
+SUCCESS README for DataStax-Examples-glitch-astra-starter
+{"documentId": "DataStax-Examples-glitch-astra-starter"}
+SUCCESS README for DataStax-Examples-fastsite-console
+{"documentId": "DataStax-Examples-fastsite-console"}
+SUCCESS README for DataStax-Examples-nf-data-explorer
+{"documentId": "DataStax-Examples-nf-data-explorer"}
+SUCCESS README for DataStax-Examples-todo-native-mobile
+{"documentId": "DataStax-Examples-todo-native-mobile"}
+SUCCESS README for DataStax-Examples-django-cassandra-blog
+{"documentId": "DataStax-Examples-django-cassandra-blog"}
+SUCCESS README for DataStax-Examples-telco-billing-app
+{"documentId": "DataStax-Examples-telco-billing-app"}
+SUCCESS README for DataStax-Examples-astra-nextjs-tutorial
+{"documentId": "DataStax-Examples-astra-nextjs-tutorial"}
+SUCCESS README for DataStax-Examples-astra-nuxtjs-nestjs
+{"documentId": "DataStax-Examples-astra-nuxtjs-nestjs"}
+SUCCESS README for DataStax-Examples-python-website-scraper
+{"documentId": "DataStax-Examples-python-website-scraper"}
+SUCCESS README for DataStax-Examples-betterreads-webapp
+{"documentId": "DataStax-Examples-betterreads-webapp"}
+SUCCESS README for DataStax-Examples-ai-as-an-api
+{"documentId": "DataStax-Examples-ai-as-an-api"}
+SUCCESS README for DataStax-Examples-astra-ide-plugin
+{"documentId": "DataStax-Examples-astra-ide-plugin"}
+SUCCESS README for DataStax-Examples-rpg-astra
+{"documentId": "DataStax-Examples-rpg-astra"}
+SUCCESS README for DataStax-Examples-weatherapp
+{"documentId": "DataStax-Examples-weatherapp"}
+SUCCESS for all
+{"documentId": "all"}
+SUCCESS for spring
+{"documentId": "spring"}
+SUCCESS for noastrajson
+{"documentId": "noastrajson"}
+SUCCESS for httpie
+{"documentId": "httpie"}
+SUCCESS for javascript
+{"documentId": "javascript"}
+SUCCESS for react
+{"documentId": "react"}
+SUCCESS for doc api
+{"documentId": "doc api"}
+SUCCESS for apps
+{"documentId": "apps"}
+SUCCESS for graphql api
+{"documentId": "graphql api"}
+SUCCESS for workshop
+{"documentId": "workshop"}
+SUCCESS for java
+{"documentId": "java"}
+SUCCESS for starters
+{"documentId": "starters"}
+SUCCESS for labs
+{"documentId": "labs"}
+SUCCESS for spark
+{"documentId": "spark"}
+SUCCESS for grpc api
+{"documentId": "grpc api"}
+SUCCESS for python
+{"documentId": "python"}
+SUCCESS for csharp
+{"documentId": "csharp"}
+SUCCESS for elixir
+{"documentId": "elixir"}
+SUCCESS for apache cassandra
+{"documentId": "apache cassandra"}
+SUCCESS for cql
+{"documentId": "cql"}
+SUCCESS for data modeling
+{"documentId": "data modeling"}
+SUCCESS for noyoutube
+{"documentId": "noyoutube"}
+SUCCESS for astra db
+{"documentId": "astra db"}
+SUCCESS for ml
+{"documentId": "ml"}
+SUCCESS for performance testing
+{"documentId": "performance testing"}
+SUCCESS for certification
+{"documentId": "certification"}
+SUCCESS for nosql
+{"documentId": "nosql"}
+SUCCESS for rest api
+{"documentId": "rest api"}
+SUCCESS for cassandra
+{"documentId": "cassandra"}
+SUCCESS for ai
+{"documentId": "ai"}
+SUCCESS for streaming
+{"documentId": "streaming"}
+SUCCESS for change data capture
+{"documentId": "change data capture"}
+SUCCESS for graph
+{"documentId": "graph"}
+SUCCESS for c#
+{"documentId": "c"}
+SUCCESS for nodejs
+{"documentId": "nodejs"}
+SUCCESS for ds-bulk
+{"documentId": "ds-bulk"}
+SUCCESS for tools
+{"documentId": "tools"}
+SUCCESS for scala
+{"documentId": "scala"}
+SUCCESS for django
+{"documentId": "django"}
+SUCCESS for video
+{"documentId": "video"}
+SUCCESS for netlify
+{"documentId": "netlify"}
+SUCCESS for nextjs
+{"documentId": "nextjs"}
+SUCCESS for nuxtjs
+{"documentId": "nuxtjs"}
+SUCCESS for nestjs
+{"documentId": "nestjs"}
+SUCCESS for selenium
+{"documentId": "selenium"}
+SUCCESS for machine-learning
+{"documentId": "machine-learning"}
+SUCCESS for jetbrains
+{"documentId": "jetbrains"}
+SUCCESS for stargate documents api
+{"documentId": "stargate documents api"}
+SUCCESS for timeseries db
+{"documentId": "timeseries db"}

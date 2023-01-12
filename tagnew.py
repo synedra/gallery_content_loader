@@ -23,6 +23,7 @@ astra_client = create_astra_client(astra_database_id=os.environ["ASTRA_DB_ID"],
                                    astra_database_region=os.environ["ASTRA_DB_REGION"],
                                    astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
 tag_collection = astra_client.collections.namespace("gallery").collection("tag_applications")
+readme_collection = astra_client.collections.namespace("gallery").collection("readme_applications")
 # using an access token
 f = open("github.token", "r")
 line = f.readlines()[0].replace("\n", "")
@@ -234,6 +235,7 @@ def main():
         reponame = url.split('/')[4]
         print ("Getting information for " + reponame)
         repo = g.get_repo('Datastax-Examples/' + reponame)
+        reposlug = 'Datastax-Examples-' + reponame
         try:
             astrajson = repo.get_contents("astra.json")
         except:
@@ -241,17 +243,19 @@ def main():
 
         entry = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), {"urls":{"github":[url]}})
         entry["last_modified"] = repo.last_modified
+        print("Last modified is " + repo.last_modified)
         entries.append(entry)
         try:
-            readme = repo.get_contents("README.md")
-            readmemd = json.loads(readme.decoded_content.decode())
-            html = markdown.markdown(readmemd)
-            soup = BeautifulSoup(html)
-            print(soup)
+            readmemd = repo.get_contents("README.md")
+            html = markdown.markdown(readmemd.decoded_content.decode())
+            entries[index]["readme"] = html
+            res = readme_collection.create(
+            document={"content":html}, path=reposlug)
+            print("SUCCESS README for " + reposlug)
+            print(json.dumps(res))
 
-        
         except:
-            continue
+            print("ERROR for " + reposlug)
 
 
     for index in range(len(entries)):
@@ -266,6 +270,7 @@ def main():
                 owner = url.split('/')[3]
                 reponame = url.split('/')[4]
                 repo = g.get_repo(owner + "/" + reponame)
+                reposlug = owner + "-" + reponame
                 try:
                     astrajson = repo.get_contents("astra.json")
                     entries[index] = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), entries[index])
@@ -275,13 +280,16 @@ def main():
                     entries[index]["tags"].append("noastrajson")
                     print ("No astrajson for " + entries[index]["name"])
                     print (json.dumps(entries[index], indent=4))
-                    continue
                 try:
                     readmemd = repo.get_contents("README.md")
                     html = markdown.markdown(readmemd.decoded_content.decode())
-                    entries[index]["readme"] = html
+                    #entries[index]["readme"] = html
+                    res = readme_collection.create(document={"content":html}, path=reposlug)
+                    print("SUCCESS README for " + reposlug)
+                    print(json.dumps(res))
+
                 except:
-                    print ("No README.md for " + entries[index]["name"])
+                    print("ERROR for " + reposlug)
 
     tagdict = {}
     tagdict["all"] = {}
@@ -308,16 +316,15 @@ def main():
     for tag in tagdict.keys():
         count = len(tagdict[tag]["apps"])
         tagdict[tag]["count"] = count
-        print(json.dumps(tagdict, indent=4))
 
         try:
             res = tag_collection.create(
                 document={"name": tag, "count": count, tag: tagdict[tag]}, path=tag)
-            print("SUCCESS")
-            print(res)
+            print("SUCCESS for " + tag)
+            print(json.dumps(res))
         except:
-            print("ERROR")
-            print(res)
+            print("ERROR for " + tag)
+            print(json.dumps(res))
 
 
 def cleanTags(tags):
