@@ -338,19 +338,31 @@ def cleanTags(tags):
     for tag in tags:
         if not (p.match(tag)):
             continue
-        if tag in ("doc api", "documentapi", "docapi", "document api"):
+        if tag in ("doc api", "document-api", "stargate documents api", "doc-api", "documentapi", "docapi", "document api"):
             tag = "doc api"
+        if tag in ("rest-api"):
+            tag = "rest api"
         if tag in ("grpc"):
             tag = "grpc api"
         if tag in ("gql api", "graphql"):
             tag = "graphql api"
-        if tag in ("nodejs", "nodejs driver"):
+        if tag in ("nodejs", "nodejs driver","nodejs-driver"):
             tag = "nodejs"
         if tag in ("python", "python driver"):
             tag = "python"
-        if tag in ("java", "java driver"):
+        if tag in ("java", "java driver", "java-driver"):
             tag = "java"
-        if tag in ("spring-boot", "spring-data", "spring", "spring-webflux"):
+        if tag in ("reactjs", "react-native"):
+            tag = "react"
+        if tag in ("ml", "machine-learning"):
+            tag = "machine learning"
+        if tag in ("datastax-enterprise"):
+            tag = "dse"
+        if tag in ("astra", "astra db"):
+            tag = "astradb"
+        if tag in ("apache cassandra", "cassandra-database","apache-cassandra"):
+            tag = "cassandra"
+        if tag in ("spring-data-cassandra","spring-mvc","spring-boot", "spring-data", "spring", "spring-webflux"):
             tag = "spring"
         if tag not in newtags:
             newtags.append(tag)

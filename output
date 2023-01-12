@@ -1,4 +1,5 @@
 Starting
+Refreshing creds
 Building service
 Getting sample application links
 Got sample application links
@@ -470,7 +471,7 @@ No astrajson for Cassandra Data Modelling
     "code": "W002",
     "name": "Cassandra Data Modelling",
     "tags": [
-        "apache cassandra",
+        "cassandra",
         "cql",
         "data modeling",
         "workshop",
@@ -563,7 +564,7 @@ No astrajson for Introduction to Machine Learning with Apache Spark and Apache C
     "code": "W006",
     "name": "Introduction to Machine Learning with Apache Spark and Apache Cassandra",
     "tags": [
-        "ml",
+        "machine learning",
         "workshop",
         "noastrajson"
     ],
@@ -1485,14 +1486,12 @@ SUCCESS for apps
 {"documentId": "apps"}
 SUCCESS for building-sample-apps
 {"documentId": "building-sample-apps"}
-SUCCESS for astra
-{"documentId": "astra"}
-SUCCESS for datastax
-{"documentId": "datastax"}
+SUCCESS for astradb
+{"documentId": "astradb"}
+SUCCESS for dse
+{"documentId": "dse"}
 SUCCESS for netlify
 {"documentId": "netlify"}
-SUCCESS for document-api
-{"documentId": "document-api"}
 SUCCESS for dev
 {"documentId": "dev"}
 SUCCESS for graphql api
@@ -1509,10 +1508,8 @@ SUCCESS for java
 {"documentId": "java"}
 SUCCESS for starters
 {"documentId": "starters"}
-SUCCESS for spring-data-cassandra
-{"documentId": "spring-data-cassandra"}
-SUCCESS for rest-api
-{"documentId": "rest-api"}
+SUCCESS for rest api
+{"documentId": "rest api"}
 SUCCESS for labs
 {"documentId": "labs"}
 SUCCESS for angular
@@ -1523,10 +1520,6 @@ SUCCESS for grpc api
 {"documentId": "grpc api"}
 SUCCESS for killrvideo
 {"documentId": "killrvideo"}
-SUCCESS for datastax-enterprise
-{"documentId": "datastax-enterprise"}
-SUCCESS for dse
-{"documentId": "dse"}
 SUCCESS for python
 {"documentId": "python"}
 SUCCESS for csharp
@@ -1543,12 +1536,8 @@ SUCCESS for devops-apis
 {"documentId": "devops-apis"}
 SUCCESS for keyspaces
 {"documentId": "keyspaces"}
-SUCCESS for apache cassandra
-{"documentId": "apache cassandra"}
 SUCCESS for cql
 {"documentId": "cql"}
-SUCCESS for astradb
-{"documentId": "astradb"}
 SUCCESS for nosql
 {"documentId": "nosql"}
 SUCCESS for database
@@ -1557,26 +1546,16 @@ SUCCESS for data modeling
 {"documentId": "data modeling"}
 SUCCESS for noyoutube
 {"documentId": "noyoutube"}
-SUCCESS for astra db
-{"documentId": "astra db"}
-SUCCESS for ml
-{"documentId": "ml"}
+SUCCESS for machine learning
+{"documentId": "machine learning"}
 SUCCESS for performance testing
 {"documentId": "performance testing"}
-SUCCESS for apache-cassandra
-{"documentId": "apache-cassandra"}
 SUCCESS for kubernetes
 {"documentId": "kubernetes"}
 SUCCESS for k8ssandra
 {"documentId": "k8ssandra"}
 SUCCESS for certification
 {"documentId": "certification"}
-SUCCESS for rest api
-{"documentId": "rest api"}
-SUCCESS for cassandra-database
-{"documentId": "cassandra-database"}
-SUCCESS for reactjs
-{"documentId": "reactjs"}
 SUCCESS for reactive
 {"documentId": "reactive"}
 SUCCESS for webflux
@@ -1589,8 +1568,6 @@ SUCCESS for game
 {"documentId": "game"}
 SUCCESS for pulsar
 {"documentId": "pulsar"}
-SUCCESS for spring-mvc
-{"documentId": "spring-mvc"}
 SUCCESS for spring-security-oauth2
 {"documentId": "spring-security-oauth2"}
 SUCCESS for change data capture
@@ -1599,8 +1576,6 @@ SUCCESS for graph
 {"documentId": "graph"}
 SUCCESS for c#
 {"documentId": "c"}
-SUCCESS for java-driver
-{"documentId": "java-driver"}
 SUCCESS for flask
 {"documentId": "flask"}
 SUCCESS for nodejs
@@ -1609,8 +1584,6 @@ SUCCESS for google-cloud
 {"documentId": "google-cloud"}
 SUCCESS for serverless-framework
 {"documentId": "serverless-framework"}
-SUCCESS for nodejs-driver
-{"documentId": "nodejs-driver"}
 SUCCESS for ds-bulk
 {"documentId": "ds-bulk"}
 SUCCESS for tools
@@ -1641,8 +1614,6 @@ SUCCESS for headless-cms
 {"documentId": "headless-cms"}
 SUCCESS for netflix-data-explorer
 {"documentId": "netflix-data-explorer"}
-SUCCESS for react-native
-{"documentId": "react-native"}
 SUCCESS for ios
 {"documentId": "ios"}
 SUCCESS for android
@@ -1661,12 +1632,8 @@ SUCCESS for selenium
 {"documentId": "selenium"}
 SUCCESS for fastapi
 {"documentId": "fastapi"}
-SUCCESS for machine-learning
-{"documentId": "machine-learning"}
 SUCCESS for jetbrains
 {"documentId": "jetbrains"}
-SUCCESS for stargate documents api
-{"documentId": "stargate documents api"}
 SUCCESS for timeseries db
 {"documentId": "timeseries db"}
 SUCCESS for typescript
