@@ -1,8 +1,11 @@
 from __future__ import print_function
 from github import Github
 
-import os.path
 import os
+import os.path
+
+from datetime import timedelta, date, datetime, timezone
+
 import json
 import re
 from bs4 import BeautifulSoup
@@ -24,243 +27,37 @@ astra_client = create_astra_client(astra_database_id=os.environ["ASTRA_DB_ID"],
                                    astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
 tag_collection = astra_client.collections.namespace("gallery").collection("tag_applications")
 readme_collection = astra_client.collections.namespace("gallery").collection("readme_applications")
+video_collection = astra_client.collections.namespace(
+    "gallery").collection("video_applications")
+
 # using an access token
-f = open("github.token", "r")
-line = f.readlines()[0].replace("\n", "")
-g = Github(line)
+
+g = Github(os.environ["GITHUB_TOKEN"])
 
 p = re.compile('[a-zA-Z]+')
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-
-# The ID and range of a sample spreadsheet.
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly','https://www.googleapis.com/auth/youtube.force-ssl',"https://www.googleapis.com/auth/youtube.readonly"]
 SAMPLE_SPREADSHEET_ID = '1vJSKJAa7EJ0s1Ksn_L_lgQGJI6-UMDqNngrQO4U4cEY'
 SAMPLE_RANGE_NAME = 'SampleApplicationMain'
-
 
 def main():
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.
     """
-    print("Starting")
-    entries = []
-    creds = None
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
-    # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            print("Refreshing creds")
-            try:
-                creds.refresh(Request())
-            except:
-                print("ERROR")
-        else:
-            print("Using creds")
-            flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
-            creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
-        with open('token.json', 'w') as token:
-            token.write(creds.to_json())
-    print("Building service")
-    service = build('sheets', 'v4', credentials=creds)
-    sheet = service.spreadsheets()
-
-    print("Getting sample application links")
-    # Call the Sheets API for SampleApplication links
-    result = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, ranges=SAMPLE_RANGE_NAME,
-                                        fields="sheets/data/rowData/values/hyperlink,sheets/data/rowData/values/textFormatRuns/format/link/uri").execute()
-    values = result.get('sheets', [])
-
-    sampleApplicationLinks = values[0]["data"][0]["rowData"]
-    print("Got sample application links")
-
-    print("Getting sample application items")
-    # Call the Sheets API for SampleApplication items
-    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-                                range=SAMPLE_RANGE_NAME).execute()
-    sampleApplicationItems = result.get('values', [])
-    print("Got sample application items")
-    # Workshop sheet for links
-    WORKSHOP_SAMPLE_RANGE_NAME = 'WorkshopCatalog'
-
-    print("Getting workshop links")
-    # Call the Sheets API for Workshop Links
-    result = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, ranges=WORKSHOP_SAMPLE_RANGE_NAME,
-                                        fields="sheets/data/rowData/values/hyperlink,sheets/data/rowData/values/textFormatRuns/format/link/uri").execute()
-    values = result.get('sheets', [])
-    workshopLinks = values[0]["data"][0]["rowData"]
-
-    print("Got workshop links")
-    print("Getting workshop items")
-    # Get the items for Workshops
-    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-                                range=WORKSHOP_SAMPLE_RANGE_NAME).execute()
-    workshopItems = result.get('values', [])
-    print("Got workshop items")
-    counter = 0
-    github = {}
-    for entry in sampleApplicationItems:
-        urls = {"heroimage":"https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"}
-        if counter == 0:
-            counter += 1
-            continue
-
-        counter += 1
-        summary = ""
-        if '\n' in entry[0]:
-            (name, summary) = entry[0].split('\n')
-        else:
-            if entry[0] == "":
-                continue
-            name = entry[0]
-
-        links = sampleApplicationLinks
-        if (len(links) > counter-1 and "values" in links[counter-1]):
-            urlcheck = links[counter-1]["values"]
-            getLinks(urlcheck, urls)
-
-        tags = []
-        language = []
-       # Language
-        if (entry[2] != [""]):
-            language = entry[2].split(",")
-            for item in language:
-                tags.append(item.lower())
-
-        # Stack should be an array
-        if (entry[3] != [""]):
-            stack = entry[3].split(",")
-            for item in stack:
-                tags.append(item.lower())
-
-        # APIs
-        entrynumber = 6
-        apiarray = []
-        for api in ["DATA", "DOC", "GQL", "CQL", "GRPC", "DB", "IAM", "STRM"]:
-            if entry[entrynumber] == 'TRUE':
-                apiarray.append(api)
-            entrynumber += 1
-
-        newtags = cleanTags(tags)
-
-        new_item = {
-            "name": name,
-            "summary": summary,
-            "urls": urls,
-            "language": language,
-            "stack": stack,
-            "usecases": entry[4],
-            "owner": entry[5],
-            "apis": apiarray,
-            "tags": newtags
-        }
-
-        entries.append(new_item)
-
-    counter = 0
-
-    for entry in workshopItems:
-        urls = {}
-        tags = []
-        if counter <= 1:
-            counter += 1
-            continue
-
-        if (len(entry) == 0):
-            continue
-        counter += 1
-        summary = ""
-
-        if '\n' in entry[0]:
-            (name, summary) = entry[0].split('\n')
-            code = ""
-        else:
-            code = entry[0]
-
-        links = workshopLinks
-
-        if (len(links) > counter-1 and "values" in links[counter-1]):
-            urlcheck = links[counter-1]["values"]
-            addurl = ""
-            getLinks(urlcheck, urls)
-
-        if (len(entry) >= 8):
-            taglist = entry[7].replace(',', "\n").split('\n')
-            for tag in taglist:
-                tags.append(tag.lower())
-
-        if "youtube" not in urls:
-            tags.append("NOYOUTUBE")
-
-        tags.append("workshop")
-        newtags = cleanTags(tags)
-
-        new_item = {
-            "code": code,
-            "name": entry[2].replace("\n", ""),
-            "tags": newtags,
-            "urls": urls
-        }
-        
-        entries.append(new_item)
-
-    githublinks = []
-    for index in range(len(entries)):
-        readme = ""
-        keys = {}
-        entry = entries[index]
-        if ("github" in entry["urls"]):
-            for url in entry["urls"]["github"]:
-                if "github" not in url or url in githublinks:
-                    continue
-                githublinks.append(url)
-                owner = url.split('/')[3]
-                reponame = url.split('/')[4]
-                repo = g.get_repo(owner + "/" + reponame)
-                # Get the README
-
-    # Just for fun, get all the repos for Datastax-Examples
-    organization = g.get_organization('Datastax-Examples')
-    for repo in organization.get_repos():
-        url = repo.raw_data["html_url"]
-        if url in githublinks:
-            continue
-        owner = url.split('/')[3]
-        reponame = url.split('/')[4]
-        print ("Getting information for " + reponame)
-        repo = g.get_repo('Datastax-Examples/' + reponame)
-        reposlug = 'Datastax-Examples-' + reponame
-        try:
-            astrajson = repo.get_contents("astra.json")
-        except:
-            continue
-
-        entry = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), {"urls":{"github":[url]}})
-        entry["last_modified"] = repo.last_modified
-        print("Last modified is " + repo.last_modified)
-        entries.append(entry)
-        try:
-            readmemd = repo.get_contents("README.md")
-            html = markdown.markdown(readmemd.decoded_content.decode())
-            entries[index]["readme"] = html
-            res = readme_collection.create(
-            document={"content":html}, path=reposlug)
-            print("SUCCESS README for " + reposlug)
-            print(json.dumps(res))
-
-        except:
-            print("ERROR for " + reposlug)
-
+    service, youtube = getCreds()
+    sampleApplicationItems, sampleApplicationLinks, workshopItems, workshopLinks = getWorksheetInfo(service)
+    
+    entries = processApplicationItems(sampleApplicationItems, sampleApplicationLinks, [])
+    entries = processWorkshopItems(workshopItems, workshopLinks, entries)
+    entries = processGithubOrganization('DatastaxDevs', entries)
+    entries = processGithubOrganization('Datastax-Examples', entries)
+    newvideos = recursiveSearch(youtube, '', [])
+    videos = getDBVideosRecursive(newvideos)
+    updateVideoStatistics(youtube, videos)
 
     for index in range(len(entries)):
         astrajson = ""
-        keys = {}
         entry = entries[index]
         if ("github" in entry["urls"]):
             for url in entry["urls"]["github"]:
@@ -271,15 +68,26 @@ def main():
                 reponame = url.split('/')[4]
                 repo = g.get_repo(owner + "/" + reponame)
                 reposlug = owner + "-" + reponame
+                entries[index]["last_modified"] = repo.last_modified
+                entry["stargazers"] = repo.stargazers_count
+                entry["forks"] = repo.forks_count
+
+                if repo.description:
+                    entries[index]["description"] = repo.description
+                astrajson = ""
                 try:
+                    print("Getting astra.json for " + owner + "/" + reponame + " at 277")
                     astrajson = repo.get_contents("astra.json")
-                    entries[index] = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), entries[index])
+                    print("Got astrajson")
                 except:
+                    print("No astra.json for " + owner + "/" + reponame + " at 281")
                     if ( "tags" not in entries[index]):
                         entries[index]["tags"] = []
                     entries[index]["tags"].append("noastrajson")
                     print ("No astrajson for " + entries[index]["name"])
-                    print (json.dumps(entries[index], indent=4))
+                if astrajson != "":
+                    entries[index] = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), entries[index])
+                            
                 try:
                     readmemd = repo.get_contents("README.md")
                     html = markdown.markdown(readmemd.decoded_content.decode())
@@ -291,15 +99,14 @@ def main():
                 try:
                     for tag in repo.get_topics():
                         entries[index]["tags"].append(tag)
-                        print ("Added new tag " + tag)
-
                 except:
-                    print("No tags for" + reposlug)
+                    print("No gh tags for" + reposlug)
                 entries[index]["tags"] = cleanTags(entries[index]["tags"])
 
     tagdict = {}
     tagdict["all"] = {}
     tagdict["all"]["apps"] = []
+    names = []
 
     for entry in entries:
         if "tags" in entry:
@@ -309,15 +116,10 @@ def main():
                         "name": tag.lower(), "apps": [entry]}
                 else:
                     tagdict[tag.lower()]["apps"].append(entry)
-
-    names = []
-
-    # Remove dupes in all
-    for tag in tagdict.keys():
-        for app in tagdict[tag]["apps"]:
-            if app["name"] not in names:
-                tagdict["all"]["apps"].append(app)
-                names.append(app["name"])
+                    if entry["name"] not in names:
+                        tagdict["all"]["apps"].append(entry)
+                        names.append(entry["name"])
+            
 
     for tag in tagdict.keys():
         count = len(tagdict[tag]["apps"])
@@ -366,8 +168,8 @@ def cleanTags(tags):
             tag = "spring"
         if tag not in newtags:
             newtags.append(tag)
+    
     return newtags
-
 
 def addURL(urlitem, index, urls):
     if index == 1:
@@ -395,7 +197,6 @@ def addURL(urlitem, index, urls):
         if "youtube" not in urls:
             urls["youtube"] = []
         urls["youtube"].append(urlitem)
-
 
 def getLinks(urlcheck, urls):
     for index in range(len(urlcheck)):
@@ -427,6 +228,11 @@ def astraJsonSettings(settings, entry):
             entry["urls"]["demo"] = [settings[key]]
         elif (key.upper() == "VERCELURL"):
             entry["urls"]["vercel"] = [settings[key]]
+        elif (key.upper() == "YOUTUBEURL"):
+            if  isinstance(settings[key], str):
+                entry["urls"]["youtube"] = [settings[key]]
+            else:
+                entry["urls"]["youtube"] = settings[key]
         elif (key.upper() == "TAGS"):
             for tag in settings["tags"]:
                 if ("name" in tag):
@@ -449,6 +255,261 @@ def astraJsonSettings(settings, entry):
         entry["tags"] = cleanTags(entry["tags"])
     return entry
 
+def getCreds():
+    print("Starting Creds")
+    entries = []
+    creds = None
+    # The file token.json stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    if os.path.exists('tokensheets.json'):
+        creds = Credentials.from_authorized_user_file('tokensheets.json', SCOPES)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            print("Refreshing creds")
+            try:
+                creds.refresh(Request())
+            except:
+                print("ERROR")
+        else:
+            print("Using creds")
+            flow = InstalledAppFlow.from_client_secrets_file(
+                os.environ['CLIENT_SECRET_FILE'], SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open('tokensheets.json', 'w') as token:
+            token.write(creds.to_json())
+    service = build('sheets', 'v4', credentials=creds)
+    youtube = build('youtube', 'v3', credentials=creds)
+    return service, youtube
+
+def getWorksheetInfo(service):   
+    sheet = service.spreadsheets()
+
+    print("Getting sample application links")
+    # Call the Sheets API for SampleApplication links
+    result = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, ranges=SAMPLE_RANGE_NAME,
+                                        fields="sheets/data/rowData/values/hyperlink,sheets/data/rowData/values/textFormatRuns/format/link/uri").execute()
+    values = result.get('sheets', [])
+
+    sampleApplicationLinks = values[0]["data"][0]["rowData"]
+    print("Got sample application links")
+
+    print("Getting sample application items")
+    # Call the Sheets API for SampleApplication items
+    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+                                range=SAMPLE_RANGE_NAME).execute()
+    sampleApplicationItems = result.get('values', [])
+    print("Got sample application items")
+    # Workshop sheet for links
+    WORKSHOP_SAMPLE_RANGE_NAME = 'WorkshopCatalog'
+
+    print("Getting workshop links")
+    # Call the Sheets API for Workshop Links
+    result = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, ranges=WORKSHOP_SAMPLE_RANGE_NAME,
+                                        fields="sheets/data/rowData/values/hyperlink,sheets/data/rowData/values/textFormatRuns/format/link/uri").execute()
+    values = result.get('sheets', [])
+    workshopLinks = values[0]["data"][0]["rowData"]
+
+    print("Got workshop links")
+    print("Getting workshop items")
+    # Get the items for Workshops
+    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
+                                range=WORKSHOP_SAMPLE_RANGE_NAME).execute()
+    workshopItems = result.get('values', [])
+    print("Got workshop items")
+ 
+    return (sampleApplicationItems, sampleApplicationLinks, workshopItems, workshopLinks)
+
+def processWorkshopItems(workshopItems, workshopLinks, entries):
+    counter = 0
+    for entry in workshopItems:
+        urls = {}
+        tags = []
+        if counter <= 1:
+            counter += 1
+            continue
+
+        if (len(entry) == 0):
+            continue
+        counter += 1
+        description = ""
+
+        
+        if '\n' in entry[0]:
+            (name, description) = entry[0].split('\n')
+            code = ""
+        else:
+            code = entry[0]
+
+        links = workshopLinks
+
+        if (len(links) > counter-1 and "values" in links[counter-1]):
+            urlcheck = links[counter-1]["values"]
+            addurl = ""
+            getLinks(urlcheck, urls)
+
+        if (len(entry) >= 8):
+            taglist = entry[7].replace(',', "\n").split('\n')
+            for tag in taglist:
+                tags.append(tag.lower())
+
+        tags.append("workshop")
+        newtags = cleanTags(tags)
+
+        new_item = {
+            "code": code,
+            "name": entry[2].replace("\n", ""),
+            "tags": newtags,
+            "urls": urls
+        }
+        
+        entries.append(new_item)
+    return entries
+
+
+def processApplicationItems(sampleApplicationItems, sampleApplicationLinks, entries):
+    counter = 0
+    for entry in sampleApplicationItems:
+        urls = {"heroimage":"https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"}
+        if counter == 0:
+            counter += 1
+            continue
+
+        counter += 1
+        description = ""
+        if '\n' in entry[0]:
+            (name, description) = entry[0].split('\n')
+        else:
+            if entry[0] == "":
+                continue
+            name = entry[0]
+
+        links = sampleApplicationLinks
+        if (len(links) > counter-1 and "values" in links[counter-1]):
+            urlcheck = links[counter-1]["values"]
+            getLinks(urlcheck, urls)
+
+        tags = []
+        language = []
+       # Language
+        if (entry[2] != [""]):
+            language = entry[2].split(",")
+            for item in language:
+                tags.append(item.lower())
+
+        # Stack should be an array
+        if (entry[3] != [""]):
+            stack = entry[3].split(",")
+            for item in stack:
+                tags.append(item.lower())
+
+        # APIs
+        entrynumber = 6
+        apiarray = []
+        for api in ["DATA", "DOC", "GQL", "CQL", "GRPC", "DB", "IAM", "STRM"]:
+            if entry[entrynumber] == 'TRUE':
+                apiarray.append(api)
+            entrynumber += 1
+
+        newtags = cleanTags(tags)
+
+        new_item = {
+            "name": name,
+            "description": description,
+            "urls": urls,
+            "language": language,
+            "stack": stack,
+            "usecases": entry[4],
+            "owner": entry[5],
+            "apis": apiarray,
+            "tags": newtags
+        }
+
+        entries.append(new_item)
+    return entries
+
+def processGithubOrganization(org, entries):
+    # Just for fun, get all the repos for Datastax-Examples
+    organization = g.get_organization(org)
+    for repo in organization.get_repos():
+        url = repo.raw_data["html_url"]
+        owner = url.split('/')[3]
+        reponame = url.split('/')[4]
+        print ("Getting information for " + reponame)
+        repo = g.get_repo(org + '/' + reponame)
+        reposlug = org + '-' + reponame
+        try:
+            astrajson = repo.get_contents("astra.json")
+        except:
+            continue
+
+        entry = {"urls":{"github":[url]}}
+        entries.append(entry)
+    return entries
+
+def updateVideoStatistics(youtube, videos):
+    for videoId in videos:
+        request = youtube.videos().list(
+            part="statistics",
+            id=videoId
+        )
+        response = request.execute()
+
+        try:
+            res = video_collection.create(
+                document=response["items"][0], path=videoId)
+            print("SUCCESS for " + videoId)
+            print(json.dumps(res))
+        except:
+            print("ERROR for " + videoId)
+            print(json.dumps(res))
+
+
+def getDBVideosRecursive(videos, pagestate=None):
+    res = None
+    if pagestate:
+        res = video_collection.find({}, {"page-state": pagestate})
+    else:
+        res = video_collection.find({})
+
+    for video in res["data"].values():
+        videos.append(video["id"])
+
+    return videos
+
+
+def recursiveSearch(youtube, nextPage, videos=[]):
+    lastweek = datetime.utcnow() - timedelta(7)
+    lastweek = lastweek.isoformat()[:-3]
+    lastweek = str(lastweek) + "Z"
+
+    if nextPage:
+        request = youtube.search().list(
+            part="id, snippet",
+            channelId="UCAIQY251avaMv7bBv5PCo-A",
+            pageToken=nextPage,
+            type="video",
+            publishedAfter=lastweek,
+            maxResults=50
+        )
+    else:
+        request = youtube.search().list(
+            part="id, snippet",
+            type="video",
+            channelId="UCAIQY251avaMv7bBv5PCo-A",
+
+            maxResults=50
+        )
+
+    response = request.execute()
+    for video in response['items']:
+        videos.append(video["id"]["videoId"])
+    if "nextPageToken" in response:
+        recursiveSearch(youtube, response['nextPageToken'], videos)
+
+    return (videos)
 
 if __name__ == '__main__':
     main()
