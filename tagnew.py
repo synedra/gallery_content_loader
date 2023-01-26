@@ -262,8 +262,8 @@ def getCreds():
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists('tokensheets.json'):
-        creds = Credentials.from_authorized_user_file('tokensheets.json', SCOPES)
+    if os.path.exists(os.environ['GOOGLE_TOKEN_FILE']):
+        creds = Credentials.from_authorized_user_file(os.environ['GOOGLE_TOKEN_FILE'], SCOPES)
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
@@ -278,7 +278,7 @@ def getCreds():
                 os.environ['CLIENT_SECRET_FILE'], SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('tokensheets.json', 'w') as token:
+        with open(os.environ['GOOGLE_TOKEN_FILE'], 'w') as token:
             token.write(creds.to_json())
     service = build('sheets', 'v4', credentials=creds)
     youtube = build('youtube', 'v3', credentials=creds)
