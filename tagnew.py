@@ -1,5 +1,8 @@
 from __future__ import print_function
 from github import Github
+from dotenv import load_dotenv
+
+load_dotenv()
 
 import os
 import os.path
@@ -52,6 +55,7 @@ def main():
     entries = processWorkshopItems(workshopItems, workshopLinks, entries)
     entries = processGithubOrganization('DatastaxDevs', entries)
     entries = processGithubOrganization('Datastax-Examples', entries)
+    # Add awesome-astra
     newvideos = recursiveSearch(youtube, '', [])
     videos = getDBVideosRecursive(newvideos)
     updateVideoStatistics(youtube, videos)
