@@ -8,11 +8,14 @@ import os
 import os.path
 
 from datetime import timedelta, date, datetime, timezone
-
+from slugify import slugify
 import json
 import re
 from bs4 import BeautifulSoup
 import markdown
+import pycmarkgfm
+import cmarkgfm
+from cmarkgfm.cmark import Options as cmarkgfmOptions
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -91,14 +94,30 @@ def main():
                     print ("No astrajson for " + entries[index]["name"])
                 if astrajson != "":
                     entries[index] = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), entries[index])
-                            
+
+                        
                 try:
                     readmemd = repo.get_contents("README.md")
-                    html = markdown.markdown(readmemd.decoded_content.decode())
-                    res = readme_collection.create(document={"content":html}, path=reposlug)
-                    print("SUCCESS for " + reposlug)
+                 
+                    html = cmarkgfm.github_flavored_markdown_to_html(readmemd.decoded_content.decode(), options=cmarkgfmOptions.CMARK_OPT_UNSAFE)
+                    newhtml = ""
+                    pattern=re.compile("((<h.>)(.+?)(<\/h.>))")
+
+                    for line in html.splitlines():
+                        match = pattern.search(line)
+                        if match:
+                            slug = slugify(match.group(3))
+                            anchorline = match.group(2) + '<a class="anchor" aria-hidden="true" id="' + slug + '"> </a>' + match.group(3) + match.group(4)
+
+                            line = line.replace(match.group(0), anchorline)
+                            print("REPLACED LINE WITH " + line)
+                        newhtml += line
+
+                    print("HTML FOR " + reposlug + newhtml)
+                    res = readme_collection.create(document={"content":newhtml}, path=reposlug)
+                    print("SUCCESS SAVING README for " + reposlug)
                 except:
-                    print("ERROR for " + reposlug)
+                    print("ERROR SAVING README for " + reposlug)
                 
                 try:
                     for tag in repo.get_topics():
@@ -456,7 +475,7 @@ def processGithubOrganization(org, entries):
 def updateVideoStatistics(youtube, videos):
     for videoId in videos:
         request = youtube.videos().list(
-            part="statistics",
+            part="statistics, liveStreamingDetails",
             id=videoId
         )
         response = request.execute()
@@ -465,7 +484,7 @@ def updateVideoStatistics(youtube, videos):
             res = video_collection.create(
                 document=response["items"][0], path=videoId)
             print("SUCCESS for " + videoId)
-            print(json.dumps(res))
+            print(json.dumps(response["items"][0]))
         except:
             print("ERROR for " + videoId)
             print(json.dumps(res))
