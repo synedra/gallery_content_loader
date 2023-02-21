@@ -1,67 +1,72 @@
 from __future__ import print_function
+from astrapy.client import create_astra_client
+from googleapiclient.errors import HttpError
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+from cmarkgfm.cmark import Options as cmarkgfmOptions
+import cmarkgfm
+import pycmarkgfm
+from mdx_gfm import GithubFlavoredMarkdownExtension
+import markdown
+from bs4 import BeautifulSoup
+import re
+import json
+from slugify import slugify
+from datetime import timedelta, date, datetime, timezone
+import requests
+import os.path
+import os
 from github import Github
 from dotenv import load_dotenv
 
 load_dotenv()
 
-import os
-import os.path
-
-from datetime import timedelta, date, datetime, timezone
-from slugify import slugify
-import json
-import re
-from bs4 import BeautifulSoup
-import markdown
-import pycmarkgfm
-import cmarkgfm
-from cmarkgfm.cmark import Options as cmarkgfmOptions
-
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-
-from astrapy.client import create_astra_client
-
-from astrapy.client import create_astra_client
-
 
 astra_client = create_astra_client(astra_database_id=os.environ["ASTRA_DB_ID"],
                                    astra_database_region=os.environ["ASTRA_DB_REGION"],
                                    astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
-tag_collection = astra_client.collections.namespace("gallery").collection("tag_applications")
-readme_collection = astra_client.collections.namespace("gallery").collection("readme_applications")
+tag_collection = astra_client.collections.namespace(
+    "gallery").collection("tag_applications")
+readme_collection = astra_client.collections.namespace(
+    "gallery").collection("readme_applications")
 video_collection = astra_client.collections.namespace(
     "gallery").collection("video_applications")
 
 # using an access token
+
+token = os.environ["GITHUB_TOKEN"]
+headers = {'Authorization': f'token {token}'}
 
 g = Github(os.environ["GITHUB_TOKEN"])
 
 p = re.compile('[a-zA-Z]+')
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly','https://www.googleapis.com/auth/youtube.force-ssl',"https://www.googleapis.com/auth/youtube.readonly"]
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly',
+    'https://www.googleapis.com/auth/youtube.force-ssl', "https://www.googleapis.com/auth/youtube.readonly"]
 SAMPLE_SPREADSHEET_ID = '1vJSKJAa7EJ0s1Ksn_L_lgQGJI6-UMDqNngrQO4U4cEY'
 SAMPLE_RANGE_NAME = 'SampleApplicationMain'
+
 
 def main():
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.
     """
     service, youtube = getCreds()
-    sampleApplicationItems, sampleApplicationLinks, workshopItems, workshopLinks = getWorksheetInfo(service)
-    
-    entries = processApplicationItems(sampleApplicationItems, sampleApplicationLinks, [])
+    sampleApplicationItems, sampleApplicationLinks, workshopItems, workshopLinks = getWorksheetInfo(
+        service)
+
+    entries = processApplicationItems(
+        sampleApplicationItems, sampleApplicationLinks, [])
     entries = processWorkshopItems(workshopItems, workshopLinks, entries)
     entries = processGithubOrganization('DatastaxDevs', entries)
     entries = processGithubOrganization('Datastax-Examples', entries)
     # Add awesome-astra
-    newvideos = recursiveSearch(youtube, '', [])
-    videos = getDBVideosRecursive(newvideos)
-    updateVideoStatistics(youtube, videos)
+    #newvideos = recursiveSearch(youtube, '', [])
+    #videos = getDBVideosRecursive(newvideos)
+    #updateVideoStatistics(youtube, videos)
 
     for index in range(len(entries)):
         astrajson = ""
@@ -70,7 +75,7 @@ def main():
             for url in entry["urls"]["github"]:
                 if "github" not in url:
                     continue
-                
+
                 owner = url.split('/')[3]
                 reponame = url.split('/')[4]
                 repo = g.get_repo(owner + "/" + reponame)
@@ -83,39 +88,71 @@ def main():
                     entries[index]["description"] = repo.description
                 astrajson = ""
                 try:
-                    print("Getting astra.json for " + owner + "/" + reponame + " at 277")
+                    print("Getting astra.json for " +
+                          owner + "/" + reponame + " at 277")
                     astrajson = repo.get_contents("astra.json")
                     print("Got astrajson")
                 except:
-                    print("No astra.json for " + owner + "/" + reponame + " at 281")
-                    if ( "tags" not in entries[index]):
+                    print("No astra.json for " + owner +
+                          "/" + reponame + " at 281")
+                    if ("tags" not in entries[index]):
                         entries[index]["tags"] = []
                     entries[index]["tags"].append("noastrajson")
-                    print ("No astrajson for " + entries[index]["name"])
+                    print("No astrajson for " + entries[index]["name"])
                 if astrajson != "":
-                    entries[index] = astraJsonSettings(json.loads(astrajson.decoded_content.decode()), entries[index])
+                    entries[index] = astraJsonSettings(json.loads(
+                        astrajson.decoded_content.decode()), entries[index])
 
-                        
+                # Direct conversion
+                options = (
+                        cmarkgfmOptions.CMARK_OPT_HARDBREAKS
+                        | cmarkgfmOptions.CMARK_OPT_UNSAFE
+                        | cmarkgfmOptions.CMARK_OPT_GITHUB_PRE_LANG
+                        )
                 try:
                     readmemd = repo.get_contents("README.md")
-                 
-                    html = cmarkgfm.github_flavored_markdown_to_html(readmemd.decoded_content.decode(), options=cmarkgfmOptions.CMARK_OPT_UNSAFE)
-                    newhtml = ""
-                    pattern=re.compile("((<h.>)(.+?)(<\/h.>))")
+                    html = cmarkgfm.github_flavored_markdown_to_html(readmemd.decoded_content.decode(), options)
+                    print("\n\n\nSTARTING HTML for " + reposlug + " : \n\n" + html)
+                    #html = markdown.markdown(readmemd.decoded_content.decode(),
+                    #     extensions=[GithubFlavoredMarkdownExtension(), 'pymdownx.highlight'])
 
+                    html = cmarkgfm.github_flavored_markdown_to_html(readmemd.decoded_content.decode(), options)
+                    newhtml = ""
+                    headerpattern = re.compile("((<h.>)(.+?)(<\/h.>))")
+                    srcpattern=re.compile("(src=\"(.+?)\")")
+                    httppattern = re.compile("http")
+                    linkpattern=re.compile("href=(\".+?\")")
+                    poundpattern=re.compile("(#)")
+
+                    
                     for line in html.splitlines():
-                        match = pattern.search(line)
+                        print ("Line is " + line)
+                        match = headerpattern.search(line)
                         if match:
                             slug = slugify(match.group(3))
                             anchorline = match.group(2) + '<a class="anchor" aria-hidden="true" id="' + slug + '"> </a>' + match.group(3) + match.group(4)
 
                             line = line.replace(match.group(0), anchorline)
-                            print("REPLACED LINE WITH " + line)
-                        newhtml += line
+                            print("REPLACE! Anchored header ")
 
-                    print("HTML FOR " + reposlug + newhtml)
-                    res = readme_collection.create(document={"content":newhtml}, path=reposlug)
-                    print("SUCCESS SAVING README for " + reposlug)
+                        srcmatch = srcpattern.search(line)
+                        httpmatch = httppattern.search(line)
+                        if srcmatch and not httpmatch:
+                            replace = "https://github.com/" + owner + "/" + reponame + "/raw/master/" +  srcmatch.group(2)
+                            line = line.replace(srcmatch.group(2), replace)
+                            print("REPLACE! Full path for src")
+
+                        linkmatch = linkpattern.search(line)
+                        if linkmatch:
+                            replace = linkmatch.group(1) + " target=\"_blank\""
+                            line = line.replace(linkmatch.group(1), replace)
+                            print("REPLACE! Target=blank" + line)
+                        
+                        newhtml += line + "\n"
+
+                        print("HTML FOR " + reposlug + newhtml)
+                        res = readme_collection.create(document={"content":newhtml}, path=reposlug)
+                        print("SUCCESS SAVING README for " + reposlug)
                 except:
                     print("ERROR SAVING README for " + reposlug)
                 
