@@ -23,7 +23,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 astra_client = create_astra_client(astra_database_id=os.environ["ASTRA_DB_ID"],
                                    astra_database_region=os.environ["ASTRA_DB_REGION"],
                                    astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
