@@ -18,14 +18,25 @@ from datetime import timedelta, date, datetime, timezone
 import requests
 import os.path
 import os
-from github import Github
+from octohub.connection import Connection
+conn = Connection('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')
+
 from dotenv import load_dotenv
 
 load_dotenv()
 
-astra_client = create_astra_client(astra_database_id=os.environ["ASTRA_DB_ID"],
+if os.environ["ASTRA_DEV_DB_URL"]:
+    astra_client = create_astra_client(base_url=os.environ["ASTRA_DEV_DB_URL"],
+                                   astra_database_id=os.environ["ASTRA_DB_ID"],
                                    astra_database_region=os.environ["ASTRA_DB_REGION"],
                                    astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
+else:
+    astra_client = create_astra_client(
+                                    astra_database_id=os.environ["ASTRA_DB_ID"],
+                                    astra_database_region=os.environ["ASTRA_DB_REGION"],
+                                    astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
+
+
 tag_collection = astra_client.collections.namespace(
     "gallery").collection("tag_applications")
 readme_collection = astra_client.collections.namespace(
@@ -37,8 +48,6 @@ video_collection = astra_client.collections.namespace(
 
 token = os.environ["GITHUB_TOKEN"]
 headers = {'Authorization': f'token {token}'}
-
-g = Github(os.environ["GITHUB_TOKEN"])
 
 p = re.compile('[a-zA-Z]+')
 
@@ -70,37 +79,38 @@ def main():
     for index in range(len(entries)):
         astrajson = ""
         entry = entries[index]
+        if "tags" not in entry:
+            entry["tags"] = []
+            
         if ("github" in entry["urls"]):
             for url in entry["urls"]["github"]:
                 if "github" not in url:
                     continue
-
                 owner = url.split('/')[3]
                 reponame = url.split('/')[4]
-                repo = g.get_repo(owner + "/" + reponame)
-                reposlug = owner + "-" + reponame
-                entries[index]["last_modified"] = repo.last_modified
-                entry["stargazers"] = repo.stargazers_count
-                entry["forks"] = repo.forks_count
 
-                if repo.description:
-                    entries[index]["description"] = repo.description
+                uri = '/repos/' + owner + '/' + reponame
+                print (uri)
+
+                repo = conn.send('GET', uri)
+                entry["last_modified"] = repo.parsed.updated_at
+                entry["stargazers"] = repo.parsed.stargazers_count
+                entry["forks"] = repo.parsed.forks_count
+                if repo.parsed.description:
+                    entry["description"] = repo.parsed.description
+
+                uri = '/repos/' + owner + '/' + reponame
+                print (uri)
+
+                reposlug = owner + "-" + reponame
+                
                 astrajson = ""
-                try:
-                    print("Getting astra.json for " +
-                          owner + "/" + reponame + " at 277")
-                    astrajson = repo.get_contents("astra.json")
-                    print("Got astrajson")
-                except:
-                    print("No astra.json for " + owner +
-                          "/" + reponame + " at 281")
-                    if ("tags" not in entries[index]):
-                        entries[index]["tags"] = []
-                    entries[index]["tags"].append("noastrajson")
-                    print("No astrajson for " + entries[index]["name"])
-                if astrajson != "":
-                    entries[index] = astraJsonSettings(json.loads(
-                        astrajson.decoded_content.decode()), entries[index])
+                print("Getting astra.json for " +
+                          owner + "/" + reponame + " at 99")
+                astrajson = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/main/astra.json')
+                if (astrajson.status_code != 404):
+                    entry = astraJsonSettings(json.loads(
+                        astrajson.text), entry)
 
                 # Direct conversion
                 options = (
@@ -109,13 +119,13 @@ def main():
                         | cmarkgfmOptions.CMARK_OPT_GITHUB_PRE_LANG
                         )
                 try:
-                    readmemd = repo.get_contents("README.md")
-                    html = cmarkgfm.github_flavored_markdown_to_html(readmemd.decoded_content.decode(), options)
-                    print("\n\n\nSTARTING HTML for " + reposlug + " : \n\n" + html)
-                    #html = markdown.markdown(readmemd.decoded_content.decode(),
-                    #     extensions=[GithubFlavoredMarkdownExtension(), 'pymdownx.highlight'])
-
-                    html = cmarkgfm.github_flavored_markdown_to_html(readmemd.decoded_content.decode(), options)
+                    readme = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/main/README.md')
+                    if readme.status_code == 404:
+                        readme = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/master/README.md')
+                    
+                    html = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
+                    #print("\n\n\nSTARTING HTML for " + reposlug + " : \n\n" + html)
+                    
                     newhtml = ""
                     headerpattern = re.compile("((<h.>)(.+?)(<\/h.>))")
                     srcpattern=re.compile("(src=\"(.+?)\")")
@@ -125,33 +135,29 @@ def main():
 
                     
                     for line in html.splitlines():
-                        print ("Line is " + line)
                         match = headerpattern.search(line)
                         if match:
                             slug = slugify(match.group(3))
                             anchorline = match.group(2) + '<a class="anchor" aria-hidden="true" id="' + slug + '"> </a>' + match.group(3) + match.group(4)
 
                             line = line.replace(match.group(0), anchorline)
-                            print("REPLACE! Anchored header ")
 
                         srcmatch = srcpattern.search(line)
                         httpmatch = httppattern.search(line)
                         if srcmatch and not httpmatch:
                             replace = "https://github.com/" + owner + "/" + reponame + "/raw/master/" +  srcmatch.group(2)
                             line = line.replace(srcmatch.group(2), replace)
-                            print("REPLACE! Full path for src")
 
                         linkmatch = linkpattern.search(line)
                         if linkmatch:
                             replace = linkmatch.group(1) + " target=\"_blank\""
                             line = line.replace(linkmatch.group(1), replace)
-                            print("REPLACE! Target=blank" + line)
                         
                         newhtml += line + "\n"
 
-                        print("HTML FOR " + reposlug + newhtml)
-                        res = readme_collection.create(document={"content":newhtml}, path=reposlug)
-                        print("SUCCESS SAVING README for " + reposlug)
+                    print("HTML FOR " + reposlug)
+                    res = readme_collection.create(document={"content":newhtml}, path=reposlug)
+                    print("SUCCESS SAVING README for " + reposlug)
                 except:
                     print("ERROR SAVING README for " + reposlug)
                 
@@ -490,17 +496,20 @@ def processApplicationItems(sampleApplicationItems, sampleApplicationLinks, entr
     return entries
 
 def processGithubOrganization(org, entries):
-    # Just for fun, get all the repos for Datastax-Examples
-    organization = g.get_organization(org)
-    for repo in organization.get_repos():
-        url = repo.raw_data["html_url"]
-        owner = url.split('/')[3]
-        reponame = url.split('/')[4]
-        print ("Getting information for " + reponame)
-        repo = g.get_repo(org + '/' + reponame)
-        reposlug = org + '-' + reponame
+    uri = '/orgs/' + org + '/repos'
+
+    repos = conn.send('GET', uri)
+
+    for repo in repos.parsed:
+        owner = repo.owner.login
+        reponame = repo.name
+        url = repo.html_url
+        reposlug = owner + '-' + reponame
+
         try:
-            astrajson = repo.get_contents("astra.json")
+            astrajson_path = "/repos/" + owner + "/" + reponame + "/contents/astra.json"
+            astrajson = conn.send('GET', astrajson_path)
+            astraparsed = astrajson.parsed
         except:
             continue
 
