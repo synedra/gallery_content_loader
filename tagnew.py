@@ -19,12 +19,12 @@ import requests
 import os.path
 import os
 from octohub.connection import Connection
-conn = Connection(os.environ["GITHUB_TOKEN"])
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
+conn = Connection(os.environ["GITHUB_TOKEN"])
 if os.environ["ASTRA_DEV_DB_URL"]:
     astra_client = create_astra_client(base_url=os.environ["ASTRA_DEV_DB_URL"],
                                    astra_database_id=os.environ["ASTRA_DB_ID"],
