@@ -19,7 +19,7 @@ import requests
 import os.path
 import os
 from octohub.connection import Connection
-conn = Connection('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')
+conn = Connection(os.environ["GITHUB_TOKEN"])
 
 from dotenv import load_dotenv
 
@@ -81,7 +81,7 @@ def main():
         entry = entries[index]
         if "tags" not in entry:
             entry["tags"] = []
-            
+
         if ("github" in entry["urls"]):
             for url in entry["urls"]["github"]:
                 if "github" not in url:
