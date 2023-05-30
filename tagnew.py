@@ -37,12 +37,9 @@ else:
                                     astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
 
 
-tag_collection = astra_client.collections.namespace(
-    "gallery").collection("tag_applications")
-readme_collection = astra_client.collections.namespace(
-    "gallery").collection("readme_applications")
-video_collection = astra_client.collections.namespace(
-    "gallery").collection("video_applications")
+applications = {}
+readmes = {}
+videos = {}
 
 # using an access token
 
@@ -57,11 +54,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly',
 SAMPLE_SPREADSHEET_ID = '1vJSKJAa7EJ0s1Ksn_L_lgQGJI6-UMDqNngrQO4U4cEY'
 SAMPLE_RANGE_NAME = 'SampleApplicationMain'
 
-
 def main():
-    """Shows basic usage of the Sheets API.
-    Prints values from a sample spreadsheet.
-    """
     service, youtube = getCreds()
     sampleApplicationItems, sampleApplicationLinks, workshopItems, workshopLinks = getWorksheetInfo(
         service)
@@ -72,9 +65,9 @@ def main():
     entries = processGithubOrganization('DatastaxDevs', entries)
     entries = processGithubOrganization('Datastax-Examples', entries)
     # Add awesome-astra
-    #newvideos = recursiveSearch(youtube, '', [])
-    #videos = getDBVideosRecursive(newvideos)
-    #updateVideoStatistics(youtube, videos)
+    newvideos = recursiveSearch(youtube, '', [])
+    videos = getDBVideosRecursive(newvideos)
+    updateVideoStatistics(youtube, videos)
 
     for index in range(len(entries)):
         astrajson = ""
@@ -174,6 +167,7 @@ def main():
     names = []
 
     for entry in entries:
+        
         if "tags" in entry:
             for tag in entry["tags"]:
                 if tag.lower() not in tagdict.keys():
