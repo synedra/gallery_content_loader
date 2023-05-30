@@ -73,8 +73,8 @@ def main():
     entries = processGithubOrganization('DatastaxDevs', entries)
     entries = processGithubOrganization('Datastax-Examples', entries)
     # Add awesome-astra
-    newvideos = recursiveSearch(youtube, '', [])
-    videos =updateVideoStatistics(youtube, newvideos)
+#    newvideos = recursiveSearch(youtube, '', [])
+#    videos =updateVideoStatistics(youtube, newvideos)
 
     readmeJson = {}
     for index in range(len(entries)):
@@ -139,39 +139,42 @@ def main():
                     readme = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/main/README.md')
                     if readme.status_code == 404:
                         readme = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/master/README.md')
-                    
+                    print (readme.text)
                     html = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
-                    #print("\n\n\nSTARTING HTML for " + reposlug + " : \n\n" + html)
+                except:
+                    print("Error getting/converting readme")
                     
-                    newhtml = ""
-                    headerpattern = re.compile("((<h.>)(.+?)(<\/h.>))")
-                    srcpattern=re.compile("(src=\"(.+?)\")")
-                    httppattern = re.compile("http")
-                    linkpattern=re.compile("href=(\".+?\")")
-                    poundpattern=re.compile("(#)")
+                newhtml = ""
+                headerpattern = re.compile("((<h.>)(.+?)(<\/h.>))")
+                srcpattern=re.compile("(src=\"(.+?)\")")
+                httppattern = re.compile("http")
+                linkpattern=re.compile("href=(\".+?\")")
+                poundpattern=re.compile("(#)")
 
-                    for line in html.splitlines():
-                        match = headerpattern.search(line)
-                        if match:
-                            slug = slugify(match.group(3))
-                            anchorline = match.group(2) + '<a class="anchor" aria-hidden="true" id="' + slug + '"> </a>' + match.group(3) + match.group(4)
+                for line in html.splitlines():
+                    match = headerpattern.search(line)
+                    if match:
+                        slug = slugify(match.group(3))
+                        anchorline = match.group(2) + '<a class="anchor" aria-hidden="true" id="' + slug + '"> </a>' + match.group(3) + match.group(4)
 
-                            line = line.replace(match.group(0), anchorline)
+                        line = line.replace(match.group(0), anchorline)
 
-                        srcmatch = srcpattern.search(line)
-                        httpmatch = httppattern.search(line)
-                        if srcmatch and not httpmatch:
-                            replace = "https://github.com/" + owner + "/" + reponame + "/raw/master/" +  srcmatch.group(2)
-                            line = line.replace(srcmatch.group(2), replace)
+                    srcmatch = srcpattern.search(line)
+                    httpmatch = httppattern.search(line)
+                    if srcmatch and not httpmatch:
+                        replace = "https://github.com/" + owner + "/" + reponame + "/raw/master/" +  srcmatch.group(2)
+                        line = line.replace(srcmatch.group(2), replace)
 
-                        linkmatch = linkpattern.search(line)
-                        if linkmatch:
-                            replace = linkmatch.group(1) + " target=\"_blank\""
-                            line = line.replace(linkmatch.group(1), replace)
+                    linkmatch = linkpattern.search(line)
+                    if linkmatch:
+                        replace = linkmatch.group(1) + " target=\"_blank\""
+                        line = line.replace(linkmatch.group(1), replace)
                         
-                        newhtml += line + "\n"
+                    newhtml += line + "\n"
 
-                    #print("HTML FOR " + reposlug)
+
+                try:
+                    print("HTML FOR " + reposlug)
                     readmeJson[reposlug] = newhtml
                     print ("Saving to github: " + reposlug)
                     saveToGithub("readmes/" + reposlug + ".md", readmeJson[reposlug])
