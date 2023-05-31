@@ -73,8 +73,8 @@ def main():
     entries = processGithubOrganization('DatastaxDevs', entries)
     entries = processGithubOrganization('Datastax-Examples', entries)
     # Add awesome-astra
-#    newvideos = recursiveSearch(youtube, '', [])
-#    videos =updateVideoStatistics(youtube, newvideos)
+    newvideos = recursiveSearch(youtube, '', [])
+    videos =updateVideoStatistics(youtube, newvideos)
 
     readmeJson = {}
     for index in range(len(entries)):
@@ -139,7 +139,6 @@ def main():
                     readme = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/main/README.md')
                     if readme.status_code == 404:
                         readme = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/master/README.md')
-                    print (readme.text)
                     html = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
                 except:
                     print("Error getting/converting readme")
@@ -174,7 +173,6 @@ def main():
 
 
                 try:
-                    print("HTML FOR " + reposlug)
                     readmeJson[reposlug] = newhtml
                     print ("Saving to github: " + reposlug)
                     saveToGithub("readmes/" + reposlug + ".md", readmeJson[reposlug])
