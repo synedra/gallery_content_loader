@@ -34,6 +34,13 @@ astra_client = create_astra_client(
 applications = {}
 readmes = {}
 videos = {}
+tag_collection = astra_client.collections.namespace(
+    "gallery").collection("tag_applications")
+readme_collection = astra_client.collections.namespace(
+    "gallery").collection("readme_applications")
+video_collection = astra_client.collections.namespace(
+    "gallery").collection("video_applications")
+
 
 # using an access token
 
