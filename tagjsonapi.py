@@ -71,17 +71,6 @@ def main():
     entries = processWorkshopItems(workshopItems, workshopLinks, entries)
     entries = processGithubOrganization('DatastaxDevs', entries)
     entries = processGithubOrganization('Datastax-Examples', entries)
-    entry = {"urls":{"github":["https://github.com/cassioml/langchain-flare-pdf-qa-demo"]},"tags":["starter"],"name":"PDF FLARE demo with Langchain and Cassandra as Vector Store"}
-    entries.append(entry)
-
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-ecommerce"]},"name":"Stargate Mongoose Demo Ecommerce"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-discord-bot"]},"name":"Stargate Mongoose Demo Discord Bot"}
-    entries.append(entry)
-
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-typescript-express-reviews"]},"name":"Stargate Mongoose Typescript Express Reviews"}
-    entries.append(entry)
-
     entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-photography"]},"name":"Stargate Mongoose Demo Photography"}
     entries.append(entry)
     entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-next.js-starter"]},"name":"Astra Next JS Starter"}
@@ -197,10 +186,6 @@ def main():
                         entries[index]["tags"].append(tag)
                 except:
                     print("No gh tags for" + reposlug)
-
-                if "categories" in entry:
-                    for tag in entry["categories"]:
-                        entries[index]["tags"].append(tag)
 
                 if "starter" in repo.url:
                     entries[index]["tags"].append("starter")

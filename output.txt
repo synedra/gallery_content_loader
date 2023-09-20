@@ -1,5 +1,4 @@
 Starting Creds
-Refreshing creds
 Getting sample application links
 Got sample application links
 Getting sample application items
@@ -8,6 +7,146 @@ Getting workshop links
 Got workshop links
 Getting workshop items
 Got workshop items
+SUCCESS for Li3KJi4kjAg
+{"kind": "youtube#video", "etag": "2aTiejlFXxPLY2mHSUSmAsIfm6M", "id": "Li3KJi4kjAg", "statistics": {"viewCount": "2617", "likeCount": "20", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for lPouZAd64LQ
+{"kind": "youtube#video", "etag": "zWyN7vf3jWkX_46a2Go-lS7RmIg", "id": "lPouZAd64LQ", "statistics": {"viewCount": "2326", "likeCount": "25", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for zyo-e_VLg4w
+{"kind": "youtube#video", "etag": "zI2gAiCwwDBsmfH4qiNai2Imcu0", "id": "zyo-e_VLg4w", "statistics": {"viewCount": "2178", "likeCount": "12", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for sFAiOANt4rU
+{"kind": "youtube#video", "etag": "E4tJQmHZ19bQ-vHeHdBMNbVoOaM", "id": "sFAiOANt4rU", "statistics": {"viewCount": "487", "likeCount": "9", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for feC5gXth2FQ
+{"kind": "youtube#video", "etag": "iuxyztnujIH0dhXAlblnyX_XdDM", "id": "feC5gXth2FQ", "statistics": {"viewCount": "1088", "likeCount": "10", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for as5IOC7vCOU
+{"kind": "youtube#video", "etag": "lqYQIkfma90h1217l4jLxQ3oFUs", "id": "as5IOC7vCOU", "statistics": {"viewCount": "172", "likeCount": "4", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for mmukXqGsauA
+{"kind": "youtube#video", "etag": "LhUPdtroE4h4aU9fRsxGTZTQ6D4", "id": "mmukXqGsauA", "statistics": {"viewCount": "452", "likeCount": "21", "favoriteCount": "0", "commentCount": "2"}}
+SUCCESS for -yrkWAjzTIk
+{"kind": "youtube#video", "etag": "IgfwYff2mStsfbT3yQ_sqivVB0M", "id": "-yrkWAjzTIk", "statistics": {"viewCount": "1851", "likeCount": "6", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for pjzbkD4xc0o
+{"kind": "youtube#video", "etag": "5b81gvY_MCCHrpj8mINM9wDUtn4", "id": "pjzbkD4xc0o", "statistics": {"viewCount": "538", "likeCount": "3", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for w0zsV-qlPCE
+{"kind": "youtube#video", "etag": "4y0Bqr28XC4Xe3tIs8fxfxTt5zA", "id": "w0zsV-qlPCE", "statistics": {"viewCount": "2334", "likeCount": "15", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for ALAqUeTbUE4
+{"kind": "youtube#video", "etag": "xwxuzBHtx5YtbOZ1sxy3aWmoPSQ", "id": "ALAqUeTbUE4", "statistics": {"viewCount": "386", "likeCount": "10", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for YjYWsN1vek8
+{"kind": "youtube#video", "etag": "AwrH_zBUHEM7_UmxCJeh4gHUcy8", "id": "YjYWsN1vek8", "statistics": {"viewCount": "68747", "likeCount": "1108", "favoriteCount": "0", "commentCount": "27"}}
+SUCCESS for Np5RJpCiCzM
+{"kind": "youtube#video", "etag": "FbLgKtfVfq78wXtcGsfusUsKhsw", "id": "Np5RJpCiCzM", "statistics": {"viewCount": "7318", "likeCount": "69", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for XSEl6deX2lU
+{"kind": "youtube#video", "etag": "CV1r8N_xTnzYt1H4r89hGfhPPNA", "id": "XSEl6deX2lU", "statistics": {"viewCount": "318159", "likeCount": "19115", "favoriteCount": "0", "commentCount": "7"}}
+SUCCESS for OCakxrzwuU4
+{"kind": "youtube#video", "etag": "qVCUF8YUuEMeP0b1q_uwsBDDWck", "id": "OCakxrzwuU4", "statistics": {"viewCount": "6612", "likeCount": "60", "favoriteCount": "0", "commentCount": "5"}}
+SUCCESS for mYrUDSCXcR4
+{"kind": "youtube#video", "etag": "6n_shBBGASRGXgtti4UDtvaB8XM", "id": "mYrUDSCXcR4", "statistics": {"viewCount": "4001", "likeCount": "39", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for 6yJEwqseMY4
+{"kind": "youtube#video", "etag": "j4ZDGxYrn11upGQ4soYH3-c4xcs", "id": "6yJEwqseMY4", "statistics": {"viewCount": "5420", "likeCount": "78", "favoriteCount": "0", "commentCount": "7"}}
+SUCCESS for SAGxMODAlEg
+{"kind": "youtube#video", "etag": "-YlDOSFebKVkxGATjJd15CugkgE", "id": "SAGxMODAlEg", "statistics": {"viewCount": "4211", "likeCount": "27", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for sns5nc3IU5g
+{"kind": "youtube#video", "etag": "8_TtiR5WVWGCZn2wNS3EvAjWWe0", "id": "sns5nc3IU5g", "statistics": {"viewCount": "3730", "likeCount": "51", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for 8AoWhAhfuYk
+{"kind": "youtube#video", "etag": "dEWA1sbPfOvu97_WtpwibP_A2b4", "id": "8AoWhAhfuYk", "statistics": {"viewCount": "21611", "likeCount": "335", "favoriteCount": "0", "commentCount": "16"}}
+SUCCESS for NPDSOdbizsY
+{"kind": "youtube#video", "etag": "YP3wu28zd1wNpXvAmUIkYf9lOQg", "id": "NPDSOdbizsY", "statistics": {"viewCount": "3478", "likeCount": "37", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for Gx-pmH-b5mI
+{"kind": "youtube#video", "etag": "r-5fU_gB4AJpRK1E-aRs2eks8EQ", "id": "Gx-pmH-b5mI", "statistics": {"viewCount": "6253", "likeCount": "90", "favoriteCount": "0", "commentCount": "5"}}
+SUCCESS for AEA1HvbJEg0
+{"kind": "youtube#video", "etag": "dyaXPVen2TIuoog3Rwdn_14xgRQ", "id": "AEA1HvbJEg0", "statistics": {"viewCount": "26746", "likeCount": "148", "favoriteCount": "0", "commentCount": "5"}}
+SUCCESS for _W5VvxzoS6w
+{"kind": "youtube#video", "etag": "6R6gNYP3ANfvcM7l3qwEfVurePg", "id": "_W5VvxzoS6w", "statistics": {"viewCount": "11804", "likeCount": "244", "favoriteCount": "0", "commentCount": "18"}}
+SUCCESS for mDd4I-isodE
+{"kind": "youtube#video", "etag": "mfv4AA7RziWdPchx011UrI8DuQc", "id": "mDd4I-isodE", "statistics": {"viewCount": "3696", "likeCount": "32", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for s73qwGaKyv0
+{"kind": "youtube#video", "etag": "ZAGA4lxdE8bd7SvpTM0tm-ohAlY", "id": "s73qwGaKyv0", "statistics": {"viewCount": "489364", "likeCount": "206", "favoriteCount": "0", "commentCount": "5"}}
+SUCCESS for vEk3VDC0J7k
+{"kind": "youtube#video", "etag": "EWpVUgMGOIWClPIlVheT3SO7zSM", "id": "vEk3VDC0J7k", "statistics": {"viewCount": "5149", "likeCount": "45", "favoriteCount": "0", "commentCount": "6"}}
+SUCCESS for d7o6a75sfY0
+{"kind": "youtube#video", "etag": "vz_kzVpMpIuhppGT5til53lIoHg", "id": "d7o6a75sfY0", "statistics": {"viewCount": "16436", "likeCount": "281", "favoriteCount": "0", "commentCount": "10"}}
+SUCCESS for zrJlojbxeXo
+{"kind": "youtube#video", "etag": "drC3mblChAQAYQmkhuRKCJBVRAo", "id": "zrJlojbxeXo", "statistics": {"viewCount": "9483", "likeCount": "107", "favoriteCount": "0", "commentCount": "4"}}
+SUCCESS for 69sHSF0iUqg
+{"kind": "youtube#video", "etag": "LCvRTkLfM43eHJULH6XP5Nl8B3I", "id": "69sHSF0iUqg", "statistics": {"viewCount": "5212", "likeCount": "44", "favoriteCount": "0", "commentCount": "3"}}
+SUCCESS for x6g0sUi-5tw
+{"kind": "youtube#video", "etag": "iHhbixmOoez7rbBwRNqVFV3G24Q", "id": "x6g0sUi-5tw", "statistics": {"viewCount": "3775", "likeCount": "26", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for QKA9XVOMA2Y
+{"kind": "youtube#video", "etag": "wDb61QP3f9AZi5U1KMAxAue-AjM", "id": "QKA9XVOMA2Y", "statistics": {"viewCount": "1404", "likeCount": "15", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for TyTXOjFMi7k
+{"kind": "youtube#video", "etag": "GFDlb-u46K7CjrkUJzsHhBen2u0", "id": "TyTXOjFMi7k", "statistics": {"viewCount": "4508", "likeCount": "52", "favoriteCount": "0", "commentCount": "6"}}
+SUCCESS for uossfVwxWXk
+{"kind": "youtube#video", "etag": "AMgGJa3MUBhUjd53cPquh5RzRzo", "id": "uossfVwxWXk", "statistics": {"viewCount": "2245", "likeCount": "41", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for Jey504qdm-c
+{"kind": "youtube#video", "etag": "Oz8vUAT61SBRHl00q4fR5qyP3wU", "id": "Jey504qdm-c", "statistics": {"viewCount": "12538", "likeCount": "100", "favoriteCount": "0", "commentCount": "3"}}
+SUCCESS for NUDO3fPGc1w
+{"kind": "youtube#video", "etag": "OAdgv6rxM2laXlaect4ZwNU1gcs", "id": "NUDO3fPGc1w", "statistics": {"viewCount": "1428", "likeCount": "19", "favoriteCount": "0", "commentCount": "2"}}
+SUCCESS for nkl1kHYyHP8
+{"kind": "youtube#video", "etag": "U_el-p53bT-_tlfc_ey2BtA3Kvg", "id": "nkl1kHYyHP8", "statistics": {"viewCount": "2929", "likeCount": "30", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for OBcJ__RHfgk
+{"kind": "youtube#video", "etag": "Mqe4VmbdMdfUgYg5BJiBRahOn24", "id": "OBcJ__RHfgk", "statistics": {"viewCount": "1458", "likeCount": "11", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for WWI_L9znCMo
+{"kind": "youtube#video", "etag": "f-PyPlBEdyECHT5YfCzOv6PniHo", "id": "WWI_L9znCMo", "statistics": {"viewCount": "3262", "likeCount": "18", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for qlZVLEWzJq0
+{"kind": "youtube#video", "etag": "Lw_3X51iBj5yaltUteWHNpauvDc", "id": "qlZVLEWzJq0", "statistics": {"viewCount": "1795", "likeCount": "42", "favoriteCount": "0", "commentCount": "8"}, "liveStreamingDetails": {"actualStartTime": "2021-03-30T21:39:55Z", "actualEndTime": "2021-03-30T21:57:31Z", "scheduledStartTime": "2021-03-30T21:39:28Z"}}
+SUCCESS for _H3Bbths0bo
+{"kind": "youtube#video", "etag": "rrIrBcFgY4v-iJ0rK_0_5iiNjh4", "id": "_H3Bbths0bo", "statistics": {"viewCount": "2583", "likeCount": "13", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for OoCUcPtOEG0
+{"kind": "youtube#video", "etag": "agfWCCDdBEwmxwtNHXRZcVj5sFw", "id": "OoCUcPtOEG0", "statistics": {"viewCount": "2550", "likeCount": "22", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for cbL5gcoyWdE
+{"kind": "youtube#video", "etag": "suqDx7p9mNCDqQTpxe0chv9A4eU", "id": "cbL5gcoyWdE", "statistics": {"viewCount": "793", "likeCount": "24", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for 5V5rGDTHs20
+{"kind": "youtube#video", "etag": "r_Uhujat3UydxcBD92bx0rbdqvU", "id": "5V5rGDTHs20", "statistics": {"viewCount": "3057", "likeCount": "20", "favoriteCount": "0", "commentCount": "2"}}
+SUCCESS for ldXhdUJ5vnU
+{"kind": "youtube#video", "etag": "ZWGnGGzToIELbMQGtBc7ardDZ4Q", "id": "ldXhdUJ5vnU", "statistics": {"viewCount": "908", "likeCount": "8", "favoriteCount": "0", "commentCount": "2"}}
+SUCCESS for 2MhEgCg80IY
+{"kind": "youtube#video", "etag": "u3p77Cx6V7me5XVDTSSRK_kWJz0", "id": "2MhEgCg80IY", "statistics": {"viewCount": "2028", "likeCount": "8", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for MX0ewD3o5wk
+{"kind": "youtube#video", "etag": "nRRdY0eyHGjV9xDaFSXeHtYekdI", "id": "MX0ewD3o5wk", "statistics": {"viewCount": "1208", "likeCount": "17", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for zmqIYg_duPM
+{"kind": "youtube#video", "etag": "kRkNUTZ6Bzifdhnxf-QOzYyiXj4", "id": "zmqIYg_duPM", "statistics": {"viewCount": "598", "likeCount": "7", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for pc-2-IueSUE
+{"kind": "youtube#video", "etag": "xLS7RFkPFhM5Tq_OvmzpBelmDRw", "id": "pc-2-IueSUE", "statistics": {"viewCount": "954", "likeCount": "16", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for oma4xwVbhvk
+{"kind": "youtube#video", "etag": "zOSgQAJINfb4hS3IcpHBQqHM4ko", "id": "oma4xwVbhvk", "statistics": {"viewCount": "3258", "likeCount": "25", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for ldXhdUJ5vnU
+{"kind": "youtube#video", "etag": "ZWGnGGzToIELbMQGtBc7ardDZ4Q", "id": "ldXhdUJ5vnU", "statistics": {"viewCount": "908", "likeCount": "8", "favoriteCount": "0", "commentCount": "2"}}
+SUCCESS for as5IOC7vCOU
+{"kind": "youtube#video", "etag": "lqYQIkfma90h1217l4jLxQ3oFUs", "id": "as5IOC7vCOU", "statistics": {"viewCount": "172", "likeCount": "4", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for pjzbkD4xc0o
+{"kind": "youtube#video", "etag": "5b81gvY_MCCHrpj8mINM9wDUtn4", "id": "pjzbkD4xc0o", "statistics": {"viewCount": "538", "likeCount": "3", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for zmqIYg_duPM
+{"kind": "youtube#video", "etag": "kRkNUTZ6Bzifdhnxf-QOzYyiXj4", "id": "zmqIYg_duPM", "statistics": {"viewCount": "598", "likeCount": "7", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for mYrUDSCXcR4
+{"kind": "youtube#video", "etag": "6n_shBBGASRGXgtti4UDtvaB8XM", "id": "mYrUDSCXcR4", "statistics": {"viewCount": "4001", "likeCount": "39", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for s73qwGaKyv0
+{"kind": "youtube#video", "etag": "ZAGA4lxdE8bd7SvpTM0tm-ohAlY", "id": "s73qwGaKyv0", "statistics": {"viewCount": "489364", "likeCount": "206", "favoriteCount": "0", "commentCount": "5"}}
+SUCCESS for 69sHSF0iUqg
+{"kind": "youtube#video", "etag": "WnX6qRIwd_U3rxOphlJqcr8j_IQ", "id": "69sHSF0iUqg", "statistics": {"viewCount": "5213", "likeCount": "44", "favoriteCount": "0", "commentCount": "3"}}
+SUCCESS for cbL5gcoyWdE
+{"kind": "youtube#video", "etag": "suqDx7p9mNCDqQTpxe0chv9A4eU", "id": "cbL5gcoyWdE", "statistics": {"viewCount": "793", "likeCount": "24", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for nkl1kHYyHP8
+{"kind": "youtube#video", "etag": "U_el-p53bT-_tlfc_ey2BtA3Kvg", "id": "nkl1kHYyHP8", "statistics": {"viewCount": "2929", "likeCount": "30", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for 8AoWhAhfuYk
+{"kind": "youtube#video", "etag": "dEWA1sbPfOvu97_WtpwibP_A2b4", "id": "8AoWhAhfuYk", "statistics": {"viewCount": "21611", "likeCount": "335", "favoriteCount": "0", "commentCount": "16"}}
+SUCCESS for 6yJEwqseMY4
+{"kind": "youtube#video", "etag": "j4ZDGxYrn11upGQ4soYH3-c4xcs", "id": "6yJEwqseMY4", "statistics": {"viewCount": "5420", "likeCount": "78", "favoriteCount": "0", "commentCount": "7"}}
+SUCCESS for AEA1HvbJEg0
+{"kind": "youtube#video", "etag": "dyaXPVen2TIuoog3Rwdn_14xgRQ", "id": "AEA1HvbJEg0", "statistics": {"viewCount": "26746", "likeCount": "148", "favoriteCount": "0", "commentCount": "5"}}
+SUCCESS for OoCUcPtOEG0
+{"kind": "youtube#video", "etag": "agfWCCDdBEwmxwtNHXRZcVj5sFw", "id": "OoCUcPtOEG0", "statistics": {"viewCount": "2550", "likeCount": "22", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for QKA9XVOMA2Y
+{"kind": "youtube#video", "etag": "wDb61QP3f9AZi5U1KMAxAue-AjM", "id": "QKA9XVOMA2Y", "statistics": {"viewCount": "1404", "likeCount": "15", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for Li3KJi4kjAg
+{"kind": "youtube#video", "etag": "2aTiejlFXxPLY2mHSUSmAsIfm6M", "id": "Li3KJi4kjAg", "statistics": {"viewCount": "2617", "likeCount": "20", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for ALAqUeTbUE4
+{"kind": "youtube#video", "etag": "xwxuzBHtx5YtbOZ1sxy3aWmoPSQ", "id": "ALAqUeTbUE4", "statistics": {"viewCount": "386", "likeCount": "10", "favoriteCount": "0", "commentCount": "0"}}
+SUCCESS for pc-2-IueSUE
+{"kind": "youtube#video", "etag": "xLS7RFkPFhM5Tq_OvmzpBelmDRw", "id": "pc-2-IueSUE", "statistics": {"viewCount": "954", "likeCount": "16", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for WWI_L9znCMo
+{"kind": "youtube#video", "etag": "8Xkod8NgJkVLld0CeLKeN9EtV-c", "id": "WWI_L9znCMo", "statistics": {"viewCount": "3263", "likeCount": "18", "favoriteCount": "0", "commentCount": "1"}}
+SUCCESS for zrJlojbxeXo
+{"kind": "youtube#video", "etag": "FRwbizmZfBeeT21p54zsGlLYyu0", "id": "zrJlojbxeXo", "statistics": {"viewCount": "9485", "likeCount": "107", "favoriteCount": "0", "commentCount": "4"}}
+SUCCESS for XSEl6deX2lU
+{"kind": "youtube#video", "etag": "CV1r8N_xTnzYt1H4r89hGfhPPNA", "id": "XSEl6deX2lU", "statistics": {"viewCount": "318159", "likeCount": "19115", "favoriteCount": "0", "commentCount": "7"}}
 /repos/datastax/astra-sdk-java
 /repos/datastax/astra-sdk-java
 Getting astra.json for datastax/astra-sdk-java at 99
@@ -44,7 +183,6 @@ Getting astra.json for DataStax-Examples/spring-data-starter at 99
 HTML FOR DataStax-Examples-spring-data-starter
 SUCCESS SAVING README for DataStax-Examples-spring-data-starter
 No gh tags forDataStax-Examples-spring-data-starter
-Added to starter - {"name": "Spring Data Starter", "description": "\u26a1\ufe0f A sample Spring Data Cassandra REST API", "urls": {"heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo", "github": ["https://github.com/DataStax-Examples/spring-data-starter"]}, "language": ["Java"], "stack": ["spring-boot", " spring-data"], "usecases": "Order Management", "owner": "Cedrick Lunven", "apis": ["CQL"], "tags": ["java", "spring", "starter"], "last_modified": "2023-07-06T22:53:15Z", "stargazers": 38, "forks": 32}
 /repos/DataStax-Examples/spring-petclinic-reactive
 /repos/DataStax-Examples/spring-petclinic-reactive
 Getting astra.json for DataStax-Examples/spring-petclinic-reactive at 99
@@ -375,70 +513,6 @@ Getting astra.json for DataStax-Examples/google-cloud-functions-nodejs at 99
 HTML FOR DataStax-Examples-google-cloud-functions-nodejs
 SUCCESS SAVING README for DataStax-Examples-google-cloud-functions-nodejs
 No gh tags forDataStax-Examples-google-cloud-functions-nodejs
-/repos/DataStax-Examples/stargate-mongoose-demo-photography
-/repos/DataStax-Examples/stargate-mongoose-demo-photography
-Getting astra.json for DataStax-Examples/stargate-mongoose-demo-photography at 99
-HTML FOR DataStax-Examples-stargate-mongoose-demo-photography
-SUCCESS SAVING README for DataStax-Examples-stargate-mongoose-demo-photography
-No gh tags forDataStax-Examples-stargate-mongoose-demo-photography
-/repos/DataStax-Examples/astra-next.js-starter
-/repos/DataStax-Examples/astra-next.js-starter
-Getting astra.json for DataStax-Examples/astra-next.js-starter at 99
-HTML FOR DataStax-Examples-astra-next.js-starter
-SUCCESS SAVING README for DataStax-Examples-astra-next.js-starter
-No gh tags forDataStax-Examples-astra-next.js-starter
-Added to starter - {"urls": {"github": ["https://github.com/DataStax-Examples/astra-next.js-starter"]}, "name": "Astra Next JS Starter", "tags": ["starter"], "last_modified": "2023-05-15T01:31:32Z", "stargazers": 16, "forks": 7, "description": "\u26a1\ufe0f A sample Next.js + DataStax Astra starter app that leverages the AstraDB REST API to manage a character database."}
-/repos/DataStax-Examples/glitch-astra-starter
-/repos/DataStax-Examples/glitch-astra-starter
-Getting astra.json for DataStax-Examples/glitch-astra-starter at 99
-HTML FOR DataStax-Examples-glitch-astra-starter
-SUCCESS SAVING README for DataStax-Examples-glitch-astra-starter
-No gh tags forDataStax-Examples-glitch-astra-starter
-Added to starter - {"urls": {"github": ["https://github.com/DataStax-Examples/glitch-astra-starter"]}, "name": "Glitch Astra Starter", "tags": ["starter"], "last_modified": "2022-10-19T15:31:59Z", "stargazers": 2, "forks": 0, "description": "Jumpstart your next NodeJS prototype with this starter!"}
-/repos/DataStax-Examples/astra-nodejs-starter
-/repos/DataStax-Examples/astra-nodejs-starter
-Getting astra.json for DataStax-Examples/astra-nodejs-starter at 99
-HTML FOR DataStax-Examples-astra-nodejs-starter
-SUCCESS SAVING README for DataStax-Examples-astra-nodejs-starter
-No gh tags forDataStax-Examples-astra-nodejs-starter
-Added to starter - {"urls": {"github": ["https://github.com/DataStax-Examples/astra-nodejs-starter"]}, "name": "Astra NodeJS Starter", "tags": ["starter"], "last_modified": "2022-01-05T18:23:43Z", "stargazers": 1, "forks": 2, "description": "Bootstrap your next NodeJS app with an Astra integration."}
-/repos/DataStax-Examples/astra-gatsbyjs-starter
-/repos/DataStax-Examples/astra-gatsbyjs-starter
-Getting astra.json for DataStax-Examples/astra-gatsbyjs-starter at 99
-HTML FOR DataStax-Examples-astra-gatsbyjs-starter
-SUCCESS SAVING README for DataStax-Examples-astra-gatsbyjs-starter
-No gh tags forDataStax-Examples-astra-gatsbyjs-starter
-Added to starter - {"urls": {"github": ["https://github.com/DataStax-Examples/astra-gatsbyjs-starter"]}, "name": "Astra GatsbyJS Starter", "tags": ["starter"], "last_modified": "2023-05-12T16:59:49Z", "stargazers": 8, "forks": 3, "description": "\ud83d\ude80  A sample React, Typescript, DataStax Astra, Gatsby.js app"}
-/repos/DataStax-Examples/google-cloud-functions-nodejs
-/repos/DataStax-Examples/google-cloud-functions-nodejs
-Getting astra.json for DataStax-Examples/google-cloud-functions-nodejs at 99
-HTML FOR DataStax-Examples-google-cloud-functions-nodejs
-SUCCESS SAVING README for DataStax-Examples-google-cloud-functions-nodejs
-No gh tags forDataStax-Examples-google-cloud-functions-nodejs
-/repos/DataStax-Examples/nf-data-explorer
-/repos/DataStax-Examples/nf-data-explorer
-Getting astra.json for DataStax-Examples/nf-data-explorer at 99
-HTML FOR DataStax-Examples-nf-data-explorer
-SUCCESS SAVING README for DataStax-Examples-nf-data-explorer
-No gh tags forDataStax-Examples-nf-data-explorer
-/repos/datastax/astra-ide-plugin
-/repos/datastax/astra-ide-plugin
-Getting astra.json for datastax/astra-ide-plugin at 99
-HTML FOR datastax-astra-ide-plugin
-SUCCESS SAVING README for datastax-astra-ide-plugin
-No gh tags fordatastax-astra-ide-plugin
-/repos/DataStax-Examples/astra-spark-migration
-/repos/DataStax-Examples/astra-spark-migration
-Getting astra.json for DataStax-Examples/astra-spark-migration at 99
-HTML FOR DataStax-Examples-astra-spark-migration
-SUCCESS SAVING README for DataStax-Examples-astra-spark-migration
-No gh tags forDataStax-Examples-astra-spark-migration
-/repos/DataStax-Examples/dsbulk-to-astra
-/repos/DataStax-Examples/dsbulk-to-astra
-Getting astra.json for DataStax-Examples/dsbulk-to-astra at 99
-HTML FOR DataStax-Examples-dsbulk-to-astra
-SUCCESS SAVING README for DataStax-Examples-dsbulk-to-astra
-No gh tags forDataStax-Examples-dsbulk-to-astra
 SUCCESS for all
 {"documentId": "all"}
 SUCCESS for spring
@@ -451,8 +525,6 @@ SUCCESS for react
 {"documentId": "react"}
 SUCCESS for java
 {"documentId": "java"}
-SUCCESS for starter
-{"documentId": "starter"}
 SUCCESS for spark
 {"documentId": "spark"}
 SUCCESS for grpc api
@@ -557,9 +629,3 @@ SUCCESS for data-science
 {"documentId": "data-science"}
 SUCCESS for graph
 {"documentId": "graph"}
-SUCCESS for mongoose
-{"documentId": "mongoose"}
-SUCCESS for json-api
-{"documentId": "json-api"}
-SUCCESS for tools
-{"documentId": "tools"}

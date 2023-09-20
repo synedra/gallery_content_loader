@@ -25,12 +25,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 conn = Connection(os.environ["GITHUB_TOKEN"])
-#if os.environ["ASTRA_DEV_DB_URL"]:
-#    astra_client = create_astra_client(base_url=os.environ["ASTRA_DEV_DB_URL"],
-#                                   astra_database_id=os.environ["ASTRA_DB_ID"],
-#                                   astra_database_region=os.environ["ASTRA_DB_REGION"],
-#                                   astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
-#else
 astra_client = create_astra_client(
                                     astra_database_id=os.environ["ASTRA_DB_ID"],
                                     astra_database_region=os.environ["ASTRA_DB_REGION"],
@@ -56,7 +50,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly',
     'https://www.googleapis.com/auth/youtube.force-ssl', "https://www.googleapis.com/auth/youtube.readonly"]
 SAMPLE_SPREADSHEET_ID = '1vJSKJAa7EJ0s1Ksn_L_lgQGJI6-UMDqNngrQO4U4cEY'
 SAMPLE_RANGE_NAME = 'SampleApplicationMain'
-
+#SAMPLE_SPREADSHEET_ID = '1KPDBmj2yTN-0LYkI7aB6g_k4M4JLIzf1BkynaVJCOOs'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -71,36 +65,8 @@ def main():
     entries = processWorkshopItems(workshopItems, workshopLinks, entries)
     entries = processGithubOrganization('DatastaxDevs', entries)
     entries = processGithubOrganization('Datastax-Examples', entries)
-    entry = {"urls":{"github":["https://github.com/cassioml/langchain-flare-pdf-qa-demo"]},"tags":["starter"],"name":"PDF FLARE demo with Langchain and Cassandra as Vector Store"}
-    entries.append(entry)
-
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-ecommerce"]},"name":"Stargate Mongoose Demo Ecommerce"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-discord-bot"]},"name":"Stargate Mongoose Demo Discord Bot"}
-    entries.append(entry)
-
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-typescript-express-reviews"]},"name":"Stargate Mongoose Typescript Express Reviews"}
-    entries.append(entry)
-
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-photography"]},"name":"Stargate Mongoose Demo Photography"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-next.js-starter"]},"name":"Astra Next JS Starter"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/glitch-astra-starter"]}, "name":"Glitch Astra Starter"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-nodejs-starter"]}, "name":"Astra NodeJS Starter"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-gatsbyjs-starter"]}, "name":"Astra GatsbyJS Starter"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/google-cloud-functions-nodejs"]}, "name":"Google Cloud Functions NodeJS"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/nf-data-explorer"]},"tags":["tools"], "name":"Netflix Data Explorer"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/datastax/astra-ide-plugin/wiki/Getting-Started"]},"tags":["tools"], "name":"Astra Jetbrains IDE"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-spark-migration"]},"tags":["tools"],"name":"Astra Spark Migration"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/dsbulk-to-astra"]}, "tags":["tools"], "name":"Dsbulk to Astra"}
+    print("Processing github organization Datastax-Examples/stargate-mongoose-demo-photography")
+    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-photography"]}}
     entries.append(entry)
     # Add awesome-astra
     #newvideos = recursiveSearch(youtube, '', [])
@@ -110,6 +76,7 @@ def main():
     for index in range(len(entries)):
         astrajson = ""
         entry = entries[index]
+        print("GETTING EVERYTHING FOR " + json.dumps(entry))
         if "tags" not in entry:
             entry["tags"] = []
 
@@ -121,9 +88,10 @@ def main():
                 reponame = url.split('/')[4]
 
                 uri = '/repos/' + owner + '/' + reponame
-                print (uri)
+                print ("URI IS" + uri)
 
                 repo = conn.send('GET', uri)
+                print (repo.parsed.description)
                 entry["last_modified"] = repo.parsed.updated_at
                 entry["stargazers"] = repo.parsed.stargazers_count
                 entry["forks"] = repo.parsed.forks_count
@@ -189,23 +157,15 @@ def main():
                     print("HTML FOR " + reposlug)
                     res = readme_collection.create(document={"content":newhtml}, path=reposlug)
                     print("SUCCESS SAVING README for " + reposlug)
-                except:
+                except Exception:
                     print("ERROR SAVING README for " + reposlug)
+                    print(Exception)
                 
                 try:
                     for tag in repo.get_topics():
                         entries[index]["tags"].append(tag)
                 except:
                     print("No gh tags for" + reposlug)
-
-                if "categories" in entry:
-                    for tag in entry["categories"]:
-                        entries[index]["tags"].append(tag)
-
-                if "starter" in repo.url:
-                    entries[index]["tags"].append("starter")
-                    print("Added to starter - " + json.dumps(entry))
-                
                 entries[index]["tags"] = cleanTags(entries[index]["tags"])
 
     tagdict = {}
@@ -219,9 +179,6 @@ def main():
                 if tag.lower() not in tagdict.keys():
                     tagdict[tag.lower()] = {
                         "name": tag.lower(), "apps": [entry]}
-                    if entry["name"] not in names:
-                        tagdict["all"]["apps"].append(entry)
-                        names.append(entry["name"])
                 else:
                     tagdict[tag.lower()]["apps"].append(entry)
                     if entry["name"] not in names:
@@ -360,7 +317,10 @@ def astraJsonSettings(settings, entry):
         else:
             entry[lowerkey] = settings[key]
     if "tags" in entry:
+        print("Tags for " + entry["name"] + " is " + json.dumps(entry["tags"]))
         entry["tags"] = cleanTags(entry["tags"])
+        print("New Tags for " + entry["name"] + " is " + json.dumps(entry["tags"]))
+
     return entry
 
 def getCreds():
@@ -514,13 +474,6 @@ def processApplicationItems(sampleApplicationItems, sampleApplicationLinks, entr
                 tags.append(item.lower())
 
         # APIs
-        entrynumber = 6
-        apiarray = []
-        for api in ["DATA", "DOC", "GQL", "CQL", "GRPC", "DB", "IAM", "STRM"]:
-            if entry[entrynumber] == 'TRUE':
-                apiarray.append(api)
-            entrynumber += 1
-
         newtags = cleanTags(tags)
 
         new_item = {
@@ -531,7 +484,6 @@ def processApplicationItems(sampleApplicationItems, sampleApplicationLinks, entr
             "stack": stack,
             "usecases": entry[4],
             "owner": entry[5],
-            "apis": apiarray,
             "tags": newtags
         }
 
@@ -546,6 +498,7 @@ def processGithubOrganization(org, entries):
     for repo in repos.parsed:
         owner = repo.owner.login
         reponame = repo.name
+        print("Processing github organization " + owner + "/" + reponame)
         url = repo.html_url
         reposlug = owner + '-' + reponame
 
@@ -553,11 +506,13 @@ def processGithubOrganization(org, entries):
             astrajson_path = "/repos/" + owner + "/" + reponame + "/contents/astra.json"
             astrajson = conn.send('GET', astrajson_path)
             astraparsed = astrajson.parsed
-        except:
+        except Exception:
+            print("No astra json for " + reponame)
             continue
-
         entry = {"urls":{"github":[url]}}
         entries.append(entry)
+
+    # Hack for mongoose
     return entries
 
 def updateVideoStatistics(youtube, videos):
