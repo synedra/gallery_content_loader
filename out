@@ -1,0 +1,1836 @@
+{
+    "message": "Update app.json",
+    "content": {
+        "datastax-astra-sdk-java": {
+            "name": "astra spring boot starter",
+            "description": "Set of client side libraries to help with Astra Platform usage",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/datastax/astra-sdk-java/tree/main/astra-spring-boot-starter"
+                ]
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                "spring-boot",
+                " spring-data"
+            ],
+            "usecases": "N/A",
+            "owner": "Cedrick Lunven",
+            "apis": [
+                "CQL"
+            ],
+            "tags": [
+                "spring"
+            ],
+            "last_modified": "2023-01-05T14:45:29Z",
+            "stargazers": 15,
+            "forks": 14,
+            "reposlug": "datastax-astra-sdk-java"
+        },
+        "astra-httpie": {
+            "name": "astra-httpie",
+            "description": "Helper to interact with Astra Api and Httpie cli to do HTTP Calls",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                "Httpie"
+            ],
+            "usecases": "N/A",
+            "owner": "Kirsten Hunter",
+            "apis": [
+                "DATA",
+                "DOC",
+                "DB",
+                "IAM"
+            ],
+            "tags": [
+                "httpie"
+            ]
+        },
+        "DataStax-Examples-astra-tik-tok": {
+            "name": "TikTok clone",
+            "description": "A simple Tik Tok clone running on AstraDB that leverages the Document API.",
+            "urls": {
+                "heroimage": "https://github.com/DataStax-Examples/astra-tik-tok",
+                "github": [
+                    "https://github.com/DataStax-Examples/astra-tik-tok"
+                ],
+                "badge": [
+                    "https://github.com/DataStax-Examples/astra-tik-tok"
+                ]
+            },
+            "language": [
+                "JavaScript"
+            ],
+            "stack": [
+                "React",
+                " netlify",
+                "\ndocAPI"
+            ],
+            "usecases": "Social Network",
+            "owner": "Chris Whilhite",
+            "apis": [
+                "DOC"
+            ],
+            "tags": [
+                "javascript",
+                "react"
+            ],
+            "last_modified": "2023-04-25T16:40:45Z",
+            "stargazers": 21,
+            "forks": 81,
+            "reposlug": "DataStax-Examples-astra-tik-tok"
+        },
+        "DataStax-Examples-astra-netflix": {
+            "name": "Netflix clone",
+            "description": "Let's code a Netflix Clone with GraphQL Pagination!",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/DataStax-Examples/astra-netflix"
+                ]
+            },
+            "language": [
+                "JavaScript"
+            ],
+            "stack": [
+                "React",
+                " netlify",
+                "\nGraphQL"
+            ],
+            "usecases": "Digital Library",
+            "owner": "Chris Whilhite",
+            "apis": [
+                "GQL"
+            ],
+            "tags": [
+                "javascript",
+                "react"
+            ],
+            "last_modified": "2023-05-13T10:01:31Z",
+            "stargazers": 25,
+            "forks": 14,
+            "reposlug": "DataStax-Examples-astra-netflix"
+        },
+        "DataStax-Examples-todo-astra-jamstack-netlify": {
+            "name": "Todo App with Jamstack",
+            "description": "Todo list JAMStack app example with ReactJS + DataStax Astra DB",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/DataStax-Examples/todo-astra-jamstack-netlify"
+                ]
+            },
+            "language": [
+                "JavaScript"
+            ],
+            "stack": [
+                "React",
+                " netlify"
+            ],
+            "usecases": "TodoList",
+            "owner": "Chris Whilhite",
+            "apis": [
+                "DOC"
+            ],
+            "tags": [
+                "javascript",
+                "react"
+            ],
+            "last_modified": "2023-02-16T19:33:19Z",
+            "stargazers": 28,
+            "forks": 20,
+            "reposlug": "DataStax-Examples-todo-astra-jamstack-netlify"
+        },
+        "DataStax-Examples-battlestax": {
+            "name": "Battlestax",
+            "description": "BattleStax is a stateful JAMStack game that is wholesome fun for the entire crew.",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/DataStax-Examples/battlestax"
+                ]
+            },
+            "language": [
+                "JavaScript"
+            ],
+            "stack": [
+                "React",
+                " netlify",
+                "\ndocAPI"
+            ],
+            "usecases": "Game Development",
+            "owner": "Chris Whilhite",
+            "apis": [
+                "DOC"
+            ],
+            "tags": [
+                "javascript",
+                "react"
+            ],
+            "last_modified": "2023-05-03T15:32:37Z",
+            "stargazers": 30,
+            "forks": 12,
+            "reposlug": "DataStax-Examples-battlestax"
+        },
+        "DataStax-Examples-spring-data-starter": {
+            "name": "Spring Data Starter",
+            "description": "\u26a1\ufe0f A sample Spring Data Cassandra REST API",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/DataStax-Examples/spring-data-starter"
+                ]
+            },
+            "language": [
+                "Java"
+            ],
+            "stack": [
+                "spring-boot",
+                " spring-data"
+            ],
+            "usecases": "Order Management",
+            "owner": "Cedrick Lunven",
+            "apis": [
+                "CQL"
+            ],
+            "tags": [
+                "java",
+                "spring"
+            ],
+            "last_modified": "2023-05-13T23:54:01Z",
+            "stargazers": 37,
+            "forks": 33,
+            "reposlug": "DataStax-Examples-spring-data-starter"
+        },
+        "DataStax-Examples-spring-petclinic-reactive": {
+            "name": "Reactive Petclinic webflux",
+            "description": "Reactive version of Spring PetClinic sample application based on Spring Webflux and Cassandra",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/DataStax-Examples/spring-petclinic-reactive"
+                ]
+            },
+            "language": [
+                "Java"
+            ],
+            "stack": [
+                "spring-boot",
+                " spring-webflux"
+            ],
+            "usecases": "Order Management",
+            "owner": "Cedrick Lunven",
+            "apis": [
+                "CQL"
+            ],
+            "tags": [
+                "java",
+                "spring"
+            ],
+            "last_modified": "2022-06-05T10:17:14Z",
+            "stargazers": 11,
+            "forks": 9,
+            "reposlug": "DataStax-Examples-spring-petclinic-reactive"
+        },
+        "Next.js and Astra Db Starter": {
+            "name": "Next.js and Astra Db Starter",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "Chris Whilhite",
+            "apis": [],
+            "tags": []
+        },
+        "Astra Glitch Starter": {
+            "name": "Astra Glitch Starter",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "Alex Leventer",
+            "apis": [],
+            "tags": []
+        },
+        "Astra Gatsby Starter": {
+            "name": "Astra Gatsby Starter",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "Chris Whilhite",
+            "apis": [],
+            "tags": []
+        },
+        "Google Cloud Functions & NodeJS": {
+            "name": "Google Cloud Functions & NodeJS",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "Chris Whilhite",
+            "apis": [],
+            "tags": []
+        },
+        "AWS Lamda & Node JS": {
+            "name": "AWS Lamda & Node JS",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "no maintenance",
+            "apis": [],
+            "tags": []
+        },
+        "Azure Functions & NodeJS": {
+            "name": "Azure Functions & NodeJS",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "no maintenance",
+            "apis": [],
+            "tags": []
+        },
+        "Spark Migration Tool Demo": {
+            "name": "Spark Migration Tool Demo",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "Chris Whilhite",
+            "apis": [],
+            "tags": []
+        },
+        "Datastax Bulk Loader Demo": {
+            "name": "Datastax Bulk Loader Demo",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                "Spark"
+            ],
+            "usecases": "N/A",
+            "owner": "Chris Whilhite",
+            "apis": [],
+            "tags": [
+                "spark"
+            ]
+        },
+        "KillrVideo-killrvideo-java": {
+            "name": "Killrvideo Java",
+            "description": "Java implementation for KillrVideo project",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/KillrVideo/killrvideo-java"
+                ]
+            },
+            "language": [
+                "Java"
+            ],
+            "stack": [
+                "grpc",
+                " spring",
+                " drivers"
+            ],
+            "usecases": "Digital Library",
+            "owner": "Cedrick Lunven",
+            "apis": [],
+            "tags": [
+                "java",
+                "grpc api"
+            ],
+            "last_modified": "2023-03-30T11:32:21Z",
+            "stargazers": 63,
+            "forks": 40,
+            "reposlug": "KillrVideo-killrvideo-java"
+        },
+        "KillrVideo-killrvideo-python": {
+            "name": "Killrvideo Python",
+            "description": "Python implementation of KillrVideo service layer",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/KillrVideo/killrvideo-python"
+                ]
+            },
+            "language": [
+                "Python"
+            ],
+            "stack": [
+                "grpc",
+                " drivers"
+            ],
+            "usecases": "Digital Library",
+            "owner": "no maintenance",
+            "apis": [],
+            "tags": [
+                "python",
+                "grpc api"
+            ],
+            "last_modified": "2023-04-29T01:36:42Z",
+            "stargazers": 30,
+            "forks": 8,
+            "reposlug": "KillrVideo-killrvideo-python"
+        },
+        "KillrVideo-killrvideo-csharp": {
+            "name": "Killrvideo CSharp",
+            "description": "Reference application for using Cassandra, DataStax Enterprise, and .NET",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/KillrVideo/killrvideo-csharp"
+                ]
+            },
+            "language": [
+                "CSharp"
+            ],
+            "stack": [
+                "grpc",
+                " drivers"
+            ],
+            "usecases": "Digital Library",
+            "owner": "no maintenance",
+            "apis": [],
+            "tags": [
+                "csharp",
+                "grpc api"
+            ],
+            "last_modified": "2023-02-16T19:28:54Z",
+            "stargazers": 6,
+            "forks": 7,
+            "reposlug": "KillrVideo-killrvideo-csharp"
+        },
+        "KillrVideo-killrvideo-nodejs": {
+            "name": "Kiillrvideo NodeJS",
+            "description": "A reference application for using Cassandra, DataStax Enterprise, and Node.js",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/KillrVideo/killrvideo-nodejs"
+                ]
+            },
+            "language": [
+                "JavaScript"
+            ],
+            "stack": [
+                "grpc",
+                " drivers"
+            ],
+            "usecases": "Digital Library",
+            "owner": "no maintenance",
+            "apis": [],
+            "tags": [
+                "javascript",
+                "grpc api"
+            ],
+            "last_modified": "2023-02-16T19:25:24Z",
+            "stargazers": 29,
+            "forks": 19,
+            "reposlug": "KillrVideo-killrvideo-nodejs"
+        },
+        "DataStax-Examples-java-cassandra-driver-from3x-to4x": {
+            "name": "From driver 3x to 4x",
+            "description": "StandAlone classes illustrating portion of DataStax Java Driver in version 3.x then 4.x",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/DataStax-Examples/java-cassandra-driver-from3x-to4x"
+                ]
+            },
+            "language": [
+                "Java"
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "Cedrick Lunven",
+            "apis": [],
+            "tags": [
+                "java"
+            ],
+            "last_modified": "2023-02-16T19:32:14Z",
+            "stargazers": 23,
+            "forks": 9,
+            "reposlug": "DataStax-Examples-java-cassandra-driver-from3x-to4x"
+        },
+        "AstraDB Loom": {
+            "name": "AstraDB Loom",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                "Elixir"
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "Chat Server",
+            "owner": "Chris Wilhite",
+            "apis": [],
+            "tags": [
+                "elixir"
+            ]
+        },
+        "astrolabeIO": {
+            "name": "astrolabeIO",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "N/A",
+            "owner": "Chris Whilhite",
+            "apis": [],
+            "tags": []
+        },
+        "ds-steven-matison-astra-ansibile-demo": {
+            "name": "Ansible Demo",
+            "description": "A sample repository demonstrating how to use Astra Data & DevOps APIs in Ansible playbooks.",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/ds-steven-matison/astra-ansibile-demo"
+                ]
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "",
+            "owner": "Steven Mattison",
+            "apis": [],
+            "tags": [],
+            "last_modified": "2021-07-13T18:19:54Z",
+            "stargazers": 3,
+            "forks": 0,
+            "reposlug": "ds-steven-matison-astra-ansibile-demo"
+        },
+        "msmygit-dse-titbits": {
+            "name": "How to use Ansible with Astra",
+            "description": "Titbits working with DataStax suite of products & Apache Cassandra(TM)",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo",
+                "github": [
+                    "https://github.com/msmygit/dse-titbits/blob/master/documents/Working_with_DataStax_Astra_API_Ansible.md"
+                ]
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "",
+            "owner": "Madhavan Sridharan",
+            "apis": [],
+            "tags": [],
+            "last_modified": "2022-02-01T18:40:19Z",
+            "stargazers": 7,
+            "forks": 3,
+            "reposlug": "msmygit-dse-titbits"
+        },
+        "VSCode extension": {
+            "name": "VSCode extension",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "",
+            "owner": "",
+            "apis": [],
+            "tags": []
+        },
+        "IntelliJ Plugin": {
+            "name": "IntelliJ Plugin",
+            "description": "",
+            "urls": {
+                "heroimage": "https://yt3.googleusercontent.com/ytc/AMLnZu99z7O76h-EBAOloogUjeaXsi0HN-2YaiixWxAjyw=s176-c-k-c0x00ffffff-no-rj-mo"
+            },
+            "language": [
+                ""
+            ],
+            "stack": [
+                ""
+            ],
+            "usecases": "",
+            "owner": "",
+            "apis": [],
+            "tags": []
+        },
+        "datastaxdevs-workshop-cassandra-fundamentals": {
+            "code": "W001",
+            "name": "Apache Cassandra Fundamentals",
+            "tags": [
+                "cassandra",
+                "cql",
+                "workshop",
+                "nosql"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/RW0Am093TlaDJBDitqOzjQ/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/RW0Am093TlaDJBDitqOzjQ/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/140-5Cz21Z897ArtF63crXbJY3ypcHyXa"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-cassandra-fundamentals"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1134126"
+                ],
+                "abstract": [
+                    "https://docs.google.com/document/d/1VZDIS6L_K4w9X8oOitzBStV1xVRPbQXtin6aWB7jqt8/edit"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=hTObPaZNBI8"
+                ]
+            },
+            "last_modified": "2023-02-07T19:26:49Z",
+            "stargazers": 17,
+            "forks": 8,
+            "description": "Welcome to the Apache Cassandra\u2122 Fundamentals workshop! In this two-hour workshop, we shows the most important fundamentals and basics of the powerful distributed NoSQL database Apache Cassandra\u2122.",
+            "reposlug": "datastaxdevs-workshop-cassandra-fundamentals",
+            "duration": "120 minutes",
+            "skilllevel": "Beginning",
+            "language": [
+                "CQL"
+            ],
+            "badge": "https://api.badgr.io/public/badges/RW0Am093TlaDJBDitqOzjQ/image?imageVersion=1",
+            "usecases": []
+        },
+        "datastaxdevs-workshop-cassandra-data-modeling": {
+            "urls": {
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-cassandra-data-modeling"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=xrDfE74QnSE"
+                ]
+            },
+            "tags": [
+                "cassandra",
+                "workshop",
+                "nosql",
+                "cql"
+            ],
+            "last_modified": "2023-05-09T12:49:29Z",
+            "stargazers": 22,
+            "forks": 12,
+            "description": "This session looks at how to effectively design a data model for your application. You\u2019ll leave knowing how to create data models that scale effectively as your system grows ",
+            "reposlug": "datastaxdevs-workshop-cassandra-data-modeling",
+            "name": "Apache Cassandra Data Modeling",
+            "duration": "120 minutes",
+            "skilllevel": "Beginner",
+            "language": [
+                "CQL"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/5dee8148-ec34-43e2-a4ec-68a501130cfd.png",
+            "usecases": []
+        },
+        "datastaxdevs-workshop-cassandra-application-development": {
+            "code": "W003",
+            "name": "Apache Cassandra Application Development",
+            "tags": [
+                "java",
+                "workshop",
+                "cassandra",
+                "nosql",
+                "cql",
+                "drivers"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/zlJu1hFlR3SBhwmROwX8ug/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/zlJu1hFlR3SBhwmROwX8ug/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1ONw8hG0_oh7bXEv4vMk9Biuq1qQqdzP4"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-cassandra-application-development"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973141"
+                ],
+                "abstract": [
+                    "https://docs.google.com/presentation/d/1Jd0nISIBIAnmp7yHDS8Ot0X6RXIuaQiy6eCnW_WezMc/edit?usp=sharing"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=jCq0Eg0RnLU"
+                ]
+            },
+            "last_modified": "2023-01-25T17:48:55Z",
+            "stargazers": 10,
+            "forks": 10,
+            "description": "Learn about drivers, connectivity and requests by running a simple API with Apache Cassandra/Astra DB as its data backend.",
+            "reposlug": "datastaxdevs-workshop-cassandra-application-development",
+            "duration": "120 minutes",
+            "skilllevel": "Beginner",
+            "language": [
+                "python",
+                "java",
+                "javascript"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/b2f4df25-039d-42d2-a109-d72bd49d3f38.png",
+            "usecases": []
+        },
+        "datastaxdevs-bootcamp-fullstack-apps-with-cassandra": {
+            "code": "W004",
+            "name": "Build Microservice and API",
+            "tags": [
+                "workshop",
+                "spring",
+                "fastapi",
+                "express",
+                "java",
+                "javascript",
+                "python",
+                "rest api",
+                "astradb",
+                "cassandra"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/U_i7NpP4R269yyq1w50MDg/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/U_i7NpP4R269yyq1w50MDg/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1a511qG28gu_SNZg8PsBuWqqfGDsbmsXI"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/bootcamp-fullstack-apps-with-cassandra"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973113"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=4djnV5wZSeg",
+                    "https://www.youtube.com/watch?v=8KmSN3KEspE",
+                    "https://www.youtube.com/watch?v=sGBFNDvk0pA",
+                    "https://www.youtube.com/watch?v=h7BEsnMk1_E"
+                ]
+            },
+            "last_modified": "2023-02-03T03:39:54Z",
+            "stargazers": 70,
+            "forks": 57,
+            "description": "Learn how to build a backend for Cassandra, from data model to drivers to API exposition",
+            "reposlug": "datastaxdevs-bootcamp-fullstack-apps-with-cassandra",
+            "duration": "120 minutes",
+            "skilllevel": "Intermediate",
+            "language": [
+                "java",
+                "python",
+                "javascript"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/ca43050e-5e6e-4edc-8218-3c12e66de4af.png",
+            "usecases": []
+        },
+        "datastaxdevs-workshop-storage-attached-indexes": {
+            "urls": {
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-storage-attached-indexes"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=GLJc1Uz9dqw"
+                ]
+            },
+            "tags": [
+                "cassandra",
+                "workshop",
+                "search",
+                "sai"
+            ],
+            "last_modified": "2023-01-20T10:20:03Z",
+            "stargazers": 10,
+            "forks": 2,
+            "description": "Welcome to the 'Scalable Indexing for Cassandra using DataStax Astra' workshop! In this two-hour workshop, the Developer Advocate team of DataStax will explain the new Storage Attached Indexing (SAI) feature using Astra, the cloud based Cassandra-as-a-Service platform delivered by DataStax, to demonstrate how you can use them to add some much wanted flexibility to your Cassandra data model by querying outside of primary key fields.",
+            "reposlug": "datastaxdevs-workshop-storage-attached-indexes",
+            "name": "Scalable Indexing for Cassandra using DataStax Astra",
+            "duration": "50 minutes",
+            "skilllevel": "Advanced",
+            "language": [
+                "CQL"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/2d92d254-5275-4e39-b59a-23d70b101f0c.png",
+            "usecases": [
+                "search"
+            ]
+        },
+        "datastaxdevs-workshop-introduction-to-machine-learning": {
+            "code": "W006",
+            "name": "Introduction to Machine Learning with Apache Spark and Apache Cassandra",
+            "tags": [
+                "machine learning",
+                "workshop",
+                "jupyter",
+                "pandas",
+                "pyspark",
+                "spark",
+                "python",
+                "cassandra",
+                "spark-ml"
+            ],
+            "urls": {
+                "badge": [
+                    "https://media.badgr.com/uploads/badges/d9dc7f9c-da38-41ff-aea4-e9ffc1c1cbe1.png"
+                ],
+                "heroimage": "https://media.badgr.com/uploads/badges/d9dc7f9c-da38-41ff-aea4-e9ffc1c1cbe1.png",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1iuZ2d3TduHL4q0pRgI-UP_SB6lNRAarM"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-introduction-to-machine-learning"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1829591"
+                ],
+                "abstract": [
+                    "https://docs.google.com/presentation/d/1YGHay-6x3XEF0BZhohrEFe4KXgm84etBB6hNu1ke_ws/edit#slide=id.g14709f5edc7_0_3213"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=KLccQKxWZ4Y"
+                ]
+            },
+            "last_modified": "2023-02-09T16:59:36Z",
+            "stargazers": 6,
+            "forks": 5,
+            "description": "Come ready to discover the goals and approaches of machine learning, and how to build effective algorithms and solutions!",
+            "reposlug": "datastaxdevs-workshop-introduction-to-machine-learning",
+            "duration": "50 minutes",
+            "skilllevel": "Beginner",
+            "language": [
+                "python"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/d9dc7f9c-da38-41ff-aea4-e9ffc1c1cbe1.png",
+            "usecases": [
+                "Machine Learning"
+            ]
+        },
+        "datastaxdevs-workshop-nosqlbench": {
+            "code": "W007",
+            "name": "Benchmark your Astra DB with NoSQLBench",
+            "tags": [
+                "performance testing",
+                "workshop",
+                "gitpod",
+                "nosqlbench",
+                "performance",
+                "benchmark",
+                "cassandra"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/Am0bzHvSTSm4hCceusS2IA/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/Am0bzHvSTSm4hCceusS2IA/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1Y7izOZOwcQfXvt-OJTwZtqdEO1vDDghe"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-nosqlbench"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973143"
+                ],
+                "abstract": [
+                    "https://docs.google.com/presentation/d/1QBqlmG5K5s7i28iX_Wagnwfr1pCoTvpjJAeEGqG7EII/edit#slide=id.p"
+                ]
+            },
+            "last_modified": "2023-01-20T11:29:26Z",
+            "stargazers": 0,
+            "forks": 1,
+            "description": "The goal of this workshop is to get you familiar with the powerful and versatile tool NoSQLBench. With that, you can perform industry-grade, robust benchmarks aimed at several (distributed) target systems, especially NoSQL databases.",
+            "reposlug": "datastaxdevs-workshop-nosqlbench",
+            "duration": "120 minutes",
+            "skilllevel": "Intermediate",
+            "language": [
+                "java"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/7d9e1746-280a-4498-bdfb-368318028fb2.png",
+            "usecases": [
+                "Tests"
+            ]
+        },
+        "datastaxdevs-workshop-k8ssandra": {
+            "urls": {
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-k8ssandra"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=mDHT-yBOUUs"
+                ]
+            },
+            "tags": [
+                "docker",
+                "helm",
+                "kubernetes",
+                "k8ssandra",
+                "stargate",
+                "workshop",
+                "cloud-native"
+            ],
+            "last_modified": "2023-02-11T10:00:49Z",
+            "stargazers": 18,
+            "forks": 15,
+            "description": " learn how to deploy and manage a data tier based on Apache Cassandra\u2122 cluster in Kubernetes using K8ssandra. ",
+            "reposlug": "datastaxdevs-workshop-k8ssandra",
+            "name": "Deploy Cassandra into Kubernetes with K8ssandra",
+            "duration": "180 minutes",
+            "skilllevel": "Intermediate",
+            "language": [
+                "yaml"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/f1523f2b-9fc2-4368-aed7-0e78a5216427.png",
+            "usecases": [
+                "cloud-native"
+            ]
+        },
+        "datastaxdevs-workshop-battlestax": {
+            "code": "W009",
+            "name": "BattleStax",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/16zspYMQgxbnt-XN34loeQIcOaUbiJ6hi"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-battlestax"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1134146"
+                ]
+            },
+            "last_modified": "2022-06-15T15:06:03Z",
+            "stargazers": 4,
+            "forks": 5,
+            "reposlug": "datastaxdevs-workshop-battlestax"
+        },
+        "DataStax-Academy-workshop-k8ssandra-certification": {
+            "code": "W010",
+            "name": "Workshop 1: Cassandra CertificationWorkshop 2: K8ssandra Certification",
+            "tags": [
+                "certification",
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1E_s-doK5RXO3MvL8tc-v-dj5u0asUD9b"
+                ],
+                "github": [
+                    "https://github.com/DataStax-Academy/workshop-cassandra-certification",
+                    "https://github.com/DataStax-Academy/workshop-k8ssandra-certification"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973145"
+                ],
+                "abstract": [
+                    "https://docs.google.com/document/d/1bVGQ85jz70uh4L7arkmwTWG_rRWPqOMbTlHXMY7wg-M/edit?usp=sharing",
+                    "https://docs.google.com/document/d/1JZtIgFtSDXCnyR1-d6Gz-r7RkacMxT1W_u84hRxJCgs/edit?usp=sharing",
+                    "https://docs.google.com/document/d/1JZtIgFtSDXCnyR1-d6Gz-r7RkacMxT1W_u84hRxJCgs/edit?usp=sharing"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=ZA-NBczakqk",
+                    "https://www.youtube.com/watch?v=JT1Dljbfmz8"
+                ]
+            },
+            "last_modified": "2023-02-23T22:26:45Z",
+            "stargazers": 15,
+            "forks": 7,
+            "reposlug": "DataStax-Academy-workshop-k8ssandra-certification"
+        },
+        "datastaxdevs-workshop-your-k8s-to-cloud": {
+            "code": "W011",
+            "name": "Cassandra in the cloud",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1UE_ooWhnRf1trfuKhAy2eQg9lB8LUjH-"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-your-k8s-to-cloud"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973130"
+                ]
+            },
+            "last_modified": "2022-08-22T12:02:43Z",
+            "stargazers": 5,
+            "forks": 7,
+            "description": "Taking your K8s App to the cloud Online Workshop",
+            "reposlug": "datastaxdevs-workshop-your-k8s-to-cloud"
+        },
+        "datastaxdevs-workshop-sql-to-nosql-migration": {
+            "code": "W012",
+            "name": "From SQL to NoSQL",
+            "tags": [
+                "nosql",
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/AuVCajxCS0eXFYb2aCRqxA/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/AuVCajxCS0eXFYb2aCRqxA/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1KP6ltv8AwRBQNroaOTfMXv-o_NM8GJYa"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-sql-to-nosql-migration"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973105"
+                ],
+                "abstract": [
+                    "https://docs.google.com/document/d/1C1lJpj_gkUsRtueL2JrY1S2M4fNdGSBe1M23l6Mlnjg/edit?usp=sharing"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=tNvBjY8izSk"
+                ]
+            },
+            "last_modified": "2023-03-06T11:38:51Z",
+            "stargazers": 10,
+            "forks": 10,
+            "reposlug": "datastaxdevs-workshop-sql-to-nosql-migration"
+        },
+        "datastaxdevs-appdev-week1-todolist": {
+            "urls": {
+                "github": [
+                    "https://github.com/datastaxdevs/appdev-week1-todolist"
+                ],
+                "heroimage": "https://camo.githubusercontent.com/fae2f66007b221f99ded30bc5edf9bfe4f2046d4d7c426dede44d66cb0588c58/68747470733a2f2f6d6f6e6f736e61702e636f6d2f696d6167652f4676307950417a6e62654e4a443376596c51667a744d4536796f677a4654",
+                "gitpod": [
+                    "https://dtsx.io/3gtADSq"
+                ],
+                "netlify": [
+                    "https://dtsx.io/2EtfGty"
+                ]
+            },
+            "tags": [
+                "javascript",
+                "rest api",
+                "apps"
+            ],
+            "last_modified": "2023-04-03T21:49:59Z",
+            "stargazers": 84,
+            "forks": 97,
+            "description": "This is an example React To-Do application using a DataStax Astra free tier database.",
+            "reposlug": "datastaxdevs-appdev-week1-todolist",
+            "name": "ToDo App using JAMStack, Netlify, and AstraDB",
+            "duration": "10 minutes",
+            "skilllevel": "Beginner",
+            "priority": 2
+        },
+        "datastaxdevs-workshop-social-media-tiktok": {
+            "urls": {
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-social-media-tiktok"
+                ]
+            },
+            "tags": [
+                "javascript",
+                "doc api",
+                "apps"
+            ],
+            "last_modified": "2023-03-28T12:45:37Z",
+            "stargazers": 60,
+            "forks": 63,
+            "description": "A simple Tik-Tok clone running on AstraDB that leverages the Document API.",
+            "reposlug": "datastaxdevs-workshop-social-media-tiktok",
+            "name": "TikTok clone using React, JAMStack and AstraDB",
+            "duration": "50 minutes",
+            "skilllevel": "Advanced",
+            "priority": 1
+        },
+        "datastaxdevs-workshop-graphql-netflix": {
+            "urls": {
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-graphql-netflix"
+                ],
+                "heroimage": "https://github.com/datastaxdevs/workshop-graphql-netflix/raw/master/images/ui.png",
+                "youtube": [
+                    "https://www.youtube.com/watch?v=g8COh40v2jU"
+                ]
+            },
+            "tags": [
+                "react",
+                "javascript",
+                "workshop"
+            ],
+            "last_modified": "2023-05-18T00:56:27Z",
+            "stargazers": 621,
+            "forks": 311,
+            "description": "A simple ReactJS Netflix homepage clone running on Astra DB that leverages the GraphQL API with paging and infinite scrolling. This application is the result of the collaboration between Ania Kubow and the Datastax Developer Advocate team.",
+            "reposlug": "datastaxdevs-workshop-graphql-netflix",
+            "name": "GraphQL Netflix Workshop",
+            "duration": "50 minutes",
+            "skilllevel": "Intermediate",
+            "language": [
+                "javascript"
+            ],
+            "usecases": []
+        },
+        "datastaxdevs-workshop-todo-native-mobile": {
+            "code": "W016",
+            "name": "React Native",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/7tNZR8zwQkS3gXVi0jLJ0w/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/7tNZR8zwQkS3gXVi0jLJ0w/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1QXerOGOImq-U_2nxwXuiBVMMOYS8Xe_n"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-todo-native-mobile"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973146"
+                ]
+            },
+            "last_modified": "2023-04-02T14:33:05Z",
+            "stargazers": 29,
+            "forks": 19,
+            "description": "Adaptation of ToDo List Web App created for a DataStax workshop",
+            "reposlug": "datastaxdevs-workshop-todo-native-mobile"
+        },
+        "datastaxdevs-workshop-vuejs": {
+            "code": "W017",
+            "name": "VueJS and TypeScript",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/6-MkoHDYS1erN3aLT8n7gg/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/6-MkoHDYS1erN3aLT8n7gg/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1o-SeO00oyszgjWrMpjQ-DK4OpewTkaFQ"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-vuejs"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973147"
+                ]
+            },
+            "last_modified": "2021-11-15T09:50:11Z",
+            "stargazers": 20,
+            "forks": 28,
+            "reposlug": "datastaxdevs-workshop-vuejs"
+        },
+        "datastaxdevs-workshop-intro-to-graphql": {
+            "code": "W018",
+            "name": "Introduction to GraphQL",
+            "tags": [
+                "graphql api",
+                "workshop",
+                "cassandra",
+                "jamstack",
+                "netlify",
+                "nosql",
+                "gitpod",
+                "astradb"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/Wp93l6JnTUG6w-b7f6KT9w/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/Wp93l6JnTUG6w-b7f6KT9w/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1UEgbHHRPu5W79E5N6FO2emK424r3BSkH"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-intro-to-graphql"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1768638"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=Z83XTWhav7g"
+                ]
+            },
+            "last_modified": "2023-04-10T05:15:46Z",
+            "stargazers": 78,
+            "forks": 44,
+            "description": "Learn the basics of GraphQL. Plenty of hands-on experience covering: a React client interacting with Astra DB using the Netlify stack; usage of playgrounds and tooling; running your own Java GraphQL backend based on the Netflix DGS framework.",
+            "reposlug": "datastaxdevs-workshop-intro-to-graphql",
+            "duration": "120 minutes",
+            "skilllevel": "Beginner",
+            "language": [
+                "java",
+                "javascript",
+                "nodejs"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/6d9d20f0-8a8e-4cc9-9cf2-dc4e1baa97d6.png",
+            "usecases": []
+        },
+        "datastaxdevs-workshop-introduction-to-nosql": {
+            "urls": {
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-introduction-to-nosql"
+                ],
+                "heroimage": "https://github.com/datastaxdevs/workshop-introduction-to-nosql/raw/main/images/intro-to-nosql-cover.png?raw=true",
+                "youtube": [
+                    "https://www.youtube.com/watch?v=rhzUrejsA4A"
+                ]
+            },
+            "tags": [
+                "nosql",
+                "workshop"
+            ],
+            "last_modified": "2023-03-15T21:04:19Z",
+            "stargazers": 262,
+            "forks": 197,
+            "description": "An introduction to NoSQL Databases",
+            "reposlug": "datastaxdevs-workshop-introduction-to-nosql",
+            "name": "Introduction to NoSQL Workshop",
+            "skilllevel": "Beginner",
+            "language": [],
+            "usecases": []
+        },
+        "Pulsar and Astra Streaming": {
+            "code": "W020",
+            "name": "Pulsar and Astra Streaming",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/XHV8YAGkSGSZdVIB4ojv5A/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/XHV8YAGkSGSZdVIB4ojv5A/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/13_d2AvKotYkIkTQTJrta_cTcE9y-JE3m"
+                ],
+                "github": [
+                    "#gid=1827917007"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973117"
+                ]
+            }
+        },
+        "datastaxdevs-workshop-intro-quarkus-cassandra": {
+            "code": "W021",
+            "name": "Cassandra and Quarkus",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://badgr.com/public/assertions/O_7Dcl7ySCiWJasmtnJaNw"
+                ],
+                "heroimage": "https://badgr.com/public/assertions/O_7Dcl7ySCiWJasmtnJaNw",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1wD15nv9KwwjtIVPrQ2YmejajcxLOilRj"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-intro-quarkus-cassandra"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1397809"
+                ]
+            },
+            "last_modified": "2023-02-08T05:55:56Z",
+            "stargazers": 18,
+            "forks": 14,
+            "reposlug": "datastaxdevs-workshop-intro-quarkus-cassandra"
+        },
+        "datastaxdevs-workshop-spring-data-cassandra": {
+            "code": "W022",
+            "name": "Todo Application (Spring Data)",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/6WpOvdPQR4CF5jcJf5tjEg/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/6WpOvdPQR4CF5jcJf5tjEg/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/167Mf0WSRTEhcD8tywONFZqWGd_-RQH-e"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-spring-data-cassandra"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973108"
+                ]
+            },
+            "last_modified": "2023-05-17T16:53:43Z",
+            "stargazers": 38,
+            "forks": 34,
+            "description": "Build a Todolist with Spring Data Cassandra",
+            "reposlug": "datastaxdevs-workshop-spring-data-cassandra"
+        },
+        "datastaxdevs-workshop-ecommerce-app": {
+            "code": "W023",
+            "name": "eCommerce Application",
+            "tags": [
+                "java",
+                "workshop",
+                "spring",
+                "astradb",
+                "cassandra",
+                "streaming"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/By3medzRRv6DYaPPJrOEyw/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/By3medzRRv6DYaPPJrOEyw/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1qRm2k12ugxH0H4ZnMKWYAARALcc-voch"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-ecommerce-app"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1495817"
+                ],
+                "abstract": [
+                    "https://docs.google.com/presentation/d/1MgVCGoe31OjFrQkg0VaiQnTPPj6h0mPqlnanBHvPe0s/edit?usp=sharing"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=4djnV5wZSeg",
+                    "https://www.youtube.com/watch?v=8KmSN3KEspE",
+                    "https://www.youtube.com/watch?v=sGBFNDvk0pA",
+                    "https://www.youtube.com/watch?v=h7BEsnMk1_E"
+                ]
+            },
+            "last_modified": "2023-05-13T16:27:04Z",
+            "stargazers": 71,
+            "forks": 59,
+            "description": "Are you building or do you support an e-commerce website? If so, then this content is for you!  Worldwide digital sales in 2020 eclipsed four trillion dollars (USD). Businesses that want to compete, need a high performing e-commerce website. Here, we will demonstrate how to build a high performing persistence layer with DataStax ASTRA DB.",
+            "reposlug": "datastaxdevs-workshop-ecommerce-app",
+            "duration": "50 minutes",
+            "skilllevel": "Advanced",
+            "language": [
+                "java"
+            ],
+            "badge": "https://api.badgr.io/public/badges/By3medzRRv6DYaPPJrOEyw/image?imageVersion=1",
+            "usecases": [
+                "Retail"
+            ]
+        },
+        "datastaxdevs-workshop-spring-stargate": {
+            "code": "W024",
+            "name": "Stargate Wheel App (Spring Data)",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://github.com/datastaxdevs/workshop-spring-stargate/raw/main/images/tutorials/badge.png?raw=true"
+                ],
+                "heroimage": "https://github.com/datastaxdevs/workshop-spring-stargate/raw/main/images/tutorials/badge.png?raw=true",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1-wAY_jtez3eNDKElovTPy_pCv6LIXeb1"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-spring-stargate"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973138"
+                ]
+            },
+            "last_modified": "2023-05-05T15:28:20Z",
+            "stargazers": 57,
+            "forks": 59,
+            "description": "Building Spring Boot/data Application leveraging Cassandra and Stargate",
+            "reposlug": "datastaxdevs-workshop-spring-stargate"
+        },
+        "datastaxdevs-workshop-spring-reactive": {
+            "code": "W025",
+            "name": "PetClinic App (Spring, Reactive)",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/QNo4Nsq5QAyo7NJsgRY1Bg/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/QNo4Nsq5QAyo7NJsgRY1Bg/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1VzvQ2vbJQVoPU75E41NT2VnJliN4v3Or"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-spring-reactive"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973087"
+                ]
+            },
+            "last_modified": "2023-03-11T15:25:54Z",
+            "stargazers": 53,
+            "forks": 54,
+            "description": "Workshop Java Spring Reactive \ud83d\udc08 PetClinic Application \ud83d\udc15",
+            "reposlug": "datastaxdevs-workshop-spring-reactive"
+        },
+        "datastaxdevs-workshop-ai-as-api": {
+            "code": "W026",
+            "name": "AI as an API",
+            "tags": [
+                "ai",
+                "workshop",
+                "nlp"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/Hx87KBhFTDK1BK1DUPRRPg/image?imageVersion=1"
+                ],
+                "heroimage": "https://github.com/datastaxdevs/workshop-ai-as-api/raw/main/images/nlp-classifier-api-cover.png",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1bOYZsmF6l7M_qmgjizXRBrUhsSa-Fk2Z"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-ai-as-api"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1585505"
+                ],
+                "abstract": [
+                    "https://docs.google.com/document/d/1ZzK86Zw7izsn5sgq1-n7tSVveqV0HPAuKtyQtwDGKrg/edit"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=sKa1uPjIBC0"
+                ]
+            },
+            "last_modified": "2023-05-15T04:58:58Z",
+            "stargazers": 133,
+            "forks": 54,
+            "reposlug": "datastaxdevs-workshop-ai-as-api",
+            "description": "Learn to build your own NLP text classifier and expose it as an API:",
+            "skilllevel": "Intermediate",
+            "language": [],
+            "usecases": []
+        },
+        "datastaxdevs-workshop-streaming-game": {
+            "code": "W027",
+            "name": "Drapetisca: a multiplayer online game with Astra Streaming and Websockets",
+            "tags": [
+                "streaming",
+                "workshop",
+                "websockets",
+                "pulsar",
+                "cassandra",
+                "react",
+                "fastapi",
+                "event streaming",
+                "real-time",
+                "astradb",
+                "astrastreaming",
+                "gaming"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/6EYVSdcSTfKyYnkXAZcmUw/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/6EYVSdcSTfKyYnkXAZcmUw/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/11BMPKnpCnEpTa5PCpNLbOuapP5X5Ze_P"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-streaming-game"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1432915"
+                ],
+                "abstract": [
+                    "https://docs.google.com/presentation/d/17_D6IFIxgkzvCb59pdeI2zoMphKCNF45BwAdlAvoBo0/edit#slide=id.p"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=jfOBPlcd9eA"
+                ]
+            },
+            "last_modified": "2023-05-05T01:56:45Z",
+            "stargazers": 28,
+            "forks": 14,
+            "description": "A simple multiplayer online game (with in-game chat) featuring: Astra Streaming, Astra DB, WebSockets, React for the front-end and FastAPI for the back-end. Also spiders!",
+            "reposlug": "datastaxdevs-workshop-streaming-game",
+            "duration": "120 minutes",
+            "skilllevel": "Intermediate",
+            "language": [
+                "javascript",
+                "python"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/98db33b1-ae34-4445-a4eb-546a4f4b8567.png",
+            "usecases": [
+                "Online gaming",
+                "Push architecture",
+                "Chat applications"
+            ]
+        },
+        "datastaxdevs-workshop-betterreads": {
+            "code": "W028",
+            "name": "Better Reads (Spring)",
+            "tags": [
+                "spring",
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/LOZuswpVQKejngXt5We_rw/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/LOZuswpVQKejngXt5We_rw/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1W2u_Wdrs7aqBQ3dfkLEE0Mygu18-QuWU"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-betterreads"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973089"
+                ]
+            },
+            "last_modified": "2023-05-16T15:57:58Z",
+            "stargazers": 21,
+            "forks": 24,
+            "description": "Clone of Good Reads using Spring and Cassandra",
+            "reposlug": "datastaxdevs-workshop-betterreads"
+        },
+        "datastaxdevs-workshop-intro-streaming-and-cdc": {
+            "code": "W029",
+            "name": "Introduction to Streaming and CDC",
+            "tags": [
+                "change data capture",
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/OE7vzm9cRHyD1WbDI2BXdQ/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/OE7vzm9cRHyD1WbDI2BXdQ/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1Ynj_SX6PS6p9XyUbIXnB03GYuRnjcNFM"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-intro-streaming-and-cdc"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973152"
+                ]
+            },
+            "last_modified": "2022-05-11T21:50:54Z",
+            "stargazers": 5,
+            "forks": 1,
+            "description": "We will visit the basics of change data capture (CDC) and why it's become so popular recently - with CDC, developers create smarter applications when real-time data is connected to the whole data ecosystem. During the workshop we will highlight use cases that make it your go-to solution when modernizing applications, getting more value out of your data (real-time), and joining new machine learning techniques with old applications.  We will introduce you to Apache Pulsar, show you how to enable the CDC feature in Datastax Astra, how to set up Astra Streaming, and (of course) how to get it all working together!",
+            "reposlug": "datastaxdevs-workshop-intro-streaming-and-cdc"
+        },
+        "datastaxdevs-workshop-realtime-data-pipelines": {
+            "code": "W030",
+            "name": "Real-Time data pipelines with Pulsar and Cassandra",
+            "tags": [
+                "workshop",
+                "pulsar",
+                "drivers",
+                "astrastreaming",
+                "cassandra",
+                "data-engineering",
+                "data-science",
+                "astradb"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+                    "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+                "slides": [
+                    "https://drive.google.com/drive/u/1/folders/1ZpDnGf53rvCDovVOZMVf8UyphZTdTJhR"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-realtime-data-pipelines"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1858607"
+                ],
+                "youtube": [
+                    "https://www.youtube.com/watch?v=AH5ETUhUCUg"
+                ]
+            },
+            "last_modified": "2023-02-09T16:58:12Z",
+            "stargazers": 3,
+            "forks": 5,
+            "description": "You will inspect and run a sample architecture making use of Apache Pulsar\u2122 and Pulsar Functions for real-time, event-streaming-based data ingestion, cleaning and processing.",
+            "reposlug": "datastaxdevs-workshop-realtime-data-pipelines",
+            "duration": "120 minutes",
+            "skilllevel": "Beginner/Intermediate",
+            "language": [
+                "python"
+            ],
+            "badge": "https://media.badgr.com/uploads/badges/6e50dd8b-5e75-448b-89cc-eac1fb074d8c.png",
+            "usecases": [
+                "ETL",
+                "real-time data",
+                "data validation",
+                "data aggregation"
+            ]
+        },
+        "datastaxdevs-workshop-IOS-Swift-Astra": {
+            "code": "W031",
+            "name": "Swift, IOS and Document API",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "slides": [
+                    "https://drive.google.com/drive/folders/1K6XtDFET9ujOzQKMHzK-RYNP2-ZSsjbF?usp=sharing"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-IOS-Swift-Astra"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1807858"
+                ],
+                "abstract": [
+                    "https://docs.google.com/document/d/1KHysoOwoohnHnA8Qz5yMmk20cNZvupZr3Rh_DbUyXvw/edit#"
+                ]
+            },
+            "last_modified": "2022-08-17T16:28:11Z",
+            "stargazers": 2,
+            "forks": 2,
+            "description": "Sample IOS app in Swift that connects to Datastax Astra",
+            "reposlug": "datastaxdevs-workshop-IOS-Swift-Astra"
+        },
+        "datastaxdevs-workshop-streaming-graph-quine": {
+            "code": "W032",
+            "name": "Quine and Astra DBIn progress 10/19",
+            "tags": [
+                "graph",
+                "workshop"
+            ],
+            "urls": {
+                "badge": [
+                    "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+                    "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1"
+                ],
+                "heroimage": "https://api.badgr.io/public/badges/xMO8NpTGQKOO8ViIPifdQA/image?imageVersion=1",
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-streaming-graph-quine"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1884439"
+                ]
+            },
+            "last_modified": "2023-01-19T20:56:30Z",
+            "stargazers": 3,
+            "forks": 5,
+            "description": "Workshop with Quine Partner showing power of Astra with Graph Analytics Quine.io",
+            "reposlug": "datastaxdevs-workshop-streaming-graph-quine"
+        },
+        "datastaxdevs-workshop-spring-quarkus-micronaut-cassandra": {
+            "code": "W033",
+            "name": "Quarkus Spring and Micronaut",
+            "tags": [
+                "workshop"
+            ],
+            "urls": {
+                "slides": [
+                    "https://drive.google.com/drive/u/0/folders/1tm2ynxcNv22TmhhbvXUpL4I4514WGgar"
+                ],
+                "github": [
+                    "https://github.com/datastaxdevs/workshop-spring-quarkus-micronaut-cassandra"
+                ],
+                "menti": [
+                    "https://www.mentimeter.com/app/folder/1973120"
+                ]
+            },
+            "last_modified": "2022-11-09T01:05:41Z",
+            "stargazers": 3,
+            "forks": 2,
+            "description": "Support Material for workshops going over the 3 frameworks",
+            "reposlug": "datastaxdevs-workshop-spring-quarkus-micronaut-cassandra"
+        },
+        "datastaxdevs-netlify-astra-example": {
+            "urls": {
+                "github": [
+                    "https://github.com/datastaxdevs/netlify-astra-example"
+                ]
+            },
+            "tags": [],
+            "last_modified": "2021-10-27T23:19:04Z",
+            "stargazers": 1,
+            "forks": 4,
+            "reposlug": "datastaxdevs-netlify-astra-example"
+        },
+        "DataStax-Examples-getting-started-with-astra-csharp": {
+            "urls": {
+                "github": [
+                    "https://github.com/DataStax-Examples/getting-started-with-astra-csharp"
+                ]
+            },
+            "tags": [],
+            "last_modified": "2020-12-03T00:59:13Z",
+            "stargazers": 0,
+            "forks": 4,
+            "description": "Example REST API in C# showing how to connect to and query DataStax Astra databases",
+            "reposlug": "DataStax-Examples-getting-started-with-astra-csharp"
+        },
+        "DataStax-Examples-getting-started-with-astra-java": {
+            "urls": {
+                "github": [
+                    "https://github.com/DataStax-Examples/getting-started-with-astra-java"
+                ]
+            },
+            "tags": [],
+            "last_modified": "2023-04-03T19:54:05Z",
+            "stargazers": 15,
+            "forks": 12,
+            "description": "Example REST API in Java showing how to connect to and query DataStax Astra databases",
+            "reposlug": "DataStax-Examples-getting-started-with-astra-java"
+        },
+        "DataStax-Examples-getting-started-with-astra-python": {
+            "urls": {
+                "github": [
+                    "https://github.com/DataStax-Examples/getting-started-with-astra-python"
+                ]
+            },
+            "tags": [],
+            "last_modified": "2022-08-02T05:27:00Z",
+            "stargazers": 18,
+            "forks": 15,
+            "description": "Example REST API in Python showing how to connect to and query DataStax Astra databases",
+            "reposlug": "DataStax-Examples-getting-started-with-astra-python"
+        },
+        "DataStax-Examples-azure-functions-nodejs": {
+            "urls": {
+                "github": [
+                    "https://github.com/DataStax-Examples/azure-functions-nodejs"
+                ]
+            },
+            "tags": [],
+            "last_modified": "2020-12-03T01:11:59Z",
+            "stargazers": 0,
+            "forks": 1,
+            "description": "Use Azure Functions with the Node.js DataStax Driver to set up a Cassandra REST API with the Serverless Framework",
+            "reposlug": "DataStax-Examples-azure-functions-nodejs"
+        },
+        "DataStax-Examples-aws-lambda-nodejs": {
+            "urls": {
+                "github": [
+                    "https://github.com/DataStax-Examples/aws-lambda-nodejs"
+                ]
+            },
+            "tags": [],
+            "last_modified": "2023-04-15T21:37:09Z",
+            "stargazers": 1,
+            "forks": 0,
+            "description": "Use AWS Lambda Functions with the Node.js DataStax Driver to set up a Cassandra REST API with the Serverless Framework",
+            "reposlug": "DataStax-Examples-aws-lambda-nodejs"
+        },
+        "DataStax-Examples-google-cloud-functions-nodejs": {
+            "urls": {
+                "github": [
+                    "https://github.com/DataStax-Examples/google-cloud-functions-nodejs"
+                ]
+            },
+            "tags": [],
+            "last_modified": "2022-11-19T04:04:05Z",
+            "stargazers": 4,
+            "forks": 0,
+            "description": "Use Google Cloud Functions with the Node.js DataStax Driver to set up a Cassandra REST API with the Serverless Framework",
+            "reposlug": "DataStax-Examples-google-cloud-functions-nodejs"
+        }
+    }
+}

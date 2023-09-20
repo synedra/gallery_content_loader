@@ -1,104 +1,105 @@
 from __future__ import print_function
-from astrapy.client import create_astra_client
-from googleapiclient.errors import HttpError
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
-from cmarkgfm.cmark import Options as cmarkgfmOptions
+
 import cmarkgfm
-import pycmarkgfm
-from mdx_gfm import GithubFlavoredMarkdownExtension
-import markdown
-from bs4 import BeautifulSoup
+from cmarkgfm.cmark import Options as cmarkgfmOptions
+
 import re
 import json
 from slugify import slugify
-from datetime import timedelta, date, datetime, timezone
+from datetime import timedelta, datetime
 import requests
 import os.path
 import os
+import sys
 from octohub.connection import Connection
+import base64
 
 from dotenv import load_dotenv
-
 load_dotenv()
 
 conn = Connection(os.environ["GITHUB_TOKEN"])
-astra_client = create_astra_client(
-                                    astra_database_id=os.environ["ASTRA_DB_ID"],
-                                    astra_database_region=os.environ["ASTRA_DB_REGION"],
-                                    astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
+
+
+def getCreds(): 
+    # Get creds for Google Sheets
+    creds = None
+    # If modifying these scopes, delete the file token.json.
+    SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly',
+    'https://www.googleapis.com/auth/youtube.force-ssl', "https://www.googleapis.com/auth/youtube.readonly"]
+
+    if os.path.exists('token.json'):
+        creds = Credentials.from_authorized_user_file(
+            'token.json', SCOPES)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                    'credentials.json', SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open('token.json', 'w') as token:
+            token.write(creds.to_json())
+
+    service = build('sheets', 'v4', credentials=creds)
+    youtube = build('youtube', 'v3', credentials=creds)
+    return service, youtube
 
 
 applications = {}
 readmes = {}
 videos = {}
 
-# using an access token
 
-token = os.environ["GITHUB_TOKEN"]
-headers = {'Authorization': f'token {token}'}
 
 p = re.compile('[a-zA-Z]+')
 
-# If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly',
-    'https://www.googleapis.com/auth/youtube.force-ssl', "https://www.googleapis.com/auth/youtube.readonly"]
-SAMPLE_SPREADSHEET_ID = '1vJSKJAa7EJ0s1Ksn_L_lgQGJI6-UMDqNngrQO4U4cEY'
-SAMPLE_RANGE_NAME = 'SampleApplicationMain'
 
 def main():
     service, youtube = getCreds()
     sampleApplicationItems, sampleApplicationLinks, workshopItems, workshopLinks = getWorksheetInfo(
         service)
 
+
     entries = processApplicationItems(
         sampleApplicationItems, sampleApplicationLinks, [])
     entries = processWorkshopItems(workshopItems, workshopLinks, entries)
     entries = processGithubOrganization('DatastaxDevs', entries)
     entries = processGithubOrganization('Datastax-Examples', entries)
-    entry = {"urls":{"github":["https://github.com/cassioml/langchain-flare-pdf-qa-demo"]},"tags":["starter"],"name":"PDF FLARE demo with Langchain and Cassandra as Vector Store"}
-    entries.append(entry)
-
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-ecommerce"]},"name":"Stargate Mongoose Demo Ecommerce"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-discord-bot"]},"name":"Stargate Mongoose Demo Discord Bot"}
-    entries.append(entry)
-
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-typescript-express-reviews"]},"name":"Stargate Mongoose Typescript Express Reviews"}
-    entries.append(entry)
-
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/stargate-mongoose-demo-photography"]},"name":"Stargate Mongoose Demo Photography"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-next.js-starter"]},"name":"Astra Next JS Starter"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/glitch-astra-starter"]}, "name":"Glitch Astra Starter"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-nodejs-starter"]}, "name":"Astra NodeJS Starter"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-gatsbyjs-starter"]}, "name":"Astra GatsbyJS Starter"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/google-cloud-functions-nodejs"]}, "name":"Google Cloud Functions NodeJS"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/nf-data-explorer"]},"tags":["tools"], "name":"Netflix Data Explorer"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/datastax/astra-ide-plugin/wiki/Getting-Started"]},"tags":["tools"], "name":"Astra Jetbrains IDE"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/astra-spark-migration"]},"tags":["tools"],"name":"Astra Spark Migration"}
-    entries.append(entry)
-    entry = {"urls":{"github":["https://github.com/DataStax-Examples/dsbulk-to-astra"]}, "tags":["tools"], "name":"Dsbulk to Astra"}
-    entries.append(entry)
     # Add awesome-astra
     newvideos = recursiveSearch(youtube, '', [])
-    videos = getDBVideosRecursive(newvideos)
-    updateVideoStatistics(youtube, videos)
+    videos =updateVideoStatistics(youtube, newvideos)
 
+    readmeJson = {}
     for index in range(len(entries)):
         astrajson = ""
         entry = entries[index]
         if "tags" not in entry:
             entry["tags"] = []
+        
+        if ("youtube" in entry["urls"]):
+            entry["youtube_statistics"] = {'viewCount': 0, 'likeCount': 0, 'dislikeCount': 0, 'favoriteCount': 0, 'commentCount': 0}
+            for path in entry["urls"]["youtube"]:
+                url, id = path.split("=")
+                if id in videos:
+                    if "statistics" in videos[id]:
+                        if entry["youtube_statistics"]["viewCount"] != 0:
+                            for key in videos[id]["statistics"]:
+                                keyint = int(entry["youtube_statistics"][key])
+                                entry["youtube_statistics"][key] = keyint + int(videos[id]["statistics"][key])
+                        else:
+                            entry["youtube_statistics"] = videos[id]["statistics"]
+                    
+                    if "liveStreamingDetails" not in entry["youtube_statistics"]:
+                        entry["youtube_statistics"]["liveStreamingDetails"] = []
+                    if "liveStreamingDetails" in videos[id]:
+                        entry["youtube_statistics"]["liveStreamingDetails"].append(videos[id]["liveStreamingDetails"])
 
         if ("github" in entry["urls"]):
             for url in entry["urls"]["github"]:
@@ -108,7 +109,6 @@ def main():
                 reponame = url.split('/')[4]
 
                 uri = '/repos/' + owner + '/' + reponame
-                print (uri)
 
                 repo = conn.send('GET', uri)
                 entry["last_modified"] = repo.parsed.updated_at
@@ -118,13 +118,12 @@ def main():
                     entry["description"] = repo.parsed.description
 
                 uri = '/repos/' + owner + '/' + reponame
-                print (uri)
 
                 reposlug = owner + "-" + reponame
+                entry["reposlug"] = reposlug
                 
                 astrajson = ""
-                print("Getting astra.json for " +
-                          owner + "/" + reponame + " at 99")
+                
                 astrajson = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/main/astra.json')
                 if (astrajson.status_code != 404):
                     entry = astraJsonSettings(json.loads(
@@ -140,96 +139,102 @@ def main():
                     readme = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/main/README.md')
                     if readme.status_code == 404:
                         readme = requests.get('https://raw.githubusercontent.com/' + owner + '/' + reponame + '/master/README.md')
-                    
                     html = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
-                    #print("\n\n\nSTARTING HTML for " + reposlug + " : \n\n" + html)
-                    
-                    newhtml = ""
-                    headerpattern = re.compile("((<h.>)(.+?)(<\/h.>))")
-                    srcpattern=re.compile("(src=\"(.+?)\")")
-                    httppattern = re.compile("http")
-                    linkpattern=re.compile("href=(\".+?\")")
-                    poundpattern=re.compile("(#)")
-
-                    
-                    for line in html.splitlines():
-                        match = headerpattern.search(line)
-                        if match:
-                            slug = slugify(match.group(3))
-                            anchorline = match.group(2) + '<a class="anchor" aria-hidden="true" id="' + slug + '"> </a>' + match.group(3) + match.group(4)
-
-                            line = line.replace(match.group(0), anchorline)
-
-                        srcmatch = srcpattern.search(line)
-                        httpmatch = httppattern.search(line)
-                        if srcmatch and not httpmatch:
-                            replace = "https://github.com/" + owner + "/" + reponame + "/raw/master/" +  srcmatch.group(2)
-                            line = line.replace(srcmatch.group(2), replace)
-
-                        linkmatch = linkpattern.search(line)
-                        if linkmatch:
-                            replace = linkmatch.group(1) + " target=\"_blank\""
-                            line = line.replace(linkmatch.group(1), replace)
-                        
-                        newhtml += line + "\n"
-
-                    print("HTML FOR " + reposlug)
-                    res = readme_collection.create(document={"content":newhtml}, path=reposlug)
-                    print("SUCCESS SAVING README for " + reposlug)
                 except:
-                    print("ERROR SAVING README for " + reposlug)
+                    print("Error getting/converting readme")
+                    
+                newhtml = ""
+                headerpattern = re.compile("((<h.>)(.+?)(<\/h.>))")
+                srcpattern=re.compile("(src=\"(.+?)\")")
+                httppattern = re.compile("http")
+                linkpattern=re.compile("href=(\".+?\")")
+                poundpattern=re.compile("(#)")
+
+                for line in html.splitlines():
+                    match = headerpattern.search(line)
+                    if match:
+                        slug = slugify(match.group(3))
+                        anchorline = match.group(2) + '<a class="anchor" aria-hidden="true" id="' + slug + '"> </a>' + match.group(3) + match.group(4)
+
+                        line = line.replace(match.group(0), anchorline)
+
+                    srcmatch = srcpattern.search(line)
+                    httpmatch = httppattern.search(line)
+                    if srcmatch and not httpmatch:
+                        replace = "https://github.com/" + owner + "/" + reponame + "/raw/master/" +  srcmatch.group(2)
+                        line = line.replace(srcmatch.group(2), replace)
+
+                    linkmatch = linkpattern.search(line)
+                    if linkmatch:
+                        replace = linkmatch.group(1) + " target=\"_blank\""
+                        line = line.replace(linkmatch.group(1), replace)
+                        
+                    newhtml += line + "\n"
+
+
+                try:
+                    readmeJson[reposlug] = newhtml
+                    print ("Saving to github: " + reposlug)
+                    saveToGithub("readmes/" + reposlug + ".md", readmeJson[reposlug])
+                except:
+                    print("ERROR SAVING README for " + reposlug, file=sys.stderr)
                 
                 try:
                     for tag in repo.get_topics():
                         entries[index]["tags"].append(tag)
                 except:
-                    print("No gh tags for" + reposlug)
-
-                if "categories" in entry:
-                    for tag in entry["categories"]:
-                        entries[index]["tags"].append(tag)
-
-                if "starter" in repo.url:
-                    entries[index]["tags"].append("starter")
-                    print("Added to starter - " + json.dumps(entry))
-                
+                    continue
+                    #print("No gh tags for" + reposlug)
                 entries[index]["tags"] = cleanTags(entries[index]["tags"])
+                entries[index]["reposlug"] = reposlug
 
-    tagdict = {}
-    tagdict["all"] = {}
-    tagdict["all"]["apps"] = []
-    names = []
-
+    applicationJson = {}
     for entry in entries:
-        
-        if "tags" in entry:
-            for tag in entry["tags"]:
-                if tag.lower() not in tagdict.keys():
-                    tagdict[tag.lower()] = {
-                        "name": tag.lower(), "apps": [entry]}
-                    if entry["name"] not in names:
-                        tagdict["all"]["apps"].append(entry)
-                        names.append(entry["name"])
-                else:
-                    tagdict[tag.lower()]["apps"].append(entry)
-                    if entry["name"] not in names:
-                        tagdict["all"]["apps"].append(entry)
-                        names.append(entry["name"])
-            
+        if "reposlug" in entry:
+            applicationJson[entry["reposlug"]] = entry
+        else:
+            applicationJson[entry["name"]] = entry
 
-    for tag in tagdict.keys():
-        count = len(tagdict[tag]["apps"])
-        tagdict[tag]["count"] = count
+    saveToGithub("app.json", json.dumps(applicationJson, indent=4))
 
-        try:
-            res = tag_collection.create(
-                document={"name": tag, "count": count, tag: tagdict[tag]}, path=tag)
-            print("SUCCESS for " + tag)
-            print(json.dumps(res))
-        except:
-            print("ERROR for " + tag)
-            print(json.dumps(res))
+def saveToGithub(filename, content):
+    url = "https://api.github.com/repos/synedra/gallerystore/contents/" + filename
+    headers = {
+        'Authorization': "Token " + os.environ["GITHUB_TOKEN"],
+        'Accept': 'application/vnd.github.v3+json'
+    }
 
+    # Encode the file content as Base64
+    import base64
+
+    content_bytes = content.encode('utf-8')
+    content_base64 = base64.b64encode(content_bytes).decode('utf-8')
+
+    # Get the current SHA of the file (if it exists)
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        current_file = response.json()
+        current_sha = current_file['sha']
+    else:
+        current_sha = ''
+    
+
+    # Create the payload for the API request
+    payload = {
+        'message': "Update " + filename,
+        'content': content_base64,
+        'branch': "main",
+        'sha': current_sha
+    }
+
+    # Make the API request to create the file
+    response = requests.put(url, headers=headers, json=payload)
+
+    # Check the response status code
+    if response.status_code == 201 or response.status_code == 200:
+        print(f"File " + filename + " added successfully to the repository.", file=sys.stderr)
+    else:
+        print(f"Failed to add file {filename} to the repository. Error: {response.status_code} : {response.text}", file=sys.stderr)
 
 def cleanTags(tags):
     newtags = []
@@ -351,70 +356,45 @@ def astraJsonSettings(settings, entry):
         entry["tags"] = cleanTags(entry["tags"])
     return entry
 
-def getCreds():
-    print("Starting Creds")
-    entries = []
-    creds = None
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
-    if os.path.exists(os.environ['GOOGLE_TOKEN_FILE']):
-        creds = Credentials.from_authorized_user_file(os.environ['GOOGLE_TOKEN_FILE'], SCOPES)
-    # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            print("Refreshing creds")
-            try:
-                creds.refresh(Request())
-            except:
-                print("ERROR")
-        else:
-            print("Using creds")
-            flow = InstalledAppFlow.from_client_secrets_file(
-                os.environ['CLIENT_SECRET_FILE'], SCOPES)
-            creds = flow.run_local_server(port=0)
-        # Save the credentials for the next run
-        with open(os.environ['GOOGLE_TOKEN_FILE'], 'w') as token:
-            token.write(creds.to_json())
-    service = build('sheets', 'v4', credentials=creds)
-    youtube = build('youtube', 'v3', credentials=creds)
-    return service, youtube
 
 def getWorksheetInfo(service):   
     sheet = service.spreadsheets()
 
-    print("Getting sample application links")
+    print("Getting sample application links", file=sys.stderr)
     # Call the Sheets API for SampleApplication links
+    SAMPLE_SPREADSHEET_ID = '1vJSKJAa7EJ0s1Ksn_L_lgQGJI6-UMDqNngrQO4U4cEY'
+    SAMPLE_RANGE_NAME = 'SampleApplicationMain'
+    WORKSHOP_SAMPLE_RANGE_NAME = 'WorkshopCatalog'
+
     result = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, ranges=SAMPLE_RANGE_NAME,
                                         fields="sheets/data/rowData/values/hyperlink,sheets/data/rowData/values/textFormatRuns/format/link/uri").execute()
     values = result.get('sheets', [])
 
     sampleApplicationLinks = values[0]["data"][0]["rowData"]
-    print("Got sample application links")
+    print("Got sample application links", file=sys.stderr)
 
-    print("Getting sample application items")
+    print("Getting sample application items", file=sys.stderr)
     # Call the Sheets API for SampleApplication items
     result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                 range=SAMPLE_RANGE_NAME).execute()
     sampleApplicationItems = result.get('values', [])
-    print("Got sample application items")
+    print("Got sample application items", file=sys.stderr)
     # Workshop sheet for links
-    WORKSHOP_SAMPLE_RANGE_NAME = 'WorkshopCatalog'
-
-    print("Getting workshop links")
+   
+    print("Getting workshop links", file=sys.stderr)
     # Call the Sheets API for Workshop Links
     result = service.spreadsheets().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, ranges=WORKSHOP_SAMPLE_RANGE_NAME,
                                         fields="sheets/data/rowData/values/hyperlink,sheets/data/rowData/values/textFormatRuns/format/link/uri").execute()
     values = result.get('sheets', [])
     workshopLinks = values[0]["data"][0]["rowData"]
 
-    print("Got workshop links")
-    print("Getting workshop items")
+    print("Got workshop links", file=sys.stderr)
+    print("Getting workshop items", file=sys.stderr)
     # Get the items for Workshops
     result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
                                 range=WORKSHOP_SAMPLE_RANGE_NAME).execute()
     workshopItems = result.get('values', [])
-    print("Got workshop items")
+    print("Got workshop items", file=sys.stderr)
  
     return (sampleApplicationItems, sampleApplicationLinks, workshopItems, workshopLinks)
 
@@ -501,6 +481,13 @@ def processApplicationItems(sampleApplicationItems, sampleApplicationLinks, entr
             for item in stack:
                 tags.append(item.lower())
 
+        usecases = []
+        if (entry[4] != [""] and entry[4] != [''] and entry[4] != ''):
+            stack = entry[4].split(",")
+            for item in stack:
+                if item != "N/A" and item != "''":
+                    usecases.append(item)
+
         # APIs
         entrynumber = 6
         apiarray = []
@@ -517,7 +504,7 @@ def processApplicationItems(sampleApplicationItems, sampleApplicationLinks, entr
             "urls": urls,
             "language": language,
             "stack": stack,
-            "usecases": entry[4],
+            "usecases": usecases,
             "owner": entry[5],
             "apis": apiarray,
             "tags": newtags
@@ -525,6 +512,7 @@ def processApplicationItems(sampleApplicationItems, sampleApplicationLinks, entr
 
         entries.append(new_item)
     return entries
+
 
 def processGithubOrganization(org, entries):
     uri = '/orgs/' + org + '/repos'
@@ -548,41 +536,21 @@ def processGithubOrganization(org, entries):
         entries.append(entry)
     return entries
 
-def updateVideoStatistics(youtube, videos):
-    for videoId in videos:
+def updateVideoStatistics(youtube, newvideos):
+    videos = {}
+    for videoId in newvideos:
         request = youtube.videos().list(
             part="statistics, liveStreamingDetails",
             id=videoId
         )
         response = request.execute()
-
-        try:
-            res = video_collection.create(
-                document=response["items"][0], path=videoId)
-            print("SUCCESS for " + videoId)
-            print(json.dumps(response["items"][0]))
-        except:
-            print("ERROR for " + videoId)
-            print(json.dumps(res))
-
-
-def getDBVideosRecursive(videos, pagestate=None):
-    res = None
-    if pagestate:
-        res = video_collection.find({}, {"page-state": pagestate})
-    else:
-        res = video_collection.find({})
-
-    for video in res["data"].values():
-        videos.append(video["id"])
-
+        info = response["items"][0]
+        videos[videoId] = info
+        
     return videos
 
 
 def recursiveSearch(youtube, nextPage, videos=[]):
-    lastweek = datetime.utcnow() - timedelta(7)
-    lastweek = lastweek.isoformat()[:-3]
-    lastweek = str(lastweek) + "Z"
 
     if nextPage:
         request = youtube.search().list(
@@ -590,7 +558,6 @@ def recursiveSearch(youtube, nextPage, videos=[]):
             channelId="UCAIQY251avaMv7bBv5PCo-A",
             pageToken=nextPage,
             type="video",
-            publishedAfter=lastweek,
             maxResults=50
         )
     else:
