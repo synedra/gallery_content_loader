@@ -1,0 +1,11 @@
+{
+    "tags": [],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/java-framework-compare"
+    },
+    "key": "Datastax-Examples-java-framework-compare",
+    "name": "A comparison of Java frameworks",
+    "description": "This repo contains a microbenchmark that collects the compile time, startup time, memory usage, and load time of simple \"Hello World\"-like apps in Spring, Quarkus, Micronaut, and Helidon.",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner"
+}

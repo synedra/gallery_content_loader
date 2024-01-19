@@ -1,0 +1,17 @@
+{
+    "tags": [
+        "javascript",
+        "tools"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/nf-data-explorer",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/nf-data-explorer",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/nf-data-explorer/master/hero.png"
+    },
+    "key": "Datastax-Examples-nf-data-explorer",
+    "name": "Netflix Data Explorer",
+    "description": "Launch Netlfix's Open Source Data Explorer in Gitpod and connect to your Astra DB instance!",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 1
+}

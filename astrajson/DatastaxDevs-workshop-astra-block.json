@@ -1,0 +1,18 @@
+{
+    "tags": [
+        "javascript",
+        "web3",
+        "nextjs",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-astra-block",
+        "heroimage": "https://github.com/datastax/block-explorer/blob/master/hero.png"
+    },
+    "key": "DatastaxDevs-workshop-astra-block",
+    "name": "Blockchain Explorer",
+    "description": "Built using React and Next JS, Block Explorer gives the user real-time view of the latest blocks and ETH transactions.",
+    "duration": "30 minutes",
+    "skilllevel": "Beginner",
+    "priority": 3
+}

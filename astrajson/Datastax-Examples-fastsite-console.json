@@ -1,0 +1,19 @@
+{
+    "tags": [
+        "javascript",
+        "doc api",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/fastsite-console",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/fastsite-console",
+        "netlify": "https://app.netlify.com/start/deploy?repository=https://github.com/DataStax-Examples/fastsite-console",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/fastsite-console/master/hero.png"
+    },
+    "key": "Datastax-Examples-fastsite-console",
+    "name": "FastSite",
+    "description": "FastSite is a no-code tool to generate content-driven websites. It leverages the power of modern JAMStack and cloud-native technologies.",
+    "duration": "50 minutes",
+    "skilllevel": "Advanced",
+    "priority": 3
+}

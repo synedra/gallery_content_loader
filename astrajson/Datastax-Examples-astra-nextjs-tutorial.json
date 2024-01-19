@@ -1,0 +1,18 @@
+{
+    "tags": [
+        "javascript",
+        "nextjs",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/astra-nextjs-tutorial",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-nextjs-tutorial/master/hero.jpeg",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/astra-nextjs-tutorial"
+    },
+    "key": "Datastax-Examples-astra-nextjs-tutorial",
+    "name": "NextJS Fullstack Tutorial",
+    "description": "Create a fullstack NextJS app while following along with the tutorial video and blogpost from Eddie Jaoude.",
+    "duration": "30 minutes",
+    "skilllevel": "Advanced",
+    "priority": 2
+}

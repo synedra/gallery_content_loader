@@ -1,0 +1,35 @@
+{
+    "tags": [
+        "spring",
+        "fastapi",
+        "express",
+        "java",
+        "javascript",
+        "python",
+        "api",
+        "astradb",
+        "cassandra",
+        "workshop"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/bootcamp-fullstack-apps-with-cassandra"
+    },
+    "key": "DatastaxDevs-bootcamp-fullstack-apps-with-cassandra",
+    "name": "Build Microservice and API",
+    "description": "Learn how to build a backend for Cassandra, from data model to drivers to API exposition",
+    "duration": "120 minutes",
+    "skilllevel": "Intermediate",
+    "language": [
+        "java",
+        "python",
+        "javascript"
+    ],
+    "badge": "https://media.badgr.com/uploads/badges/ca43050e-5e6e-4edc-8218-3c12e66de4af.png",
+    "youtubeurl": [
+        "https://www.youtube.com/watch?v=4djnV5wZSeg",
+        "https://www.youtube.com/watch?v=8KmSN3KEspE",
+        "https://www.youtube.com/watch?v=sGBFNDvk0pA",
+        "https://www.youtube.com/watch?v=h7BEsnMk1_E"
+    ],
+    "usecases": []
+}

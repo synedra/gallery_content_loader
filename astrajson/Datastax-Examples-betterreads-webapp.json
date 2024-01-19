@@ -1,0 +1,18 @@
+{
+    "tags": [
+        "java",
+        "spring",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/betterreads-webapp",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/betterreads-webapp",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/betterreads-webapp/master/hero.jpeg"
+    },
+    "key": "Datastax-Examples-betterreads-webapp",
+    "name": "BetterReads Spring App",
+    "description": "Companion code for the Java Brains \"code with me\" series that reads data from DataStax Astra DB.",
+    "duration": "180 minutes",
+    "skilllevel": "Advanced",
+    "priority": 2
+}

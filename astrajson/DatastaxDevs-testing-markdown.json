@@ -1,0 +1,23 @@
+{
+    "tags": [
+        "react",
+        "javascript",
+        "workshop"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/testing-markdown",
+        "heroimage": "https://github.com/datastaxdevs/workshop-graphql-netflix/raw/master/images/ui.png"
+    },
+    "key": "DatastaxDevs-testing-markdown",
+    "name": "Markdown Tester",
+    "description": "A simple ReactJS Netflix homepage clone running on Astra DB that leverages the GraphQL API with paging and infinite scrolling. This application is the result of the collaboration between Ania Kubow and the Datastax Developer Advocate team.",
+    "duration": "50 minutes",
+    "skilllevel": "Intermediate",
+    "language": [
+        "javascript"
+    ],
+    "youtubeurl": [
+        "https://www.youtube.com/watch?v=g8COh40v2jU"
+    ],
+    "usecases": []
+}

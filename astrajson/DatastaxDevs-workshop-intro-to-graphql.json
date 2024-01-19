@@ -1,0 +1,30 @@
+{
+    "tags": [
+        "cassandra",
+        "jamstack",
+        "netlify",
+        "workshop",
+        "nosql",
+        "graphql api",
+        "gitpod",
+        "astradb"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-intro-to-graphql"
+    },
+    "key": "DatastaxDevs-workshop-intro-to-graphql",
+    "name": "Introduction to GraphQL",
+    "description": "Learn the basics of GraphQL. Plenty of hands-on experience covering: a React client interacting with Astra DB using the Netlify stack; usage of playgrounds and tooling; running your own Java GraphQL backend based on the Netflix DGS framework.",
+    "duration": "120 minutes",
+    "skilllevel": "Beginner",
+    "language": [
+        "java",
+        "javascript",
+        "nodejs"
+    ],
+    "badge": "https://media.badgr.com/uploads/badges/6d9d20f0-8a8e-4cc9-9cf2-dc4e1baa97d6.png",
+    "youtubeurl": [
+        "https://www.youtube.com/watch?v=Z83XTWhav7g"
+    ],
+    "usecases": []
+}

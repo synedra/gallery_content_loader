@@ -1,0 +1,17 @@
+{
+    "tags": [
+        "labs",
+        "python",
+        "javascript",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/doom-patrol"
+    },
+    "key": "Datastax-Examples-doom-patrol",
+    "name": "Doom Patrol, an Astra + Kepler.gl App",
+    "description": "Geospatial data store based on Astra and Stargate leveraging both the keyspace and document APIs.",
+    "duration": "50 minutes",
+    "skilllevel": "Advanced",
+    "priority": 2
+}

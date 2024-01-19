@@ -1,0 +1,31 @@
+{
+    "tags": [
+        "jupyter",
+        "pandas",
+        "pyspark",
+        "spark",
+        "machine-learning",
+        "python",
+        "cassandra",
+        "spark-ml",
+        "workshop"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-introduction-to-machine-learning"
+    },
+    "key": "DatastaxDevs-workshop-introduction-to-machine-learning",
+    "name": "Introduction to Machine Learning with Apache Spark and Apache Cassandra",
+    "description": "Come ready to discover the goals and approaches of machine learning, and how to build effective algorithms and solutions!",
+    "duration": "50 minutes",
+    "skilllevel": "Beginner",
+    "language": [
+        "python"
+    ],
+    "badge": "https://media.badgr.com/uploads/badges/d9dc7f9c-da38-41ff-aea4-e9ffc1c1cbe1.png",
+    "youtubeurl": [
+        "https://www.youtube.com/watch?v=KLccQKxWZ4Y"
+    ],
+    "usecases": [
+        "Machine Learning"
+    ]
+}

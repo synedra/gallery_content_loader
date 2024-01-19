@@ -1,0 +1,16 @@
+{
+    "tags": [],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/sample-app-template",
+        "netlify": "",
+        "gitpod": "",
+        "vercel": "",
+        "heroimage": ""
+    },
+    "key": "sample-app-template",
+    "name": "",
+    "description": "",
+    "duration": "",
+    "skilllevel": "",
+    "priority": 1
+}

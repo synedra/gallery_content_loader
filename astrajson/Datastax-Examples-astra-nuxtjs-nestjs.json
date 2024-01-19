@@ -1,0 +1,19 @@
+{
+    "tags": [
+        "javascript",
+        "nuxtjs",
+        "nestjs",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/astra-nuxtjs-nestjs",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-nuxtjs-nestjs/master/hero.jpeg",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/astra-nuxtjs-nestjs"
+    },
+    "key": "Datastax-Examples-astra-nuxtjs-nestjs",
+    "name": "NuxtJS + NestJS Fullstack Tutorial",
+    "description": "Create a fullstack NuxtJS + NestJS app while following along with the tutorial video from Eddie Jaoude.",
+    "duration": "50 minutes",
+    "skilllevel": "Advanced",
+    "priority": 3
+}

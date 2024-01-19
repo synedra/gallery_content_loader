@@ -1,0 +1,20 @@
+{
+    "tags": [
+        "javascript",
+        "react",
+        "netlify",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/telco-billing-app",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/telco-billing-app/master/hero.png",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/telco-billing-app",
+        "demo": "https://sag-telco-billing-app.netlify.app/"
+    },
+    "key": "Datastax-Examples-telco-billing-app",
+    "name": "Telco Billing App",
+    "description": "An example of a telcom app dashboard, built with React and Netlify.",
+    "duration": "30 minutes",
+    "skilllevel": "Advanced",
+    "priority": 3
+}

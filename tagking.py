@@ -1,4 +1,10 @@
 from __future__ import print_function
+from dotenv import load_dotenv
+from astrapy.db import AstraDB, AstraDBCollection
+from astrapy.ops import AstraDBOps  
+
+
+
 from github import Github
 
 import os.path
@@ -12,14 +18,17 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-from astrapy.client import create_astra_client
+load_dotenv()
 
-from astrapy.client import create_astra_client
+token = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
+api_endpoint = os.getenv("ASTRA_DB_API_ENDPOINT")
 
-astra_client = create_astra_client(astra_database_id=os.environ["ASTRA_DB_ID"],
-                                   astra_database_region=os.environ["ASTRA_DB_REGION"],
-                                   astra_application_token=os.environ["ASTRA_DB_APPLICATION_TOKEN"])
-tag_collection = astra_client.collections.namespace("gallery").collection("tag_applications")
+astra_db = AstraDB(token=token, api_endpoint=api_endpoint)
+tag_application_collection = AstraDBCollection(collection_name="tag_applications", astra_db=astra_db)
+collection = AstraDBCollection(
+    collection_name="tag_applications", token=token, api_endpoint=api_endpoint
+)
+
 # using an access token
 f = open("github.token", "r")
 line = f.readlines()[0].replace("\n", "")

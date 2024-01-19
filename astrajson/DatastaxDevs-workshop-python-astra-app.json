@@ -1,0 +1,29 @@
+{
+    "tags": [
+        "cassandra",
+        "python",
+        "fastapi",
+        "workshop",
+        "nosql",
+        "gitpod",
+        "astradb"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-python-astra-app",
+        "heroimage": "https://raw.githubusercontent.com/datastaxdevs/workshop-python-astra-app/main/images/python_nosql_workshop.png"
+    },
+    "key": "DatastaxDevs-workshop-python-astra-app",
+    "name": "Learn how to build out Python DALs, work with NoSQL DBs, and expose Python methods as restful endpoints.",
+    "duration": "120 minutes",
+    "skilllevel": "Intermediate",
+    "language": [
+        "python"
+    ],
+    "youtubeurl": [
+        "https://www.youtube.com/watch?v=ENvr1ssphlg"
+    ],
+    "usecases": [
+        "sales",
+        "employees"
+    ]
+}

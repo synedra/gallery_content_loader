@@ -1,0 +1,16 @@
+{
+    "tags": [
+        "labs",
+        "java",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/Astra101Java"
+    },
+    "key": "Datastax-Examples-Astra101Java",
+    "name": "Astra + Java 101",
+    "description": "Minimal code sample to work ASTRA in Java.",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 2
+}

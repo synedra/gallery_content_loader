@@ -1,0 +1,20 @@
+{
+    "tags": [
+        "javascript",
+        "doc api",
+        "workshop",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/battlestax",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/battlestax",
+        "netlify": "https://app.netlify.com/start/deploy?repository=https://github.com/DataStax-Examples/battlestax",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/battlestax/master/hero.png"
+    },
+    "key": "Datastax-Examples-battlestax",
+    "name": "BattleStax, a JamStack + Astra DB Workshop",
+    "description": "BattleStax is a stateful JAMStack game that is wholesome fun for the entire crew.",
+    "duration": "50 minutes",
+    "skilllevel": "Advanced",
+    "priority": 2
+}

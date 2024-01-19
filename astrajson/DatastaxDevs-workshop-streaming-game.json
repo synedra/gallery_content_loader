@@ -1,0 +1,36 @@
+{
+    "tags": [
+        "websockets",
+        "pulsar",
+        "cassandra",
+        "react",
+        "fastapi",
+        "workshop",
+        "event streaming",
+        "real-time",
+        "astradb",
+        "astrastreaming",
+        "gaming"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-streaming-game"
+    },
+    "key": "DatastaxDevs-workshop-streaming-game",
+    "name": "Drapetisca: a multiplayer online game with Astra Streaming and Websockets",
+    "description": "A simple multiplayer online game (with in-game chat) featuring: Astra Streaming, Astra DB, WebSockets, React for the front-end and FastAPI for the back-end. Also spiders!",
+    "duration": "120 minutes",
+    "skilllevel": "Intermediate",
+    "language": [
+        "javascript",
+        "python"
+    ],
+    "badge": "https://media.badgr.com/uploads/badges/98db33b1-ae34-4445-a4eb-546a4f4b8567.png",
+    "youtubeurl": [
+        "https://www.youtube.com/watch?v=jfOBPlcd9eA"
+    ],
+    "usecases": [
+        "Online gaming",
+        "Push architecture",
+        "Chat applications"
+    ]
+}
