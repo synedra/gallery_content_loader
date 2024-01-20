@@ -9,8 +9,14 @@
         "cloud-native"
     ],
     "urls": {
-        "github": "https://github.com/datastaxdevs/workshop-k8ssandra"
+        "github": "https://github.com/datastaxdevs/workshop-k8ssandra",
+        "youtube": [
+            "https://www.youtube.com/watch?v=mDHT-yBOUUs"
+        ]
     },
+    "last_modified": "Fri, 29 Dec 2023 16:33:11 GMT",
+    "forks_count": 16,
+    "stargazers_count": 19,
     "key": "DatastaxDevs-workshop-k8ssandra",
     "name": "Deploy Cassandra into Kubernetes with K8ssandra",
     "description": " learn how to deploy and manage a data tier based on Apache Cassandra\u2122 cluster in Kubernetes using K8ssandra. ",
@@ -20,9 +26,8 @@
         "yaml"
     ],
     "badge": "https://media.badgr.com/uploads/badges/f1523f2b-9fc2-4368-aed7-0e78a5216427.png",
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=mDHT-yBOUUs"
-    ],
+    "likes": "32",
+    "views": "1166",
     "usecases": [
         "cloud-native"
     ]

@@ -10,8 +10,14 @@
         "astradb"
     ],
     "urls": {
-        "github": "https://github.com/datastaxdevs/workshop-intro-to-graphql"
+        "github": "https://github.com/datastaxdevs/workshop-intro-to-graphql",
+        "youtube": [
+            "https://www.youtube.com/watch?v=Z83XTWhav7g"
+        ]
     },
+    "last_modified": "Fri, 12 Jan 2024 14:55:06 GMT",
+    "forks_count": 45,
+    "stargazers_count": 79,
     "key": "DatastaxDevs-workshop-intro-to-graphql",
     "name": "Introduction to GraphQL",
     "description": "Learn the basics of GraphQL. Plenty of hands-on experience covering: a React client interacting with Astra DB using the Netlify stack; usage of playgrounds and tooling; running your own Java GraphQL backend based on the Netflix DGS framework.",
@@ -23,8 +29,7 @@
         "nodejs"
     ],
     "badge": "https://media.badgr.com/uploads/badges/6d9d20f0-8a8e-4cc9-9cf2-dc4e1baa97d6.png",
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=Z83XTWhav7g"
-    ],
+    "likes": "63",
+    "views": "5417",
     "usecases": []
 }

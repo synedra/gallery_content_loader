@@ -555,11 +555,11 @@ def processGithubOrganization(org, entries):
         entries.append(entry)
     return entries
 
-def updateVideoStatistics(youtube, videos):
+def updateVideoStatistics(youtube, video):
     for videoId in videos:
         request = youtube.videos().list(
             part="statistics, liveStreamingDetails",
-            id=videoId
+            id=video
         )
         response = request.execute()
 

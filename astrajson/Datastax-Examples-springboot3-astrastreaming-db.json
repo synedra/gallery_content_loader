@@ -10,6 +10,9 @@
         "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/springboot3-astrastreaming-db",
         "heroimage": "https://stackjava.com/wp-content/uploads/2018/05/spring-boot-data-logo.png"
     },
+    "last_modified": "Wed, 01 Feb 2023 08:12:13 GMT",
+    "forks_count": 0,
+    "stargazers_count": 0,
     "key": "Datastax-Examples-springboot3-astrastreaming-db",
     "name": "Spring Boot 3 with Astra Streaming and Astra DB",
     "description": "good time to introduce a new sample including the bleeding edge spring-pulsar-spring-boot-starter library for connecting with Astra Streaming. And of course, also using spring-boot-starter-data-cassandra to access the Astra DB.",

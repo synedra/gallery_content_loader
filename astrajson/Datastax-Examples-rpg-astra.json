@@ -10,6 +10,9 @@
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/rpg-astra/master/hero.jpg",
         "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/rpg-astra"
     },
+    "last_modified": "Mon, 20 Nov 2023 13:08:02 GMT",
+    "forks_count": 3,
+    "stargazers_count": 8,
     "key": "Datastax-Examples-rpg-astra",
     "name": "Build an Astra DB RPG",
     "description": "This example is a simple RPG application that allows you to add skills and allocate skill points to them, gaining you experience and levels as a result.",

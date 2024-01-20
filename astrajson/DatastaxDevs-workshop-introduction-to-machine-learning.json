@@ -11,8 +11,14 @@
         "workshop"
     ],
     "urls": {
-        "github": "https://github.com/datastaxdevs/workshop-introduction-to-machine-learning"
+        "github": "https://github.com/datastaxdevs/workshop-introduction-to-machine-learning",
+        "youtube": [
+            "https://www.youtube.com/watch?v=KLccQKxWZ4Y"
+        ]
     },
+    "last_modified": "Mon, 11 Sep 2023 10:16:55 GMT",
+    "forks_count": 6,
+    "stargazers_count": 7,
     "key": "DatastaxDevs-workshop-introduction-to-machine-learning",
     "name": "Introduction to Machine Learning with Apache Spark and Apache Cassandra",
     "description": "Come ready to discover the goals and approaches of machine learning, and how to build effective algorithms and solutions!",
@@ -22,9 +28,8 @@
         "python"
     ],
     "badge": "https://media.badgr.com/uploads/badges/d9dc7f9c-da38-41ff-aea4-e9ffc1c1cbe1.png",
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=KLccQKxWZ4Y"
-    ],
+    "likes": "90",
+    "views": "1816",
     "usecases": [
         "Machine Learning"
     ]

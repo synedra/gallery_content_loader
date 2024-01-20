@@ -7,6 +7,9 @@
     "urls": {
         "github": "https://github.com/DataStax-Examples/Astra101Java"
     },
+    "last_modified": "Thu, 03 Dec 2020 00:24:03 GMT",
+    "forks_count": 1,
+    "stargazers_count": 0,
     "key": "Datastax-Examples-Astra101Java",
     "name": "Astra + Java 101",
     "description": "Minimal code sample to work ASTRA in Java.",

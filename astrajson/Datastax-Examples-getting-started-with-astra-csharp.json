@@ -7,6 +7,9 @@
     "urls": {
         "github": "https://github.com/DataStax-Examples/getting-started-with-astra-csharp"
     },
+    "last_modified": "Thu, 03 Dec 2020 00:59:13 GMT",
+    "forks_count": 5,
+    "stargazers_count": 0,
     "key": "Datastax-Examples-getting-started-with-astra-csharp",
     "name": "Getting Started with Cassandra + C# + Astra",
     "description": "This provides an example REST backend built in C# using .NET Core 2.1 for use with the Getting Started with Astra UI.",

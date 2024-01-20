@@ -5,15 +5,20 @@
     ],
     "urls": {
         "github": "https://github.com/datastaxdevs/workshop-ai-as-api",
-        "heroimage": "https://github.com/datastaxdevs/workshop-ai-as-api/raw/main/images/nlp-classifier-api-cover.png"
+        "heroimage": "https://github.com/datastaxdevs/workshop-ai-as-api/raw/main/images/nlp-classifier-api-cover.png",
+        "youtube": [
+            "https://www.youtube.com/watch?v=sKa1uPjIBC0"
+        ]
     },
+    "last_modified": "Thu, 04 Jan 2024 17:05:35 GMT",
+    "forks_count": 55,
+    "stargazers_count": 134,
     "key": "DatastaxDevs-workshop-ai-as-api",
     "name": "AI as an API",
     "description": "Learn to build your own NLP text classifier and expose it as an API:",
     "skilllevel": "Intermediate",
     "language": [],
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=sKa1uPjIBC0"
-    ],
+    "likes": "36",
+    "views": "3263",
     "usecases": []
 }

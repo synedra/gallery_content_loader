@@ -12,8 +12,17 @@
         "workshop"
     ],
     "urls": {
-        "github": "https://github.com/datastaxdevs/bootcamp-fullstack-apps-with-cassandra"
+        "github": "https://github.com/datastaxdevs/bootcamp-fullstack-apps-with-cassandra",
+        "youtube": [
+            "https://www.youtube.com/watch?v=4djnV5wZSeg",
+            "https://www.youtube.com/watch?v=8KmSN3KEspE",
+            "https://www.youtube.com/watch?v=sGBFNDvk0pA",
+            "https://www.youtube.com/watch?v=h7BEsnMk1_E"
+        ]
     },
+    "last_modified": "Fri, 03 Feb 2023 03:39:54 GMT",
+    "forks_count": 58,
+    "stargazers_count": 70,
     "key": "DatastaxDevs-bootcamp-fullstack-apps-with-cassandra",
     "name": "Build Microservice and API",
     "description": "Learn how to build a backend for Cassandra, from data model to drivers to API exposition",
@@ -25,11 +34,7 @@
         "javascript"
     ],
     "badge": "https://media.badgr.com/uploads/badges/ca43050e-5e6e-4edc-8218-3c12e66de4af.png",
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=4djnV5wZSeg",
-        "https://www.youtube.com/watch?v=8KmSN3KEspE",
-        "https://www.youtube.com/watch?v=sGBFNDvk0pA",
-        "https://www.youtube.com/watch?v=h7BEsnMk1_E"
-    ],
+    "likes": "164",
+    "views": "3818",
     "usecases": []
 }

@@ -10,8 +10,14 @@
     ],
     "urls": {
         "github": "https://github.com/datastaxdevs/workshop-python-astra-app",
-        "heroimage": "https://raw.githubusercontent.com/datastaxdevs/workshop-python-astra-app/main/images/python_nosql_workshop.png"
+        "heroimage": "https://raw.githubusercontent.com/datastaxdevs/workshop-python-astra-app/main/images/python_nosql_workshop.png",
+        "youtube": [
+            "https://www.youtube.com/watch?v=ENvr1ssphlg"
+        ]
     },
+    "last_modified": "Mon, 30 Jan 2023 19:57:30 GMT",
+    "forks_count": 1,
+    "stargazers_count": 0,
     "key": "DatastaxDevs-workshop-python-astra-app",
     "name": "Learn how to build out Python DALs, work with NoSQL DBs, and expose Python methods as restful endpoints.",
     "duration": "120 minutes",
@@ -19,9 +25,8 @@
     "language": [
         "python"
     ],
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=ENvr1ssphlg"
-    ],
+    "likes": "46",
+    "views": "2282",
     "usecases": [
         "sales",
         "employees"

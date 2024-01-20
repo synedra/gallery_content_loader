@@ -10,6 +10,9 @@
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-nuxtjs-nestjs/master/hero.jpeg",
         "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/astra-nuxtjs-nestjs"
     },
+    "last_modified": "Tue, 28 Sep 2021 13:21:03 GMT",
+    "forks_count": 0,
+    "stargazers_count": 0,
     "key": "Datastax-Examples-astra-nuxtjs-nestjs",
     "name": "NuxtJS + NestJS Fullstack Tutorial",
     "description": "Create a fullstack NuxtJS + NestJS app while following along with the tutorial video from Eddie Jaoude.",

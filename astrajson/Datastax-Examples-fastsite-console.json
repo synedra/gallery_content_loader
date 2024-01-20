@@ -10,6 +10,9 @@
         "netlify": "https://app.netlify.com/start/deploy?repository=https://github.com/DataStax-Examples/fastsite-console",
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/fastsite-console/master/hero.png"
     },
+    "last_modified": "Thu, 03 Feb 2022 13:17:40 GMT",
+    "forks_count": 4,
+    "stargazers_count": 0,
     "key": "Datastax-Examples-fastsite-console",
     "name": "FastSite",
     "description": "FastSite is a no-code tool to generate content-driven websites. It leverages the power of modern JAMStack and cloud-native technologies.",

@@ -7,6 +7,9 @@
     "urls": {
         "github": "https://github.com/DataStax-Examples/aws-lambda-nodejs"
     },
+    "last_modified": "Sat, 15 Apr 2023 21:37:09 GMT",
+    "forks_count": 0,
+    "stargazers_count": 1,
     "key": "Datastax-Examples-aws-lambda-nodejs",
     "name": "Cassandra + AWS Lambda + Astra using Node.js",
     "description": "This example shows how to use AWS Lambda with the Node.js DataStax Cassandra Driver to set up a basic REST API for a Cassandra database via HTTP Endpoints.",

@@ -8,6 +8,9 @@
         "github": "https://github.com/DataStax-Examples/astra-spark-migration",
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-spark-migration/master/hero.png"
     },
+    "last_modified": "Wed, 25 Jan 2023 21:08:17 GMT",
+    "forks_count": 3,
+    "stargazers_count": 4,
     "key": "Datastax-Examples-astra-spark-migration",
     "name": "Spark Migration Tool for Astra DB",
     "description": "Migrate data from an existing Cassandra cluster to Astra DB using a Spark application.",

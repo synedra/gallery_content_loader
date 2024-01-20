@@ -10,6 +10,9 @@
         "netlify": "https://dtsx.io/3aZJLxa",
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-gatsbyjs-starter/master/hero.png"
     },
+    "last_modified": "Fri, 12 May 2023 16:59:49 GMT",
+    "forks_count": 3,
+    "stargazers_count": 8,
     "key": "Datastax-Examples-astra-gatsbyjs-starter",
     "name": "Astra DB and Gatsby.js Starter",
     "description": "Create a React.js, Gatsby application that reads data from DataStax Astra DB using GraphQL.",

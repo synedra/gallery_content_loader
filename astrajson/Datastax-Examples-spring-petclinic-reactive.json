@@ -9,6 +9,9 @@
         "gitpod": "https://gitpod.io/#https://github.com/spring-petclinic/spring-petclinic-reactive",
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/spring-petclinic-reactive/master/hero.png"
     },
+    "last_modified": "Sun, 05 Jun 2022 10:17:14 GMT",
+    "forks_count": 8,
+    "stargazers_count": 11,
     "key": "Datastax-Examples-spring-petclinic-reactive",
     "name": "Reactive PetClinic, using Spring WebFlux and Astra DB",
     "description": "This sample is a fully reactive version of the Spring PetClinic application using Spring WebFlux.",

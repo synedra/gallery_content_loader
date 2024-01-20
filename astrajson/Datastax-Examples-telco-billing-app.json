@@ -11,6 +11,9 @@
         "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/telco-billing-app",
         "demo": "https://sag-telco-billing-app.netlify.app/"
     },
+    "last_modified": "Sun, 05 Mar 2023 22:44:06 GMT",
+    "forks_count": 4,
+    "stargazers_count": 2,
     "key": "Datastax-Examples-telco-billing-app",
     "name": "Telco Billing App",
     "description": "An example of a telcom app dashboard, built with React and Netlify.",

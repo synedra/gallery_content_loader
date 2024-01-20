@@ -9,6 +9,9 @@
         "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/betterreads-webapp",
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/betterreads-webapp/master/hero.jpeg"
     },
+    "last_modified": "Tue, 31 Jan 2023 06:23:33 GMT",
+    "forks_count": 3,
+    "stargazers_count": 1,
     "key": "Datastax-Examples-betterreads-webapp",
     "name": "BetterReads Spring App",
     "description": "Companion code for the Java Brains \"code with me\" series that reads data from DataStax Astra DB.",

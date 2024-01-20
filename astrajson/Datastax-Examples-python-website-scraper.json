@@ -9,6 +9,9 @@
         "github": "https://github.com/DataStax-Examples/python-website-scraper",
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/python-website-scraper/master/hero.jpeg"
     },
+    "last_modified": "Thu, 19 Oct 2023 23:33:17 GMT",
+    "forks_count": 4,
+    "stargazers_count": 6,
     "key": "Datastax-Examples-python-website-scraper",
     "name": "Build a Website Scraper with Astra DB + Python",
     "description": "Learn how to scrape websites with Astra DB, Python, Selenium, Requests HTML, Celery, & FastAPI.",

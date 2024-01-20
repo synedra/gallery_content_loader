@@ -6,8 +6,14 @@
         "cql"
     ],
     "urls": {
-        "github": "https://github.com/datastaxdevs/workshop-cassandra-data-modeling"
+        "github": "https://github.com/datastaxdevs/workshop-cassandra-data-modeling",
+        "youtube": [
+            "https://www.youtube.com/watch?v=xrDfE74QnSE"
+        ]
     },
+    "last_modified": "Tue, 09 May 2023 12:49:29 GMT",
+    "forks_count": 13,
+    "stargazers_count": 22,
     "key": "DatastaxDevs-workshop-cassandra-data-modeling",
     "name": "Apache Cassandra Data Modeling",
     "description": "This session looks at how to effectively design a data model for your application. You\u2019ll leave knowing how to create data models that scale effectively as your system grows ",
@@ -17,8 +23,7 @@
         "CQL"
     ],
     "badge": "https://media.badgr.com/uploads/badges/5dee8148-ec34-43e2-a4ec-68a501130cfd.png",
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=xrDfE74QnSE"
-    ],
+    "likes": "33",
+    "views": "1082",
     "usecases": []
 }

@@ -9,6 +9,9 @@
         "gitpod": "https://gitpod.io#https://github.com/DataStax-Examples/astra-loom",
         "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-loom/master/hero.png"
     },
+    "last_modified": "Sat, 26 Nov 2022 14:51:52 GMT",
+    "forks_count": 0,
+    "stargazers_count": 7,
     "key": "Datastax-Examples-astra-loom",
     "name": "Astra DB Loom",
     "description": "Loom is a thread based chat server, where users can send messages to one or more threads via hashtags (ex. I'm heading to the park at noon #family #friends #frisbee_club ).",

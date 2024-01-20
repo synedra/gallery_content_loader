@@ -5,9 +5,16 @@ from langchain.schema import Document
 import cmarkgfm
 from cmarkgfm.cmark import Options as cmarkgfmOptions
 import requests
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
 from openai import OpenAI
 from astrapy.db import AstraDB, AstraDBCollection
 from astrapy.ops import AstraDBOps
+from pytube import extract
+
+SCOPES = [ "https://www.googleapis.com/auth/youtube.readonly"]
 
 import json
 import os.path
@@ -25,11 +32,17 @@ p = re.compile('[a-zA-Z]+')
 token = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
 api_endpoint = os.getenv("ASTRA_DB_API_ENDPOINT")
 
+
+    
+
 # Initialize our vector db
 astra_db = AstraDB(token=token, api_endpoint=api_endpoint)
 
 #astra_db.create_collection(collection_name="tag_gallery", dimension=1536)
 #astra_db.create_collection(collection_name="readme_gallery", dimension=1536)
+#astra_db.delete_collection(collection_name="application_gallery")
+
+#astra_db.create_collection(collection_name="application_gallery", dimension=1536)
 
 demo_collection = AstraDBCollection(collection_name="application_gallery", astra_db=astra_db)
 tag_collection = AstraDBCollection(collection_name="tag_gallery", astra_db=astra_db)
@@ -126,19 +139,21 @@ def main():
     # Grab the Astra token and api endpoint from the environment
     counter = 0
     input_documents = []
+
+    youtube = getCreds()
     
     from langchain_openai import OpenAIEmbeddings
     myEmbedding = OpenAIEmbeddings()
 
-    processOrganization('Datastax-Examples')
-    processOrganization('DatastaxDevs')
+    processOrganization('DatastaxDevs', youtube)
+    processOrganization('Datastax-Examples', youtube)
     #tagset = set(taglist)
     #newtagset = list(tagset)
     #print (newtagset)
     #
     #tag_collection.insert_one({"_id":"other", "taglist":newtagset})
 
-def processOrganization(organization_name):
+def processOrganization(organization_name, youtube):
 
     github = {}
     entries = []
@@ -165,10 +180,12 @@ def processOrganization(organization_name):
                         | cmarkgfmOptions.CMARK_OPT_GITHUB_PRE_LANG
                         )
         
+        
+
+        print ("Trying to get readme")
+        readme = ""
         try:
-            print ("Trying to get readme")
             firstrepo = 'https://raw.githubusercontent.com/' + organization_name + '/' + rawkey + '/main/README.md'
-            print(firstrepo)
             readme = requests.get(firstrepo)
             if readme.status_code == 404:
                 secondrepo = 'https://raw.githubusercontent.com/' + organization_name  + '/' + rawkey + '/master/README.md'
@@ -177,8 +194,9 @@ def processOrganization(organization_name):
                 if readme.status_code == 404:
                     print("Couldn't find a readme")
                     continue
+            
             readme_as_a_string = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
-            print(readme_as_a_string)
+            #print(readme_as_a_string)
             query_vector = client.embeddings.create(
                 input=[readme_as_a_string],
                 model=embedding_model_name).data[0].embedding
@@ -193,7 +211,12 @@ def processOrganization(organization_name):
             readme_as_a_string = ""
         
         if (astrajson is not None):
-                entry = {"tags":[], "urls":{"github":url}}
+                
+                last_modified = repo.last_modified
+                forks_count = repo.forks_count
+                stargazers_count = repo.stargazers_count
+
+                entry = {"tags":[], "urls":{"github":url}, "last_modified":last_modified, "forks_count":forks_count, "stargazers_count":stargazers_count}
                 
                 settings = json.loads(astrajson.decoded_content.decode())
                 keys = settings.keys()
@@ -202,6 +225,16 @@ def processOrganization(organization_name):
                     lowerkey = key.lower()
                     if (key.upper() == "GITHUBURL"):
                         continue
+                    elif (key.upper() == "YOUTUBEURL" or key.upper() == "YOUTUBE"):
+                        print("Youtube is " + json.dumps(settings[key]))
+                        entry["urls"]["youtube"] = settings[key]
+                        try:
+                            (path, video_id) = settings[key][0].split("=")
+                            (likes, views) = getVideoStats(youtube, video_id)
+                            entry["likes"] = likes
+                            entry["views"] = views
+                        except:
+                            continue
                     elif (key.upper() == "GITPODURL"):
                         entry["urls"]["gitpod"] = settings[key]
                     elif (key.upper() == "NETLIFYURL"):
@@ -231,7 +264,7 @@ def processOrganization(organization_name):
                 if "tags" in entry:
                     entry["tags"] = cleanTags(entry["tags"])
         if "name" in entry:
-            filename = entry["key"] + ".json"
+            filename = "./astrajson/" + entry["key"] + ".json"
             print(filename)
             with open(filename, 'w') as outfile:
                 json.dump(entry, outfile, indent=4)
@@ -240,16 +273,20 @@ def processOrganization(organization_name):
             vector_json = json.dumps(entry)
             query_vector = client.embeddings.create(input=[vector_json],
     model=embedding_model_name).data[0].embedding
-            entry["$vector"] = query_vector
             entry["_id"] = entry["key"]
             for tag in entry["tags"]:
                 if tag not in existingtags:
                     taglist.append(tag)
                     print(taglist)
-
-            print("ENTRY:" + json.dumps(entry))
-            response = demo_collection.insert_one(entry)
-            print("RESPONSE:" + json.dumps(response))
+            
+            entry["$vector"] = query_vector
+            
+            try:
+                demo_collection.insert_one(entry)
+                print("Inserted " + entry["key"])
+            except:
+                demo_collection.find_one_and_replace(filter={"_id":entry["key"]}, replacement=entry)
+                print("Replaced " + entry["key"])
                 
     
 
@@ -269,6 +306,51 @@ def cleanTags(tags):
         if tag not in newtags:
             newtags.append(tag)
     return newtags
+
+def getVideoId(youtubeurl):
+    from pytube import extract
+    id=extract.video_id(youtubeurl)
+    return(id)
+
+def getVideoStats(youtube, videoid):
+    print("Getting stats for video")
+    request = youtube.videos().list(
+            part="statistics, liveStreamingDetails",
+            id=videoid
+    )
+    response = request.execute()
+    print(response) 
+    try:
+        (likes, views) = response["items"][0]["statistics"]["likeCount"], response["items"][0]["statistics"]["viewCount"]
+        return(likes, views)
+    except:
+        return(0,0)
+
+def getCreds():
+    print("Starting Creds")
+    entries = []
+    creds = None
+    # The file token.json stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    if os.path.exists('token.json'):
+        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            print("Refreshing creds")
+            creds.refresh(Request())
+        else:
+            print("Using creds")
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'credentials.json', SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open('token.json', 'w') as token:
+            token.write(creds.to_json())
+    youtube = build('youtube', 'v3', credentials=creds)
+    return youtube
+
 
 
 if __name__ == '__main__':

@@ -10,8 +10,14 @@
         "astradb"
     ],
     "urls": {
-        "github": "https://github.com/datastaxdevs/workshop-realtime-data-pipelines"
+        "github": "https://github.com/datastaxdevs/workshop-realtime-data-pipelines",
+        "youtube": [
+            "https://www.youtube.com/watch?v=AH5ETUhUCUg"
+        ]
     },
+    "last_modified": "Thu, 09 Feb 2023 16:58:12 GMT",
+    "forks_count": 5,
+    "stargazers_count": 3,
     "key": "DatastaxDevs-workshop-realtime-data-pipelines",
     "name": "Real-Time data pipelines with Pulsar and Cassandra",
     "description": "You will inspect and run a sample architecture making use of Apache Pulsar\u2122 and Pulsar Functions for real-time, event-streaming-based data ingestion, cleaning and processing.",
@@ -21,9 +27,8 @@
         "python"
     ],
     "badge": "https://media.badgr.com/uploads/badges/6e50dd8b-5e75-448b-89cc-eac1fb074d8c.png",
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=AH5ETUhUCUg"
-    ],
+    "likes": "15",
+    "views": "607",
     "usecases": [
         "ETL",
         "real-time data",

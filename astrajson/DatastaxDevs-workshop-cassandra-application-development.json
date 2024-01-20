@@ -7,8 +7,14 @@
         "drivers"
     ],
     "urls": {
-        "github": "https://github.com/datastaxdevs/workshop-cassandra-application-development"
+        "github": "https://github.com/datastaxdevs/workshop-cassandra-application-development",
+        "youtube": [
+            "https://www.youtube.com/watch?v=jCq0Eg0RnLU"
+        ]
     },
+    "last_modified": "Tue, 12 Dec 2023 16:42:33 GMT",
+    "forks_count": 10,
+    "stargazers_count": 11,
     "key": "DatastaxDevs-workshop-cassandra-application-development",
     "name": "Apache Cassandra Application Development",
     "description": "Learn about drivers, connectivity and requests by running a simple API with Apache Cassandra/Astra DB as its data backend.",
@@ -20,8 +26,7 @@
         "javascript"
     ],
     "badge": "https://media.badgr.com/uploads/badges/b2f4df25-039d-42d2-a109-d72bd49d3f38.png",
-    "youtubeurl": [
-        "https://www.youtube.com/watch?v=jCq0Eg0RnLU"
-    ],
+    "likes": "29",
+    "views": "845",
     "usecases": []
 }
