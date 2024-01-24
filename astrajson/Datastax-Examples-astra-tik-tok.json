@@ -1,0 +1,20 @@
+{
+    "tags": [
+        "javascript",
+        "doc api",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/astra-tik-tok",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-tik-tok/master/hero.png"
+    },
+    "last_modified": "Thu, 21 Dec 2023 21:19:45 GMT",
+    "forks_count": 84,
+    "stargazers_count": 24,
+    "key": "Datastax-Examples-astra-tik-tok",
+    "name": "Social Media App using React, JAMStack and Astra DB",
+    "description": "A simple Tik-Tok clone running on Astra DB that leverages the Document API.",
+    "duration": "50 minutes",
+    "skilllevel": "Advanced",
+    "priority": 2
+}

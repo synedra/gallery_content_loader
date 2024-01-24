@@ -1,0 +1,20 @@
+{
+    "tags": [
+        "jetbrains",
+        "java",
+        "tools"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/astra-ide-plugin",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-ide-plugin/master/hero.jpeg"
+    },
+    "last_modified": "Fri, 28 Jan 2022 14:06:20 GMT",
+    "forks_count": 0,
+    "stargazers_count": 1,
+    "key": "Datastax-Examples-astra-ide-plugin",
+    "name": "JetBrains Astra DB Plugin",
+    "description": "A Jetbrains plugin that allows you to connect and explore your data on Astra DB or any Apache Cassandra cluster running with Stargate.",
+    "duration": "15 minutes",
+    "skilllevel": "Beginner",
+    "priority": 2
+}

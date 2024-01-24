@@ -1,0 +1,22 @@
+{
+    "tags": [
+        "javascript",
+        "stargate-mongoose",
+        "json-api",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/stargate-mongoose-demo-typescript-express-reviews",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/stargate-mongoose-demo-typescript-express-reviews",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/stargate-mongoose-demo-typescript-express-reviews/master/img/splash.png"
+    },
+    "last_modified": "Thu, 14 Sep 2023 17:52:24 GMT",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "key": "Datastax-Examples-stargate-mongoose-demo-typescript-express-reviews",
+    "name": "This sample demonstrates integrating stargate-mongoose with [`express`](https://www.npmjs.com/package/express).",
+    "description": "This sample demonstrates integrating stargate-mongoose with [`express`](https://www.npmjs.com/package/express).",
+    "duration": "30 min",
+    "skilllevel": "Beginner",
+    "priority": 1
+}

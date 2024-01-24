@@ -1,0 +1,22 @@
+{
+    "tags": [
+        "javascript",
+        "rest api",
+        "starters"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/astra-next.js-starter",
+        "gitpod": "https://dtsx.io/2YtXWVU",
+        "vercel": "https://dtsx.io/3aUg00p",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-next.js-starter/master/hero.png"
+    },
+    "last_modified": "Wed, 03 Jan 2024 06:10:07 GMT",
+    "forks_count": 8,
+    "stargazers_count": 18,
+    "key": "Datastax-Examples-astra-next.js-starter",
+    "name": "Next.js and Astra DB Starter",
+    "description": "A sample Next.js + DataStax Astra DB starter app that integrates Astra DB with Next.js.",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 1
+}

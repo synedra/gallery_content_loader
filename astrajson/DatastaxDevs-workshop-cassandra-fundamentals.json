@@ -1,0 +1,25 @@
+{
+    "tags": [
+        "cassandra",
+        "workshop",
+        "nosql",
+        "cql"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-cassandra-fundamentals",
+        "youtube": "https://www.youtube.com/watch?v=hTObPaZNBI8"
+    },
+    "last_modified": "Wed, 19 Jul 2023 09:01:17 GMT",
+    "forks_count": 10,
+    "stargazers_count": 19,
+    "key": "DatastaxDevs-workshop-cassandra-fundamentals",
+    "name": "Apache Cassandra Fundamentals",
+    "description": "Welcome to the Apache Cassandra\u2122 Fundamentals workshop! In this two-hour workshop, we shows the most important fundamentals and basics of the powerful distributed NoSQL database Apache Cassandra\u2122.",
+    "duration": "120 minutes",
+    "skilllevel": "Beginning",
+    "language": [
+        "CQL"
+    ],
+    "badge": "https://api.badgr.io/public/badges/RW0Am093TlaDJBDitqOzjQ/image?imageVersion=1",
+    "usecases": []
+}

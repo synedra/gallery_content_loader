@@ -1,0 +1,21 @@
+{
+    "tags": [
+        "javascript",
+        "stargate documents api",
+        "timeseries db",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/weatherapp",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/weatherapp/master/hero.png"
+    },
+    "last_modified": "Wed, 14 Jun 2023 23:15:05 GMT",
+    "forks_count": 0,
+    "stargazers_count": 1,
+    "key": "Datastax-Examples-weatherapp",
+    "name": "Using Stargate Documents API to build a TimeSeries DB API",
+    "description": "A sample app that shows how the Stargate Documents API can be used to build a TimeSeries DB Abstraction on top of AstraDB",
+    "duration": "15 minutes",
+    "skilllevel": "Beginner",
+    "priority": 3
+}

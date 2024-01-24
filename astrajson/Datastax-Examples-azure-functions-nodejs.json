@@ -1,0 +1,19 @@
+{
+    "tags": [
+        "labs",
+        "javascript",
+        "starters"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/azure-functions-nodejs"
+    },
+    "last_modified": "Thu, 03 Dec 2020 01:11:59 GMT",
+    "forks_count": 1,
+    "stargazers_count": 0,
+    "key": "Datastax-Examples-azure-functions-nodejs",
+    "name": "Cassandra + Azure Functions + Astra using Node.js",
+    "description": "This example shows how to use Azure Functions with the Node.js DataStax Cassandra Driver to set up a basic REST API for a Cassandra database via HTTP Endpoints.",
+    "duration": "30 minutes",
+    "skilllevel": "Intermediate",
+    "priority": 3
+}

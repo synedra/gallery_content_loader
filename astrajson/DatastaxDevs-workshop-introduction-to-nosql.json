@@ -1,0 +1,24 @@
+{
+    "tags": [
+        "nosql",
+        "workshop"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-introduction-to-nosql",
+        "heroimage": "https://github.com/datastaxdevs/workshop-introduction-to-nosql/raw/main/images/intro-to-nosql-cover.png?raw=true",
+        "youtube": [
+            "https://www.youtube.com/watch?v=rhzUrejsA4A"
+        ]
+    },
+    "last_modified": "Wed, 24 Jan 2024 19:18:42 GMT",
+    "forks_count": 199,
+    "stargazers_count": 270,
+    "key": "DatastaxDevs-workshop-introduction-to-nosql",
+    "name": "Introduction to NoSQL Workshop",
+    "description": "An introduction to NoSQL Databases",
+    "skilllevel": "Beginner",
+    "language": [],
+    "likes": "330",
+    "views": "234639",
+    "usecases": []
+}

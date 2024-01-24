@@ -1,0 +1,20 @@
+{
+    "tags": [
+        "javascript",
+        "doc api",
+        "workshop"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-social-media-tiktok"
+    },
+    "last_modified": "Wed, 21 Jun 2023 08:15:00 GMT",
+    "forks_count": 66,
+    "stargazers_count": 61,
+    "key": "DatastaxDevs-workshop-social-media-tiktok",
+    "name": "TikTok clone using React, JAMStack and AstraDB",
+    "description": "A simple Tik-Tok clone running on AstraDB that leverages the Document API.",
+    "duration": "50 minutes",
+    "skilllevel": "Advanced",
+    "demo": "https://fanciful-licorice-ea1437.netlify.app/",
+    "priority": 1
+}

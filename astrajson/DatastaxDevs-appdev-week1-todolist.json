@@ -1,0 +1,22 @@
+{
+    "tags": [
+        "javascript",
+        "rest api",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/appdev-week1-todolist",
+        "heroimage": "https://camo.githubusercontent.com/fae2f66007b221f99ded30bc5edf9bfe4f2046d4d7c426dede44d66cb0588c58/68747470733a2f2f6d6f6e6f736e61702e636f6d2f696d6167652f4676307950417a6e62654e4a443376596c51667a744d4536796f677a4654",
+        "gitpod": "https://dtsx.io/3gtADSq",
+        "netlify": "https://dtsx.io/2EtfGty"
+    },
+    "last_modified": "Mon, 03 Apr 2023 21:49:59 GMT",
+    "forks_count": 99,
+    "stargazers_count": 84,
+    "key": "DatastaxDevs-appdev-week1-todolist",
+    "name": "ToDo App using JAMStack, Netlify, and AstraDB",
+    "description": "This is an example React To-Do application using a DataStax Astra free tier database.",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 2
+}

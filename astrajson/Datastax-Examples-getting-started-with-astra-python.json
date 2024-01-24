@@ -1,0 +1,21 @@
+{
+    "tags": [
+        "labs",
+        "python",
+        "python driver",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/getting-started-with-astra-python",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/astra-sample-app-default.png"
+    },
+    "last_modified": "Wed, 14 Jun 2023 23:17:26 GMT",
+    "forks_count": 14,
+    "stargazers_count": 19,
+    "key": "Datastax-Examples-getting-started-with-astra-python",
+    "name": "Getting Started with Python + Astra DB",
+    "description": "This sample Python backend provides a REST API service that is used with the Getting Started with Astra UI to show a simple example of how to connect to and query DataStax Astra DBs.",
+    "duration": "50 minutes",
+    "skilllevel": "Intermediate",
+    "priority": 3
+}

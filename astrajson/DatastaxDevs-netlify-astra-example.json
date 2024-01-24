@@ -1,0 +1,21 @@
+{
+    "tags": [
+        "javascript",
+        "rest api",
+        "apps"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/netlify-astra-example",
+        "gitpod": "https://dtsx.io/3gtADSq",
+        "netlify": "https://dtsx.io/2EtfGty"
+    },
+    "last_modified": "Wed, 27 Oct 2021 23:19:04 GMT",
+    "forks_count": 4,
+    "stargazers_count": 1,
+    "key": "DatastaxDevs-netlify-astra-example",
+    "name": "ToDo App using JAMStack, Netlify, and AstraDB",
+    "description": "This is an example React To-Do application using a DataStax Astra free tier database.",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 2
+}

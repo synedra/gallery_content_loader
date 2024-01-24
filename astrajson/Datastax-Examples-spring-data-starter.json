@@ -1,0 +1,20 @@
+{
+    "tags": [
+        "java",
+        "starters"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/spring-data-starter",
+        "gitpod": "https://dtsx.io/2QjoULs",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/spring-data-starter/master/hero.png"
+    },
+    "last_modified": "Mon, 18 Dec 2023 17:18:23 GMT",
+    "forks_count": 32,
+    "stargazers_count": 39,
+    "key": "Datastax-Examples-spring-data-starter",
+    "name": "Spring Data Astra DB REST API",
+    "description": "This application uses Spring Data Cassandra and DataStax Astra DB to build a REST API for a backend service that interacts with products and orders.",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 1
+}

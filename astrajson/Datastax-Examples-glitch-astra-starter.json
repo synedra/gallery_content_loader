@@ -1,0 +1,20 @@
+{
+    "tags": [
+        "javascript",
+        "rest api",
+        "starters"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/glitch-astra-starter",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/glitch-astra-starter/master/hero.png"
+    },
+    "last_modified": "Wed, 19 Oct 2022 15:31:59 GMT",
+    "forks_count": 0,
+    "stargazers_count": 2,
+    "key": "Datastax-Examples-glitch-astra-starter",
+    "name": "Glitch and Astra DB Starter",
+    "description": "Jumpstart your next React/Express prototype with this starter!",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 1
+}
