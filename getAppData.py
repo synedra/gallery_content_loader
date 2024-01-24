@@ -38,8 +38,9 @@ api_endpoint = os.getenv("ASTRA_DB_API_ENDPOINT")
 # Initialize our vector db
 astra_db = AstraDB(token=token, api_endpoint=api_endpoint)
 
-#astra_db.create_collection(collection_name="tag_gallery", dimension=1536)
-#astra_db.create_collection(collection_name="readme_gallery", dimension=1536)
+astra_db.create_collection(collection_name="tag_gallery", dimension=1536)
+astra_db.create_collection(collection_name="readme_gallery", dimension=1536)
+astra_db.create_collection(collection_name="application_gallery", dimension=1536)
 #astra_db.delete_collection(collection_name="application_gallery")
 
 #astra_db.create_collection(collection_name="application_gallery", dimension=1536)
@@ -258,16 +259,17 @@ def main():
             if "tags" in entry:
                 entry["tags"] = cleanTags(entry["tags"])
             if entry:
-
+                print(entry)
                 vector_json = json.dumps(entry)
-                query_vector = client.embeddings.create(input=[vector_json],
-        model=embedding_model_name).data[0].embedding
-                entry["_id"] = entry["key"]
+                print(vector_json)
+                #query_vector = client.embeddings.create(input=[vector_json],
+        #model=embedding_model_name).data[0].embedding
+         #       entry["_id"] = entry["key"]
                 for tag in entry["tags"]:
                     if tag not in existingtags:
                         taglist.append(tag)
                 
-                entry["$vector"] = query_vector
+                #entry["$vector"] = query_vector
                 
                 try:
                     demo_collection.insert_one(entry)
