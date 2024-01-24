@@ -27,8 +27,8 @@ api_endpoint = os.getenv("ASTRA_DB_API_ENDPOINT")
 
 # Initialize our vector db
 astra_db = AstraDB(token=token, api_endpoint=api_endpoint)
-
-#astra_db.create_collection(collection_name="tag_gallery", dimension=1536)
+astra_db.delete_collection(collection_name="tag_gallery")
+astra_db.create_collection(collection_name="tag_gallery", dimension=1536)
 
 demo_collection = AstraDBCollection(collection_name="tag_gallery", astra_db=astra_db)
 
@@ -47,8 +47,9 @@ def main():
           "ios",
           "android",
         ]}
-   # demo_collection.delete_one(id="languages")
-   # demo_collection.insert_one(insert)
+    demo_collection.delete_one(id="languages")
+    response = demo_collection.insert_one(insert)
+    print(response)
     insert = {
         "_id":"apis", "tags":[
           "doc api",
@@ -57,26 +58,32 @@ def main():
           "gprc api",
           "devops-apis",
           "json-api",
+          "stargate documents api",
+          "api"
         ]}
-   # demo_collection.delete_one(id="apis")
-    
-   # demo_collection.insert_one(insert)
+
+    response = demo_collection.insert_one(insert)
+    print(response)  
     insert = {
         "_id":"secret", "tags": ["workshop", "apps", "starters", "dev", "tools", "examples"]
     }
-    #demo_collection.delete_one(id="secret")
+    demo_collection.delete_one(id="secret")
     
-    #demo_collection.insert_one(insert)
+    response = demo_collection.insert_one(insert)
+    print(response)
     insert = {
         "_id":"frameworks", 
         "tags":[
           "selenium",
           "react",
+          "pandas",
           "spring",
           "mongoose",
           "django",
           "nextjs",
           "nestjs",
+          "nuxtjs",
+          "helm",
           "angular",
           "redux",
           "webflux",
@@ -84,12 +91,12 @@ def main():
           "serverless-framework",
           "streaming",
           "video",
+          "pulsar",
+          "express"
         ]
     }
-    print(insert)
-    demo_collection.delete_one(id="frameworks")
-    
-    demo_collection.insert_one(insert)
+    response = demo_collection.insert_one(insert)
+    print(response)
     insert={"_id":"technology", "tags":[
           "kubernetes",
           "k8ssandra",
@@ -101,11 +108,14 @@ def main():
           "cassandra",
           "fastapi",
           "datastax",
+          "stargate",
           "keyspaces",
+          "astrastreaming"
         ]}
- #   demo_collection.delete_one(id="technology")
+    demo_collection.delete_one(id="technology")
     
- #   demo_collection.insert_one(insert)
+    response = demo_collection.insert_one(insert)
+    print(response)
     insert = {"_id":"integrations", "tags":
                   [
           "eddiehub",
@@ -114,16 +124,24 @@ def main():
           "gitpod",
           "template",
           "google-cloud",
+          "docker",
+          "selenium",
+          "pyspark",
+          "nodejs driver"
         ]}
-#    demo_collection.delete_one(id="integrations")
+    demo_collection.delete_one(id="integrations")
     
-#    demo_collection.insert_one(insert)
+    response = demo_collection.insert_one(insert)
+    print(response)
     insert = {"_id":"usecases", "tags":[
           "change data capture",
+          "machine-learning",
           "building-sample-apps",
           "ansible-playbooks",
+          "data-engineering",
           "machine learning",
           "graph",
+          "event streaming"
           "ai",
           "game",
           "performance testing",
@@ -131,9 +149,11 @@ def main():
           "timeseries db",
           "killrvideo",
           "devops",
+          "continuous integration",
+          "continuous deployment",
+          "gaming"
         ]   }
-    demo_collection.delete_one(id="usecases")
-    
-    demo_collection.insert_one(insert)
+    response = demo_collection.insert_one(insert)
+    print(response)
 if __name__ == '__main__':
     main()

@@ -3,7 +3,8 @@
         "python",
         "machine-learning",
         "video",
-        "apps"
+        "apps",
+	"vector"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/ai-as-an-api",
