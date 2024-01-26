@@ -38,9 +38,9 @@ api_endpoint = os.getenv("ASTRA_DB_API_ENDPOINT")
 # Initialize our vector db
 astra_db = AstraDB(token=token, api_endpoint=api_endpoint)
 
-astra_db.create_collection(collection_name="tag_gallery", dimension=1536)
-astra_db.create_collection(collection_name="readme_gallery", dimension=1536)
-astra_db.create_collection(collection_name="application_gallery", dimension=1536)
+#astra_db.create_collection(collection_name="tag_gallery", dimension=1536)
+#astra_db.create_collection(collection_name="readme_gallery", dimension=1536)
+#astra_db.create_collection(collection_name="application_gallery", dimension=1536)
 #astra_db.delete_collection(collection_name="application_gallery")
 
 #astra_db.create_collection(collection_name="application_gallery", dimension=1536)
@@ -158,24 +158,22 @@ def main():
     repo = g.get_repo("datastaxdevs/gallery_content_loader")    
     contents = repo.get_contents("astrajson")
     for content_file in contents:
+        readme_trunc = ""
         print(content_file)
         
         if content_file.name.endswith(".json"):
             print("Getting " + content_file.name)
             astrajson = content_file
             last_modified = content_file.last_modified
-            entry = json.loads(content_file.decoded_content.decode())
-            repository = entry["urls"]["github"]
-            url = entry["urls"]["github"]
+            currententry = json.loads(content_file.decoded_content.decode())
+            repository = currententry["urls"]["github"]
+            url = currententry["urls"]["github"]
             organization_name = repository.split("/")[3]
             repository_name = repository.split("/")[4]
-            key = entry["key"]
-            try:
-                if ("last_modified" in entry and entry["last_modified"] == last_modified):
-                    print ("No update, skipping " + content_file.name)
-                    continue
-            except:
-                print("Unable to check last modified")
+            key = currententry["key"]
+            if ("last_modified" in currententry and currententry["last_modified"] == last_modified):
+                print ("No update, skipping " + content_file.name)
+                continue
 
             try:
                 firstrepo = 'https://raw.githubusercontent.com/' + organization_name + '/' + repository_name + '/main/README.md'
@@ -185,103 +183,100 @@ def main():
                     readme = requests.get(secondrepo)
 
                 readme_as_a_string = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
-                #query_vector = client.embeddings.create(
-                #    input=[readme_as_a_string],
-                #    model=embedding_model_name).data[0].embedding
                 readme_entry = {}
                 #readme_entry["$vector"] = query_vector
-                readme_entry["_id"] = entry["key"]
+                readme_entry["_id"] = currententry["key"]
                 readme_entry["readme"] = readme_as_a_string
+                readme_trunc = readme_as_a_string[:5000]
 
                 try:
                     readme_collection.insert_one(readme_entry)
-                    print("Inserted readme for " + entry["key"])
+                    print("Inserted readme for " + currententry["key"])
                 except:
-                    readme_collection.find_one_and_replace(filter={"_id":entry["key"]}, replacement=readme_entry)
-                    print("Replaced readme for  " + entry["key"])
+                    readme_collection.find_one_and_replace(filter={"_id":currententry["key"]}, replacement=readme_entry)
+                    print("Replaced readme for  " + currententry["key"])
             except(Exception) as error:
                 print(error)
                 continue
-        if "tags" in entry:
-            entry["tags"] = cleanTags(entry["tags"])
 
         if (astrajson is not None):
+            apprepo = g.get_repo(organization_name  + '/' + repository_name)
+            last_modified = apprepo.last_modified
+            forks_count = apprepo.forks_count
+            stargazers_count = apprepo.stargazers_count
+            ghtopics = apprepo.get_topics()
+            for topic in ghtopics:
+                if topic not in currententry["tags"]:
+                    currententry["tags"].append(topic)
             
-            last_modified = repo.last_modified
-            forks_count = repo.forks_count
-            stargazers_count = repo.stargazers_count
-
-            entry = {"tags":[], "urls":{"github":url}, "last_modified":last_modified, "forks_count":forks_count, "stargazers_count":stargazers_count}
+            newentry = {"key":key, "tags":currententry["tags"], "urls":{"github":url}, "last_modified":last_modified, "forks_count":forks_count, "stargazers_count":stargazers_count}
             
             settings = json.loads(astrajson.decoded_content.decode())
             keys = settings.keys()
-            entry["key"] = key
             for key in keys:
                 lowerkey = key.lower()
                 if (key.upper() == "GITHUBURL"):
                     continue
                 elif (key.upper() == "YOUTUBEURL" or key.upper() == "YOUTUBE"):
                     print("Youtube is " + json.dumps(settings[key]))
-                    entry["urls"]["youtube"] = settings[key]
+                    newentry["urls"]["youtube"] = settings[key]
                     try:
                         (path, video_id) = settings[key][0].split("=")
                         (likes, views) = getVideoStats(youtube, video_id)
-                        entry["likes"] = likes
-                        entry["views"] = views
+                        newentry["likes"] = likes
+                        newentry["views"] = views
                     except:
                         continue
                 elif (key.upper() == "GITPODURL"):
-                    entry["urls"]["gitpod"] = settings[key]
+                    newentry["urls"]["gitpod"] = settings[key]
                 elif (key.upper() == "NETLIFYURL"):
-                    entry["urls"]["netlify"] = settings[key]
+                    newentry["urls"]["netlify"] = settings[key]
                 elif (key.upper() == "DEMOURL"):
-                    entry["urls"]["demo"] = settings[key]
+                    newentry["urls"]["demo"] = settings[key]
                 elif (key.upper() == "VERCELURL"):
-                    entry["urls"]["vercel"] = settings[key]
+                    newentry["urls"]["vercel"] = settings[key]
                 elif (key.upper() == "TAGS"):
                     for tag in settings["tags"]:
                         if ("name" in tag):
-                            entry["tags"].append(
+                            newentry["tags"].append(
                                 tag["name"].lower())
                         else:
-                            entry["tags"].append(tag.lower())
+                            newentry["tags"].append(tag.lower())
                 elif (key.upper() == "STACK"):
                     for stack in settings["stack"]:
                         if ("tags" not in entry):
-                            entry["tags"] = []
-                        entry["tags"].append(stack.lower())
+                            newentry["tags"] = []
+                        newentry["tags"].append(stack.lower())
                 elif (key.upper() == "CATEGORY"):
-                    entry["tags"].append(settings[key])
+                    newentry["tags"].append(settings[key])
                 elif (key.upper() == "HEROIMAGE"):
-                    entry["urls"]["heroimage"] = settings[key]
+                    newentry["urls"]["heroimage"] = settings[key]
                 else:
-                    entry[lowerkey] = settings[key]
-            if "tags" in entry:
-                entry["tags"] = cleanTags(entry["tags"])
-            if entry:
-                print(entry)
-                vector_json = json.dumps(entry)
+                    newentry[lowerkey] = settings[key]
+            newentry["tags"] = cleanTags(newentry["tags"])
+            if newentry:
+                newentry["readme"] = readme_trunc
+                vector_json = json.dumps(newentry)
                 print(vector_json)
-                #query_vector = client.embeddings.create(input=[vector_json],
-        #model=embedding_model_name).data[0].embedding
-         #       entry["_id"] = entry["key"]
-                for tag in entry["tags"]:
+                query_vector = client.embeddings.create(input=[vector_json],
+                    model=embedding_model_name).data[0].embedding
+                newentry["_id"] = newentry["key"]
+                for tag in newentry["tags"]:
                     if tag not in existingtags:
                         taglist.append(tag)
                 
-                #entry["$vector"] = query_vector
+                newentry["$vector"] = query_vector
                 
                 try:
-                    demo_collection.insert_one(entry)
-                    print("Inserted " + entry["key"])
+                    demo_collection.insert_one(newentry)
+                    print("Inserted " + newentry["key"])
                 except:
-                    demo_collection.find_one_and_replace(filter={"_id":entry["key"]}, replacement=entry)
-                    print("Replaced " + entry["key"])
+                    demo_collection.find_one_and_replace(filter={"_id":newentry["key"]}, replacement=newentry)
+                    print("Replaced " + newentry["key"])
 
-            filename = "./astrajson/" + entry["key"] + ".json"
-            print(filename)
+            filename = "./astrajson/" + newentry["key"] + ".json"
             with open(filename, 'w') as outfile:
-                json.dump(entry, outfile, indent=4)
+                json.dump(newentry, outfile, indent=4)
                 print("Wrote " + filename)
         
 
