@@ -125,8 +125,7 @@ existingtags = [
     "change data capture",
     "building-sample-apps",
     "ansible-playbooks",
-    "machine learning",
-    "graph",
+    "machine-learning",
     "ai",
     "game",
     "performance testing",
@@ -166,6 +165,7 @@ def main():
             astrajson = content_file
             last_modified = content_file.last_modified
             currententry = json.loads(content_file.decoded_content.decode())
+            del currententry["$vector"]
             repository = currententry["urls"]["github"]
             url = currententry["urls"]["github"]
             organization_name = repository.split("/")[3]
@@ -253,28 +253,29 @@ def main():
                     newentry["urls"]["heroimage"] = settings[key]
                 else:
                     newentry[lowerkey] = settings[key]
-            newentry["tags"] = cleanTags(newentry["tags"])
-            if newentry:
-                newentry["readme"] = readme_trunc
-                vector_json = json.dumps(newentry)
-                print(vector_json)
-                query_vector = client.embeddings.create(input=[vector_json],
-                    model=embedding_model_name).data[0].embedding
-                newentry["_id"] = newentry["key"]
-                for tag in newentry["tags"]:
-                    if tag not in existingtags:
-                        taglist.append(tag)
-                
-                newentry["$vector"] = query_vector
-                
-                try:
-                    demo_collection.insert_one(newentry)
-                    print("Inserted " + newentry["key"])
-                except:
-                    demo_collection.find_one_and_replace(filter={"_id":newentry["key"]}, replacement=newentry)
-                    print("Replaced " + newentry["key"])
+            newentry["readme"] = readme_trunc
+            del newentry["$vector"]
+            vector_json = json.dumps(newentry)
+            print(vector_json)
+            
+            for tag in newentry["tags"]:
+                if tag not in existingtags:
+                    taglist.append(tag)
+
+            query_vector = client.embeddings.create(input=[vector_json],
+                model=embedding_model_name).data[0].embedding
+            newentry["_id"] = newentry["key"]
+            newentry["$vector"] = query_vector
+            
+            try:
+                demo_collection.insert_one(newentry)
+                print("Inserted " + newentry["key"])
+            except:
+                demo_collection.find_one_and_replace(filter={"_id":newentry["key"]}, replacement=newentry)
+                print("Replaced " + newentry["key"])
 
             filename = "./astrajson/" + newentry["key"] + ".json"
+            del newentry["$vector"]
             with open(filename, 'w') as outfile:
                 json.dump(newentry, outfile, indent=4)
                 print("Wrote " + filename)
@@ -285,6 +286,8 @@ def cleanTags(tags):
     for tag in tags:
         if not (p.match(tag)):
             continue
+        if tag in ("astra", "astra db", "astradb"):
+            tag = "astradb"
         if tag in ("doc api", "documentapi", "docapi", "document api"):
             tag = "doc api"
         if tag in ("gql api", "graphql"):

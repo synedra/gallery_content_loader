@@ -44,8 +44,6 @@ def main():
           "python",
           "c#",
           "scala",
-          "ios",
-          "android",
         ]}
     demo_collection.delete_one(id="languages")
     response = demo_collection.insert_one(insert)
@@ -89,7 +87,6 @@ def main():
           "webflux",
           "elixir",
           "serverless-framework",
-          "streaming",
           "video",
           "pulsar",
           "express"
@@ -104,13 +101,14 @@ def main():
           "nosql",
           "vector",
           "astradb",
-          "dse",
           "cassandra",
           "fastapi",
           "datastax",
           "stargate",
           "keyspaces",
-          "astrastreaming"
+          "astrastreaming",
+          "ios",
+          "android"
         ]}
     demo_collection.delete_one(id="technology")
     
@@ -137,11 +135,10 @@ def main():
           "change data capture",
           "machine-learning",
           "building-sample-apps",
-          "ansible-playbooks",
           "data-engineering",
           "machine learning",
           "graph",
-          "event streaming"
+          "event streaming",
           "ai",
           "game",
           "performance testing",
