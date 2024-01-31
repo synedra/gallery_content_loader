@@ -24,18 +24,10 @@ import re
 from dotenv import load_dotenv
 load_dotenv()
 
-base64_token = os.getenv("TOKEN_JSON") 
+os.system('touch token.json; echo $TOKEN_JSON | base64 -d |jq > token.json') 
+os.system('touch token.json; echo $CREDENTIALS_JSON | base64 -d | jq> credentials.json')
 base64_creds = os.getenv("CREDENTIALS_JSON")
 
-with open('token.json', 'w') as token:
-           string = base64.b64decode(base64_token)
-           filestring = string.decode('ascii')
-           token.write(filestring)
-
-with open('credentials.json', 'w') as token:
-           string = base64.b64decode(base64_creds)
-           filestring = string.decode('ascii')
-           token.write(filestring)
 
 g = Github(os.getenv("GITHUB_TOKEN"))
 
