@@ -24,12 +24,6 @@ import re
 from dotenv import load_dotenv
 load_dotenv()
 
-os.system('touch token.json; echo $TOKEN_JSON | base64 -d |jq > token.json') 
-os.system('touch credentials.json; echo $CREDENTIALS_JSON | base64 -d | jq> credentials.json')
-
-os.system('ls -al')
-
-
 g = Github(os.getenv("GITHUB_TOKEN"))
 
 p = re.compile('[a-zA-Z]+')
@@ -139,7 +133,7 @@ def main():
     counter = 0
     input_documents = []
 
-    youtube = getCreds()
+    #youtube = getCreds()
     
     from langchain_openai import OpenAIEmbeddings
     myEmbedding = OpenAIEmbeddings()
@@ -220,13 +214,13 @@ def main():
                 elif (key.upper() == "YOUTUBEURL" or key.upper() == "YOUTUBE"):
                     print("Youtube is " + json.dumps(settings[key]))
                     newentry["urls"]["youtube"] = settings[key]
-                    try:
-                        (path, video_id) = settings[key][0].split("=")
-                        (likes, views) = getVideoStats(youtube, video_id)
-                        newentry["likes"] = likes
-                        newentry["views"] = views
-                    except:
-                        continue
+                    #try:
+                    #    (path, video_id) = settings[key][0].split("=")
+                   #    (likes, views) = getVideoStats(youtube, video_id)
+                    #    newentry["likes"] = likes
+                     #   newentry["views"] = views
+                    #except:
+                    #    continue
                 elif (key.upper() == "GITPODURL"):
                     newentry["urls"]["gitpod"] = settings[key]
                 elif (key.upper() == "NETLIFYURL"):
