@@ -13,5 +13,4 @@ jobs:
       - run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env
       - run: cat .env
       - run: pip install -r requirements.txt
-      - run: echo "Blah Blah Blah"
       - run: python getAppData.py
