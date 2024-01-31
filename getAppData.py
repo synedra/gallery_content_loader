@@ -18,10 +18,22 @@ SCOPES = [ "https://www.googleapis.com/auth/youtube.readonly"]
 
 import json
 import os.path
+import base64
 import os
 import re
 from dotenv import load_dotenv
 load_dotenv()
+
+base64_token = os.getenv("TOKEN_JSON")
+base64_creds = os.getenv("CREDENTIALS_JSON")
+
+with open('token.json', 'w') as token:
+           string = base64.b64decode(base64_token)
+           token.write(string)
+
+with open('credentials.json', 'w') as creds:
+           string = base64.b64decode(base64_token)
+           creds.write(string)
 
 
 g = Github(os.getenv("GITHUB_TOKEN"))
