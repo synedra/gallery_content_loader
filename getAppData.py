@@ -28,10 +28,7 @@ g = Github(os.getenv("GH_TOKEN"))
 p = re.compile('[a-zA-Z]+')
 token = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
 api_endpoint = os.getenv("ASTRA_DB_API_ENDPOINT")
-
-
     
-
 # Initialize our vector db
 astra_db = AstraDB(token=token, api_endpoint=api_endpoint)
 
