@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: cd $ {{github.workspace}}
+      - run: cd ${{ github.workspace }}
       - run: pip install -r requirements.txt
       - run: python getAppData.py
