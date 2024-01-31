@@ -39,6 +39,7 @@ httplib2==0.22.0
 httpx==0.25.2
 hyperframe==6.0.1
 idna==3.6
+jq==1.6.0
 jsonpatch==1.33
 jsonpointer==2.4
 langchain==0.1.0
