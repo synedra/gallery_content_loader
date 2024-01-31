@@ -17,5 +17,6 @@ jobs:
       - run: echo '${{secrets.TOKEN_JSON}}' | base64 -- decode | jq > token.json
       - run: cat token.json
       - run: cat credentials.json
+      - run: ls -al
       - run: pip install -r requirements.txt
       - run: python getAppData.py
