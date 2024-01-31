@@ -14,7 +14,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 cmarkgfm==2022.10.27
 cqlsh==6.1.2
-cryptography==41.0.7
+cryptography==38.0.4
 dataclasses-json==0.6.3
 defusedxml==0.7.1
 Deprecated==1.2.14
