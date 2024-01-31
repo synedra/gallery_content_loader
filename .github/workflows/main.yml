@@ -12,6 +12,7 @@ jobs:
       - run: echo "ASTRA_DB_API_ENDPOINT=${{ secrets.ASTRA_DB_API_ENDPOINT }}" >> .env
       - run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env
       - run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
+      - run: echo ${{secrets.CREDENTIALS_JSON}} > credentials.json
       - run: cat .env
       - run: pip install -r requirements.txt
       - run: python getAppData.py
