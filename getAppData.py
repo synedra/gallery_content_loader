@@ -25,8 +25,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 os.system('touch token.json; echo $TOKEN_JSON | base64 -d |jq > token.json') 
-os.system('touch token.json; echo $CREDENTIALS_JSON | base64 -d | jq> credentials.json')
-base64_creds = os.getenv("CREDENTIALS_JSON")
+os.system('touch credentials.json; echo $CREDENTIALS_JSON | base64 -d | jq> credentials.json')
+
+os.system('ls -al')
 
 
 g = Github(os.getenv("GITHUB_TOKEN"))
