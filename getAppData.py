@@ -23,7 +23,8 @@ import re
 from dotenv import load_dotenv
 load_dotenv()
 
-g = Github(os.getenv("GH_TOKEN"))
+
+g = Github(os.getenv("GITHUB_TOKEN"))
 
 p = re.compile('[a-zA-Z]+')
 token = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
