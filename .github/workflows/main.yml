@@ -15,3 +15,4 @@ jobs:
       - run: cat .env
       - run: pip install -r requirements.txt
       - run: python getAppData.py
+      - run: git commit -a -m "Updated app gallery"
