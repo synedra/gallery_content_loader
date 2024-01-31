@@ -14,9 +14,5 @@ jobs:
       - run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
       - run: echo "CREDENTIALS_JSON=${{ secrets.CREDENTIALS_JSON }}" >> .env
       - run: echo "TOKEN_JSON=${{ secrets.TOKEN_JSON }}" >> .env
-      - run: jq
-      - run: cat token.json
-      - run: cat credentials.json
-      - run: ls -al
       - run: pip install -r requirements.txt
       - run: python getAppData.py
