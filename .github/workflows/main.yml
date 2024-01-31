@@ -13,6 +13,7 @@ jobs:
       - run: echo ${{ secrets.CREDENTIALS_JSON }} | base64 --decode > .env
       - run: mv .env credentials.json
       - run: echo "" > .env
+      - run: ls -al
       - run: echo "ASTRA_DB_APPLICATION_TOKEN=${{ secrets.ASTRA_DB_APPLICATION_TOKEN }}" >> .env
       - run: echo "ASTRA_DB_API_ENDPOINT=${{ secrets.ASTRA_DB_API_ENDPOINT }}" >> .env
       - run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env
