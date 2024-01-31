@@ -53,9 +53,7 @@ embedding_model_name = "text-embedding-ada-002"
 taglist = []
 
 # using an access token
-f = open("github.token", "r")
-line = f.readlines()[0].replace("\n", "")
-g = Github(line)
+g = Github(os.getenv("GH_TOKEN"))
 
 p = re.compile('[a-zA-Z]+')
 token = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
