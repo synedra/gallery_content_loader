@@ -6,7 +6,7 @@
         "netlify",
         "apps",
         "datastax",
-        "astra",
+        "astradb",
         "gitpod",
         "dev",
         "building-sample-apps"

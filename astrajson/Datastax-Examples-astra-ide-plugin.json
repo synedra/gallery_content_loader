@@ -6,7 +6,7 @@
         "tools",
         "building-sample-apps",
         "dev",
-        "astra"
+        "astradb"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-ide-plugin",

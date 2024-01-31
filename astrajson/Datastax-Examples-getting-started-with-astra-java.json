@@ -8,7 +8,7 @@
         "dev",
         "cassandra",
         "java-driver",
-        "astra",
+        "astradb",
         "datastax",
         "building-sample-apps"
     ],

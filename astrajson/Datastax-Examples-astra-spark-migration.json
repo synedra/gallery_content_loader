@@ -8,7 +8,7 @@
         "dev",
         "cassandra",
         "spark",
-        "astra",
+        "astradb",
         "datastax"
     ],
     "urls": {

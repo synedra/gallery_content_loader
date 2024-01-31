@@ -6,7 +6,7 @@
         "apps",
         "eddiehub",
         "datastax",
-        "astra",
+        "astradb",
         "dev",
         "building-sample-apps"
     ],

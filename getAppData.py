@@ -165,7 +165,8 @@ def main():
             astrajson = content_file
             last_modified = content_file.last_modified
             currententry = json.loads(content_file.decoded_content.decode())
-            del currententry["$vector"]
+            if ("$vector" in currententry):
+                del currententry["$vector"]
             repository = currententry["urls"]["github"]
             url = currententry["urls"]["github"]
             organization_name = repository.split("/")[3]
@@ -254,13 +255,16 @@ def main():
                 else:
                     newentry[lowerkey] = settings[key]
             newentry["readme"] = readme_trunc
-            del newentry["$vector"]
+            if ("$vector" in newentry):
+                del newentry["$vector"] 
             vector_json = json.dumps(newentry)
             print(vector_json)
             
             for tag in newentry["tags"]:
                 if tag not in existingtags:
                     taglist.append(tag)
+            
+            newentry["tags"] = cleanTags(newentry["tags"])
 
             query_vector = client.embeddings.create(input=[vector_json],
                 model=embedding_model_name).data[0].embedding

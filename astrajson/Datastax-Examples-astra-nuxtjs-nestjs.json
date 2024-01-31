@@ -6,7 +6,7 @@
         "nestjs",
         "apps",
         "dev",
-        "astra",
+        "astradb",
         "eddiehub",
         "datastax",
         "building-sample-apps"

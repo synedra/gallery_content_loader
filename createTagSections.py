@@ -76,6 +76,7 @@ def main():
           "react",
           "pandas",
           "spring",
+          "stargate-mongoose",
           "mongoose",
           "django",
           "nextjs",
@@ -132,23 +133,17 @@ def main():
     response = demo_collection.insert_one(insert)
     print(response)
     insert = {"_id":"usecases", "tags":[
-          "change data capture",
           "machine-learning",
           "building-sample-apps",
           "data-engineering",
-          "machine learning",
-          "graph",
           "event streaming",
-          "ai",
           "game",
           "performance testing",
           "ds-bulk",
           "timeseries db",
-          "killrvideo",
           "devops",
           "continuous integration",
-          "continuous deployment",
-          "gaming"
+          "continuous deployment"
         ]   }
     response = demo_collection.insert_one(insert)
     print(response)

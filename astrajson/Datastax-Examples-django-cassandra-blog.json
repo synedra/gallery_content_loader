@@ -6,7 +6,7 @@
         "video",
         "apps",
         "datastax",
-        "astra",
+        "astradb",
         "dev"
     ],
     "urls": {

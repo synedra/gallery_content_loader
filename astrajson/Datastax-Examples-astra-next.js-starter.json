@@ -9,7 +9,7 @@
         "gitpod",
         "rest-api",
         "datastax",
-        "astra",
+        "astradb",
         "nextjs"
     ],
     "urls": {

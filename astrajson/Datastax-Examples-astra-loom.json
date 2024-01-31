@@ -7,7 +7,7 @@
         "cassandra",
         "dev",
         "datastax",
-        "astra",
+        "astradb",
         "gitpod",
         "building-sample-apps"
     ],

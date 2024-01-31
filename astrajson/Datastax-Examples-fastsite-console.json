@@ -6,7 +6,7 @@
         "apps",
         "dev",
         "datastax",
-        "astra",
+        "astradb",
         "building-sample-apps",
         "react",
         "netlify",

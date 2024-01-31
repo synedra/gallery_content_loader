@@ -6,7 +6,7 @@
         "cassandra",
         "dev",
         "datastax",
-        "astra",
+        "astradb",
         "netflix-data-explorer",
         "building-sample-apps"
     ],

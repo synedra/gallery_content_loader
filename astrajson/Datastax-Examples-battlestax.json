@@ -7,7 +7,7 @@
         "apps",
         "dev",
         "building-sample-apps",
-        "astra",
+        "astradb",
         "datastax",
         "cassandra",
         "document-api",
