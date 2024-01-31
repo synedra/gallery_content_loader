@@ -13,9 +13,9 @@ jobs:
       - run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env
       - run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
       - run: touch credentials.json
-      - run: echo '${{ secrets.CREDENTIALS_JSON }}' | base64 --decode | jq >> credentials.json
+      - run: echo "CREDENTIALS_JSON=${{ secrets.CREDENTIALS_JSON }}" >> .env
       - run: touch token.json
-      - run: echo '${{ secrets.TOKEN_JSON }}' | base64 -- decode | jq >> token.json
+      - run: echo "TOKEN_JSON=${{ secrets.TOKEN_JSON }}" >> .env
       - run: jq
       - run: cat token.json
       - run: cat credentials.json
