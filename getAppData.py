@@ -141,7 +141,7 @@ def main():
     with open('credentials.json', 'w') as credentials_json:
         credentialsjson = json.dumps(os.getenv("CREDENTIALS_JSON"))
         print(credentialsjson)
-        token_json.write(credentialsjson)
+        credentials_json.write(credentialsjson)
         print(credentialsjson)
 
 
