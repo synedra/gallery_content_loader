@@ -132,32 +132,18 @@ def main():
 
 
     print(os.getenv("TOKEN_JSON"))
-    print(os.getenv("CREDENTIALS_JSON"))
-    decoded_credentials = decode_and_parse_credentials(os.getenv("TOKEN_JSON"))
-    print(os.getenv("TOKEN_JSON"))
-    if decoded_credentials:
-        print("Decoded Credentials:")
-        print(decoded_credentials)
-    else:
-        print("Failed to decode and parse credentials.")
-
+    tokenjson = json.dumps(os.getenv("TOKEN_JSON"))
+    
     with open('token.json', 'w') as token_json:
-        contents = json.dumps(decoded_credentials)
-        token_json.write(contents)
-        print(contents)
+        token_json.write(tokenjson)
+        print(tokenjson)
+        close(token_json)
 
-    decoded_credentials = decode_and_parse_credentials(os.getenv("CREDENTIALS_JSON"))
-
-    if decoded_credentials:
-        print("Decoded Credentials:")
-        print(decoded_credentials)
-    else:
-        print("Failed to decode and parse credentials.")
-
-    with open('credentials.json', 'w') as token_json:
-        contents = json.dumps(decoded_credentials)
-        token_json.write(contents)
-        print(contents)
+    with open('credentials.json', 'w') as credentials_json:
+        credentialsjson = json.dumps(os.getenv("CREDENTIALS_JSON"))
+        token_json.write(credentialsjson)
+        print(credentialsjson)
+        close(credentials_json)
 
 
     os.system('ls -al')
