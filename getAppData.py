@@ -373,6 +373,9 @@ def getCreds():
 
 def decode_and_parse_credentials(encoded_credentials):
     try:
+        while len(encoded_credentials) % 4 != 0:
+            encoded_credentials += '='
+        
         # Decode the base64 string to bytes
         credentials_bytes = base64.b64decode(encoded_credentials)
         
