@@ -146,12 +146,13 @@ def main():
 
 
     os.system('ls -al')
+    os.system('cat token.json')
 
     # Grab the Astra token and api endpoint from the environment
     counter = 0
     input_documents = []
 
-    #youtube = getCreds()
+    youtube = getCreds()
     
     from langchain_openai import OpenAIEmbeddings
     myEmbedding = OpenAIEmbeddings()
@@ -232,13 +233,13 @@ def main():
                 elif (key.upper() == "YOUTUBEURL" or key.upper() == "YOUTUBE"):
                     print("Youtube is " + json.dumps(settings[key]))
                     newentry["urls"]["youtube"] = settings[key]
-                    #try:
-                    #    (path, video_id) = settings[key][0].split("=")
-                    #    (likes, views) = getVideoStats(youtube, video_id)
-                    #    newentry["likes"] = likes
-                    #    newentry["views"] = views
-                    #except:
-                    #    continue
+                    try:
+                        (path, video_id) = settings[key][0].split("=")
+                        (likes, views) = getVideoStats(youtube, video_id)
+                        newentry["likes"] = likes
+                        newentry["views"] = views
+                    except:
+                        continue
                 elif (key.upper() == "GITPODURL"):
                     newentry["urls"]["gitpod"] = settings[key]
                 elif (key.upper() == "NETLIFYURL"):
@@ -269,7 +270,6 @@ def main():
             if ("$vector" in newentry):
                 del newentry["$vector"] 
             vector_json = json.dumps(newentry)
-            print(vector_json)
             
             for tag in newentry["tags"]:
                 if tag not in existingtags:
