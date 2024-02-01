@@ -133,7 +133,7 @@ def main():
     tokenobj = json.dumps(os.getenv("TOKEN_JSON"))
     
     with open('token.json', 'w') as token_json:
-       token_json.write(json.dumps(tokenobj))
+        token_json.write(json.dumps(tokenobj))
         print(tokenobj)
 
     with open('credentials.json', 'w') as credentials_json:
