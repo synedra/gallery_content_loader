@@ -24,44 +24,6 @@ import re
 from dotenv import load_dotenv
 load_dotenv()
 
-
-decoded_credentials = decode_and_parse_credentials(os.getenv("TOKEN_JSON"))
-
-if decoded_credentials:
-    print("Decoded Credentials:")
-    print(decoded_credentials)
-else:
-    print("Failed to decode and parse credentials.")
-
-with open('token.json', 'w') as token_json:
-    contents = decoded_credentials
-    token_json.write(contents)
-    print ("Wrote token.json")
-    print(contents)
-
-decoded_credentials = decode_and_parse_credentials(os.getenv("CREDENTIALS_JSON"))
-
-if decoded_credentials:
-    print("Decoded Credentials:")
-    print(decoded_credentials)
-else:
-    print("Failed to decode and parse credentials.")
-
-with open('credentials.json', 'w') as token_json:
-    contents = decoded_credentials
-    token_json.write(contents)
-    print ("Wrote token.json")
-    print(contents)
-
-
-os.system('ls -al')
-
-with open('token.json', 'w') as token_json:
-    contents = base64.b64decode(os.getenv("TOKEN_JSON"))
-    token_json.write(contents)
-    print ("Wrote token.json")
-    print(contents)
-
 g = Github(os.getenv("GITHUB_TOKEN"))
 
 p = re.compile('[a-zA-Z]+')
@@ -167,6 +129,36 @@ existingtags = [
 
 
 def main():
+
+    decoded_credentials = decode_and_parse_credentials(os.getenv("TOKEN_JSON"))
+
+    if decoded_credentials:
+        print("Decoded Credentials:")
+        print(decoded_credentials)
+    else:
+        print("Failed to decode and parse credentials.")
+
+    with open('token.json', 'w') as token_json:
+        contents = json.dumps(decoded_credentials)
+        token_json.write(contents)
+        print(contents)
+
+    decoded_credentials = decode_and_parse_credentials(os.getenv("CREDENTIALS_JSON"))
+
+    if decoded_credentials:
+        print("Decoded Credentials:")
+        print(decoded_credentials)
+    else:
+        print("Failed to decode and parse credentials.")
+
+    with open('credentials.json', 'w') as token_json:
+        contents = json.dumps(decoded_credentials)
+        token_json.write(contents)
+        print(contents)
+
+
+    os.system('ls -al')
+
     # Grab the Astra token and api endpoint from the environment
     counter = 0
     input_documents = []
