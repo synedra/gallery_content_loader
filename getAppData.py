@@ -37,7 +37,6 @@ astra_db = AstraDB(token=token, api_endpoint=api_endpoint)
 #astra_db.create_collection(collection_name="readme_gallery", dimension=1536)
 #astra_db.create_collection(collection_name="application_gallery", dimension=1536)
 #astra_db.delete_collection(collection_name="application_gallery")
-
 #astra_db.create_collection(collection_name="application_gallery", dimension=1536)
 
 demo_collection = AstraDBCollection(collection_name="application_gallery", astra_db=astra_db)
