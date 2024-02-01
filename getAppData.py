@@ -27,7 +27,6 @@ load_dotenv()
 
 os.system('touch token.json; echo "${TOKEN_JSON// /}" | base64 -d |jq > token.json') 
 os.system('touch credentials.json; echo $CREDENTIALS_JSON | base64 -d | jq> credentials.json')
-filter(|b| !b" \n\t\r\x0b\x0c".contains(b)
        
 os.system('ls -al')
 
