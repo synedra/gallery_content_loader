@@ -25,9 +25,36 @@ import re
 from dotenv import load_dotenv
 load_dotenv()
 
-os.system('touch token.json; echo "${TOKEN_JSON// /}" | base64 -d |jq > token.json') 
-os.system('touch credentials.json; echo $CREDENTIALS_JSON | base64 -d | jq> credentials.json')
-       
+
+decoded_credentials = decode_and_parse_credentials(os.getenv("TOKEN_JSON"))
+
+if decoded_credentials:
+    print("Decoded Credentials:")
+    print(decoded_credentials)
+else:
+    print("Failed to decode and parse credentials.")
+
+with open('token.json', 'w') as token_json:
+    contents = decoded_credentials
+    token_json.write(contents)
+    print ("Wrote token.json")
+    print(contents)
+
+decoded_credentials = decode_and_parse_credentials(os.getenv("CREDENTIALS_JSON"))
+
+if decoded_credentials:
+    print("Decoded Credentials:")
+    print(decoded_credentials)
+else:
+    print("Failed to decode and parse credentials.")
+
+with open('credentials.json', 'w') as token_json:
+    contents = decoded_credentials
+    token_json.write(contents)
+    print ("Wrote token.json")
+    print(contents)
+
+
 os.system('ls -al')
 
 with open('token.json', 'w') as token_json:
@@ -353,7 +380,20 @@ def getCreds():
     youtube = build('youtube', 'v3', credentials=creds)
     return youtube
 
-
+def decode_and_parse_credentials(encoded_credentials):
+    try:
+        # Decode the base64 string to bytes
+        credentials_bytes = base64.b64decode(encoded_credentials)
+        
+        # Convert bytes to a JSON string
+        credentials_str = credentials_bytes.decode('utf-8')
+        
+        # Parse the JSON string into a dictionary
+        credentials = json.loads(credentials_str)
+        
+        return credentials
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
 
 if __name__ == '__main__':
     main()
