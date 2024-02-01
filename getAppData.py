@@ -130,6 +130,9 @@ existingtags = [
 
 def main():
 
+
+    print(os.getenv("TOKEN_JSON"))
+    print(os.getenv("CREDENTIALS_JSON"))
     decoded_credentials = decode_and_parse_credentials(os.getenv("TOKEN_JSON"))
     print(os.getenv("TOKEN_JSON"))
     if decoded_credentials:

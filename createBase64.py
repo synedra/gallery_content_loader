@@ -23,5 +23,5 @@ def read_and_base64_encode_credentials(credentials_file_path):
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
-read_and_base64_encode_credentials('credentials.json')
+read_and_base64_encode_credentials('token.json')
 
