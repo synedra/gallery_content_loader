@@ -15,6 +15,7 @@ jobs:
       - run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env
       - run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
       - run: cat .env
+      - run: ls -al
       - run: pip install -r requirements.txt
       - run: python getAppData.py
       - uses: stefanzweifel/git-auto-commit-action@v5
