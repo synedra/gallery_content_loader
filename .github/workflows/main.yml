@@ -9,9 +9,9 @@ jobs:
       - run: python --version
       - run: cd ${{ github.workspace }}
       - run: pip install -r requirements.txt
-      - run: echo ${{ secrets.TOKEN_JSON }} | base64 --decode | jq > token.json
+      - run: echo '${{ secrets.TOKEN_JSON }}'' | base64 --decode | jq > token.json
       - run: mv .env token.json
-      - run: echo ${{ secrets.CREDENTIALS_JSON }} | base64 --decode | jq > credentials.json
+      - run: echo '${{ secrets.CREDENTIALS_JSON }}'' | base64 --decode | jq > credentials.json
       - run: mv .env credentials.json
       - run: echo "" > .env
       - run: ls -al
