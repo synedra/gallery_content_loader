@@ -130,11 +130,16 @@ existingtags = [
 def main():
     
     with open('token.json', 'w') as token_json:
-        token_json.write(json.dumps(os.getenv("TOKEN_JSON")))
-        print(json.dumps(os.getenv("TOKEN_JSON")))
+        json_string = json.loads(os.getenv("TOKEN_JSON"))
+        token_json.write(json.dumps(json_string))
+
+
+
+        token_json.write(json_string)
+        print(json_string)
 
     with open('credentials.json', 'w') as credentials_json:
-        credentialsjson = json.dumps(os.getenv("CREDENTIALS_JSON"))
+        credentialsjson = json.loads(os.getenv("CREDENTIALS_JSON"))
         print (credentialsjson)
         credentials_json.write(json.dumps(credentialsjson))
         print(json.dumps(os.getenv("CREDENTIALS_JSON")))
