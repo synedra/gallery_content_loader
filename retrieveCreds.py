@@ -11,8 +11,9 @@ def decode_and_parse_credentials(encoded_credentials):
         
         # Parse the JSON string into a dictionary
         credentials = json.loads(credentials_str)
+        print (credentials)
         
-        return credentials
+        return json.dumps(credentials)
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 
