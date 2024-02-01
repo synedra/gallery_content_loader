@@ -21,4 +21,5 @@ jobs:
       - run: cat .env
       - run: pip install -r requirements.txt
       - run: python getAppData.py
-      - run: git commit -a -m "Updated app gallery"
+      - uses: stefanzweifel/git-auto-commit-action@v5
+      - run: echo "Updated app gallery"
