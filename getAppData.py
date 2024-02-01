@@ -128,20 +128,16 @@ existingtags = [
 
 
 def main():
-
-
-    tokenobj = json.dumps(os.getenv("TOKEN_JSON"))
     
     with open('token.json', 'w') as token_json:
         token_json.write(json.dumps(tokenobj))
-        print(tokenobj)
+        print(json.dumps(jsonobj))
 
     with open('credentials.json', 'w') as credentials_json:
         credentialsjson = json.dumps(os.getenv("CREDENTIALS_JSON"))
+        print (credentialsjson)
         credentials_json.write(json.dumps(credentialsjson))
         print(json.dumps(credentialsjson))
-
-    print(tokenjson)
 
     os.system('ls -al')
     os.system('cat token.json')
