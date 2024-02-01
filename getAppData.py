@@ -24,6 +24,17 @@ import re
 from dotenv import load_dotenv
 load_dotenv()
 
+os.system('touch token.json; echo $TOKEN_JSON | base64 -d |jq > token.json') 
+os.system('touch credentials.json; echo $CREDENTIALS_JSON | base64 -d | jq> credentials.json')
+
+os.system('ls -al')
+
+with open('token.json', 'w') as token_json:
+    contents = base64.b64decode(os.getenv("TOKEN_JSON"))
+    token_json.write(contents)
+    print ("Wrote token.json")
+    print(contents)
+
 g = Github(os.getenv("GITHUB_TOKEN"))
 
 p = re.compile('[a-zA-Z]+')
@@ -216,9 +227,9 @@ def main():
                     newentry["urls"]["youtube"] = settings[key]
                     #try:
                     #    (path, video_id) = settings[key][0].split("=")
-                   #    (likes, views) = getVideoStats(youtube, video_id)
+                    #    (likes, views) = getVideoStats(youtube, video_id)
                     #    newentry["likes"] = likes
-                     #   newentry["views"] = views
+                    #    newentry["views"] = views
                     #except:
                     #    continue
                 elif (key.upper() == "GITPODURL"):
