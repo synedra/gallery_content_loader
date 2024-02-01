@@ -130,11 +130,12 @@ existingtags = [
 def main():
 
 
-    print(os.getenv("TOKEN_JSON"))
-    tokenjson = json.dumps(os.getenv("TOKEN_JSON"))
+    tokenobj = eval(os.getenv("TOKEN_JSON"))
+    print(json.dumps(tokenobj))
+    #tokenjson = (os.getenv("TOKEN_JSON")
     
     with open('token.json', 'w') as token_json:
-        token_json.write(tokenjson)
+        token_json.write(tokenobj)
         print(tokenjson)
 
     with open('credentials.json', 'w') as credentials_json:
@@ -143,6 +144,7 @@ def main():
         credentials_json.write(credentialsjson)
         print(credentialsjson)
 
+    print(tokenjson)
 
     os.system('ls -al')
     os.system('cat token.json')
@@ -194,12 +196,15 @@ def main():
                     secondrepo = 'https://raw.githubusercontent.com/' + organization_name  + '/' + repository_name + '/master/README.md'
                     readme = requests.get(secondrepo)
 
+                readme_as_markdown = readme.text
                 readme_as_a_string = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
                 readme_entry = {}
                 #readme_entry["$vector"] = query_vector
                 readme_entry["_id"] = currententry["key"]
                 readme_entry["readme"] = readme_as_a_string
+                readme_entry["markdown"] = readme_as_markdown
                 readme_trunc = readme_as_a_string[:5000]
+                readme_markdown_trunc = readme_as_markdown[:5000]
 
                 try:
                     readme_collection.insert_one(readme_entry)
@@ -266,6 +271,7 @@ def main():
                 else:
                     newentry[lowerkey] = settings[key]
             newentry["readme"] = readme_trunc
+            newentry["readme_markdown"] = readme_markdown_trunc
             if ("$vector" in newentry):
                 del newentry["$vector"] 
             vector_json = json.dumps(newentry)
