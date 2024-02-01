@@ -137,13 +137,12 @@ def main():
     with open('token.json', 'w') as token_json:
         token_json.write(tokenjson)
         print(tokenjson)
-        close(token_json)
 
     with open('credentials.json', 'w') as credentials_json:
         credentialsjson = json.dumps(os.getenv("CREDENTIALS_JSON"))
+        print(credentialsjson)
         token_json.write(credentialsjson)
         print(credentialsjson)
-        close(credentials_json)
 
 
     os.system('ls -al')
