@@ -9,8 +9,8 @@ jobs:
       - run: python --version
       - run: cd ${{ github.workspace }}
       - run: pip install -r requirements.txt
-      - run: echo '${{ secrets.TOKEN_JSON }}' | base64 --decode | jq
-      - run: echo '${{ secrets.CREDENTIALS_JSON }}' | base64 --decode | jq
+      - run: echo '${{ secrets.TOKEN_JSON }}' | base64 -di
+      - run: echo '${{ secrets.CREDENTIALS_JSON }}' | base64 -di
       - run: ls -al
       - run: echo "ASTRA_DB_APPLICATION_TOKEN=${{ secrets.ASTRA_DB_APPLICATION_TOKEN }}" >> .env
       - run: echo "ASTRA_DB_API_ENDPOINT=${{ secrets.ASTRA_DB_API_ENDPOINT }}" >> .env
