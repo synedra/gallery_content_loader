@@ -128,24 +128,23 @@ existingtags = [
 
 
 def main():
+
+    
     
     with open('token.json', 'w') as token_json:
-        json_string = json.loads(os.getenv("TOKEN_JSON"))
-        token_json.write(json.dumps(json_string))
-
-
-
-        token_json.write(json_string)
-        print(json_string)
+        credentials_bytes = base64.b64decode(os.getenv("TOKEN_JSON"))
+        credentials_str = credentials_bytes.decode('utf-8')
+        credentials = json.loads(credentials_str)
+        token_json.write(json.dumps(credentials))   
 
     with open('credentials.json', 'w') as credentials_json:
-        credentialsjson = json.loads(os.getenv("CREDENTIALS_JSON"))
-        print (credentialsjson)
-        credentials_json.write(json.dumps(credentialsjson))
-        print(json.dumps(os.getenv("CREDENTIALS_JSON")))
+        credentials_bytes = base64.b64decode(os.getenv("CREDENTIALS_JSON"))
+        credentials_str = credentials_bytes.decode('utf-8')
+        credentials = json.loads(credentials_str)
+        credentials_json.write(json.dumps(credentials))   
 
     os.system('ls -al')
-    os.system('cat token.json')
+    os.system('cat token.json credentials.json')
 
     # Grab the Astra token and api endpoint from the environment
     counter = 0
