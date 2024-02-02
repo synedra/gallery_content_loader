@@ -131,13 +131,8 @@ def main():
 
     token_encode = os.getenv("TOKEN_JSON")
     credentials_encode = os.getenv("CREDENTIALS_JSON")
-
-    while len(token_encode) % 4 != 0:
-            token_encode += '='
-
-    while len(credentials_encode) % 4 != 0:
-            credentials_encode += '='
- 
+    print (token_encode)
+    print (credentials_encode)
     with open('token.json', 'w') as token_json:
         credentials_bytes = base64.b64decode(token_encode)
         credentials_str = credentials_bytes.decode('utf-8')
