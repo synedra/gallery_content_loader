@@ -2,3 +2,6 @@
 
 # Local Netlify folder
 .netlify
+credentials.json
+token.json
+github.token
