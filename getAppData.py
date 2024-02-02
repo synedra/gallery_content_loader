@@ -128,7 +128,7 @@ existingtags = [
 
 
 def main():
-    token_json = {
+    token_object = {
         "token": os.getenv("TOKEN_JSON_TOKEN"),
         "refresh_token": os.getenv("TOKEN_JSON_REFRESH_TOKEN"),
         "token_uri": "https://oauth2.googleapis.com/token",
@@ -141,13 +141,8 @@ def main():
         "expiry": "2024-01-31T19:48:32.118307Z"
     }
     
-    print (token_encode)
-    print (credentials_encode)
     with open('token.json', 'w') as token_json:
-        credentials_bytes = base64.b64decode(token_encode)
-        credentials_str = token_encode.decode('utf-8')
-        credentials = json.loads(credentials_str)
-        token_json.write(json.dumps(credentials))   
+        token_json.write(json.dumps(token_object))   
 
     with open('credentials.json', 'w') as credentials_json:
         credentials_bytes = base64.b64decode(credentials_encode)
