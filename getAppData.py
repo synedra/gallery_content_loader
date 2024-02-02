@@ -134,13 +134,13 @@ def main():
     print (token_encode)
     print (credentials_encode)
     with open('token.json', 'w') as token_json:
-        credentials_bytes = base64.b64decode(token_encode)
+        #credentials_bytes = base64.b64decode(token_encode)
         credentials_str = credentials_bytes.decode('utf-8')
         credentials = json.loads(credentials_str)
         token_json.write(json.dumps(credentials))   
 
     with open('credentials.json', 'w') as credentials_json:
-        credentials_bytes = base64.b64decode(credentials_encode)
+        #credentials_bytes = base64.b64decode(credentials_encode)
         credentials_str = credentials_bytes.decode('utf-8')
         credentials = json.loads(credentials_str)
         credentials_json.write(json.dumps(credentials))   
