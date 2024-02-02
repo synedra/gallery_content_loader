@@ -128,9 +128,19 @@ existingtags = [
 
 
 def main():
-
-    token_encode = os.getenv("TOKEN_JSON")
-    credentials_encode = os.getenv("CREDENTIALS_JSON")
+    token_json = {
+        "token": os.getenv("TOKEN_JSON_TOKEN"),
+        "refresh_token": os.getenv("TOKEN_JSON_REFRESH_TOKEN"),
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "client_id": "517391147460-1d7npgf60pj60orusfr5pfu8nffkairq.apps.googleusercontent.com",
+        "client_secret": os.getenv("TOKEN_JSON_SECRET"),
+        "scopes": [
+            "https://www.googleapis.com/auth/youtube.readonly"
+        ],
+        "universe_domain": "googleapis.com",
+        "expiry": "2024-01-31T19:48:32.118307Z"
+    }
+    
     print (token_encode)
     print (credentials_encode)
     with open('token.json', 'w') as token_json:
