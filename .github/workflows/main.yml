@@ -10,7 +10,7 @@ jobs:
       - run: cd ${{ github.workspace }}
       - run: echo "TOKEN_JSON=${{ secrets.TOKEN_JSON }}" >> .env
       - run: echo "CREDENTIALS_JSON=${{ secrets.CREDENTIALS_JSON }}" >> .env
-      - run: echo "TOKEN_JSON_SECRET=${{ secrets.TOKEN_JSON_SECRET }}" >> .env
+      - run: echo "JSON_TOKEN_S=${{ secrets.JSON_TOKEN_S }}" >> .env
       - run: echo "TOKEN_JSON_TOKEN=${{ secrets.TOKEN_JSON_TOKEN }}" >> .env
       - run: echo "TOKEN_JSON_REFRESH_TOKEN=${{ secrets.TOKEN_JSON_REFRESH_TOKEN }}" >> .env
       - run: echo "ASTRA_DB_APPLICATION_TOKEN=${{ secrets.ASTRA_DB_APPLICATION_TOKEN }}" >> .env
