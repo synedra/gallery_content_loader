@@ -11,7 +11,6 @@ jobs:
       - run: echo "JSON_TOKEN_S=${{ secrets.JSON_TOKEN_S }}" >> .env
       - run: echo "JSON_TOKEN_RT=${{ secrets.JSON_TOKEN_RT }}" >> .env
       - run: echo "TOKEN_JSON_TOKEN=${{ secrets.TOKEN_JSON_TOKEN }}" >> .env
-      - run: echo "TOKEN_JSON_RT=${{ secrets.TOKEN_JSON_RT }}" >> .env
       - run: echo "ASTRA_DB_APPLICATION_TOKEN=${{ secrets.ASTRA_DB_APPLICATION_TOKEN }}" >> .env
       - run: echo "ASTRA_DB_API_ENDPOINT=${{ secrets.ASTRA_DB_API_ENDPOINT }}" >> .env
       - run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env

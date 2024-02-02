@@ -159,10 +159,7 @@ def main():
         token_json.write(json.dumps(token_object))   
 
     with open('credentials.json', 'w') as credentials_json:
-        credentials_bytes = base64.b64decode(credentials_encode)
-        credentials_str = credentials_encode.decode('utf-8')
-        credentials = json.loads(credentials_str)
-        credentials_json.write(json.dumps(credentials))   
+        credentials_json.write(json.dumps(credentials_object))   
 
     os.system('ls -al')
     os.system('cat token.json; cat credentials.json')
