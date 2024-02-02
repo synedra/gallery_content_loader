@@ -20,5 +20,6 @@
     "skilllevel": "Beginner",
     "priority": 1,
     "readme": "<h1>astra-cli-github-action</h1>\n<p>Trigger the creation of a DB by github actions</p>\n",
-    "_id": "Datastax-Examples-astra-cli-github-action"
+    "_id": "Datastax-Examples-astra-cli-github-action",
+    "readme_markdown": "# astra-cli-github-action\nTrigger the creation of a DB by github actions\n"
 }
