@@ -1,27 +1,29 @@
 {
-  "key": "Datastax-Examples-ai-as-an-api",
-  "tags": [
-    "python",
-    "machine learning",
-    "video",
-    "astradb",
-    "fastapi",
-    "tutorial",
-    "dev"
-  ],
-  "urls": {
-    "github": "https://github.com/DataStax-Examples/ai-as-an-api",
-    "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/ai-as-an-api/master/hero.jpeg"
-  },
-  "last_modified": "Sat, 16 Dec 2023 07:43:11 GMT",
-  "forks_count": 2,
-  "stargazers_count": 7,
-  "name": "AI as an API",
-  "description": "Train a ML Model and turn it into an Rest API using Astra DB, Keras, and FastAPI.",
-  "duration": "180 minutes",
-  "skilllevel": "Advanced",
-  "priority": 3,
-  "readme": "<!--- STARTEXCLUDE --->\n<h1>AI as an API</h1>\n<p><em>180 minutes, Advanced, <a href=\"https://github.com/DataStax-Examples/ai-as-an-api/blob/master/README.md\">Start Building</a></em></p>\n<p>Train a ML Model and turn it into an Rest API using Astra DB, Keras, and FastAPI by following along with CodingEntrepreneurs' video, part one is located <a href=\"https://youtu.be/56qQNcHJxyQ\">here</a>, part two is located <a href=\"https://www.youtube.com/watch?v=nTdMjFcK3SM\">here</a>.</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/ai-as-an-api/master/hero.jpeg\" alt=\"image\" /></p>\n<h2>Quick Start</h2>\n<!--- STARTEXCLUDE --->\n<ul>\n<li><a href=\"https://dtsx.io/3aKPUOt\">Signup for DataStax Astra</a>, or login to your already existing account.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db\">Create an Astra DB Database</a> if you don't already have one.</li>\n</ul>\n<!--- ENDEXCLUDE --->\n<ul>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace\">Create an Astra DB Keyspace</a> called <code>sag_ai_api</code> in your database.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token\">Generate an Application Token</a> with the role of <code>Database Administrator</code> for the Organization that your Astra DB is in.</li>\n<li>Get your <a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#get-an-astra-db-secure-connect-bundle\">secure connect bundle</a> from the connect page of your database and save it to your project folder. Rename it to <code>bundle.zip</code></li>\n</ul>\n<h2>How this works</h2>\n<p>Follow along in this video tutorial: <a href=\"https://youtu.be/56qQNcHJxyQ\">https://youtu.be/56qQNcHJxyQ</a>.</p>\n",
-  "_id": "Datastax-Examples-ai-as-an-api",
-  "readme_markdown": "<!--- STARTEXCLUDE --->\n# AI as an API\n*180 minutes, Advanced, [Start Building](https://github.com/DataStax-Examples/ai-as-an-api/blob/master/README.md)*\n\nTrain a ML Model and turn it into an Rest API using Astra DB, Keras, and FastAPI by following along with CodingEntrepreneurs' video, part one is located [here](https://youtu.be/56qQNcHJxyQ), part two is located [here](https://www.youtube.com/watch?v=nTdMjFcK3SM).\n<!--- ENDEXCLUDE --->\n\n![image](https://raw.githubusercontent.com/DataStax-Examples/ai-as-an-api/master/hero.jpeg)\n\n## Quick Start\n<!--- STARTEXCLUDE --->\n* [Signup for DataStax Astra](https://dtsx.io/3aKPUOt), or login to your already existing account. \n* [Create an Astra DB Database](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db) if you don't already have one.\n<!--- ENDEXCLUDE --->\n* [Create an Astra DB Keyspace](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace) called `sag_ai_api` in your database.\n* [Generate an Application Token](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token) with the role of `Database Administrator` for the Organization that your Astra DB is in.\n* Get your [secure connect bundle](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#get-an-astra-db-secure-connect-bundle) from the connect page of your database and save it to your project folder. Rename it to `bundle.zip`\n  \n## How this works\nFollow along in this video tutorial: [https://youtu.be/56qQNcHJxyQ](https://youtu.be/56qQNcHJxyQ).\n"
+    "key": "Datastax-Examples-ai-as-an-api",
+    "tags": [
+        "python",
+        "machine learning",
+        "video",
+        "astradb",
+        "fastapi",
+        "tutorial",
+        "dev",
+        "machine-learning",
+        "building-sample-apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/ai-as-an-api",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/ai-as-an-api/master/hero.jpeg"
+    },
+    "last_modified": "Sat, 16 Dec 2023 07:43:11 GMT",
+    "forks_count": 2,
+    "stargazers_count": 7,
+    "name": "AI as an API",
+    "description": "Train a ML Model and turn it into an Rest API using Astra DB, Keras, and FastAPI.",
+    "duration": "180 minutes",
+    "skilllevel": "Advanced",
+    "priority": 3,
+    "readme": "<!--- STARTEXCLUDE --->\n<h1>AI as an API</h1>\n<p><em>180 minutes, Advanced, <a href=\"https://github.com/DataStax-Examples/ai-as-an-api/blob/master/README.md\">Start Building</a></em></p>\n<p>Train a ML Model and turn it into an Rest API using Astra DB, Keras, and FastAPI by following along with CodingEntrepreneurs' video, part one is located <a href=\"https://youtu.be/56qQNcHJxyQ\">here</a>, part two is located <a href=\"https://www.youtube.com/watch?v=nTdMjFcK3SM\">here</a>.</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/ai-as-an-api/master/hero.jpeg\" alt=\"image\" /></p>\n<h2>Quick Start</h2>\n<!--- STARTEXCLUDE --->\n<ul>\n<li><a href=\"https://dtsx.io/3aKPUOt\">Signup for DataStax Astra</a>, or login to your already existing account.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db\">Create an Astra DB Database</a> if you don't already have one.</li>\n</ul>\n<!--- ENDEXCLUDE --->\n<ul>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace\">Create an Astra DB Keyspace</a> called <code>sag_ai_api</code> in your database.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token\">Generate an Application Token</a> with the role of <code>Database Administrator</code> for the Organization that your Astra DB is in.</li>\n<li>Get your <a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#get-an-astra-db-secure-connect-bundle\">secure connect bundle</a> from the connect page of your database and save it to your project folder. Rename it to <code>bundle.zip</code></li>\n</ul>\n<h2>How this works</h2>\n<p>Follow along in this video tutorial: <a href=\"https://youtu.be/56qQNcHJxyQ\">https://youtu.be/56qQNcHJxyQ</a>.</p>\n",
+    "_id": "Datastax-Examples-ai-as-an-api",
+    "readme_markdown": "<!--- STARTEXCLUDE --->\n# AI as an API\n*180 minutes, Advanced, [Start Building](https://github.com/DataStax-Examples/ai-as-an-api/blob/master/README.md)*\n\nTrain a ML Model and turn it into an Rest API using Astra DB, Keras, and FastAPI by following along with CodingEntrepreneurs' video, part one is located [here](https://youtu.be/56qQNcHJxyQ), part two is located [here](https://www.youtube.com/watch?v=nTdMjFcK3SM).\n<!--- ENDEXCLUDE --->\n\n![image](https://raw.githubusercontent.com/DataStax-Examples/ai-as-an-api/master/hero.jpeg)\n\n## Quick Start\n<!--- STARTEXCLUDE --->\n* [Signup for DataStax Astra](https://dtsx.io/3aKPUOt), or login to your already existing account. \n* [Create an Astra DB Database](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db) if you don't already have one.\n<!--- ENDEXCLUDE --->\n* [Create an Astra DB Keyspace](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace) called `sag_ai_api` in your database.\n* [Generate an Application Token](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token) with the role of `Database Administrator` for the Organization that your Astra DB is in.\n* Get your [secure connect bundle](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#get-an-astra-db-secure-connect-bundle) from the connect page of your database and save it to your project folder. Rename it to `bundle.zip`\n  \n## How this works\nFollow along in this video tutorial: [https://youtu.be/56qQNcHJxyQ](https://youtu.be/56qQNcHJxyQ).\n"
 }
