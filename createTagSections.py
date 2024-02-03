@@ -54,9 +54,8 @@ def main():
           "graphql api",
           "rest api",
           "gprc api",
-          "devops-apis",
-          "json-api",
-          "stargate documents api",
+          "devops apis",
+          "data api",
           "api"
         ]}
 
@@ -122,7 +121,7 @@ def main():
           "netlify",
           "gitpod",
           "template",
-          "google-cloud",
+          "google cloud",
           "docker",
           "selenium",
           "pyspark",
@@ -133,9 +132,10 @@ def main():
     response = demo_collection.insert_one(insert)
     print(response)
     insert = {"_id":"usecases", "tags":[
-          "machine-learning",
-          "building-sample-apps",
-          "data-engineering",
+          "machine learning",
+          "tutorials",
+          "data engineering",
+	  "data science",
           "event streaming",
           "game",
           "performance testing",
@@ -143,7 +143,8 @@ def main():
           "timeseries db",
           "devops",
           "continuous integration",
-          "continuous deployment"
+          "continuous deployment",
+	  "real time"
         ]   }
     response = demo_collection.insert_one(insert)
     print(response)

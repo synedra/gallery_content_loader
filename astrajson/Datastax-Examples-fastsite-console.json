@@ -1,32 +1,31 @@
 {
-    "key": "Datastax-Examples-fastsite-console",
-    "tags": [
-        "javascript",
-        "doc api",
-        "apps",
-        "dev",
-        "datastax",
-        "astradb",
-        "building-sample-apps",
-        "react",
-        "netlify",
-        "headless-cms"
-    ],
-    "urls": {
-        "github": "https://github.com/DataStax-Examples/fastsite-console",
-        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/fastsite-console",
-        "netlify": "https://app.netlify.com/start/deploy?repository=https://github.com/DataStax-Examples/fastsite-console",
-        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/fastsite-console/master/hero.png"
-    },
-    "last_modified": "Thu, 03 Feb 2022 13:17:40 GMT",
-    "forks_count": 4,
-    "stargazers_count": 0,
-    "name": "FastSite",
-    "description": "FastSite is a no-code tool to generate content-driven websites. It leverages the power of modern JAMStack and cloud-native technologies.",
-    "duration": "50 minutes",
-    "skilllevel": "Advanced",
-    "priority": 3,
-    "readme": "<!--- STARTEXCLUDE --->\n<h1>FastSite</h1>\n<p><em>60m, advanced, <a href=\"https://github.com/DataStax-Examples/fastsite-console#quick-start\">Start Building</a></em></p>\n<p>FastSite is a no-code tool to generate content-driven websites. It leverages the power of modern JAMStack and cloud-native technologies.</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/fastsite-console/master/hero.png\" alt=\"fastsite\" /></p>\n<p>Demo Video: <a href=\"https://youtu.be/3Pw0-7XqjC8\">https://youtu.be/3Pw0-7XqjC8</a></p>\n<h2>Quick Start</h2>\n<!--- STARTEXCLUDE --->\n<ol start=\"0\">\n<li><a href=\"https://dtsx.io/3DKySgr\">Signup for DataStax Astra</a>, or login to your already existing account.</li>\n</ol>\n<!--- ENDEXCLUDE --->\n<ol>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db\">Create an Astra DB Database</a> or use an existing one.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace\">Create an Astra DB Keyspace</a> called <code>sag_sites</code> in your database.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token\">Generate an Application Token</a> with the role of <code>Database Administrator</code> for the Organization that your Astra DB is in.</li>\n<li>Click the 'Open in Gitpod' link: <a href=\"https://gitpod.io/#https://github.com/DataStax-Examples/todo-astra-jamstack-netlify\"><img src=\"https://gitpod.io/button/open-in-gitpod.svg\" alt=\"Open in IDE\" /></a></li>\n<li>Once the app is finished launching in the Gitpod IDE, copy the <code>.env.example</code> file to a file named <code>.env</code> and fill the required values in from your Application Token and <a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#get-your-astra-db-connection-settings\">Astra DB connection settings</a>.</li>\n<li>Start the example by running <code>npm run dev</code> in the Gitpod console.</li>\n</ol>\n<h2>How this works</h2>\n<table>\n<thead>\n<tr>\n<th>Layer</th>\n<th>Technology</th>\n<th>Provider</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Front-end</td>\n<td>SPA/ SPA-SSR/ Static website</td>\n<td>Netlify/ Vercel</td>\n</tr>\n<tr>\n<td>Back-end</td>\n<td>Serverless Functions</td>\n<td>Netlify/ Vercel</td>\n</tr>\n<tr>\n<td>Database</td>\n<td>Cloud-native NoSQL DB</td>\n<td>DataStax Astra</td>\n</tr>\n</tbody>\n</table>\n",
-    "_id": "Datastax-Examples-fastsite-console",
-    "readme_markdown": "<!--- STARTEXCLUDE --->\n# FastSite\n\n_60m, advanced, [Start Building](https://github.com/DataStax-Examples/fastsite-console#quick-start)_\n\nFastSite is a no-code tool to generate content-driven websites. It leverages the power of modern JAMStack and cloud-native technologies.\n<!--- ENDEXCLUDE --->\n\n![fastsite](https://raw.githubusercontent.com/DataStax-Examples/fastsite-console/master/hero.png)\n\nDemo Video: [https://youtu.be/3Pw0-7XqjC8](https://youtu.be/3Pw0-7XqjC8)\n\n## Quick Start\n\n<!--- STARTEXCLUDE --->\n0. [Signup for DataStax Astra](https://dtsx.io/3DKySgr), or login to your already existing account.\n<!--- ENDEXCLUDE --->\n1. [Create an Astra DB Database](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db) or use an existing one.\n2. [Create an Astra DB Keyspace](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace) called `sag_sites` in your database.\n3. [Generate an Application Token](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token) with the role of `Database Administrator` for the Organization that your Astra DB is in.\n4. Click the 'Open in Gitpod' link: [![Open in IDE](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/DataStax-Examples/todo-astra-jamstack-netlify)\n5. Once the app is finished launching in the Gitpod IDE, copy the `.env.example` file to a file named `.env` and fill the required values in from your Application Token and [Astra DB connection settings](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#get-your-astra-db-connection-settings).\n6. Start the example by running `npm run dev` in the Gitpod console.\n\n## How this works\n\n| Layer     | Technology                   | Provider        |\n| --------- | ---------------------------- | --------------- |\n| Front-end | SPA/ SPA-SSR/ Static website | Netlify/ Vercel |\n| Back-end  | Serverless Functions         | Netlify/ Vercel |\n| Database  | Cloud-native NoSQL DB        | DataStax Astra  |\n"
+  "key": "Datastax-Examples-fastsite-console",
+  "tags": [
+    "javascript",
+    "doc api",
+    "dev",
+    "datastax",
+    "astradb",
+    "tutorials",
+    "react",
+    "netlify",
+    "headless-cms"
+  ],
+  "urls": {
+    "github": "https://github.com/DataStax-Examples/fastsite-console",
+    "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/fastsite-console",
+    "netlify": "https://app.netlify.com/start/deploy?repository=https://github.com/DataStax-Examples/fastsite-console",
+    "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/fastsite-console/master/hero.png"
+  },
+  "last_modified": "Thu, 03 Feb 2022 13:17:40 GMT",
+  "forks_count": 4,
+  "stargazers_count": 0,
+  "name": "FastSite",
+  "description": "FastSite is a no-code tool to generate content-driven websites. It leverages the power of modern JAMStack and cloud-native technologies.",
+  "duration": "50 minutes",
+  "skilllevel": "Advanced",
+  "priority": 3,
+  "readme": "<!--- STARTEXCLUDE --->\n<h1>FastSite</h1>\n<p><em>60m, advanced, <a href=\"https://github.com/DataStax-Examples/fastsite-console#quick-start\">Start Building</a></em></p>\n<p>FastSite is a no-code tool to generate content-driven websites. It leverages the power of modern JAMStack and cloud-native technologies.</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/fastsite-console/master/hero.png\" alt=\"fastsite\" /></p>\n<p>Demo Video: <a href=\"https://youtu.be/3Pw0-7XqjC8\">https://youtu.be/3Pw0-7XqjC8</a></p>\n<h2>Quick Start</h2>\n<!--- STARTEXCLUDE --->\n<ol start=\"0\">\n<li><a href=\"https://dtsx.io/3DKySgr\">Signup for DataStax Astra</a>, or login to your already existing account.</li>\n</ol>\n<!--- ENDEXCLUDE --->\n<ol>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db\">Create an Astra DB Database</a> or use an existing one.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace\">Create an Astra DB Keyspace</a> called <code>sag_sites</code> in your database.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token\">Generate an Application Token</a> with the role of <code>Database Administrator</code> for the Organization that your Astra DB is in.</li>\n<li>Click the 'Open in Gitpod' link: <a href=\"https://gitpod.io/#https://github.com/DataStax-Examples/todo-astra-jamstack-netlify\"><img src=\"https://gitpod.io/button/open-in-gitpod.svg\" alt=\"Open in IDE\" /></a></li>\n<li>Once the app is finished launching in the Gitpod IDE, copy the <code>.env.example</code> file to a file named <code>.env</code> and fill the required values in from your Application Token and <a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#get-your-astra-db-connection-settings\">Astra DB connection settings</a>.</li>\n<li>Start the example by running <code>npm run dev</code> in the Gitpod console.</li>\n</ol>\n<h2>How this works</h2>\n<table>\n<thead>\n<tr>\n<th>Layer</th>\n<th>Technology</th>\n<th>Provider</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Front-end</td>\n<td>SPA/ SPA-SSR/ Static website</td>\n<td>Netlify/ Vercel</td>\n</tr>\n<tr>\n<td>Back-end</td>\n<td>Serverless Functions</td>\n<td>Netlify/ Vercel</td>\n</tr>\n<tr>\n<td>Database</td>\n<td>Cloud-native NoSQL DB</td>\n<td>DataStax Astra</td>\n</tr>\n</tbody>\n</table>\n",
+  "_id": "Datastax-Examples-fastsite-console",
+  "readme_markdown": "<!--- STARTEXCLUDE --->\n# FastSite\n\n_60m, advanced, [Start Building](https://github.com/DataStax-Examples/fastsite-console#quick-start)_\n\nFastSite is a no-code tool to generate content-driven websites. It leverages the power of modern JAMStack and cloud-native technologies.\n<!--- ENDEXCLUDE --->\n\n![fastsite](https://raw.githubusercontent.com/DataStax-Examples/fastsite-console/master/hero.png)\n\nDemo Video: [https://youtu.be/3Pw0-7XqjC8](https://youtu.be/3Pw0-7XqjC8)\n\n## Quick Start\n\n<!--- STARTEXCLUDE --->\n0. [Signup for DataStax Astra](https://dtsx.io/3DKySgr), or login to your already existing account.\n<!--- ENDEXCLUDE --->\n1. [Create an Astra DB Database](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db) or use an existing one.\n2. [Create an Astra DB Keyspace](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace) called `sag_sites` in your database.\n3. [Generate an Application Token](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token) with the role of `Database Administrator` for the Organization that your Astra DB is in.\n4. Click the 'Open in Gitpod' link: [![Open in IDE](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/DataStax-Examples/todo-astra-jamstack-netlify)\n5. Once the app is finished launching in the Gitpod IDE, copy the `.env.example` file to a file named `.env` and fill the required values in from your Application Token and [Astra DB connection settings](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#get-your-astra-db-connection-settings).\n6. Start the example by running `npm run dev` in the Gitpod console.\n\n## How this works\n\n| Layer     | Technology                   | Provider        |\n| --------- | ---------------------------- | --------------- |\n| Front-end | SPA/ SPA-SSR/ Static website | Netlify/ Vercel |\n| Back-end  | Serverless Functions         | Netlify/ Vercel |\n| Database  | Cloud-native NoSQL DB        | DataStax Astra  |\n"
 }

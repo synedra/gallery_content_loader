@@ -1,26 +1,19 @@
 {
-    "key": "Datastax-Examples-astra-ide-plugin",
-    "tags": [
-        "jetbrains",
-        "java",
-        "tools",
-        "building-sample-apps",
-        "dev",
-        "astradb"
-    ],
-    "urls": {
-        "github": "https://github.com/DataStax-Examples/astra-ide-plugin",
-        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-ide-plugin/master/hero.jpeg"
-    },
-    "last_modified": "Fri, 28 Jan 2022 14:06:20 GMT",
-    "forks_count": 0,
-    "stargazers_count": 1,
-    "name": "JetBrains Astra DB Plugin",
-    "description": "A Jetbrains plugin that allows you to connect and explore your data on Astra DB or any Apache Cassandra cluster running with Stargate.",
-    "duration": "15 minutes",
-    "skilllevel": "Beginner",
-    "priority": 2,
-    "readme": "<!--- STARTEXCLUDE --->\n<h1>JetBrains Astra DB Plugin</h1>\n<p><em>15 minutes, Beginner, <a href=\"https://github.com/DataStax-Examples/astra-ide-plugin/blob/master/README.md#quick-start\">Get Started</a></em></p>\n<p>A Jetbrains plugin that allows you to connect and explore your data on Astra DB or any Apache Cassandra cluster running with Stargate.</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/astra-ide-plugin/master/hero.jpeg\" alt=\"image\" /></p>\n<p>View the plugin's information page at JetBrains: <a href=\"https://plugins.jetbrains.com/plugin/17013-datastax-astra-db-explorer/\">https://plugins.jetbrains.com/plugin/17013-datastax-astra-db-explorer/</a></p>\n<p>View the plugin's source code on GitHub: <a href=\"https://github.com/datastax/astra-ide-plugin\">https://github.com/datastax/astra-ide-plugin</a></p>\n<h2>Quick Start</h2>\n<!--- STARTEXCLUDE --->\n<ul>\n<li><a href=\"https://dtsx.io/3B1szT3\">Signup for DataStax Astra</a>, or login to your already existing account.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db\">Create an Astra DB Database</a> if you don't already have one.</li>\n</ul>\n<!--- ENDEXCLUDE --->\n<ul>\n<li><a href=\"https://github.com/datastax/astra-ide-plugin/wiki/Getting-Started\">Install the Plugin</a> Follow the installation instructions at the plugin GitHub repository.</li>\n</ul>\n",
-    "_id": "Datastax-Examples-astra-ide-plugin",
-    "readme_markdown": "<!--- STARTEXCLUDE --->\n# JetBrains Astra DB Plugin\n\n_15 minutes, Beginner, [Get Started](https://github.com/DataStax-Examples/astra-ide-plugin/blob/master/README.md#quick-start)_\n\nA Jetbrains plugin that allows you to connect and explore your data on Astra DB or any Apache Cassandra cluster running with Stargate.\n<!--- ENDEXCLUDE --->\n\n![image](https://raw.githubusercontent.com/DataStax-Examples/astra-ide-plugin/master/hero.jpeg)\n\nView the plugin's information page at JetBrains: [https://plugins.jetbrains.com/plugin/17013-datastax-astra-db-explorer/](https://plugins.jetbrains.com/plugin/17013-datastax-astra-db-explorer/)\n\nView the plugin's source code on GitHub: [https://github.com/datastax/astra-ide-plugin](https://github.com/datastax/astra-ide-plugin)\n\n## Quick Start\n\n<!--- STARTEXCLUDE --->\n- [Signup for DataStax Astra](https://dtsx.io/3B1szT3), or login to your already existing account.\n- [Create an Astra DB Database](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db) if you don't already have one.\n<!--- ENDEXCLUDE --->\n- [Install the Plugin](https://github.com/datastax/astra-ide-plugin/wiki/Getting-Started) Follow the installation instructions at the plugin GitHub repository.\n"
+  "key": "Datastax-Examples-astra-ide-plugin",
+  "tags": ["jetbrains", "java", "tools", "tutorials", "dev", "astradb"],
+  "urls": {
+    "github": "https://github.com/DataStax-Examples/astra-ide-plugin",
+    "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/astra-ide-plugin/master/hero.jpeg"
+  },
+  "last_modified": "Fri, 28 Jan 2022 14:06:20 GMT",
+  "forks_count": 0,
+  "stargazers_count": 1,
+  "name": "JetBrains Astra DB Plugin",
+  "description": "A plugin that allows you to connect Jetbrains with your data on Astra DB or any Apache Cassandra cluster running with Stargate.",
+  "duration": "15 minutes",
+  "skilllevel": "Beginner",
+  "priority": 2,
+  "readme": "<!--- STARTEXCLUDE --->\n<h1>JetBrains Astra DB Plugin</h1>\n<p><em>15 minutes, Beginner, <a href=\"https://github.com/DataStax-Examples/astra-ide-plugin/blob/master/README.md#quick-start\">Get Started</a></em></p>\n<p>A Jetbrains plugin that allows you to connect and explore your data on Astra DB or any Apache Cassandra cluster running with Stargate.</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/astra-ide-plugin/master/hero.jpeg\" alt=\"image\" /></p>\n<p>View the plugin's information page at JetBrains: <a href=\"https://plugins.jetbrains.com/plugin/17013-datastax-astra-db-explorer/\">https://plugins.jetbrains.com/plugin/17013-datastax-astra-db-explorer/</a></p>\n<p>View the plugin's source code on GitHub: <a href=\"https://github.com/datastax/astra-ide-plugin\">https://github.com/datastax/astra-ide-plugin</a></p>\n<h2>Quick Start</h2>\n<!--- STARTEXCLUDE --->\n<ul>\n<li><a href=\"https://dtsx.io/3B1szT3\">Signup for DataStax Astra</a>, or login to your already existing account.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db\">Create an Astra DB Database</a> if you don't already have one.</li>\n</ul>\n<!--- ENDEXCLUDE --->\n<ul>\n<li><a href=\"https://github.com/datastax/astra-ide-plugin/wiki/Getting-Started\">Install the Plugin</a> Follow the installation instructions at the plugin GitHub repository.</li>\n</ul>\n",
+  "_id": "Datastax-Examples-astra-ide-plugin",
+  "readme_markdown": "<!--- STARTEXCLUDE --->\n# JetBrains Astra DB Plugin\n\n_15 minutes, Beginner, [Get Started](https://github.com/DataStax-Examples/astra-ide-plugin/blob/master/README.md#quick-start)_\n\nA Jetbrains plugin that allows you to connect and explore your data on Astra DB or any Apache Cassandra cluster running with Stargate.\n<!--- ENDEXCLUDE --->\n\n![image](https://raw.githubusercontent.com/DataStax-Examples/astra-ide-plugin/master/hero.jpeg)\n\nView the plugin's information page at JetBrains: [https://plugins.jetbrains.com/plugin/17013-datastax-astra-db-explorer/](https://plugins.jetbrains.com/plugin/17013-datastax-astra-db-explorer/)\n\nView the plugin's source code on GitHub: [https://github.com/datastax/astra-ide-plugin](https://github.com/datastax/astra-ide-plugin)\n\n## Quick Start\n\n<!--- STARTEXCLUDE --->\n- [Signup for DataStax Astra](https://dtsx.io/3B1szT3), or login to your already existing account.\n- [Create an Astra DB Database](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db) if you don't already have one.\n<!--- ENDEXCLUDE --->\n- [Install the Plugin](https://github.com/datastax/astra-ide-plugin/wiki/Getting-Started) Follow the installation instructions at the plugin GitHub repository.\n"
 }
