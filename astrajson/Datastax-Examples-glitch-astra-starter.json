@@ -1,29 +1,30 @@
 {
-  "key": "Datastax-Examples-glitch-astra-starter",
-  "tags": [
-    "javascript",
-    "rest api",
-    "astradb",
-    "tutorials",
-    "dev",
-    "datastax",
-    "cassandra",
-    "nodejs",
-    "glitch"
-  ],
-  "urls": {
-    "github": "https://github.com/DataStax-Examples/glitch-astra-starter",
-    "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/glitch-astra-starter/master/hero.png"
-  },
-  "last_modified": "Wed, 19 Oct 2022 15:31:59 GMT",
-  "forks_count": 0,
-  "stargazers_count": 2,
-  "name": "Glitch and Astra DB Starter",
-  "description": "Jumpstart your next React/Express prototype with this starter!",
-  "duration": "10 minutes",
-  "skilllevel": "Beginner",
-  "priority": 1,
-  "readme": "<!--- STARTEXCLUDE --->\n<h1>Glitch and Astra DB Starter</h1>\n<p><em>10 minutes, Beginner, <a href=\"https://github.com/DataStax-Examples/glitch-astra-starter#quick-start\">Start Building</a></em></p>\n<p>Jumpstart your next NodeJS prototype with this starter!</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/glitch-astra-starter/master/hero.png\" alt=\"image\" /></p>\n<h2>Quick Start</h2>\n<!--- STARTEXCLUDE --->\n<ul>\n<li><a href=\"https://dtsx.io/2YmhZJ6\">Signup for DataStax Astra</a>, or login to your already existing account.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db\">Create an Astra DB Database</a> if you don't already have one.</li>\n</ul>\n<!--- ENDEXCLUDE --->\n<ul>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace\">Create an Astra DB Keyspace</a> called <code>sag_glitch_starter</code> in your database.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token\">Generate an Application Token</a> with the role of <code>Database Administrator</code> for the Organization that your Astra DB is in.</li>\n<li>Login to or create a <a href=\"https://glitch.com\">Glitch</a> account.</li>\n<li>Start a new project using the sample app github repository (<a href=\"https://github.com/DataStax-Examples/glitch-astra-starter\">https://github.com/DataStax-Examples/glitch-astra-starter</a>).<br />\n<img src=\"https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/glitch-new-project.png\" alt=\"image\" /></li>\n<li>Add your Astra DB connection information into the <code>.env</code> section provided by Glitch.<br />\n<img src=\"https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/glitch-env-vars.png\" alt=\"image\" /></li>\n</ul>\n<h2>Objectives</h2>\n<ul>\n<li>Provide a fullstack development example using Astra DB as the storage backend</li>\n</ul>\n<h2>How this works</h2>\n<p>Run this sample in Glitch or on your local machine and then use it to jump start your next App.</p>\n<p><a href=\"https://glitch.com/\">Glitch</a> is a a place to prototype fast, full-stack web apps in your browser for free.</p>\n",
-  "_id": "Datastax-Examples-glitch-astra-starter",
-  "readme_markdown": "<!--- STARTEXCLUDE --->\n# Glitch and Astra DB Starter\n*10 minutes, Beginner, [Start Building](https://github.com/DataStax-Examples/glitch-astra-starter#quick-start)*\n\nJumpstart your next NodeJS prototype with this starter!\n<!--- ENDEXCLUDE --->\n\n![image](https://raw.githubusercontent.com/DataStax-Examples/glitch-astra-starter/master/hero.png)\n\n## Quick Start\n<!--- STARTEXCLUDE --->\n* [Signup for DataStax Astra](https://dtsx.io/2YmhZJ6), or login to your already existing account. \n* [Create an Astra DB Database](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db) if you don't already have one.\n<!--- ENDEXCLUDE --->\n* [Create an Astra DB Keyspace](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace) called `sag_glitch_starter` in your database.\n* [Generate an Application Token](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token) with the role of `Database Administrator` for the Organization that your Astra DB is in.\n* Login to or create a [Glitch](https://glitch.com) account.\n* Start a new project using the sample app github repository (https://github.com/DataStax-Examples/glitch-astra-starter).\n![image](https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/glitch-new-project.png)\n* Add your Astra DB connection information into the `.env` section provided by Glitch. \n![image](https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/glitch-env-vars.png)\n\n## Objectives\n* Provide a fullstack development example using Astra DB as the storage backend\n  \n## How this works\nRun this sample in Glitch or on your local machine and then use it to jump start your next App.\n\n[Glitch](https://glitch.com/) is a a place to prototype fast, full-stack web apps in your browser for free.\n"
+    "key": "Datastax-Examples-glitch-astra-starter",
+    "tags": [
+        "javascript",
+        "rest api",
+        "astradb",
+        "tutorials",
+        "dev",
+        "datastax",
+        "cassandra",
+        "nodejs",
+        "glitch",
+        "building-sample-apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/glitch-astra-starter",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/glitch-astra-starter/master/hero.png"
+    },
+    "last_modified": "Wed, 19 Oct 2022 15:31:59 GMT",
+    "forks_count": 0,
+    "stargazers_count": 2,
+    "name": "Glitch and Astra DB Starter",
+    "description": "Jumpstart your next React/Express prototype with this starter!",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 1,
+    "readme": "<!--- STARTEXCLUDE --->\n<h1>Glitch and Astra DB Starter</h1>\n<p><em>10 minutes, Beginner, <a href=\"https://github.com/DataStax-Examples/glitch-astra-starter#quick-start\">Start Building</a></em></p>\n<p>Jumpstart your next NodeJS prototype with this starter!</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/glitch-astra-starter/master/hero.png\" alt=\"image\" /></p>\n<h2>Quick Start</h2>\n<!--- STARTEXCLUDE --->\n<ul>\n<li><a href=\"https://dtsx.io/2YmhZJ6\">Signup for DataStax Astra</a>, or login to your already existing account.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db\">Create an Astra DB Database</a> if you don't already have one.</li>\n</ul>\n<!--- ENDEXCLUDE --->\n<ul>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace\">Create an Astra DB Keyspace</a> called <code>sag_glitch_starter</code> in your database.</li>\n<li><a href=\"https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token\">Generate an Application Token</a> with the role of <code>Database Administrator</code> for the Organization that your Astra DB is in.</li>\n<li>Login to or create a <a href=\"https://glitch.com\">Glitch</a> account.</li>\n<li>Start a new project using the sample app github repository (<a href=\"https://github.com/DataStax-Examples/glitch-astra-starter\">https://github.com/DataStax-Examples/glitch-astra-starter</a>).<br />\n<img src=\"https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/glitch-new-project.png\" alt=\"image\" /></li>\n<li>Add your Astra DB connection information into the <code>.env</code> section provided by Glitch.<br />\n<img src=\"https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/glitch-env-vars.png\" alt=\"image\" /></li>\n</ul>\n<h2>Objectives</h2>\n<ul>\n<li>Provide a fullstack development example using Astra DB as the storage backend</li>\n</ul>\n<h2>How this works</h2>\n<p>Run this sample in Glitch or on your local machine and then use it to jump start your next App.</p>\n<p><a href=\"https://glitch.com/\">Glitch</a> is a a place to prototype fast, full-stack web apps in your browser for free.</p>\n",
+    "_id": "Datastax-Examples-glitch-astra-starter",
+    "readme_markdown": "<!--- STARTEXCLUDE --->\n# Glitch and Astra DB Starter\n*10 minutes, Beginner, [Start Building](https://github.com/DataStax-Examples/glitch-astra-starter#quick-start)*\n\nJumpstart your next NodeJS prototype with this starter!\n<!--- ENDEXCLUDE --->\n\n![image](https://raw.githubusercontent.com/DataStax-Examples/glitch-astra-starter/master/hero.png)\n\n## Quick Start\n<!--- STARTEXCLUDE --->\n* [Signup for DataStax Astra](https://dtsx.io/2YmhZJ6), or login to your already existing account. \n* [Create an Astra DB Database](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db) if you don't already have one.\n<!--- ENDEXCLUDE --->\n* [Create an Astra DB Keyspace](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-astra-db-keyspace) called `sag_glitch_starter` in your database.\n* [Generate an Application Token](https://github.com/DataStax-Examples/sample-app-template/blob/master/GETTING_STARTED.md#create-an-application-token) with the role of `Database Administrator` for the Organization that your Astra DB is in.\n* Login to or create a [Glitch](https://glitch.com) account.\n* Start a new project using the sample app github repository (https://github.com/DataStax-Examples/glitch-astra-starter).\n![image](https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/glitch-new-project.png)\n* Add your Astra DB connection information into the `.env` section provided by Glitch. \n![image](https://raw.githubusercontent.com/DataStax-Examples/sample-app-template/master/screenshots/glitch-env-vars.png)\n\n## Objectives\n* Provide a fullstack development example using Astra DB as the storage backend\n  \n## How this works\nRun this sample in Glitch or on your local machine and then use it to jump start your next App.\n\n[Glitch](https://glitch.com/) is a a place to prototype fast, full-stack web apps in your browser for free.\n"
 }

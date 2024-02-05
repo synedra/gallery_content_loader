@@ -1,32 +1,39 @@
 {
-  "key": "DatastaxDevs-workshop-k8ssandra",
-  "tags": [
-    "docker",
-    "helm",
-    "kubernetes",
-    "k8ssandra",
-    "stargate",
-    "workshop",
-    "cloud native",
-    "cassandra"
-  ],
-  "urls": {
-    "github": "https://github.com/datastaxdevs/workshop-k8ssandra",
-    "youtube": ["https://www.youtube.com/watch?v=mDHT-yBOUUs"]
-  },
-  "last_modified": "Fri, 29 Dec 2023 16:33:11 GMT",
-  "forks_count": 16,
-  "stargazers_count": 19,
-  "name": "Deploy Cassandra into Kubernetes with K8ssandra",
-  "description": " learn how to deploy and manage a data tier based on Apache Cassandra\u2122 cluster in Kubernetes using K8ssandra. ",
-  "duration": "180 minutes",
-  "skilllevel": "Intermediate",
-  "language": ["yaml"],
-  "badge": "https://media.badgr.com/uploads/badges/f1523f2b-9fc2-4368-aed7-0e78a5216427.png",
-  "likes": "32",
-  "views": "1166",
-  "usecases": ["cloud native"],
-  "readme": "<h1>K8ssandra Workshop</h1>\n<p>In this repository, you'll find everything for the Cassandra Kubernetes Workshop delivered by DataStax Developers!</p>\n<p>How to do the workshop and learn the new skills? Very easy, just three steps!</p>\n<ol>\n<li>Watch <a href=\"https://youtu.be/GddqfK8JubA\">the workshop</a> on youtube</li>\n<li>Do the <a href=\"https://github.com/datastaxdevs/k8ssandra-workshop/wiki\">practice steps</a></li>\n<li>Ask you questions (<a href=\"https://bit.ly/cassandra-workshop\">chat</a> or <a href=\"https://community.datastax.com\">forum</a>)</li>\n</ol>\n<p>Done! That's it, you are amazing!</p>\n<h2>Table of content</h2>\n<ul>\n<li><a href=\"https://youtu.be/GddqfK8JubA\">Workshop on YouTube</a></li>\n<li><a href=\"https://github.com/datastaxdevs/k8ssandra-workshop/raw/main/K8ssandra%20Workshop%20Feb%202021.pdf\">Presentation</a></li>\n<li><a href=\"https://bit.ly/cassandra-workshop\">Discord chat</a></li>\n<li><a href=\"https://community.datastax.com\">Q&amp;A: community.datastax.com</a></li>\n</ul>\n<h2>Workshop Practice</h2>\n<p>Instructions has been moved to the wiki to ease the progression.</p>\n<p align=\"left\">\n<a href=\"https://github.com/datastaxdevs/k8ssandra-workshop/wiki\">\n <img src=\"https://dabuttonfactory.com/button.png?t=Open+labs+in+wiki&f=Roboto-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798\" />\n</a>\n</p>\n<h2>Resources and next steps</h2>\n<ul>\n<li>For further learning from our team, please checkout <a href=\"https://datastax.com/dev\">datastax.com/dev</a> where we keep many resources and hands on labs to help you improve your skill set.</li>\n<li>If you are looking to get certified on Cassandra, please visit <a href=\"https://datastax.com/dev/certifications\">datastax.com/dev/certifications</a>.</li>\n<li>To get involved in the discussion around this project and others, please check out <a href=\"https://community.datastax.com\">community.datastax.com</a>.</li>\n<li>To learn more about K8ssandra, please checkout our website at <a href=\"https://k8ssandra.io\">k8ssandra.io</a> and our project github at <a href=\"https://github.com/k8ssandra/k8ssandra\">github.com</a>.</li>\n<li>Liked the workshop? Subscribe to the next one at <a href=\"https://datastax.com/workshops\">datastax.com/workshops</a>!</li>\n</ul>\n",
-  "_id": "DatastaxDevs-workshop-k8ssandra",
-  "readme_markdown": "# K8ssandra Workshop\n\nIn this repository, you'll find everything for the Cassandra Kubernetes Workshop delivered by DataStax Developers!\n\nHow to do the workshop and learn the new skills? Very easy, just three steps! \n\n1. Watch [the workshop](https://youtu.be/GddqfK8JubA) on youtube\n2. Do the [practice steps](https://github.com/datastaxdevs/k8ssandra-workshop/wiki)\n3. Ask you questions ([chat](https://bit.ly/cassandra-workshop) or [forum](https://community.datastax.com))\n\nDone! That's it, you are amazing! \n\n## Table of content\n\n* [Workshop on YouTube](https://youtu.be/GddqfK8JubA)\n* [Presentation](https://github.com/datastaxdevs/k8ssandra-workshop/raw/main/K8ssandra%20Workshop%20Feb%202021.pdf)\n* [Discord chat](https://bit.ly/cassandra-workshop)\n* [Q&A: community.datastax.com](https://community.datastax.com)\n\n## Workshop Practice\n\nInstructions has been moved to the wiki to ease the progression.\n\n<p align=\"left\">\n<a href=\"https://github.com/datastaxdevs/k8ssandra-workshop/wiki\">\n <img src=\"https://dabuttonfactory.com/button.png?t=Open+labs+in+wiki&f=Roboto-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798\" />\n</a>\n</p>\n\n## Resources and next steps\n\n* For further learning from our team, please checkout [datastax.com/dev](https://datastax.com/dev) where we keep many resources and hands on labs to help you improve your skill set.\n* If you are looking to get certified on Cassandra, please visit [datastax.com/dev/certifications](https://datastax.com/dev/certifications).\n* To get involved in the discussion around this project and others, please check out [community.datastax.com](https://community.datastax.com).\n* To learn more about K8ssandra, please checkout our website at [k8ssandra.io](https://k8ssandra.io) and our project github at [github.com](https://github.com/k8ssandra/k8ssandra).\n* Liked the workshop? Subscribe to the next one at [datastax.com/workshops](https://datastax.com/workshops)! \n"
+    "key": "DatastaxDevs-workshop-k8ssandra",
+    "tags": [
+        "docker",
+        "helm",
+        "kubernetes",
+        "k8ssandra",
+        "stargate",
+        "workshop",
+        "cloud native",
+        "cassandra",
+        "apache-cassandra"
+    ],
+    "urls": {
+        "github": "https://github.com/datastaxdevs/workshop-k8ssandra",
+        "youtube": [
+            "https://www.youtube.com/watch?v=mDHT-yBOUUs"
+        ]
+    },
+    "last_modified": "Fri, 29 Dec 2023 16:33:11 GMT",
+    "forks_count": 16,
+    "stargazers_count": 19,
+    "name": "Deploy Cassandra into Kubernetes with K8ssandra",
+    "description": " learn how to deploy and manage a data tier based on Apache Cassandra\u2122 cluster in Kubernetes using K8ssandra. ",
+    "duration": "180 minutes",
+    "skilllevel": "Intermediate",
+    "language": [
+        "yaml"
+    ],
+    "badge": "https://media.badgr.com/uploads/badges/f1523f2b-9fc2-4368-aed7-0e78a5216427.png",
+    "likes": "32",
+    "views": "1166",
+    "usecases": [
+        "cloud native"
+    ],
+    "readme": "<h1>K8ssandra Workshop</h1>\n<p>In this repository, you'll find everything for the Cassandra Kubernetes Workshop delivered by DataStax Developers!</p>\n<p>How to do the workshop and learn the new skills? Very easy, just three steps!</p>\n<ol>\n<li>Watch <a href=\"https://youtu.be/GddqfK8JubA\">the workshop</a> on youtube</li>\n<li>Do the <a href=\"https://github.com/datastaxdevs/k8ssandra-workshop/wiki\">practice steps</a></li>\n<li>Ask you questions (<a href=\"https://bit.ly/cassandra-workshop\">chat</a> or <a href=\"https://community.datastax.com\">forum</a>)</li>\n</ol>\n<p>Done! That's it, you are amazing!</p>\n<h2>Table of content</h2>\n<ul>\n<li><a href=\"https://youtu.be/GddqfK8JubA\">Workshop on YouTube</a></li>\n<li><a href=\"https://github.com/datastaxdevs/k8ssandra-workshop/raw/main/K8ssandra%20Workshop%20Feb%202021.pdf\">Presentation</a></li>\n<li><a href=\"https://bit.ly/cassandra-workshop\">Discord chat</a></li>\n<li><a href=\"https://community.datastax.com\">Q&amp;A: community.datastax.com</a></li>\n</ul>\n<h2>Workshop Practice</h2>\n<p>Instructions has been moved to the wiki to ease the progression.</p>\n<p align=\"left\">\n<a href=\"https://github.com/datastaxdevs/k8ssandra-workshop/wiki\">\n <img src=\"https://dabuttonfactory.com/button.png?t=Open+labs+in+wiki&f=Roboto-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798\" />\n</a>\n</p>\n<h2>Resources and next steps</h2>\n<ul>\n<li>For further learning from our team, please checkout <a href=\"https://datastax.com/dev\">datastax.com/dev</a> where we keep many resources and hands on labs to help you improve your skill set.</li>\n<li>If you are looking to get certified on Cassandra, please visit <a href=\"https://datastax.com/dev/certifications\">datastax.com/dev/certifications</a>.</li>\n<li>To get involved in the discussion around this project and others, please check out <a href=\"https://community.datastax.com\">community.datastax.com</a>.</li>\n<li>To learn more about K8ssandra, please checkout our website at <a href=\"https://k8ssandra.io\">k8ssandra.io</a> and our project github at <a href=\"https://github.com/k8ssandra/k8ssandra\">github.com</a>.</li>\n<li>Liked the workshop? Subscribe to the next one at <a href=\"https://datastax.com/workshops\">datastax.com/workshops</a>!</li>\n</ul>\n",
+    "_id": "DatastaxDevs-workshop-k8ssandra",
+    "readme_markdown": "# K8ssandra Workshop\n\nIn this repository, you'll find everything for the Cassandra Kubernetes Workshop delivered by DataStax Developers!\n\nHow to do the workshop and learn the new skills? Very easy, just three steps! \n\n1. Watch [the workshop](https://youtu.be/GddqfK8JubA) on youtube\n2. Do the [practice steps](https://github.com/datastaxdevs/k8ssandra-workshop/wiki)\n3. Ask you questions ([chat](https://bit.ly/cassandra-workshop) or [forum](https://community.datastax.com))\n\nDone! That's it, you are amazing! \n\n## Table of content\n\n* [Workshop on YouTube](https://youtu.be/GddqfK8JubA)\n* [Presentation](https://github.com/datastaxdevs/k8ssandra-workshop/raw/main/K8ssandra%20Workshop%20Feb%202021.pdf)\n* [Discord chat](https://bit.ly/cassandra-workshop)\n* [Q&A: community.datastax.com](https://community.datastax.com)\n\n## Workshop Practice\n\nInstructions has been moved to the wiki to ease the progression.\n\n<p align=\"left\">\n<a href=\"https://github.com/datastaxdevs/k8ssandra-workshop/wiki\">\n <img src=\"https://dabuttonfactory.com/button.png?t=Open+labs+in+wiki&f=Roboto-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798\" />\n</a>\n</p>\n\n## Resources and next steps\n\n* For further learning from our team, please checkout [datastax.com/dev](https://datastax.com/dev) where we keep many resources and hands on labs to help you improve your skill set.\n* If you are looking to get certified on Cassandra, please visit [datastax.com/dev/certifications](https://datastax.com/dev/certifications).\n* To get involved in the discussion around this project and others, please check out [community.datastax.com](https://community.datastax.com).\n* To learn more about K8ssandra, please checkout our website at [k8ssandra.io](https://k8ssandra.io) and our project github at [github.com](https://github.com/k8ssandra/k8ssandra).\n* Liked the workshop? Subscribe to the next one at [datastax.com/workshops](https://datastax.com/workshops)! \n"
 }

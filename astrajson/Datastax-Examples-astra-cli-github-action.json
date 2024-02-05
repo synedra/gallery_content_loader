@@ -1,20 +1,24 @@
 {
-  "key": "Datastax-Examples-astra-cli-github-action",
-  "tags": ["cli", "continuous integration", "github"],
-  "urls": {
-    "github": "https://github.com/DataStax-Examples/astra-cli-github-action",
-    "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/astra-cli-github-action",
-    "heroimage": "https://awesome-astra.github.io/docs/img/github/github_logo.png"
-  },
-  "last_modified": "Wed, 25 Jan 2023 09:15:48 GMT",
-  "forks_count": 1,
-  "stargazers_count": 0,
-  "name": "Starter to integrate Astra CLI with Github Action",
-  "description": "CLI can be used in CI/CD pipelines, creating environment at will",
-  "duration": "10 minutes",
-  "skilllevel": "Beginner",
-  "priority": 1,
-  "readme": "<h1>astra-cli-github-action</h1>\n<p>Trigger the creation of a DB by github actions</p>\n",
-  "_id": "Datastax-Examples-astra-cli-github-action",
-  "readme_markdown": "# astra-cli-github-action\nTrigger the creation of a DB by github actions\n"
+    "key": "Datastax-Examples-astra-cli-github-action",
+    "tags": [
+        "cli",
+        "continuous integration",
+        "github"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/astra-cli-github-action",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/astra-cli-github-action",
+        "heroimage": "https://awesome-astra.github.io/docs/img/github/github_logo.png"
+    },
+    "last_modified": "Wed, 25 Jan 2023 09:15:48 GMT",
+    "forks_count": 1,
+    "stargazers_count": 0,
+    "name": "Starter to integrate Astra CLI with Github Action",
+    "description": "CLI can be used in CI/CD pipelines, creating environment at will",
+    "duration": "10 minutes",
+    "skilllevel": "Beginner",
+    "priority": 1,
+    "readme": "<h1>astra-cli-github-action</h1>\n<p>Trigger the creation of a DB by github actions</p>\n",
+    "_id": "Datastax-Examples-astra-cli-github-action",
+    "readme_markdown": "# astra-cli-github-action\nTrigger the creation of a DB by github actions\n"
 }

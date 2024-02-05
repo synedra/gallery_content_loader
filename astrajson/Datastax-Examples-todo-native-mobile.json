@@ -1,31 +1,32 @@
 {
-  "key": "Datastax-Examples-todo-native-mobile",
-  "tags": [
-    "javascript",
-    "workshop",
-    "astradb",
-    "datastax",
-    "react",
-    "react-native",
-    "ios",
-    "android",
-    "dev",
-    "tutorials"
-  ],
-  "urls": {
-    "github": "https://github.com/DataStax-Examples/todo-native-mobile",
-    "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/todo-native-mobile",
-    "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/todo-native-mobile/master/hero.png"
-  },
-  "last_modified": "Thu, 23 Mar 2023 19:01:16 GMT",
-  "forks_count": 3,
-  "stargazers_count": 1,
-  "name": "React Native Todo List, an Astra DB + Netlify Workshop",
-  "description": "A workshop where you build a React Native Todo application using DataStax Astra DB.",
-  "duration": "40 minutes",
-  "skilllevel": "Intermediate",
-  "priority": 2,
-  "readme": "<!--- STARTEXCLUDE --->\n<h1>React Native Todo List, an Astra DB + Netlify Workshop</h1>\n<p><em>40 minutes, Beginner/Intermediate</em></p>\n<p><a href=\"https://gitpod.io/from-referrer/\"><img src=\"https://gitpod.io/button/open-in-gitpod.svg\" alt=\"Open in Gitpod\" /></a></p>\n<p>In this workshop, you will learn how to convert the Todo web application from a previous <a href=\"https://github.com/datastaxdevs/appdev-week1-todolist\">DataStaxDevs workshop</a> into a React Native mobile and web application. We will actually be using the same database setup as before, so if you've already created it during the prior workshop, you can skip the Database setup section of this workshop.</p>\n<p>Before going all React Native, if you would like to learn more about React and create your first React app take a look at our previous Todo app workshop. <a href=\"https://github.com/datastaxdevs/appdev-week1-todolist\">HERE</a>.</p>\n<p>This is an example React Native Todo application using a <a href=\"https://dtsx.io/3nvKRsO\">DataStax AstraDB</a> free tier database.</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/todo-native-mobile/master/hero.png\" alt=\"image\" /></p>\n<h2>Objectives</h2>\n<ul>\n<li>Implement a <strong>React Native</strong> Todo app using Expo</li>\n<li>Learn about <strong>React Native</strong> components and how they are used to dynamically update the DOM with new information</li>\n<li>Learn how to convert a React web app to a <strong>React Native</strong> mobile and web app</li>\n<li>Learn how <strong>state</strong> and <strong>props</strong> changes are used</li>\n<li>Leverage Netlify and DataStax AstraDB</li>\n</ul>\n<h2>Get Started</h2>\n<!--- STARTEXCLUDE --->\n<p>Create a <a href=\"https://dtsx.io/3nvKRsO\">DataStax Astra account</a> if you don't already have one.</p>\n<!--- ENDEXCLUDE --->\n<p>To build and play with this app, follow the workshop instructions that are located here: <a href=\"https://github.com/DataStax-Examples/todo-native-mobile/blob/master/WORKSHOP.md\">https://github.com/DataStax-Examples/todo-native-mobile/blob/master/WORKSHOP.md</a></p>\n",
-  "_id": "Datastax-Examples-todo-native-mobile",
-  "readme_markdown": "\n<!--- STARTEXCLUDE --->\n# React Native Todo List, an Astra DB + Netlify Workshop\n*40 minutes, Beginner/Intermediate*\n\n[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)\n\nIn this workshop, you will learn how to convert the Todo web application from a previous [DataStaxDevs workshop](https://github.com/datastaxdevs/appdev-week1-todolist) into a React Native mobile and web application. We will actually be using the same database setup as before, so if you've already created it during the prior workshop, you can skip the Database setup section of this workshop.\n\nBefore going all React Native, if you would like to learn more about React and create your first React app take a look at our previous Todo app workshop. [HERE](https://github.com/datastaxdevs/appdev-week1-todolist).\n\nThis is an example React Native Todo application using a [DataStax AstraDB](https://dtsx.io/3nvKRsO) free tier database.\n<!--- ENDEXCLUDE --->\n\n![image](https://raw.githubusercontent.com/DataStax-Examples/todo-native-mobile/master/hero.png)\n\n## Objectives\n* Implement a **React Native** Todo app using Expo\n* Learn about **React Native** components and how they are used to dynamically update the DOM with new information\n* Learn how to convert a React web app to a **React Native** mobile and web app\n* Learn how **state** and **props** changes are used\n* Leverage Netlify and DataStax AstraDB\n\n## Get Started\n<!--- STARTEXCLUDE --->\nCreate a [DataStax Astra account](https://dtsx.io/3nvKRsO) if you don't already have one.\n<!--- ENDEXCLUDE --->\n\nTo build and play with this app, follow the workshop instructions that are located here: [https://github.com/DataStax-Examples/todo-native-mobile/blob/master/WORKSHOP.md](https://github.com/DataStax-Examples/todo-native-mobile/blob/master/WORKSHOP.md)\n\n\n"
+    "key": "Datastax-Examples-todo-native-mobile",
+    "tags": [
+        "javascript",
+        "workshop",
+        "astradb",
+        "datastax",
+        "react",
+        "react-native",
+        "ios",
+        "android",
+        "dev",
+        "tutorials",
+        "building-sample-apps"
+    ],
+    "urls": {
+        "github": "https://github.com/DataStax-Examples/todo-native-mobile",
+        "gitpod": "https://gitpod.io/#https://github.com/DataStax-Examples/todo-native-mobile",
+        "heroimage": "https://raw.githubusercontent.com/DataStax-Examples/todo-native-mobile/master/hero.png"
+    },
+    "last_modified": "Thu, 23 Mar 2023 19:01:16 GMT",
+    "forks_count": 3,
+    "stargazers_count": 1,
+    "name": "React Native Todo List, an Astra DB + Netlify Workshop",
+    "description": "A workshop where you build a React Native Todo application using DataStax Astra DB.",
+    "duration": "40 minutes",
+    "skilllevel": "Intermediate",
+    "priority": 2,
+    "readme": "<!--- STARTEXCLUDE --->\n<h1>React Native Todo List, an Astra DB + Netlify Workshop</h1>\n<p><em>40 minutes, Beginner/Intermediate</em></p>\n<p><a href=\"https://gitpod.io/from-referrer/\"><img src=\"https://gitpod.io/button/open-in-gitpod.svg\" alt=\"Open in Gitpod\" /></a></p>\n<p>In this workshop, you will learn how to convert the Todo web application from a previous <a href=\"https://github.com/datastaxdevs/appdev-week1-todolist\">DataStaxDevs workshop</a> into a React Native mobile and web application. We will actually be using the same database setup as before, so if you've already created it during the prior workshop, you can skip the Database setup section of this workshop.</p>\n<p>Before going all React Native, if you would like to learn more about React and create your first React app take a look at our previous Todo app workshop. <a href=\"https://github.com/datastaxdevs/appdev-week1-todolist\">HERE</a>.</p>\n<p>This is an example React Native Todo application using a <a href=\"https://dtsx.io/3nvKRsO\">DataStax AstraDB</a> free tier database.</p>\n<!--- ENDEXCLUDE --->\n<p><img src=\"https://raw.githubusercontent.com/DataStax-Examples/todo-native-mobile/master/hero.png\" alt=\"image\" /></p>\n<h2>Objectives</h2>\n<ul>\n<li>Implement a <strong>React Native</strong> Todo app using Expo</li>\n<li>Learn about <strong>React Native</strong> components and how they are used to dynamically update the DOM with new information</li>\n<li>Learn how to convert a React web app to a <strong>React Native</strong> mobile and web app</li>\n<li>Learn how <strong>state</strong> and <strong>props</strong> changes are used</li>\n<li>Leverage Netlify and DataStax AstraDB</li>\n</ul>\n<h2>Get Started</h2>\n<!--- STARTEXCLUDE --->\n<p>Create a <a href=\"https://dtsx.io/3nvKRsO\">DataStax Astra account</a> if you don't already have one.</p>\n<!--- ENDEXCLUDE --->\n<p>To build and play with this app, follow the workshop instructions that are located here: <a href=\"https://github.com/DataStax-Examples/todo-native-mobile/blob/master/WORKSHOP.md\">https://github.com/DataStax-Examples/todo-native-mobile/blob/master/WORKSHOP.md</a></p>\n",
+    "_id": "Datastax-Examples-todo-native-mobile",
+    "readme_markdown": "\n<!--- STARTEXCLUDE --->\n# React Native Todo List, an Astra DB + Netlify Workshop\n*40 minutes, Beginner/Intermediate*\n\n[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)\n\nIn this workshop, you will learn how to convert the Todo web application from a previous [DataStaxDevs workshop](https://github.com/datastaxdevs/appdev-week1-todolist) into a React Native mobile and web application. We will actually be using the same database setup as before, so if you've already created it during the prior workshop, you can skip the Database setup section of this workshop.\n\nBefore going all React Native, if you would like to learn more about React and create your first React app take a look at our previous Todo app workshop. [HERE](https://github.com/datastaxdevs/appdev-week1-todolist).\n\nThis is an example React Native Todo application using a [DataStax AstraDB](https://dtsx.io/3nvKRsO) free tier database.\n<!--- ENDEXCLUDE --->\n\n![image](https://raw.githubusercontent.com/DataStax-Examples/todo-native-mobile/master/hero.png)\n\n## Objectives\n* Implement a **React Native** Todo app using Expo\n* Learn about **React Native** components and how they are used to dynamically update the DOM with new information\n* Learn how to convert a React web app to a **React Native** mobile and web app\n* Learn how **state** and **props** changes are used\n* Leverage Netlify and DataStax AstraDB\n\n## Get Started\n<!--- STARTEXCLUDE --->\nCreate a [DataStax Astra account](https://dtsx.io/3nvKRsO) if you don't already have one.\n<!--- ENDEXCLUDE --->\n\nTo build and play with this app, follow the workshop instructions that are located here: [https://github.com/DataStax-Examples/todo-native-mobile/blob/master/WORKSHOP.md](https://github.com/DataStax-Examples/todo-native-mobile/blob/master/WORKSHOP.md)\n\n\n"
 }
