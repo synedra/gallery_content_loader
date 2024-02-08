@@ -1,0 +1,14 @@
+{
+  "name": "Multi-Modal Vector Retrieval",
+  "description": "Demonstrates how to perform multi modal vector retrieval with Astra and langchain with flickr-8k dataset.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/mukundha/multi-modal-vector-retrieval-astra",
+  "tags": ["vector", "astradb", "cassio", "openai", "python"],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/datastaxdevs/gallery_content_loader/blob/main/datastax-logo_square.png"
+}

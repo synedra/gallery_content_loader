@@ -1,0 +1,14 @@
+{
+  "name": "Streamlit Langchain Vectorstore",
+  "description": "A chatbot built on streamlit and langchain. It is a playground to compare using other vector stores like REDIS, Mongo.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/krishnannarayanaswamy/video-summarizer-langchain",
+  "tags": ["vector", "astradb", "langchain", "openai", "python"],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://raw.githubusercontent.com/krishnannarayanaswamy/streamlit-langchain-vectorstore-demo/main/img/chatbot.png"
+}
