@@ -1,0 +1,14 @@
+{
+  "name": "PDF FLARE demo with Langchain and AstraDB",
+  "description": "Ingest PDF files from their URL into an Astra DB vector store and run FLARE Question-Answering on them.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/CassioML/langchain-flare-pdf-qa-demo",
+  "tags": ["vector", "astradb", "pdf", "flare", "cassio"],
+  "category": "",
+  "priority": 1,
+  "heroImage": ""
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Bank Ragstax Demo",
+  "description": "A demo that demonstrates Astra RAGStax platform, Streamlit interface for a chatbot and DataStax Astra as Vector Store.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/krishnannarayanaswamy/bank-ragstax-demo",
+  "tags": ["vector", "astradb", "data api", "ragstax"],
+  "category": "",
+  "priority": 1,
+  "heroImage": ""
+}

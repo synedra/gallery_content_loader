@@ -5,8 +5,7 @@
         "spring",
         "dev",
         "astradb",
-        "tutorials",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/betterreads-webapp",

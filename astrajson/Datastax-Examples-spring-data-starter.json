@@ -2,15 +2,12 @@
     "key": "Datastax-Examples-spring-data-starter",
     "tags": [
         "java",
-        "starters",
+        "tutorials",
         "spring",
         "rest api",
         "cassandra",
-        "tutorials",
         "dev",
-        "spring-data-cassandra",
-        "rest-api",
-        "building-sample-apps"
+        "rest-api"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/spring-data-starter",

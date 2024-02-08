@@ -1,0 +1,22 @@
+{
+  "name": "DataStax VectorDB Demos",
+  "description": "The goal of this project is to provide a simple demonstration of the capabilities of AstraDB as it related to its vector database and search functionality.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/smatiolids/astra-agent-memory",
+  "tags": [
+    "vector",
+    "astradb",
+    "hybrid search",
+    "index analysis",
+    "sai",
+    "python",
+    "streamlit"
+  ],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/mborges-pivotal/ds-vector-demo/blob/main/docs/app_demos.jpg"
+}

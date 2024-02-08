@@ -4,13 +4,12 @@
         "javascript",
         "doc api",
         "dev",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "tutorials",
         "react",
         "netlify",
-        "headless-cms",
-        "building-sample-apps"
+        "headless-cms"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/fastsite-console",

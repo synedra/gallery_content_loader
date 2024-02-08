@@ -5,12 +5,11 @@
         "tools",
         "cassandra",
         "dev",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "netflix data explorer",
         "tutorials",
-        "netflix-data-explorer",
-        "building-sample-apps"
+        "netflix-data-explorer"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/nf-data-explorer",

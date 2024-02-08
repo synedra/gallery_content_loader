@@ -8,9 +8,8 @@
         "nextjs",
         "typescript",
         "astradb",
-        "datastax",
-        "tutorials",
-        "building-sample-apps"
+        "ds-bulk",
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/weatherapp",

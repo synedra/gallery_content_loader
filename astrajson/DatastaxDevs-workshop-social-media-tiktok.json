@@ -5,8 +5,7 @@
         "doc api",
         "workshop",
         "cassandra",
-        "netlify",
-        "cassandra-database"
+        "netlify"
     ],
     "urls": {
         "github": "https://github.com/datastaxdevs/workshop-social-media-tiktok"

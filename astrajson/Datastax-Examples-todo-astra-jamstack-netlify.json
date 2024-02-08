@@ -4,12 +4,10 @@
         "javascript",
         "doc api",
         "cassandra",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "tutorials",
-        "dev",
-        "building-sample-apps",
-        "document-api"
+        "dev"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/todo-astra-jamstack-netlify",

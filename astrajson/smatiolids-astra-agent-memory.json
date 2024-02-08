@@ -1,0 +1,14 @@
+{
+  "name": "Astra Agent Memory with PDF context",
+  "description": "This demo combines the processing of PDF files, embedding generation, multiple retrieval metrics and a user interface with streamlit.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/smatiolids/astra-agent-memory",
+  "tags": ["vector", "astradb", "python"],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/smatiolids/astra-agent-memory/blob/main/astra_agent.png"
+}

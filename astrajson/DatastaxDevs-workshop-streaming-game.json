@@ -12,7 +12,7 @@
         "astradb",
         "streaming",
         "game",
-        "datastax",
+        "ds-bulk",
         "gaming",
         "real-time"
     ],

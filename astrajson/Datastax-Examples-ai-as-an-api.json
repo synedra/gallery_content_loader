@@ -6,10 +6,9 @@
         "video",
         "astradb",
         "fastapi",
-        "tutorial",
+        "tutorials",
         "dev",
-        "machine-learning",
-        "building-sample-apps"
+        "machine-learning"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/ai-as-an-api",

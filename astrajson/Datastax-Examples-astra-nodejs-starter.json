@@ -4,11 +4,10 @@
         "javascript",
         "nodejs",
         "astradb",
-        "datastax",
+        "ds-bulk",
         "dev",
         "tutorials",
-        "cassandra",
-        "building-sample-apps"
+        "cassandra"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-nodejs-starter",

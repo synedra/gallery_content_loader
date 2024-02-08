@@ -6,14 +6,13 @@
         "workshop",
         "dev",
         "astradb",
-        "datastax",
+        "ds-bulk",
         "cassandra",
         "netlify",
         "gitpod",
         "react",
         "redux",
-        "building-sample-apps",
-        "document-api"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/battlestax",

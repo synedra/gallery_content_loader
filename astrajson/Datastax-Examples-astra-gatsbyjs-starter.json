@@ -6,11 +6,10 @@
         "astradb",
         "cassandra",
         "jamstack",
-        "tutorial",
+        "tutorials",
         "dev",
         "examples",
-        "cassandra-cql",
-        "building-sample-apps"
+        "cassandra-cql"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-gatsbyjs-starter",

@@ -7,10 +7,9 @@
         "dev",
         "cassandra",
         "astradb",
-        "datastax",
+        "ds-bulk",
         "tutorials",
-        "java-driver",
-        "building-sample-apps"
+        "java-driver"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/getting-started-with-astra-java",

@@ -5,12 +5,11 @@
         "python",
         "python driver",
         "dev",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "flask",
         "cassandra",
-        "tutorials",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/getting-started-with-astra-python",

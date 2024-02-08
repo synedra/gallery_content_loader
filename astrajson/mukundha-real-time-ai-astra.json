@@ -1,0 +1,14 @@
+{
+  "name": "Real Time AI with Astra",
+  "description": "This demo reviews the role of Astra in ML lifecycle: Training.",
+  "duration": "20m",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/michelderu/vector-playgrounds/tree/main/hybrid-search",
+  "tags": ["vector", "cassio", "langchain"],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/michelderu/vector-playgrounds/blob/main/hybrid-search/Hybrid-search.jpg"
+}

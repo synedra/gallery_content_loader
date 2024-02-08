@@ -6,12 +6,9 @@
         "ds-bulk",
         "tools",
         "dev",
-        "datastax",
         "astradb",
         "cassandra",
-        "tutorials",
-        "datastax-bulk-loader",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/dsbulk-to-astra",

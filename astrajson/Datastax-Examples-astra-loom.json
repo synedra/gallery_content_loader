@@ -5,11 +5,10 @@
         "elixir",
         "cassandra",
         "dev",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "gitpod",
-        "tutorials",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-loom",

@@ -6,10 +6,9 @@
         "tutorials",
         "dev",
         "gitpod",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "nextjs",
-        "building-sample-apps",
         "rest-api"
     ],
     "urls": {

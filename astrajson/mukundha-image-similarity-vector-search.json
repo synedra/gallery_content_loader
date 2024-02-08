@@ -1,0 +1,14 @@
+{
+  "name": "Image Similarity with Vector Search",
+  "description": "Demonstrate Datastax Astra's Vector search with Image similarity search using Amazon Berkeley Objects (ABO) Dataset.",
+  "duration": "20m",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/mukundha/image-similarity-vector-search",
+  "tags": ["vector", "cassio", "langchain"],
+  "category": "",
+  "priority": 1,
+  "heroImage": ""
+}

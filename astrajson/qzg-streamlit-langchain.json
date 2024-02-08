@@ -1,0 +1,21 @@
+{
+  "name": "Configurable Enterprise Chat Agent",
+  "description": "This Chat Agent is build specifically as a reusable and configurable sample app to share with enterprises or prospects.",
+  "duration": "20m",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/qzg/streamlit-langchain",
+  "tags": [
+    "vector",
+    "langchain",
+    "streamlit",
+    "astradb",
+    "localization",
+    "rails"
+  ],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/qzg/streamlit-langchain/blob/main/assets/QA-app-RAG.png"
+}

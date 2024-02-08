@@ -4,11 +4,10 @@
         "javascript",
         "nextjs",
         "eddiehub",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "dev",
-        "tutorials",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-nextjs-tutorial",

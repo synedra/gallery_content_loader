@@ -4,12 +4,11 @@
         "javascript",
         "react",
         "netlify",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "gitpod",
         "dev",
-        "tutorials",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/telco-billing-app",

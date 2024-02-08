@@ -5,7 +5,7 @@
         "nodejs driver",
         "dev",
         "astradb",
-        "datastax",
+        "ds-bulk",
         "nodejs",
         "google cloud",
         "serverless framework",
@@ -13,8 +13,7 @@
         "tutorials",
         "google-cloud",
         "serverless-framework",
-        "nodejs-driver",
-        "building-sample-apps"
+        "nodejs-driver"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/google-cloud-functions-nodejs",

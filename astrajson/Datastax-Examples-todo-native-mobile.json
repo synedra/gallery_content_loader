@@ -4,14 +4,13 @@
         "javascript",
         "workshop",
         "astradb",
-        "datastax",
+        "ds-bulk",
         "react",
         "react-native",
         "ios",
         "android",
         "dev",
-        "tutorials",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/todo-native-mobile",

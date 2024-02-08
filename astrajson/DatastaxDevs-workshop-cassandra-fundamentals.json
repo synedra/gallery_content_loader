@@ -5,8 +5,7 @@
         "workshop",
         "nosql",
         "cql",
-        "astradb",
-        "database"
+        "astradb"
     ],
     "urls": {
         "github": "https://github.com/datastaxdevs/workshop-cassandra-fundamentals",

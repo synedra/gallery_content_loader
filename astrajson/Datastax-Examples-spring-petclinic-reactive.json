@@ -6,10 +6,9 @@
         "dev",
         "angular",
         "astradb",
-        "datastax",
+        "ds-bulk",
         "spring",
-        "tutorials",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/spring-petclinic-reactive",

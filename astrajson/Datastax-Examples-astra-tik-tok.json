@@ -4,13 +4,11 @@
         "javascript",
         "tutorials",
         "astradb",
-        "datastax",
+        "ds-bulk",
         "react",
         "netlify",
         "doc api",
-        "dev",
-        "building-sample-apps",
-        "document-api"
+        "dev"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-tik-tok",

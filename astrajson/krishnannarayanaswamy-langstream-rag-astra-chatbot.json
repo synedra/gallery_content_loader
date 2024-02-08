@@ -1,0 +1,14 @@
+{
+  "name": "Langstream Chat Bot",
+  "description": "A demo that crawls and does a Q&A chatbot with chat history support, all through configuration using langstream including authentication.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/krishnannarayanaswamy/langstream-rag-astra-chatbot",
+  "tags": ["vector", "astradb", "data api", "langstream"],
+  "category": "",
+  "priority": 1,
+  "heroImage": ""
+}

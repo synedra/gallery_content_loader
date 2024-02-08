@@ -9,8 +9,7 @@
         "cassandra",
         "spark",
         "astradb",
-        "datastax",
-        "building-sample-apps"
+        "ds-bulk"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-spark-migration",

@@ -6,8 +6,7 @@
         "netlify",
         "astradb",
         "tutorials",
-        "dev",
-        "building-sample-apps"
+        "dev"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/rpg-astra",

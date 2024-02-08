@@ -1,0 +1,14 @@
+{
+  "name": "Moonshot",
+  "description": "Alpha-stage library that could almost replace your customer support department.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/devinbost/moonshot",
+  "tags": ["vector", "astradb", "data api"],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/devinbost/moonshot/blob/master/img%2Fmoonshot_graphic.png"
+}

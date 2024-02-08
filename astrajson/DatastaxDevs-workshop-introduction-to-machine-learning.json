@@ -10,7 +10,6 @@
         "cassandra",
         "spark-ml",
         "workshop",
-        "database",
         "nosql",
         "jupyter-notebook",
         "machine-learning"

@@ -169,7 +169,7 @@ def main():
     counter = 0
     input_documents = []
 
-    youtube = getCreds()
+    #youtube = getCreds()
     
     from langchain_openai import OpenAIEmbeddings
     myEmbedding = OpenAIEmbeddings()
@@ -253,13 +253,13 @@ def main():
                 elif (key.upper() == "YOUTUBEURL" or key.upper() == "YOUTUBE"):
                     print("Youtube is " + json.dumps(settings[key]))
                     newentry["urls"]["youtube"] = settings[key]
-                    try:
-                        (path, video_id) = settings[key][0].split("=")
-                        (likes, views) = getVideoStats(youtube, video_id)
-                        newentry["likes"] = likes
-                        newentry["views"] = views
-                    except:
-                        continue
+                    #try:
+                    #    (path, video_id) = settings[key][0].split("=")
+                    #    (likes, views) = getVideoStats(youtube, video_id)
+                    #    newentry["likes"] = likes
+                    #    newentry["views"] = views
+                    #except:
+                    #    continue
                 elif (key.upper() == "GITPODURL"):
                     newentry["urls"]["gitpod"] = settings[key]
                 elif (key.upper() == "NETLIFYURL"):
@@ -324,15 +324,32 @@ def cleanTags(tags):
             continue
         if tag in ("astra", "astra db", "astradb"):
             tag = "astradb"
-        if tag in ("doc api", "documentapi", "docapi", "document api"):
+        if tag in ("machine-learning"):
+            tag = "machine learning"
+        if tag in ("building-sample-apps", "starters", "tutorial"):
+            tag = "tutorials"
+        if tag in ("doc api", "documentapi", "docapi", "document api", "document-api"):
             tag = "doc api"
         if tag in ("gql api", "graphql"):
             tag = "graphql api"
+        if tag in ("serverless-framework"):
+            tag = "serverless framework"
+        if tag in ("google-cloud"):
+            tag = "google cloud"
+        if tag in ("nodejs-driver", "nodejs driver"):
+            tag = "nodejs"
+        if tag in ("data-engineering"):
+            tag = "data engineering"
+        if tag in ("cassandra-database"):
+            tag = "cassandra"
         if tag in ("java", "java driver"):
             tag = "java"
-        if tag in ("spring-boot", "spring-data", "spring", "spring-webflux"):
+        if tag in ("spring-boot", "spring-data", "spring", "spring-webflux", "spring-data-cassandra"):
             tag = "spring"
-        if tag not in newtags:
+        if tag in ("datastax-bulk-loader"):
+            tag = "ds-bulk"
+ 
+        if tag not in newtags and tag != "datastax":
             newtags.append(tag)
     return newtags
 

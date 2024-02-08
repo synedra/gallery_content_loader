@@ -8,9 +8,8 @@
         "dev",
         "astradb",
         "eddiehub",
-        "datastax",
-        "tutorials",
-        "building-sample-apps"
+        "ds-bulk",
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-nuxtjs-nestjs",

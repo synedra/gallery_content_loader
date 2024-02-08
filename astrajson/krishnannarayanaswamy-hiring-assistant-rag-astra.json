@@ -1,0 +1,14 @@
+{
+  "name": "AI Hiring Assistant",
+  "description": "Gen AI powered Hiring Assistant application to effectively screen resumes based on job descriptions with DataStax Astra and Amazon Bedrock.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/krishnannarayanaswamy/ragstack-astra-dev-jam",
+  "tags": ["vector", "astradb", "data api", "ragstax", "bedrock"],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/krishnannarayanaswamy/hiring-assistant-rag-astra/blob/main/images/hiringassistant.gif"
+}

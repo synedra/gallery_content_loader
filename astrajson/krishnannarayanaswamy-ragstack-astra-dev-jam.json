@@ -1,0 +1,23 @@
+{
+  "name": "Gen AI Dev Jam",
+  "description": "This Dev Jam will help your enterprise architects, developers and practitioners to quickly become familiar with RAGStack, LLMs and Vector Database.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/krishnannarayanaswamy/ragstack-astra-dev-jam",
+  "tags": [
+    "vector",
+    "ragbot",
+    "ragstack",
+    "astrachatbot",
+    "astradb",
+    "langchain",
+    "vercel",
+    "streamlit"
+  ],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/krishnannarayanaswamy/ragstack-astra-dev-jam/blob/main/ragbot/images/dbdataexplorer.png"
+}

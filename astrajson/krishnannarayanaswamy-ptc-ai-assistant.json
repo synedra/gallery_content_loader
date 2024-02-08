@@ -1,0 +1,14 @@
+{
+  "name": "Commerce AI Assistant",
+  "description": "An eCommerce Chatbot with LangServe API with the new LangChain (LCEL) expression language..",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/krishnannarayanaswamy/ptc-ai-assistant",
+  "tags": ["vector", "astradb", "data api"],
+  "category": "",
+  "priority": 1,
+  "heroImage": ""
+}

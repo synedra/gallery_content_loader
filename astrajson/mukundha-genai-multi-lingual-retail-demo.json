@@ -1,0 +1,14 @@
+{
+  "name": "Generative AI demo for Multi-lingual Retail application",
+  "description": "Visualize embeddings for a multi-lingual retail application",
+  "duration": "20m",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/mukundha/genai-multi-lingual-retail-demo/tree/main",
+  "tags": ["vector", "python", "cassandra"],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/mukundha/genai-multi-lingual-retail-demo/blob/main/embedding-projector/ss.png"
+}

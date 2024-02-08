@@ -4,13 +4,12 @@
         "python",
         "selenium",
         "video",
-        "datastax",
+        "ds-bulk",
         "astradb",
         "fastapi",
         "cassandra",
         "dev",
-        "tutorials",
-        "building-sample-apps"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/python-website-scraper",

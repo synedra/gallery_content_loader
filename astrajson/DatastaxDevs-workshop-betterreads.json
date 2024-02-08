@@ -4,7 +4,6 @@
         "spring",
         "workshop",
         "cassandra",
-        "cassandra-database",
         "spring-mvc",
         "spring-security-oauth2"
     ],

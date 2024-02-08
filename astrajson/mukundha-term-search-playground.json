@@ -1,0 +1,14 @@
+{
+  "name": "Term-based search with Astra",
+  "description": "Playground WebApp that allows to use variations of term search lookups introduced in SAI",
+  "duration": "20m",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "githubUrl": "https://github.com/mukundha/term-search-playground/tree/main",
+  "tags": ["vector", "python", "cassandra"],
+  "category": "",
+  "priority": 1,
+  "heroImage": "https://github.com/mukundha/term-search-playground/blob/main/images/ss1.png"
+}

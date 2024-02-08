@@ -4,10 +4,9 @@
         "javascript",
         "graphql api",
         "tutorials",
-        "datastax",
+        "ds-bulk",
         "astradb",
-        "dev",
-        "building-sample-apps"
+        "dev"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-netflix",

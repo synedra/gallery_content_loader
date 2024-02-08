@@ -6,11 +6,10 @@
         "astradb",
         "tutorials",
         "dev",
-        "datastax",
+        "ds-bulk",
         "cassandra",
         "nodejs",
-        "glitch",
-        "building-sample-apps"
+        "glitch"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/glitch-astra-starter",
