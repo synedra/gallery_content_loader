@@ -8,10 +8,10 @@
   "gitpodUrl": "",
   "vercelUrl": "",
   "urls": {
-    "github": "https://github.com/krishnannarayanaswamy/video-summarizer-langchain"
+    "github": "https://github.com/krishnannarayanaswamy/video-summarizer-langchain",
+    "heroImage": "https://raw.githubusercontent.com/krishnannarayanaswamy/streamlit-langchain-vectorstore-demo/main/img/chatbot.png"
   },
   "tags": ["vector", "astradb", "langchain", "openai", "python"],
   "category": "",
-  "priority": 1,
-  "heroImage": "https://raw.githubusercontent.com/krishnannarayanaswamy/streamlit-langchain-vectorstore-demo/main/img/chatbot.png"
+  "priority": 1
 }

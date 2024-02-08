@@ -1,17 +1,19 @@
 {
+  "key": "mukundha-genai-multi-lingual-retail-demo",
+  "tags": ["vector", "python", "cassandra"],
+  "urls": {
+    "github": "https://github.com/mukundha/genai-multi-lingual-retail-demo/tree/main",
+    "heroimage": "https://raw.githubusercontent.com/mukundha/genai-multi-lingual-retail-demo/main/embedding-projector/ss.png"
+  },
+  "last_modified": "Mon, 03 Jul 2023 08:14:06 GMT",
+  "forks_count": 1,
+  "stargazers_count": 0,
   "name": "Generative AI demo for Multi-lingual Retail application",
   "description": "Visualize embeddings for a multi-lingual retail application",
   "duration": "20m",
-  "key": "mukundha-genai-multi-lingual-retail-demo",
-  "skillLevel": "Intermediate",
-  "netlifyUrl": "",
-  "gitpodUrl": "",
-  "vercelUrl": "",
-  "urls": {
-    "github": "https://github.com/mukundha/genai-multi-lingual-retail-demo/tree/main"
-  },
-  "tags": ["vector", "python", "cassandra"],
-  "category": "",
+  "skilllevel": "Intermediate",
   "priority": 1,
-  "heroImage": "https://github.com/mukundha/genai-multi-lingual-retail-demo/blob/main/embedding-projector/ss.png"
+  "readme": "<h1>Generative AI demo for Multi-lingual Retail application</h1>\n<h2>Backend</h2>\n<p>Source the following env variables</p>\n<pre><code>openai_api_key=\ncass_user=\ncass_pw=\nscb_path=\nkeyspace=\ntable=\n</code></pre>\n<p><code>pip install openai pandas numpy flask flask_cors tensorflow tensorflow_hub cassandra-driver googletrans</code></p>\n<pre><code>python3 similaritySearch_openAI.py\n</code></pre>\n<h2>Frontend</h2>\n<pre><code>npm install\nnpm start\n</code></pre>\n<p>Update <code>src/App.js</code> to point to the local backend</p>\n<h3>Visualize embeddings</h3>\n<pre><code>cd embedding-projector\ntensorboard --logdir logs\n</code></pre>\n<p>Visit <code>http://localhost:6006/?darkMode=true#projector</code></p>\n<p><img src=\"embedding-projector/ss.png\" alt=\"Screenshot of Embedding Projector\" /></p>\n",
+  "readme_markdown": "# Generative AI demo for Multi-lingual Retail application\n\n## Backend\n\nSource the following env variables\n\n```\nopenai_api_key=\ncass_user=\ncass_pw=\nscb_path=\nkeyspace=\ntable=\n```\n\n`pip install openai pandas numpy flask flask_cors tensorflow tensorflow_hub cassandra-driver googletrans`\n\n```\npython3 similaritySearch_openAI.py\n```\n\n## Frontend\n\n```\nnpm install\nnpm start\n```\n\nUpdate `src/App.js` to point to the local backend\n\n\n### Visualize embeddings\n\n```\ncd embedding-projector\ntensorboard --logdir logs\n```\nVisit `http://localhost:6006/?darkMode=true#projector`\n\n![Screenshot of Embedding Projector](embedding-projector/ss.png)",
+  "_id": "mukundha-genai-multi-lingual-retail-demo"
 }

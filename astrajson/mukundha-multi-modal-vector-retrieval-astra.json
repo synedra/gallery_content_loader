@@ -1,17 +1,19 @@
 {
+  "key": "mukundha-multi-modal-vector-retrieval-astra",
+  "tags": ["vector", "astradb", "cassio", "openai", "python"],
+  "urls": {
+    "github": "https://github.com/mukundha/multi-modal-vector-retrieval-astra",
+    "heroimage": "https://raw.githubusercontent.com/datastaxdevs/gallery_content_loader/main/datastax-logo_square.png"
+  },
+  "last_modified": "Fri, 06 Oct 2023 00:55:27 GMT",
+  "forks_count": 1,
+  "stargazers_count": 0,
   "name": "Multi-Modal Vector Retrieval",
   "description": "Demonstrates how to perform multi modal vector retrieval with Astra and langchain with flickr-8k dataset.",
   "duration": "2h",
-  "key": "mukundha-multi-modal-vector-retrieval-astra",
-  "skillLevel": "Intermediate",
-  "netlifyUrl": "",
-  "gitpodUrl": "",
-  "vercelUrl": "",
-  "urls": {
-    "github": "https://github.com/mukundha/multi-modal-vector-retrieval-astra"
-  },
-  "tags": ["vector", "astradb", "cassio", "openai", "python"],
-  "category": "",
+  "skilllevel": "Intermediate",
   "priority": 1,
-  "heroImage": "https://github.com/datastaxdevs/gallery_content_loader/blob/main/datastax-logo_square.png"
+  "readme": "<h2>Multi-Modal Vector Retrieval with Astra</h2>\n<p>Demonstrates how to perform multi modal vector retrieval with Astra and langchain with flickr-8k dataset</p>\n<h3>Get started</h3>\n<p>Download flickr-8k dataset from<br />\n<code>https://www.kaggle.com/datasets/adityajn105/flickr8k</code></p>\n<p>Extract here, folder structure would look like</p>\n<pre><code>./flickr\n./flickr/captions.txt\n./flickr/Images\n</code></pre>\n<pre><code>pip install -r requirements.txt\n</code></pre>\n<p>Init Astra</p>\n<pre><code>export ASTRA_DB_APPLICATION_TOKEN=\nexport ASTRA_DB_DATABASE_ID=\nexport ASTRA_DB_KEYSPACE=\n</code></pre>\n<pre><code>python3 multimodal_demo.py\n</code></pre>\n<p>With langchain</p>\n<pre><code>python3 multimodal_langchain.py\n\n</code></pre>\n<h3>How it works</h3>\n<p>CLIP Embeddings are generated based on this <a href=\"https://ai.meta.com/research/publications/scaling-autoregressive-multi-modal-models-pretraining-and-instruction-tuning/\">paper</a><br />\nKey idea is representing text and image in the same vector space</p>\n<p><code>langchain</code> doesn't have good support for multi-modal embeddings yet, so if you want to use it with langchain, here is a sample on how to do that <code>clip_embedding.py</code>.  It uses a json encoded string to support text and images</p>\n<h3>Usecases</h3>\n<p>As MultiModal generative models become more accessible, usecases to retrieve multimodal content for RAG usecases will follow.</p>\n<p>There are some fun projects out there to caption images, text guided image generation etc.</p>\n<p>One of the usecase, I'm trying to solve in Edtech / learning space -</p>\n<p>Students can take a picture of their work (partially completed), either they are trying to sktech a plant cell or electronic circuitry for a Adder and ask a Generative model to help complete.</p>\n<p>Student provides the Initial state (A),<br />\nRAG can supplement the final state (B),<br />\nGenerative model shows the path from A -&gt; B</p>\n<p>Cool? What will you build with MultiModal retrieval?</p>\n",
+  "readme_markdown": "## Multi-Modal Vector Retrieval with Astra\n\nDemonstrates how to perform multi modal vector retrieval with Astra and langchain with flickr-8k dataset\n\n### Get started\n\nDownload flickr-8k dataset from \n`https://www.kaggle.com/datasets/adityajn105/flickr8k`\n\nExtract here, folder structure would look like\n```\n./flickr\n./flickr/captions.txt\n./flickr/Images\n```\n\n```\npip install -r requirements.txt\n```\n\nInit Astra\n```\nexport ASTRA_DB_APPLICATION_TOKEN=\nexport ASTRA_DB_DATABASE_ID=\nexport ASTRA_DB_KEYSPACE=\n```\n\n```\npython3 multimodal_demo.py\n```\n\nWith langchain \n```\npython3 multimodal_langchain.py\n\n```\n\n### How it works\n\nCLIP Embeddings are generated based on this [paper](https://ai.meta.com/research/publications/scaling-autoregressive-multi-modal-models-pretraining-and-instruction-tuning/)\nKey idea is representing text and image in the same vector space\n\n`langchain` doesn't have good support for multi-modal embeddings yet, so if you want to use it with langchain, here is a sample on how to do that `clip_embedding.py`.  It uses a json encoded string to support text and images\n\n### Usecases\n\nAs MultiModal generative models become more accessible, usecases to retrieve multimodal content for RAG usecases will follow. \n\nThere are some fun projects out there to caption images, text guided image generation etc.\n\nOne of the usecase, I'm trying to solve in Edtech / learning space - \n\nStudents can take a picture of their work (partially completed), either they are trying to sktech a plant cell or electronic circuitry for a Adder and ask a Generative model to help complete.\n\nStudent provides the Initial state (A), \nRAG can supplement the final state (B), \nGenerative model shows the path from A -> B\n\nCool? What will you build with MultiModal retrieval?",
+  "_id": "mukundha-multi-modal-vector-retrieval-astra"
 }
