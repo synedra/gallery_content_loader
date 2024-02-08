@@ -348,6 +348,8 @@ def cleanTags(tags):
             tag = "spring"
         if tag in ("datastax-bulk-loader"):
             tag = "ds-bulk"
+        if tag in ("doc api", "graphql api"):
+            newtags.append("deprecated")
  
         if tag not in newtags and tag != "datastax":
             newtags.append(tag)

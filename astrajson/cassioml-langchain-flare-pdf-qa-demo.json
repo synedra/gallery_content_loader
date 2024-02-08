@@ -1,6 +1,6 @@
 {
   "key": "cassioml-langchain-flare-pdf-qa-demo",
-  "tags": ["vector", "astradb", "pdf", "flare", "cassio"],
+  "tags": ["vector", "astradb", "pdf", "flare", "cassio", "python", "openai"],
   "urls": {
     "github": "https://github.com/CassioML/langchain-flare-pdf-qa-demo",
     "heroimage": "https://raw.githubusercontent.com/datastaxdevs/gallery_content_loader/main/datastax-logo_square.png"
