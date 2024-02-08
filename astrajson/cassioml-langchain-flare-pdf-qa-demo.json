@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/CassioML/langchain-flare-pdf-qa-demo",
+  "urls": {
+    "github": "https://github.com/CassioML/langchain-flare-pdf-qa-demo"
+  },
   "tags": ["vector", "astradb", "pdf", "flare", "cassio"],
   "category": "",
   "priority": 1,

@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/krishnannarayanaswamy/bank-ragstax-demo",
+  "urls": {
+    "github": "https://github.com/krishnannarayanaswamy/bank-ragstax-demo"
+  },
   "tags": ["vector", "astradb", "data api", "ragstax"],
   "category": "",
   "priority": 1,

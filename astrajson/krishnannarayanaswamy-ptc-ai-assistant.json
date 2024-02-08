@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/krishnannarayanaswamy/ptc-ai-assistant",
+  "urls": {
+    "github": "https://github.com/krishnannarayanaswamy/ptc-ai-assistant"
+  },
   "tags": ["vector", "astradb", "data api"],
   "category": "",
   "priority": 1,

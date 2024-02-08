@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/smatiolids/astra-agent-memory",
+  "urls": {
+    "github": "https://github.com/smatiolids/astra-agent-memory"
+  },
   "tags": ["vector", "astradb", "python"],
   "category": "",
   "priority": 1,

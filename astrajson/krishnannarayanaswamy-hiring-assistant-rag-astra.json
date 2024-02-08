@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/krishnannarayanaswamy/ragstack-astra-dev-jam",
+  "urls": {
+    "github": "https://github.com/krishnannarayanaswamy/ragstack-astra-dev-jam"
+  },
   "tags": ["vector", "astradb", "data api", "ragstax", "bedrock"],
   "category": "",
   "priority": 1,

@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/devinbost/moonshot",
+  "urls": {
+    "github": "https://github.com/devinbost/moonshot"
+  },
   "tags": ["vector", "astradb", "data api"],
   "category": "",
   "priority": 1,

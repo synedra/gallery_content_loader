@@ -2,18 +2,14 @@
     "key": "Datastax-Examples-google-cloud-functions-nodejs",
     "tags": [
         "javascript",
-        "nodejs driver",
+        "nodejs",
         "dev",
         "astradb",
         "ds-bulk",
-        "nodejs",
         "google cloud",
         "serverless framework",
         "cassandra",
-        "tutorials",
-        "google-cloud",
-        "serverless-framework",
-        "nodejs-driver"
+        "tutorials"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/google-cloud-functions-nodejs",

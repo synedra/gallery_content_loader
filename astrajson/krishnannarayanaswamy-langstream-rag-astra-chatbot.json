@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/krishnannarayanaswamy/langstream-rag-astra-chatbot",
+  "urls": {
+    "github": "https://github.com/krishnannarayanaswamy/langstream-rag-astra-chatbot"
+  },
   "tags": ["vector", "astradb", "data api", "langstream"],
   "category": "",
   "priority": 1,

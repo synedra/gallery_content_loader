@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/difli/astra_vsearch_QA_for_documents",
+  "urls": {
+    "github": "https://github.com/difli/astra_vsearch_QA_for_documents"
+  },
   "tags": ["vector", "astradb", "cassio", "openai", "python"],
   "category": "",
   "priority": 1,

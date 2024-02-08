@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/michelderu/vector-playgrounds/tree/main/hybrid-search",
+  "urls": {
+    "github": "https://github.com/michelderu/vector-playgrounds/tree/main/hybrid-search"
+  },
   "tags": ["vector", "cassio", "langchain"],
   "category": "",
   "priority": 1,

@@ -11,8 +11,7 @@
         "spark-ml",
         "workshop",
         "nosql",
-        "jupyter-notebook",
-        "machine-learning"
+        "jupyter-notebook"
     ],
     "urls": {
         "github": "https://github.com/datastaxdevs/workshop-introduction-to-machine-learning",

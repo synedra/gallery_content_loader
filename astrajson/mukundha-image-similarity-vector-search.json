@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/mukundha/image-similarity-vector-search",
+  "urls": {
+    "github": "https://github.com/mukundha/image-similarity-vector-search"
+  },
   "tags": ["vector", "cassio", "langchain"],
   "category": "",
   "priority": 1,

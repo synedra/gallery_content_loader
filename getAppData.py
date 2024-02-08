@@ -196,6 +196,7 @@ def main():
             currententry = json.loads(content_file.decoded_content.decode())
             if ("$vector" in currententry):
                 del currententry["$vector"]
+            print(currententry)
             repository = currententry["urls"]["github"]
             url = currententry["urls"]["github"]
             organization_name = repository.split("/")[3]
@@ -232,90 +233,90 @@ def main():
                 print(error)
                 continue
 
-        if (astrajson is not None):
-            apprepo = g.get_repo(organization_name  + '/' + repository_name)
-            last_modified = apprepo.last_modified
-            forks_count = apprepo.forks_count
-            stargazers_count = apprepo.stargazers_count
-            ghtopics = apprepo.get_topics()
-            for topic in ghtopics:
-                if topic not in currententry["tags"]:
-                    currententry["tags"].append(topic)
-            
-            newentry = {"key":key, "tags":currententry["tags"], "urls":{"github":url}, "last_modified":last_modified, "forks_count":forks_count, "stargazers_count":stargazers_count}
-            
-            settings = json.loads(astrajson.decoded_content.decode())
-            keys = settings.keys()
-            for key in keys:
-                lowerkey = key.lower()
-                if (key.upper() == "GITHUBURL"):
-                    continue
-                elif (key.upper() == "YOUTUBEURL" or key.upper() == "YOUTUBE"):
-                    print("Youtube is " + json.dumps(settings[key]))
-                    newentry["urls"]["youtube"] = settings[key]
-                    #try:
-                    #    (path, video_id) = settings[key][0].split("=")
-                    #    (likes, views) = getVideoStats(youtube, video_id)
-                    #    newentry["likes"] = likes
-                    #    newentry["views"] = views
-                    #except:
-                    #    continue
-                elif (key.upper() == "GITPODURL"):
-                    newentry["urls"]["gitpod"] = settings[key]
-                elif (key.upper() == "NETLIFYURL"):
-                    newentry["urls"]["netlify"] = settings[key]
-                elif (key.upper() == "DEMOURL"):
-                    newentry["urls"]["demo"] = settings[key]
-                elif (key.upper() == "VERCELURL"):
-                    newentry["urls"]["vercel"] = settings[key]
-                elif (key.upper() == "TAGS"):
-                    for tag in settings["tags"]:
-                        if ("name" in tag):
-                            newentry["tags"].append(
-                                tag["name"].lower())
-                        else:
-                            newentry["tags"].append(tag.lower())
-                elif (key.upper() == "STACK"):
-                    for stack in settings["stack"]:
-                        if ("tags" not in entry):
-                            newentry["tags"] = []
-                        newentry["tags"].append(stack.lower())
-                elif (key.upper() == "CATEGORY"):
-                    newentry["tags"].append(settings[key])
-                elif (key.upper() == "HEROIMAGE"):
-                    newentry["urls"]["heroimage"] = settings[key]
-                else:
-                    newentry[lowerkey] = settings[key]
-            newentry["readme"] = readme_trunc
-            newentry["readme_markdown"] = readme_markdown_trunc
-            if ("$vector" in newentry):
-                del newentry["$vector"] 
-            vector_json = json.dumps(newentry)
-            
-            for tag in newentry["tags"]:
-                if tag not in existingtags:
-                    taglist.append(tag)
-            
-            newentry["tags"] = cleanTags(newentry["tags"])
+            if (astrajson is not None):
+                apprepo = g.get_repo(organization_name  + '/' + repository_name)
+                last_modified = apprepo.last_modified
+                forks_count = apprepo.forks_count
+                stargazers_count = apprepo.stargazers_count
+                ghtopics = apprepo.get_topics()
+                for topic in ghtopics:
+                    if topic not in currententry["tags"]:
+                        currententry["tags"].append(topic)
+                
+                newentry = {"key":key, "tags":currententry["tags"], "urls":{"github":url}, "last_modified":last_modified, "forks_count":forks_count, "stargazers_count":stargazers_count}
+                
+                settings = json.loads(astrajson.decoded_content.decode())
+                keys = settings.keys()
+                for key in keys:
+                    lowerkey = key.lower()
+                    if (key.upper() == "GITHUBURL"):
+                        continue
+                    elif (key.upper() == "YOUTUBEURL" or key.upper() == "YOUTUBE"):
+                        print("Youtube is " + json.dumps(settings[key]))
+                        newentry["urls"]["youtube"] = settings[key]
+                        #try:
+                        #    (path, video_id) = settings[key][0].split("=")
+                        #    (likes, views) = getVideoStats(youtube, video_id)
+                        #    newentry["likes"] = likes
+                        #    newentry["views"] = views
+                        #except:
+                        #    continue
+                    elif (key.upper() == "GITPODURL"):
+                        newentry["urls"]["gitpod"] = settings[key]
+                    elif (key.upper() == "NETLIFYURL"):
+                        newentry["urls"]["netlify"] = settings[key]
+                    elif (key.upper() == "DEMOURL"):
+                        newentry["urls"]["demo"] = settings[key]
+                    elif (key.upper() == "VERCELURL"):
+                        newentry["urls"]["vercel"] = settings[key]
+                    elif (key.upper() == "TAGS"):
+                        for tag in settings["tags"]:
+                            if ("name" in tag):
+                                newentry["tags"].append(
+                                    tag["name"].lower())
+                            else:
+                                newentry["tags"].append(tag.lower())
+                    elif (key.upper() == "STACK"):
+                        for stack in settings["stack"]:
+                            if ("tags" not in entry):
+                                newentry["tags"] = []
+                            newentry["tags"].append(stack.lower())
+                    elif (key.upper() == "CATEGORY"):
+                        newentry["tags"].append(settings[key])
+                    elif (key.upper() == "HEROIMAGE"):
+                        newentry["urls"]["heroimage"] = settings[key]
+                    else:
+                        newentry[lowerkey] = settings[key]
+                newentry["readme"] = readme_trunc
+                newentry["readme_markdown"] = readme_markdown_trunc
+                if ("$vector" in newentry):
+                    del newentry["$vector"] 
+                vector_json = json.dumps(newentry)
+                
+                for tag in newentry["tags"]:
+                    if tag not in existingtags:
+                        taglist.append(tag)
+                
+                newentry["tags"] = cleanTags(newentry["tags"])
 
-            query_vector = client.embeddings.create(input=[vector_json],
-                model=embedding_model_name).data[0].embedding
-            newentry["_id"] = newentry["key"]
-            newentry["$vector"] = query_vector
-            
-            try:
-                demo_collection.insert_one(newentry)
-                print("Inserted " + newentry["key"])
-            except:
-                demo_collection.find_one_and_replace(filter={"_id":newentry["key"]}, replacement=newentry)
-                print("Replaced " + newentry["key"])
+                query_vector = client.embeddings.create(input=[vector_json],
+                    model=embedding_model_name).data[0].embedding
+                newentry["_id"] = newentry["key"]
+                newentry["$vector"] = query_vector
+                
+                try:
+                    demo_collection.insert_one(newentry)
+                    print("Inserted " + newentry["key"])
+                except:
+                    demo_collection.find_one_and_replace(filter={"_id":newentry["key"]}, replacement=newentry)
+                    print("Replaced " + newentry["key"])
 
-            filename = "./astrajson/" + newentry["key"] + ".json"
-            del newentry["$vector"]
-            with open(filename, 'w') as outfile:
-                json.dump(newentry, outfile, indent=4)
-                print("Wrote " + filename)
-        
+                filename = "./astrajson/" + newentry["key"] + ".json"
+                del newentry["$vector"]
+                with open(filename, 'w') as outfile:
+                    json.dump(newentry, outfile, indent=4)
+                    print("Wrote " + filename)
+            
 
 def cleanTags(tags):
     newtags = []

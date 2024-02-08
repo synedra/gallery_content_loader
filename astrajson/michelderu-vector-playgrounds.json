@@ -6,12 +6,10 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/michelderu/vector-playgrounds/tree/main/hybrid-search",
-  "tags": [
-    "vector",
-    "cassio",
-    "langchain"
-  ],
+  "urls": {
+    "github": "https://github.com/michelderu/vector-playgrounds/tree/main/hybrid-search"
+  },
+  "tags": ["vector", "cassio", "langchain"],
   "category": "",
   "priority": 1,
   "heroImage": "https://github.com/michelderu/vector-playgrounds/blob/main/hybrid-search/Hybrid-search.jpg"

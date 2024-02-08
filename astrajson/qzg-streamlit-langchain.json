@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/qzg/streamlit-langchain",
+  "urls": {
+    "github": "https://github.com/qzg/streamlit-langchain"
+  },
   "tags": [
     "vector",
     "langchain",

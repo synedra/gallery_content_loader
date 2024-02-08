@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/mukundha/multi-modal-vector-retrieval-astra",
+  "urls": {
+    "github": "https://github.com/mukundha/multi-modal-vector-retrieval-astra"
+  },
   "tags": ["vector", "astradb", "cassio", "openai", "python"],
   "category": "",
   "priority": 1,

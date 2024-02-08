@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/krishnannarayanaswamy/video-summarizer-langchain",
+  "urls": {
+    "github": "https://github.com/krishnannarayanaswamy/video-summarizer-langchain"
+  },
   "tags": ["vector", "astradb", "langchain", "openai", "python"],
   "category": "",
   "priority": 1,

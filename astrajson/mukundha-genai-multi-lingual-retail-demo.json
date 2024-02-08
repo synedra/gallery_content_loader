@@ -6,7 +6,9 @@
   "netlifyUrl": "",
   "gitpodUrl": "",
   "vercelUrl": "",
-  "githubUrl": "https://github.com/mukundha/genai-multi-lingual-retail-demo/tree/main",
+  "urls": {
+    "github": "https://github.com/mukundha/genai-multi-lingual-retail-demo/tree/main"
+  },
   "tags": ["vector", "python", "cassandra"],
   "category": "",
   "priority": 1,

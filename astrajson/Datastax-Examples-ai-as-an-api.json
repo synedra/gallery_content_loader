@@ -7,8 +7,7 @@
         "astradb",
         "fastapi",
         "tutorials",
-        "dev",
-        "machine-learning"
+        "dev"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/ai-as-an-api",
