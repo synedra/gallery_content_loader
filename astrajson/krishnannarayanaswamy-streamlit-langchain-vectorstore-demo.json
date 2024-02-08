@@ -2,6 +2,7 @@
   "name": "Streamlit Langchain Vectorstore",
   "description": "A chatbot built on streamlit and langchain. It is a playground to compare using other vector stores like REDIS, Mongo.",
   "duration": "2h",
+  "key": "krishnannarayanaswamy-streamlit-langchain-vectorstore",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

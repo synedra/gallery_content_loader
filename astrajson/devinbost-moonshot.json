@@ -2,6 +2,7 @@
   "name": "Moonshot",
   "description": "Alpha-stage library that could almost replace your customer support department.",
   "duration": "2h",
+  "key": "devinbost-moonshot",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

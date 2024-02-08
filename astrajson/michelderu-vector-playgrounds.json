@@ -2,6 +2,7 @@
   "name": "Configurable Enterprise Chat Agent",
   "description": "A novel RAG pattern using Hybrid Search that aims to increase relevance and performance.",
   "duration": "20m",
+  "key": "michelderu-vector-playgrounds",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

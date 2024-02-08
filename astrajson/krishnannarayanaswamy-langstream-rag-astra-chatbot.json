@@ -2,6 +2,7 @@
   "name": "Langstream Chat Bot",
   "description": "A demo that crawls and does a Q&A chatbot with chat history support, all through configuration using langstream including authentication.",
   "duration": "2h",
+  "key": "krishnannarayanaswamy-langstream-rag-astra-chatbot",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

@@ -2,6 +2,7 @@
   "name": "DataStax VectorDB Demos",
   "description": "The goal of this project is to provide a simple demonstration of the capabilities of AstraDB as it related to its vector database and search functionality.",
   "duration": "2h",
+  "key": "mborges-pivotal-ds-vector-demo",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

@@ -2,6 +2,7 @@
   "name": "Image Similarity with Vector Search",
   "description": "Demonstrate Datastax Astra's Vector search with Image similarity search using Amazon Berkeley Objects (ABO) Dataset.",
   "duration": "20m",
+  "key": "mukundha-image-similarity-vector-search",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

@@ -2,6 +2,7 @@
   "name": "Configurable Enterprise Chat Agent",
   "description": "This Chat Agent is build specifically as a reusable and configurable sample app to share with enterprises or prospects.",
   "duration": "20m",
+  "key": "qzg-streamlit-langchain",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

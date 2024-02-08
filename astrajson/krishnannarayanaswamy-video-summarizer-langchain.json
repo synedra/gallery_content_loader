@@ -2,6 +2,7 @@
   "name": "Video Summarizer",
   "description": "Demonstrates how to perform multi modal vector retrieval with Astra and langchain with flickr-8k dataset.",
   "duration": "2h",
+  "key": "krishnannarayanaswamy-video-summarizer-langchain",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

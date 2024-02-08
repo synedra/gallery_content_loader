@@ -2,6 +2,7 @@
   "name": "AstraDB Vector Searach QA for Documents",
   "description": "This demo guides you through setting up Astra DB with Vector Search, Cassio and Open AI to implement an generative Q&A for your own Documentation.",
   "duration": "2h",
+  "key": "difli-astra_vsearch_QA_for_documents",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

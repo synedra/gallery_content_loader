@@ -2,6 +2,7 @@
   "name": "AI Hiring Assistant",
   "description": "Gen AI powered Hiring Assistant application to effectively screen resumes based on job descriptions with DataStax Astra and Amazon Bedrock.",
   "duration": "2h",
+  "key": "krishnannarayanaswamy-hiring-assistant-rag-astra",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

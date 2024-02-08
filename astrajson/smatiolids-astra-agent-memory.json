@@ -2,6 +2,7 @@
   "name": "Astra Agent Memory with PDF context",
   "description": "This demo combines the processing of PDF files, embedding generation, multiple retrieval metrics and a user interface with streamlit.",
   "duration": "2h",
+  "key": "smatiolids-astra-agent-memory",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

@@ -196,7 +196,6 @@ def main():
             currententry = json.loads(content_file.decoded_content.decode())
             if ("$vector" in currententry):
                 del currententry["$vector"]
-            print(currententry)
             repository = currententry["urls"]["github"]
             url = currententry["urls"]["github"]
             organization_name = repository.split("/")[3]

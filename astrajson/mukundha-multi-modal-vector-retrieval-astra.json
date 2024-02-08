@@ -2,6 +2,7 @@
   "name": "Multi-Modal Vector Retrieval",
   "description": "Demonstrates how to perform multi modal vector retrieval with Astra and langchain with flickr-8k dataset.",
   "duration": "2h",
+  "key": "mukundha-multi-modal-vector-retrieval-astra",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

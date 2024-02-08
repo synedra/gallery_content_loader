@@ -2,6 +2,7 @@
   "name": "Generative AI demo for Multi-lingual Retail application",
   "description": "Visualize embeddings for a multi-lingual retail application",
   "duration": "20m",
+  "key": "mukundha-genai-multi-lingual-retail-demo",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",

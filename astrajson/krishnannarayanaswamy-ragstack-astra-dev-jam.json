@@ -2,6 +2,7 @@
   "name": "Gen AI Dev Jam",
   "description": "This Dev Jam will help your enterprise architects, developers and practitioners to quickly become familiar with RAGStack, LLMs and Vector Database.",
   "duration": "2h",
+  "key": "krishnannarayanaswamy-ragstack-astra-dev-jam",
   "skillLevel": "Intermediate",
   "netlifyUrl": "",
   "gitpodUrl": "",
