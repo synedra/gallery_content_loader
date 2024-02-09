@@ -187,7 +187,7 @@ def main():
     contents = repo.get_contents("astrajson")
     for content_file in contents:
         readme_trunc = ""
-        print(content_file)
+        #print(content_file)
         
         if content_file.name.endswith(".json"):
             print("Getting " + content_file.name)
@@ -206,11 +206,16 @@ def main():
                 continue
 
             try:
-                firstrepo = 'https://raw.githubusercontent.com/' + organization_name + '/' + repository_name + '/main/README.md'
-                readme = requests.get(firstrepo)
-                if readme.status_code == 404:
-                    secondrepo = 'https://raw.githubusercontent.com/' + organization_name  + '/' + repository_name + '/master/README.md'
-                    readme = requests.get(secondrepo)
+                if "readme" in currententry["urls"]:
+                    print ("README: " + currententry["urls"]["readme"])
+                    readme = requests.get(currententry["urls"]["readme"])
+                else:
+                    firstrepo = 'https://raw.githubusercontent.com/' + organization_name + '/' + repository_name + '/main/README.md'
+                    readme = requests.get(firstrepo)
+                    if readme.status_code == 404:
+                        #print ("Getting second repo")
+                        secondrepo = 'https://raw.githubusercontent.com/' + organization_name  + '/' + repository_name + '/master/README.md'
+                        readme = requests.get(secondrepo)
 
                 readme_as_markdown = readme.text
                 readme_as_a_string = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
@@ -259,7 +264,7 @@ def main():
                         #    newentry["likes"] = likes
                         #    newentry["views"] = views
                         #except:
-                        #    continue
+                         #   continue
                     elif (key.upper() == "GITPODURL"):
                         newentry["urls"]["gitpod"] = settings[key]
                     elif (key.upper() == "NETLIFYURL"):

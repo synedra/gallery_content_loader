@@ -1,0 +1,14 @@
+{
+  "key": "cassioml-langchain-hotels-app",
+  "tags": ["vector", "astradb", "python", "cassio", "langchain"],
+  "urls": {
+    "github": "https://github.com/awesome-astra/docs",
+    "heroimage": "https://raw.githubusercontent.com/awesome-astra/docs/main/docs/img/vector_demos/vector_demos.png",
+    "readme": "https://github.com/awesome-astra/docs/blob/main/docs/pages/aiml/llm/vector_demos.md"
+  },
+  "name": "Vector Demos",
+  "description": "Vector Search and GenAI, a curated collection of demo notebooks and apps.",
+  "duration": "2h",
+  "skilllevel": "Intermediate",
+  "priority": 1
+}

@@ -1,0 +1,15 @@
+{
+  "key": "cassioml-langchain-hotels-app",
+  "tags": ["vector", "astradb", "python", "cassio", "langchain"],
+  "urls": {
+    "github": "https://github.com/cassioml/langchain-hotels-app",
+    "heroimage": "https://raw.githubusercontent.com/cassioml/langchain-hotels-app/main/hotels_animated.gif"
+  },
+  "forks_count": 1,
+  "stargazers_count": 4,
+  "name": "Hotels LLM Demo",
+  "description": "A full demo app (API + front-end) to search and review hotels, powered by GenAI, LLMs and embedding vectors.",
+  "duration": "2h",
+  "skilllevel": "Intermediate",
+  "priority": 1
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Restaurant Search Application",
+  "key": "AI-Phil-RestSearch",
+  "description": "This is a technology demonstrator that combines vector similarity search with a secondary geographic radius filter.",
+  "duration": "2h",
+  "skillLevel": "Intermediate",
+  "netlifyUrl": "",
+  "gitpodUrl": "",
+  "vercelUrl": "",
+  "urls": {
+    "github": "https://github.com/qzg/streamlit-langchain/tree/main",
+    "heroimage": "https://raw.githubusercontent.com/AI-Phil/RestSearch/main/readme/homepage.png"
+  },
+  "tags": ["vector", "nodejs", "openstreetmap", "openai", "docker"],
+  "category": "",
+  "priority": 1
+}
