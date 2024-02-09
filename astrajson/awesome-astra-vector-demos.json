@@ -4,7 +4,7 @@
   "urls": {
     "github": "https://github.com/awesome-astra/docs",
     "heroimage": "https://raw.githubusercontent.com/awesome-astra/docs/main/docs/img/vector_demos/vector_demos.png",
-    "readme": "https://github.com/awesome-astra/docs/blob/main/docs/pages/aiml/llm/vector_demos.md"
+    "readme": "https://raw.githubusercontent.com/awesome-astra/docs/main/docs/pages/aiml/llm/vector_demos.md"
   },
   "name": "Vector Demos",
   "description": "Vector Search and GenAI, a curated collection of demo notebooks and apps.",

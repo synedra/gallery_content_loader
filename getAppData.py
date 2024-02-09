@@ -169,7 +169,7 @@ def main():
     counter = 0
     input_documents = []
 
-    #youtube = getCreds()
+    youtube = getCreds()
     
     from langchain_openai import OpenAIEmbeddings
     myEmbedding = OpenAIEmbeddings()
@@ -187,10 +187,11 @@ def main():
     contents = repo.get_contents("astrajson")
     for content_file in contents:
         readme_trunc = ""
-        #print(content_file)
+        print("\n\n")
+        print(content_file)
         
         if content_file.name.endswith(".json"):
-            print("Getting " + content_file.name)
+            print("    Getting " + content_file.name)
             astrajson = content_file
             last_modified = content_file.last_modified
             currententry = json.loads(content_file.decoded_content.decode())
@@ -202,13 +203,14 @@ def main():
             repository_name = repository.split("/")[4]
             key = currententry["key"]
             if ("last_modified" in currententry and currententry["last_modified"] == last_modified):
-                print ("No update, skipping " + content_file.name)
+                print ("    No update, skipping " + content_file.name)
                 continue
 
             try:
                 if "readme" in currententry["urls"]:
-                    print ("README: " + currententry["urls"]["readme"])
+                    print ("    README: " + currententry["urls"]["readme"])
                     readme = requests.get(currententry["urls"]["readme"])
+                    print ("    Got  weird README")
                 else:
                     firstrepo = 'https://raw.githubusercontent.com/' + organization_name + '/' + repository_name + '/main/README.md'
                     readme = requests.get(firstrepo)
@@ -217,22 +219,23 @@ def main():
                         secondrepo = 'https://raw.githubusercontent.com/' + organization_name  + '/' + repository_name + '/master/README.md'
                         readme = requests.get(secondrepo)
 
+                print("    Got README")
                 readme_as_markdown = readme.text
                 readme_as_a_string = cmarkgfm.github_flavored_markdown_to_html(readme.text, options)
                 readme_entry = {}
                 #readme_entry["$vector"] = query_vector
                 readme_entry["_id"] = currententry["key"]
-                readme_entry["readme"] = readme_as_a_string
-                readme_entry["markdown"] = readme_as_markdown
+                readme_entry["readme"] = readme_as_a_string[:5000]
+                readme_entry["markdown"] = readme_as_markdown[:5000]
                 readme_trunc = readme_as_a_string[:5000]
                 readme_markdown_trunc = readme_as_markdown[:5000]
 
                 try:
                     readme_collection.insert_one(readme_entry)
-                    print("Inserted readme for " + currententry["key"])
+                    print("    Inserted readme for " + currententry["key"])
                 except:
                     readme_collection.find_one_and_replace(filter={"_id":currententry["key"]}, replacement=readme_entry)
-                    print("Replaced readme for  " + currententry["key"])
+                    print("    Replaced readme for  " + currententry["key"])
             except(Exception) as error:
                 print(error)
                 continue
@@ -258,13 +261,13 @@ def main():
                     elif (key.upper() == "YOUTUBEURL" or key.upper() == "YOUTUBE"):
                         print("Youtube is " + json.dumps(settings[key]))
                         newentry["urls"]["youtube"] = settings[key]
-                        #try:
-                        #    (path, video_id) = settings[key][0].split("=")
-                        #    (likes, views) = getVideoStats(youtube, video_id)
-                        #    newentry["likes"] = likes
-                        #    newentry["views"] = views
-                        #except:
-                         #   continue
+                        try:
+                            (path, video_id) = settings[key][0].split("=")
+                            (likes, views) = getVideoStats(youtube, video_id)
+                            newentry["likes"] = likes
+                            newentry["views"] = views
+                        except:
+                            continue
                     elif (key.upper() == "GITPODURL"):
                         newentry["urls"]["gitpod"] = settings[key]
                     elif (key.upper() == "NETLIFYURL"):
