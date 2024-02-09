@@ -2,11 +2,13 @@
     "key": "Datastax-Examples-astra-netflix",
     "tags": [
         "javascript",
+        "deprecated",
         "graphql api",
         "tutorials",
         "ds-bulk",
         "astradb",
-        "dev"
+        "dev",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-netflix",

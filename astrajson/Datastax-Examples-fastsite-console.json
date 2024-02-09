@@ -2,6 +2,7 @@
     "key": "Datastax-Examples-fastsite-console",
     "tags": [
         "javascript",
+        "deprecated",
         "doc api",
         "dev",
         "ds-bulk",
@@ -9,7 +10,8 @@
         "tutorials",
         "react",
         "netlify",
-        "headless-cms"
+        "headless-cms",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/fastsite-console",

@@ -7,10 +7,13 @@
         "astradb",
         "cassandra",
         "gitpod",
+        "deprecated",
         "graphql api",
         "netlify",
         "nosql",
-        "reactjs"
+        "reactjs",
+        "deprecated",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/datastaxdevs/workshop-graphql-netflix",

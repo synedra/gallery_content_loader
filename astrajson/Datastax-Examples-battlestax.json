@@ -2,6 +2,7 @@
     "key": "Datastax-Examples-battlestax",
     "tags": [
         "javascript",
+        "deprecated",
         "doc api",
         "workshop",
         "dev",
@@ -12,7 +13,9 @@
         "gitpod",
         "react",
         "redux",
-        "tutorials"
+        "tutorials",
+        "deprecated",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/battlestax",

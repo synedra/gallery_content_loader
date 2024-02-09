@@ -1,27 +1,27 @@
 {
-  "key": "mborges-pivotal-ds-vector-demo",
-  "tags": [
-    "vector",
-    "astradb",
-    "hybrid search",
-    "index analysis",
-    "sai",
-    "python",
-    "streamlit"
-  ],
-  "urls": {
-    "github": "https://github.com/smatiolids/astra-agent-memory",
-    "heroimage": "https://raw.githubusercontent.com/mborges-pivotal/ds-vector-demo/main/docs/app_demos.jpg"
-  },
-  "last_modified": "Mon, 11 Dec 2023 12:19:40 GMT",
-  "forks_count": 1,
-  "stargazers_count": 4,
-  "name": "DataStax VectorDB Demos",
-  "description": "The goal of this project is to provide a simple demonstration of the capabilities of AstraDB as it related to its vector database and search functionality.",
-  "duration": "2h",
-  "skilllevel": "Intermediate",
-  "priority": 1,
-  "readme": "<h1>Astra Agent Memory with PDF context</h1>\n<p><img src=\"astra_agent.png\" alt=\"Astra Agent Memory\" /></p>\n<p>The purpose of this demo is to combine the processing of PDF files, embedding generation, multiple retrieval metrics and a user interface with streamlit that also consider agent memory.</p>\n<h2>Installing dependencies</h2>\n<p>pip install -r requirements.txt</p>\n<h2>DataStax Astra</h2>\n<p>Create an account and a Vector DB at (astra.datastax.com).</p>\n<h2>Environment Variables</h2>\n<p>Define the AstraDB credentials and Open AI API Key in the .env file.</p>\n<p>Copy .env.sample to .env</p>\n<h2>Running</h2>\n<p>streamlit run app.py</p>\n<h2>Loading PDF</h2>\n<p>I uploaded and converted PDF using the notebook &quot;Explicando Retrieval Augmented Generation.ipynb&quot;.</p>\n",
-  "readme_markdown": "# Astra Agent Memory with PDF context\n\n![Astra Agent Memory](astra_agent.png)\n\nThe purpose of this demo is to combine the processing of PDF files, embedding generation, multiple retrieval metrics and a user interface with streamlit that also consider agent memory.\n\n## Installing dependencies\n\npip install -r requirements.txt\n\n## DataStax Astra\n\nCreate an account and a Vector DB at (astra.datastax.com).\n\n## Environment Variables\n\nDefine the AstraDB credentials and Open AI API Key in the .env file.\n\nCopy .env.sample to .env\n\n## Running\n\nstreamlit run app.py\n\n## Loading PDF\n\nI uploaded and converted PDF using the notebook \"Explicando Retrieval Augmented Generation.ipynb\". \n",
-  "_id": "mborges-pivotal-ds-vector-demo"
+    "key": "mborges-pivotal-ds-vector-demo",
+    "tags": [
+        "vector",
+        "astradb",
+        "hybrid search",
+        "index analysis",
+        "sai",
+        "python",
+        "streamlit"
+    ],
+    "urls": {
+        "github": "https://github.com/smatiolids/astra-agent-memory",
+        "heroimage": "https://raw.githubusercontent.com/mborges-pivotal/ds-vector-demo/main/docs/app_demos.jpg"
+    },
+    "last_modified": "Mon, 11 Dec 2023 12:19:40 GMT",
+    "forks_count": 1,
+    "stargazers_count": 4,
+    "name": "DataStax VectorDB Demos",
+    "description": "The goal of this project is to provide a simple demonstration of the capabilities of AstraDB as it related to its vector database and search functionality.",
+    "duration": "2h",
+    "skilllevel": "Intermediate",
+    "priority": 1,
+    "readme": "<h1>Astra Agent Memory with PDF context</h1>\n<p><img src=\"astra_agent.png\" alt=\"Astra Agent Memory\" /></p>\n<p>The purpose of this demo is to combine the processing of PDF files, embedding generation, multiple retrieval metrics and a user interface with streamlit that also consider agent memory.</p>\n<h2>Installing dependencies</h2>\n<p>pip install -r requirements.txt</p>\n<h2>DataStax Astra</h2>\n<p>Create an account and a Vector DB at (astra.datastax.com).</p>\n<h2>Environment Variables</h2>\n<p>Define the AstraDB credentials and Open AI API Key in the .env file.</p>\n<p>Copy .env.sample to .env</p>\n<h2>Running</h2>\n<p>streamlit run app.py</p>\n<h2>Loading PDF</h2>\n<p>I uploaded and converted PDF using the notebook &quot;Explicando Retrieval Augmented Generation.ipynb&quot;.</p>\n",
+    "readme_markdown": "# Astra Agent Memory with PDF context\n\n![Astra Agent Memory](astra_agent.png)\n\nThe purpose of this demo is to combine the processing of PDF files, embedding generation, multiple retrieval metrics and a user interface with streamlit that also consider agent memory.\n\n## Installing dependencies\n\npip install -r requirements.txt\n\n## DataStax Astra\n\nCreate an account and a Vector DB at (astra.datastax.com).\n\n## Environment Variables\n\nDefine the AstraDB credentials and Open AI API Key in the .env file.\n\nCopy .env.sample to .env\n\n## Running\n\nstreamlit run app.py\n\n## Loading PDF\n\nI uploaded and converted PDF using the notebook \"Explicando Retrieval Augmented Generation.ipynb\". \n",
+    "_id": "mborges-pivotal-ds-vector-demo"
 }

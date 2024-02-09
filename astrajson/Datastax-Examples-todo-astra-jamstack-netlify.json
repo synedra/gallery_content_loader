@@ -2,12 +2,15 @@
     "key": "Datastax-Examples-todo-astra-jamstack-netlify",
     "tags": [
         "javascript",
+        "deprecated",
         "doc api",
         "cassandra",
         "ds-bulk",
         "astradb",
         "tutorials",
-        "dev"
+        "dev",
+        "deprecated",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/todo-astra-jamstack-netlify",

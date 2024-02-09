@@ -2,6 +2,7 @@
     "key": "Datastax-Examples-astra-gatsbyjs-starter",
     "tags": [
         "javascript",
+        "deprecated",
         "graphql api",
         "astradb",
         "cassandra",
@@ -9,7 +10,8 @@
         "tutorials",
         "dev",
         "examples",
-        "cassandra-cql"
+        "cassandra-cql",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-gatsbyjs-starter",

@@ -1,19 +1,24 @@
 {
-  "key": "krishnannarayanaswamy-langstream-rag-astra-chatbot",
-  "tags": ["vector", "astradb", "data api", "langstream"],
-  "urls": {
-    "github": "https://github.com/krishnannarayanaswamy/langstream-rag-astra-chatbot",
-    "heroimage": "https://raw.githubusercontent.com/datastaxdevs/gallery_content_loader/main/datastax-logo_square.png"
-  },
-  "last_modified": "Thu, 16 Nov 2023 19:11:04 GMT",
-  "forks_count": 0,
-  "stargazers_count": 0,
-  "name": "Langstream Chat Bot",
-  "description": "A demo that crawls and does a Q&A chatbot with chat history support, all through configuration using langstream including authentication.",
-  "duration": "2h",
-  "skilllevel": "Intermediate",
-  "priority": 1,
-  "readme": "",
-  "readme_markdown": "",
-  "_id": "krishnannarayanaswamy-langstream-rag-astra-chatbot"
+    "key": "krishnannarayanaswamy-langstream-rag-astra-chatbot",
+    "tags": [
+        "vector",
+        "astradb",
+        "data api",
+        "langstream"
+    ],
+    "urls": {
+        "github": "https://github.com/krishnannarayanaswamy/langstream-rag-astra-chatbot",
+        "heroimage": "https://raw.githubusercontent.com/datastaxdevs/gallery_content_loader/main/datastax-logo_square.png"
+    },
+    "last_modified": "Thu, 16 Nov 2023 19:11:04 GMT",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "name": "Langstream Chat Bot",
+    "description": "A demo that crawls and does a Q&A chatbot with chat history support, all through configuration using langstream including authentication.",
+    "duration": "2h",
+    "skilllevel": "Intermediate",
+    "priority": 1,
+    "readme": "",
+    "readme_markdown": "",
+    "_id": "krishnannarayanaswamy-langstream-rag-astra-chatbot"
 }

@@ -1,19 +1,23 @@
 {
-  "key": "krishnannarayanaswamy-ptc-ai-assistant",
-  "tags": ["vector", "astradb", "data api"],
-  "urls": {
-    "github": "https://github.com/krishnannarayanaswamy/ptc-ai-assistant",
-    "heroimage": "https://raw.githubusercontent.com/datastaxdevs/gallery_content_loader/main/datastax-logo_square.png"
-  },
-  "last_modified": "Thu, 04 Jan 2024 09:08:05 GMT",
-  "forks_count": 0,
-  "stargazers_count": 0,
-  "name": "Commerce AI Assistant",
-  "description": "An eCommerce Chatbot with LangServe API with the new LangChain (LCEL) expression language..",
-  "duration": "2h",
-  "skilllevel": "Intermediate",
-  "priority": 1,
-  "readme": "",
-  "readme_markdown": "",
-  "_id": "krishnannarayanaswamy-ptc-ai-assistant"
+    "key": "krishnannarayanaswamy-ptc-ai-assistant",
+    "tags": [
+        "vector",
+        "astradb",
+        "data api"
+    ],
+    "urls": {
+        "github": "https://github.com/krishnannarayanaswamy/ptc-ai-assistant",
+        "heroimage": "https://raw.githubusercontent.com/datastaxdevs/gallery_content_loader/main/datastax-logo_square.png"
+    },
+    "last_modified": "Thu, 04 Jan 2024 09:08:05 GMT",
+    "forks_count": 0,
+    "stargazers_count": 0,
+    "name": "Commerce AI Assistant",
+    "description": "An eCommerce Chatbot with LangServe API with the new LangChain (LCEL) expression language..",
+    "duration": "2h",
+    "skilllevel": "Intermediate",
+    "priority": 1,
+    "readme": "",
+    "readme_markdown": "",
+    "_id": "krishnannarayanaswamy-ptc-ai-assistant"
 }

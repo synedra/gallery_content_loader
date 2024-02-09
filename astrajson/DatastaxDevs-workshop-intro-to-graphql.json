@@ -6,11 +6,14 @@
         "netlify",
         "workshop",
         "nosql",
+        "deprecated",
         "graphql api",
         "gitpod",
         "astradb",
         "dgs framework",
-        "dgs-framework"
+        "dgs-framework",
+        "deprecated",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/datastaxdevs/workshop-intro-to-graphql",

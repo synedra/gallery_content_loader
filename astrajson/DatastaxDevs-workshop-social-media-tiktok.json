@@ -2,10 +2,12 @@
     "key": "DatastaxDevs-workshop-social-media-tiktok",
     "tags": [
         "javascript",
+        "deprecated",
         "doc api",
         "workshop",
         "cassandra",
-        "netlify"
+        "netlify",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/datastaxdevs/workshop-social-media-tiktok"

@@ -1,5 +1,5 @@
 {
-    "key": "krishnannarayanaswamy-video-summarizer-langchain",
+    "key": "krishnannarayanaswamy-streamlit-langchain-vectorstore",
     "tags": [
         "vector",
         "astradb",
@@ -9,17 +9,17 @@
     ],
     "urls": {
         "github": "https://github.com/krishnannarayanaswamy/video-summarizer-langchain",
-        "heroimage": "https://raw.githubusercontent.com/datastaxdevs/gallery_content_loader/main/datastax-logo_square.png"
+        "heroImage": "https://raw.githubusercontent.com/krishnannarayanaswamy/streamlit-langchain-vectorstore-demo/main/img/chatbot.png"
     },
     "last_modified": "Fri, 06 Oct 2023 01:33:20 GMT",
     "forks_count": 0,
     "stargazers_count": 0,
-    "name": "Video Summarizer",
-    "description": "Demonstrates how to perform multi modal vector retrieval with Astra and langchain with flickr-8k dataset.",
+    "name": "Streamlit Langchain Vectorstore",
+    "description": "A chatbot built on streamlit and langchain. It is a playground to compare using other vector stores like REDIS, Mongo.",
     "duration": "2h",
     "skilllevel": "Intermediate",
     "priority": 1,
     "readme": "<p>This demo uses langchain. OpenAI and Streamlit. Uses langchain's Youtube loader to extract text from the video and summarize chain to summarize the video.</p>\n<p>Run the demo locally</p>\n<p>pip install -r requirements.txt</p>\n<p>streamlit run summarizer.py</p>\n",
     "readme_markdown": "This demo uses langchain. OpenAI and Streamlit. Uses langchain's Youtube loader to extract text from the video and summarize chain to summarize the video.\n\nRun the demo locally\n\npip install -r requirements.txt\n\nstreamlit run summarizer.py",
-    "_id": "krishnannarayanaswamy-video-summarizer-langchain"
+    "_id": "krishnannarayanaswamy-streamlit-langchain-vectorstore"
 }

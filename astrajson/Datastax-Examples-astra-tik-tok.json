@@ -7,8 +7,11 @@
         "ds-bulk",
         "react",
         "netlify",
+        "deprecated",
         "doc api",
-        "dev"
+        "dev",
+        "deprecated",
+        "deprecated"
     ],
     "urls": {
         "github": "https://github.com/DataStax-Examples/astra-tik-tok",
