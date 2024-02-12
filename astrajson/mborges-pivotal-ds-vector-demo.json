@@ -18,7 +18,7 @@
     "stargazers_count": 4,
     "name": "DataStax VectorDB Demos",
     "description": "The goal of this project is to provide a simple demonstration of the capabilities of AstraDB as it related to its vector database and search functionality.",
-    "duration": "2h",
+    "duration": "2 hours",
     "skilllevel": "Intermediate",
     "priority": 1,
     "readme": "<h1>Astra Agent Memory with PDF context</h1>\n<p><img src=\"astra_agent.png\" alt=\"Astra Agent Memory\" /></p>\n<p>The purpose of this demo is to combine the processing of PDF files, embedding generation, multiple retrieval metrics and a user interface with streamlit that also consider agent memory.</p>\n<h2>Installing dependencies</h2>\n<p>pip install -r requirements.txt</p>\n<h2>DataStax Astra</h2>\n<p>Create an account and a Vector DB at (astra.datastax.com).</p>\n<h2>Environment Variables</h2>\n<p>Define the AstraDB credentials and Open AI API Key in the .env file.</p>\n<p>Copy .env.sample to .env</p>\n<h2>Running</h2>\n<p>streamlit run app.py</p>\n<h2>Loading PDF</h2>\n<p>I uploaded and converted PDF using the notebook &quot;Explicando Retrieval Augmented Generation.ipynb&quot;.</p>\n",

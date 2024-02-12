@@ -15,7 +15,7 @@
     "stargazers_count": 0,
     "name": "Bank Ragstax Demo",
     "description": "A demo that demonstrates Astra RAGStax platform, Streamlit interface for a chatbot and DataStax Astra as Vector Store.",
-    "duration": "2h",
+    "duration": "2 hours",
     "skilllevel": "Intermediate",
     "priority": 1,
     "readme": "<p>A demo that demonstrates Astra RAGStax platform, Streamlit interface for a chatbot and DataStax Astra as Vector Store.</p>\n<p>Create Astra account, enable RAGStax, create vector database, download the secure bundle and create a token<br />\nCreate a folder named config<br />\nStore the Astra token in json format<br />\nStore the secure connect bundle</p>\n<p>Create a Streaming tenant and Astra and enable RAGStax on it.</p>\n<p>Install langstream in your computer for CLI</p>\n<p>export KAFKA_BOOTSTRAP_SERVERS=&quot;&quot;<br />\nexport KAFKA_USERNAME=&quot;&quot;<br />\nexport KAFKA_PASSWORD=&quot;&quot;<br />\nexport OPEN_AI_ACCESS_KEY=&quot;&quot;<br />\nexport ASTRA_CLIENT_ID=&quot;&quot;<br />\nexport ASTRA_SECRET=&quot;&quot;<br />\nexport ASTRA_TOKEN=&quot;&quot;<br />\nexport ASTRA_DATABASE=<br />\nexport S3_BUCKET_NAME=<br />\nexport S3_ENDPOINT=<br />\nexport S3_ACCESS_KEY=<br />\nexport S3_SECRET=<br />\nexport S3_REGION=</p>\n<p>ragstack apps deploy ragstax-astra-demo -app app -i instances/astra.yaml -s secrets/secrets.yaml</p>\n<p>Review logs using</p>\n<p>ragstack apps logs ragstax-astra-demo</p>\n<p>Review and Change the code in frontend/chatbot.py based on your config files, keyspace and table names.</p>\n<p>export ASTRA_DB_APPLICATION_TOKEN=&quot;&quot;<br />\nexport ASTRA_DB_ID=&quot;&quot;<br />\nexport ASTRA_DB_KEYSPACE=&quot;&quot;</p>\n<p>streamlit run frontend/chatbot.py</p>\n",

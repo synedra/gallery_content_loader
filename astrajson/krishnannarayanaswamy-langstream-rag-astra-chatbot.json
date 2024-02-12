@@ -15,7 +15,7 @@
     "stargazers_count": 0,
     "name": "Langstream Chat Bot",
     "description": "A demo that crawls and does a Q&A chatbot with chat history support, all through configuration using langstream including authentication.",
-    "duration": "2h",
+    "duration": "2 hours",
     "skilllevel": "Intermediate",
     "priority": 1,
     "readme": "",

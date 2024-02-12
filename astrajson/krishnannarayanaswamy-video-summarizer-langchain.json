@@ -16,7 +16,7 @@
     "stargazers_count": 0,
     "name": "Video Summarizer",
     "description": "Demonstrates how to perform multi modal vector retrieval with Astra and langchain with flickr-8k dataset.",
-    "duration": "2h",
+    "duration": "2 hours",
     "skilllevel": "Intermediate",
     "priority": 1,
     "readme": "<p>This demo uses langchain. OpenAI and Streamlit. Uses langchain's Youtube loader to extract text from the video and summarize chain to summarize the video.</p>\n<p>Run the demo locally</p>\n<p>pip install -r requirements.txt</p>\n<p>streamlit run summarizer.py</p>\n",
