@@ -313,16 +313,16 @@ def main():
                 
                 try:
                     demo_collection.insert_one(newentry)
-                    print("Inserted " + newentry["key"])
+                    print("    Inserted " + newentry["key"])
                 except:
                     demo_collection.find_one_and_replace(filter={"_id":newentry["key"]}, replacement=newentry)
-                    print("Replaced " + newentry["key"])
+                    print("    Replaced " + newentry["key"])
 
                 filename = "./astrajson/" + newentry["key"] + ".json"
                 del newentry["$vector"]
                 with open(filename, 'w') as outfile:
                     json.dump(newentry, outfile, indent=4)
-                    print("Wrote " + filename)
+                    print("    Wrote " + filename)
             
 
 def cleanTags(tags):
