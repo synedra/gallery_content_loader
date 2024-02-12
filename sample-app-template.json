@@ -1,14 +1,15 @@
 {
-  "name": "",
-  "description": "",
-  "duration": "",
-  "skillLevel": "",
-  "netlifyUrl": "",
-  "gitpodUrl": "",
-  "vercelUrl": "",
-  "githubUrl": "",
-  "tags": ["", ""],
-  "category": "",
+  "name": "Human Readable Name",
+  "description": "One or two sentences about the application.",
+  "duration":"30 minutes | 2 hours",
+  "skillLevel": "Beginner | Intermediate | Advanced",
+  "urls": {
+    "netlify": "",
+    "gitpod": "",
+    "vercel": "",
+    "github": ""
+  },
+  "tags": ["", ""], ["thistag", "thattag"]
   "priority": 1,
-  "heroImage": ""
+  "heroImage": "Path to image for the application",
 }
