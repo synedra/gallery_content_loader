@@ -22,7 +22,7 @@
     "stargazers_count": 19,
     "name": "Deploy Cassandra into Kubernetes with K8ssandra",
     "description": " learn how to deploy and manage a data tier based on Apache Cassandra\u2122 cluster in Kubernetes using K8ssandra. ",
-    "duration": "180 minutes",
+    "duration": "3 hours",
     "skilllevel": "Intermediate",
     "language": [
         "yaml"

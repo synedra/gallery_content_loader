@@ -25,7 +25,7 @@
     "stargazers_count": 3,
     "name": "Real-Time data pipelines with Pulsar and Cassandra",
     "description": "You will inspect and run a sample architecture making use of Apache Pulsar\u2122 and Pulsar Functions.",
-    "duration": "120 minutes",
+    "duration": "2 hours",
     "skilllevel": "Beginner/Intermediate",
     "language": [
         "python"

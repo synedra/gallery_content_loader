@@ -18,7 +18,7 @@
     "stargazers_count": 11,
     "name": "Apache Cassandra Application Development",
     "description": "Learn about drivers, connectivity and requests by running a simple API with Apache Cassandra/Astra DB.",
-    "duration": "120 minutes",
+    "duration": "2 hours",
     "skilllevel": "Beginner",
     "language": [
         "python",

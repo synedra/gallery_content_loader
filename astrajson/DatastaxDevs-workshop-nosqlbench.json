@@ -18,7 +18,7 @@
     "stargazers_count": 1,
     "name": "Benchmark your Astra DB with NoSQLBench",
     "description": "The goal of this workshop is to get you familiar with the powerful and versatile tool NoSQLBench.",
-    "duration": "120 minutes",
+    "duration": "2 hours",
     "skilllevel": "Intermediate",
     "language": [
         "java"

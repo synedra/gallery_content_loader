@@ -17,7 +17,7 @@
     "stargazers_count": 22,
     "name": "Apache Cassandra Data Modeling",
     "description": "This session looks at how to effectively design a data model for your application. ",
-    "duration": "120 minutes",
+    "duration": "2 hours",
     "skilllevel": "Beginner",
     "language": [
         "CQL"

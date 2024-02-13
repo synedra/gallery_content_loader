@@ -27,7 +27,7 @@
     "stargazers_count": 70,
     "name": "Build Microservice and API",
     "description": "Learn how to build a backend for Cassandra, from data model to drivers to API exposition",
-    "duration": "120 minutes",
+    "duration": "2 hours",
     "skilllevel": "Intermediate",
     "language": [
         "java",
