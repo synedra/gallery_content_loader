@@ -25,7 +25,6 @@ api_endpoint = os.getenv("ASTRA_DB_API_ENDPOINT")
 my_client = DataAPIClient(token)
 my_database = my_client.get_database_by_api_endpoint(
     "https://3c18f9b2-3f49-4e7b-8cd4-f238b06dbca5-us-east-2.apps.astra.datastax.com",
-    keyspace="gallery",
 )
 
 app_collection = my_database.create_collection("examples_and_starters", check_exists= False)
