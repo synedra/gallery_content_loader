@@ -1,6 +1,8 @@
 name: FusionAuth Gallery Loader
 run-name: ${{ github.actor }} is populating 🚀
-on: [push]
+on:
+  schedule:
+    - cron: "0 * * * *"
 jobs:
   Update-app-gallery:
     runs-on: ubuntu-latest
