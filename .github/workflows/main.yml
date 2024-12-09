@@ -10,7 +10,7 @@ jobs:
       - run: cd ${{ github.workspace }}
       - run: echo "ASTRA_DB_APPLICATION_TOKEN=${{ secrets.ASTRA_DB_APPLICATION_TOKEN }}" >> .env
       - run: echo "ASTRA_DB_API_ENDPOINT=${{ secrets.ASTRA_DB_API_ENDPOINT }}" >> .env
-      - run: echo "GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env
+      - run: echo "GITHUB_TOKEN=${{ secrets.GH_TOKEN }}" >> .env
       - run: ls -al
       - run: cat .env
       - run: pip install -r requirements.txt
