@@ -29,7 +29,7 @@ my_database = my_client.get_database_by_api_endpoint(
 
 app_collection = my_database.create_collection("examples_and_starters", check_exists= False)
 
-g = Github(osgetenv("GITHUB_TOKEN"))
+g = Github(os.getenv("GITHUB_TOKEN"))
 
 p = re.compile('[a-zA-Z]+')
 
